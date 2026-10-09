@@ -21,7 +21,6 @@ import { OrderConfirmationModal } from './components/OrderConfirmationModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { Footer } from './components/Footer';
 import { PolicyModal, PolicyTab } from './components/PolicyModal';
-import { ContactModal } from './components/ContactModal';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
@@ -37,6 +36,7 @@ type RouteState =
 export const AppContent: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [policyTab, setPolicyTab] = useState<PolicyTab | null>(null);
+  const { isContactOpen, setIsContactOpen } = useCart();
   const products: Product[] = (productsData as any).products;
 
   // Brand landing preloader on every page load
@@ -232,11 +232,13 @@ export const AppContent: React.FC = () => {
       <CheckoutModal />
       <OrderConfirmationModal />
       <PolicyModal 
-        isOpen={!!policyTab} 
-        initialTab={policyTab || 'privacy'} 
-        onClose={() => setPolicyTab(null)} 
+        isOpen={!!policyTab || isContactOpen} 
+        initialTab={policyTab || (isContactOpen ? 'contact' : 'privacy')} 
+        onClose={() => {
+          setPolicyTab(null);
+          setIsContactOpen(false);
+        }} 
       />
-      <ContactModal />
     </>
   );
 };

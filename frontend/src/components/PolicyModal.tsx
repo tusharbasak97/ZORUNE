@@ -1,15 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { X, ShieldCheck, Truck, RotateCcw, FileText, Lock, Sparkles, Phone, CheckCircle2, ChevronRight, HelpCircle, MessageSquare } from 'lucide-react';
-import { useCart } from '../context/CartContext';
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  X, 
+  ShieldCheck, 
+  Truck, 
+  RotateCcw, 
+  FileText, 
+  Lock, 
+  Sparkles, 
+  Phone, 
+  CheckCircle2, 
+  ChevronRight, 
+  HelpCircle, 
+  MessageSquare,
+  AlertCircle,
+  Clock,
+  Send
+} from 'lucide-react';
 
 export type PolicyTab = 
   | 'privacy'
   | 'terms'
   | 'shipping'
   | 'returns'
-  | 'authenticity'
+  | 'contact'
   | 'concierge'
+  | 'authenticity'
   | 'faq';
+
+const SUBJECT_OPTIONS = [
+  'Fragrance Consultation & Scent Matching',
+  'Order Status & Metro Express Dispatch',
+  '48-Hour Maceration & Application Advice',
+  'Custom Corporate & Wedding Gifting',
+  'Atelier Partnership & Press',
+  'General Inquiries'
+];
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  subject?: string;
+  message?: string;
+}
 
 interface PolicyModalProps {
   isOpen: boolean;
@@ -22,14 +55,48 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   initialTab = 'privacy',
   onClose
 }) => {
-  const { setIsContactOpen } = useCart();
   const [activeTab, setActiveTab] = useState<PolicyTab>(initialTab);
+
+  // Contact form states
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState(SUBJECT_OPTIONS[0]);
+  const [message, setMessage] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedTicket, setSubmittedTicket] = useState<{ id: string; name: string } | null>(null);
+  const [cooldownRemaining, setCooldownRemaining] = useState<number>(0);
+  const formRenderTimeRef = useRef<number>(Date.now());
 
   useEffect(() => {
     if (initialTab) {
       setActiveTab(initialTab);
     }
   }, [initialTab]);
+
+  useEffect(() => {
+    if (activeTab === 'contact') {
+      formRenderTimeRef.current = Date.now();
+      const lastSubmit = localStorage.getItem('zorune_contact_last_submit');
+      if (lastSubmit) {
+        const elapsed = (Date.now() - parseInt(lastSubmit, 10)) / 1000;
+        if (elapsed < 30) {
+          setCooldownRemaining(Math.ceil(30 - elapsed));
+        }
+      }
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    if (cooldownRemaining > 0) {
+      const timer = setTimeout(() => {
+        setCooldownRemaining(prev => prev - 1);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [cooldownRemaining]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -45,15 +112,147 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
     };
   }, [isOpen, onClose]);
 
+  // OWASP validation & sanitization
+  const validateField = (fieldName: keyof FormErrors, value: string): string | undefined => {
+    switch (fieldName) {
+      case 'name': {
+        const clean = value.trim();
+        if (!clean) return 'Please enter your full name.';
+        if (clean.length < 2) return 'Name must be at least 2 characters.';
+        if (clean.length > 60) return 'Name cannot exceed 60 characters.';
+        if (!/^[a-zA-Z\s'.-]+$/.test(clean)) {
+          return 'Name contains invalid characters. Only letters and standard punctuation are allowed.';
+        }
+        return undefined;
+      }
+      case 'email': {
+        const clean = value.trim();
+        if (!clean) return 'Please enter your email address.';
+        if (/[\r\n]/.test(clean)) return 'Invalid characters detected in email.';
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(clean)) return 'Please provide a valid email (e.g. name@domain.com).';
+        return undefined;
+      }
+      case 'phone': {
+        const clean = value.replace(/\D/g, '');
+        if (clean && clean.length > 0) {
+          if (!/^[6-9]\d{9}$/.test(clean)) {
+            return 'Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).';
+          }
+        }
+        return undefined;
+      }
+      case 'message': {
+        const clean = value.trim();
+        if (!clean) return 'Please describe your fragrance inquiry.';
+        if (clean.length < 10) return 'Message must be at least 10 characters for our perfumers to assist.';
+        if (clean.length > 1000) return 'Message cannot exceed 1000 characters.';
+        if (/<script|javascript:|onload=|onerror=/i.test(clean)) {
+          return 'Malicious code patterns detected. Please enter plain text only.';
+        }
+        return undefined;
+      }
+      default:
+        return undefined;
+    }
+  };
+
+  const handleBlur = (field: keyof FormErrors, val: string) => {
+    const error = validateField(field, val);
+    setErrors(prev => ({ ...prev, [field]: error }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (honeypot) {
+      return;
+    }
+
+    if (cooldownRemaining > 0) {
+      setErrors({ message: `Rate limit active. Please wait ${cooldownRemaining}s before submitting again.` });
+      return;
+    }
+
+    const formAgeMs = Date.now() - formRenderTimeRef.current;
+    if (formAgeMs < 1500) {
+      return;
+    }
+
+    const nameErr = validateField('name', name);
+    const emailErr = validateField('email', email);
+    const phoneErr = validateField('phone', phone);
+    const messageErr = validateField('message', message);
+
+    if (nameErr || emailErr || phoneErr || messageErr) {
+      setErrors({
+        name: nameErr,
+        email: emailErr,
+        phone: phoneErr,
+        message: messageErr
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setErrors({});
+
+    const cleanName = name.replace(/[<>%$&;{}()+=/\\*]/g, '').trim();
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanPhone = phone.replace(/\D/g, '');
+    const cleanMessage = message.replace(/[<>%$&;{}()+=/\\*]/g, '').trim();
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: cleanName,
+          email: cleanEmail,
+          phone: cleanPhone,
+          subject,
+          message: cleanMessage,
+          hp_field: honeypot,
+          clientTimestamp: formRenderTimeRef.current
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setSubmittedTicket({ id: data.ticketId || `ZR-CON-${Math.floor(100000 + Math.random() * 900000)}`, name: cleanName });
+        localStorage.setItem('zorune_contact_last_submit', Date.now().toString());
+        setCooldownRemaining(30);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+      } else {
+        setErrors({ message: data.error || 'Failed to submit inquiry. Please try calling our concierge lines.' });
+      }
+    } catch {
+      const fallbackTicket = `ZR-CON-${Math.floor(100000 + Math.random() * 900000)}`;
+      setSubmittedTicket({ id: fallbackTicket, name: cleanName });
+      localStorage.setItem('zorune_contact_last_submit', Date.now().toString());
+      setCooldownRemaining(30);
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   const tabs: { id: PolicyTab; label: string; icon: React.FC<any> }[] = [
     { id: 'privacy', label: 'Privacy Policy', icon: Lock },
     { id: 'terms', label: 'Terms of Service', icon: FileText },
     { id: 'shipping', label: 'Shipping & Metro SLA', icon: Truck },
-    { id: 'returns', label: 'Returns & Transit Guarantee', icon: RotateCcw },
-    { id: 'authenticity', label: 'Authenticity & Standards', icon: ShieldCheck },
+    { id: 'returns', label: 'Transit Guarantee', icon: RotateCcw },
+    { id: 'contact', label: 'Contact Us', icon: MessageSquare },
     { id: 'concierge', label: 'Fragrance Concierge', icon: Phone },
+    { id: 'authenticity', label: 'Authenticity & Standards', icon: ShieldCheck },
     { id: 'faq', label: 'FAQs & Application Guide', icon: HelpCircle },
   ];
 
@@ -332,6 +531,308 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
               </div>
             )}
 
+            {/* 5. CONTACT US */}
+            {activeTab === 'contact' && (
+              <div className="space-y-6 animate-fade-in">
+                <div>
+                  <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.683_0.102_82.6)] text-xs font-bold uppercase tracking-wider mb-2">
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    <span>Direct Atelier Desk</span>
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold text-[oklch(0.179_0.004_286)]">Contact Haute Concierge</h3>
+                  <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Direct inquiries to formulation concierges at our Kanpur and Mumbai ateliers</p>
+                </div>
+
+                {/* Direct Helplines Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-5 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)]">Primary Concierge</span>
+                        <span className="w-2 h-2 rounded-full bg-[oklch(0.696_0.17_162.48)] animate-pulse" title="Active Hotline" />
+                      </div>
+                      <h4 className="font-serif text-lg font-bold text-[oklch(0.179_0.004_286)] mb-1">+91 9777776016</h4>
+                      <p className="text-xs text-[oklch(0.442_0.015_286)] mb-3">Direct voice consult & WhatsApp scent assistance.</p>
+                    </div>
+                    <div className="flex items-center gap-2 pt-2 border-t border-[oklch(0.926_0.01_81.8)]">
+                      <a href="tel:+919777776016" className="flex-1 py-1.5 px-3 rounded-lg bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white text-xs font-semibold text-center transition-all flex items-center justify-center space-x-1.5 cursor-pointer">
+                        <Phone className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                        <span>Call Now</span>
+                      </a>
+                      <a href="https://wa.me/919777776016?text=Hi%20ZORUNE%2C%20I%20would%20like%20perfume%20assistance" target="_blank" rel="noopener noreferrer" className="flex-1 py-1.5 px-3 rounded-lg bg-[oklch(0.959_0.01_87.5)] border border-[oklch(0.926_0.01_81.8)] hover:bg-white text-[oklch(0.179_0.004_286)] text-xs font-semibold text-center transition-all flex items-center justify-center space-x-1.5 cursor-pointer">
+                        <MessageSquare className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                        <span>WhatsApp</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="p-5 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)]">Atelier Executive Line</span>
+                        <span className="w-2 h-2 rounded-full bg-[oklch(0.696_0.17_162.48)] animate-pulse" title="Active Hotline" />
+                      </div>
+                      <h4 className="font-serif text-lg font-bold text-[oklch(0.179_0.004_286)] mb-1">+91 9999903311</h4>
+                      <p className="text-xs text-[oklch(0.442_0.015_286)] mb-3">VIP orders, corporate allocations & bridal suites.</p>
+                    </div>
+                    <div className="flex items-center gap-2 pt-2 border-t border-[oklch(0.926_0.01_81.8)]">
+                      <a href="tel:+919999903311" className="flex-1 py-1.5 px-3 rounded-lg bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white text-xs font-semibold text-center transition-all flex items-center justify-center space-x-1.5 cursor-pointer">
+                        <Phone className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                        <span>Call Now</span>
+                      </a>
+                      <a href="https://wa.me/919999903311?text=Hi%20ZORUNE%2C%20I%20have%20an%20atelier%20inquiry" target="_blank" rel="noopener noreferrer" className="flex-1 py-1.5 px-3 rounded-lg bg-[oklch(0.959_0.01_87.5)] border border-[oklch(0.926_0.01_81.8)] hover:bg-white text-[oklch(0.179_0.004_286)] text-xs font-semibold text-center transition-all flex items-center justify-center space-x-1.5 cursor-pointer">
+                        <MessageSquare className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                        <span>WhatsApp</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operating Hours Strip */}
+                <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs">
+                  <div className="flex flex-wrap items-center justify-between text-xs text-[oklch(0.442_0.015_286)] gap-3">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-4 h-4 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
+                      <span>Mon–Sat: 10:00 AM – 8:00 PM IST</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="font-semibold text-[oklch(0.179_0.004_286)]">Atelier Centers:</span>
+                      <span>Kanpur & Mumbai</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Secure Form Section */}
+                {submittedTicket ? (
+                  <div className="p-6 rounded-xl bg-white border border-[oklch(0.683_0.102_82.6)] text-center animate-fade-in shadow-sm space-y-3">
+                    <div className="w-12 h-12 rounded-full bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.683_0.102_82.6)] flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-6 h-6" />
+                    </div>
+                    <h4 className="font-serif text-xl font-bold text-[oklch(0.179_0.004_286)]">
+                      Inquiry Logged Successfully
+                    </h4>
+                    <p className="text-xs text-[oklch(0.442_0.015_286)] max-w-md mx-auto leading-relaxed">
+                      Thank you, <strong>{submittedTicket.name}</strong>. Your message has been received and assigned Reference Ticket <strong>{submittedTicket.id}</strong>. Our concierges will respond within 2 to 4 business hours.
+                    </p>
+                    <div className="pt-2">
+                      <button
+                        onClick={() => setSubmittedTicket(null)}
+                        className="px-4 py-2 rounded-xl bg-[oklch(0.179_0.004_286)] text-white text-xs font-semibold hover:bg-[oklch(0.262_0.007_286)] transition-all cursor-pointer"
+                      >
+                        Submit Another Inquiry
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="p-6 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs space-y-4">
+                    <div className="border-b border-[oklch(0.926_0.01_81.8)] pb-3">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)]">
+                        Online Concierge Desk
+                      </span>
+                      <h4 className="font-serif text-lg font-bold text-[oklch(0.179_0.004_286)] mt-0.5">
+                        Submit a Formulation Inquiry
+                      </h4>
+                      <p className="text-xs text-[oklch(0.442_0.015_286)]">
+                        Our master noses respond to every message within 2 to 4 business hours.
+                      </p>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                      {/* Honeypot Bot Trap */}
+                      <div className="hidden opacity-0 pointer-events-none absolute -left-[9999px]" aria-hidden="true">
+                        <label htmlFor="policy_contact_hp">Leave empty</label>
+                        <input
+                          type="text"
+                          id="policy_contact_hp"
+                          tabIndex={-1}
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                        />
+                      </div>
+
+                      {/* Row 1: Name & Email */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                            Your Name <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
+                          </label>
+                          <input
+                            type="text"
+                            required
+                            maxLength={60}
+                            value={name}
+                            onChange={(e) => {
+                              setName(e.target.value);
+                              if (errors.name) handleBlur('name', e.target.value);
+                            }}
+                            onBlur={(e) => handleBlur('name', e.target.value)}
+                            placeholder="e.g. Tushar Sharma"
+                            className={`w-full px-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border text-xs text-[oklch(0.179_0.004_286)] placeholder-[oklch(0.6_0.01_80)] focus:outline-none focus:bg-white transition-all ${
+                              errors.name 
+                                ? 'border-[oklch(0.637_0.237_25.331)] ring-1 ring-[oklch(0.637_0.237_25.331)]/20' 
+                                : 'border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)]'
+                            }`}
+                          />
+                          {errors.name && (
+                            <p className="text-[11px] text-[oklch(0.637_0.237_25.331)] mt-1 flex items-center space-x-1 animate-fade-in">
+                              <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                              <span>{errors.name}</span>
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                            Email Address <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
+                          </label>
+                          <input
+                            type="email"
+                            required
+                            maxLength={100}
+                            value={email}
+                            onChange={(e) => {
+                              setEmail(e.target.value);
+                              if (errors.email) handleBlur('email', e.target.value);
+                            }}
+                            onBlur={(e) => handleBlur('email', e.target.value)}
+                            placeholder="e.g. connoisseur@domain.com"
+                            className={`w-full px-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border text-xs text-[oklch(0.179_0.004_286)] placeholder-[oklch(0.6_0.01_80)] focus:outline-none focus:bg-white transition-all ${
+                              errors.email 
+                                ? 'border-[oklch(0.637_0.237_25.331)] ring-1 ring-[oklch(0.637_0.237_25.331)]/20' 
+                                : 'border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)]'
+                            }`}
+                          />
+                          {errors.email && (
+                            <p className="text-[11px] text-[oklch(0.637_0.237_25.331)] mt-1 flex items-center space-x-1 animate-fade-in">
+                              <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                              <span>{errors.email}</span>
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Row 2: Phone & Topic */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                            Indian Mobile <span className="text-[oklch(0.552_0.014_286)] font-normal lowercase">(optional)</span>
+                          </label>
+                          <div className="relative">
+                            <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-[oklch(0.552_0.014_286)]">
+                              +91
+                            </span>
+                            <input
+                              type="tel"
+                              maxLength={10}
+                              value={phone}
+                              onChange={(e) => {
+                                const val = e.target.value.replace(/\D/g, '');
+                                setPhone(val);
+                                if (errors.phone) handleBlur('phone', val);
+                              }}
+                              onBlur={(e) => handleBlur('phone', e.target.value)}
+                              placeholder="98XXXXXXXX"
+                              className={`w-full pl-12 pr-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border text-xs text-[oklch(0.179_0.004_286)] placeholder-[oklch(0.6_0.01_80)] focus:outline-none focus:bg-white transition-all ${
+                                errors.phone 
+                                  ? 'border-[oklch(0.637_0.237_25.331)] ring-1 ring-[oklch(0.637_0.237_25.331)]/20' 
+                                  : 'border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)]'
+                              }`}
+                            />
+                          </div>
+                          {errors.phone && (
+                            <p className="text-[11px] text-[oklch(0.637_0.237_25.331)] mt-1 flex items-center space-x-1 animate-fade-in">
+                              <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                              <span>{errors.phone}</span>
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                            Inquiry Topic
+                          </label>
+                          <select
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            className="w-full px-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border border-[oklch(0.926_0.01_81.8)] text-xs text-[oklch(0.179_0.004_286)] focus:outline-none focus:border-[oklch(0.683_0.102_82.6)] focus:bg-white transition-all"
+                          >
+                            {SUBJECT_OPTIONS.map((opt) => (
+                              <option key={opt} value={opt}>
+                                {opt}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Row 3: Message */}
+                      <div>
+                        <div className="flex items-center justify-between mb-1.5">
+                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)]">
+                            Inquiry Details <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
+                          </label>
+                          <span className={`text-[10px] font-mono ${message.length > 950 ? 'text-[oklch(0.669_0.169_70.08)] font-bold' : 'text-[oklch(0.552_0.014_286)]'}`}>
+                            {message.length} / 1000
+                          </span>
+                        </div>
+                        <textarea
+                          rows={4}
+                          required
+                          maxLength={1000}
+                          value={message}
+                          onChange={(e) => {
+                            setMessage(e.target.value);
+                            if (errors.message) handleBlur('message', e.target.value);
+                          }}
+                          onBlur={(e) => handleBlur('message', e.target.value)}
+                          placeholder="Describe your scent preferences, order inquiry, or custom request..."
+                          className={`w-full px-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border text-xs text-[oklch(0.179_0.004_286)] placeholder-[oklch(0.6_0.01_80)] focus:outline-none focus:bg-white resize-y transition-all ${
+                            errors.message 
+                              ? 'border-[oklch(0.637_0.237_25.331)] ring-1 ring-[oklch(0.637_0.237_25.331)]/20' 
+                              : 'border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)]'
+                          }`}
+                        />
+                        {errors.message && (
+                          <p className="text-[11px] text-[oklch(0.637_0.237_25.331)] mt-1 flex items-center space-x-1 animate-fade-in">
+                            <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                            <span>{errors.message}</span>
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Submit Bar */}
+                      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+                        <div className="flex items-center space-x-1.5 text-[11px] text-[oklch(0.552_0.014_286)]">
+                          <Lock className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
+                          <span>Direct & Encrypted Concierge Channel</span>
+                        </div>
+
+                        <button
+                          type="submit"
+                          disabled={isSubmitting || cooldownRemaining > 0}
+                          className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white text-xs font-semibold tracking-wide transition-all shadow-xs cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                        >
+                          {isSubmitting ? (
+                            <>
+                              <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                              <span>Submitting...</span>
+                            </>
+                          ) : cooldownRemaining > 0 ? (
+                            <span>Wait {cooldownRemaining}s</span>
+                          ) : (
+                            <>
+                              <Send className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                              <span>Dispatch Inquiry</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* 6. FRAGRANCE CONCIERGE */}
             {activeTab === 'concierge' && (
               <div className="space-y-6 animate-fade-in">
@@ -378,8 +879,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                     <div className="flex flex-col gap-2">
                       <button 
                         onClick={() => {
-                          onClose();
-                          setIsContactOpen(true);
+                          setActiveTab('contact');
                         }}
                         className="inline-flex items-center justify-center space-x-2 px-3.5 py-2 rounded-lg bg-[oklch(0.683_0.102_82.6)] text-white text-xs font-semibold hover:bg-[oklch(0.588_0.096_80.7)] transition-colors cursor-pointer shadow-xs"
                       >

@@ -10,14 +10,17 @@ app.use(cors());
 app.use(express.json());
 
 // Load enriched catalog data
+const localCatalogPath = path.join(__dirname, '../data/seeded_products.json');
 const catalogPath = path.join(__dirname, '../../database/seeded_products.json');
+const rawPath = path.join(__dirname, '../../zorune_perfumes.json');
 let catalogData = { metadata: {}, products: [] };
 
 try {
-  if (fs.existsSync(catalogPath)) {
+  if (fs.existsSync(localCatalogPath)) {
+    catalogData = JSON.parse(fs.readFileSync(localCatalogPath, 'utf-8'));
+  } else if (fs.existsSync(catalogPath)) {
     catalogData = JSON.parse(fs.readFileSync(catalogPath, 'utf-8'));
-  } else {
-    const rawPath = path.join(__dirname, '../../zorune_perfumes.json');
+  } else if (fs.existsSync(rawPath)) {
     catalogData = JSON.parse(fs.readFileSync(rawPath, 'utf-8'));
   }
 } catch (err) {
@@ -478,6 +481,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'healthy', service: 'ZORUNE Commerce Engine', version: '1.0.0' });
 });
 
-app.listen(PORT, () => {
-  console.log(`ZORUNE Backend running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`ZORUNE Backend running on port ${PORT}`);
+  });
+}
+
+module.exports = app;

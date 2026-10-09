@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({
   onReplayIntro,
   onOpenPolicy 
 }) => {
-  const { setIsQuizOpen, setIsWardrobeOpen, setIsContactOpen } = useCart();
+  const { setIsQuizOpen, setIsWardrobeOpen } = useCart();
 
   const handlePolicyClick = (tab: PolicyTab) => {
     if (onOpenPolicy) {
@@ -125,7 +125,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             <div className="pt-2">
               <button
-                onClick={() => setIsContactOpen(true)}
+                onClick={() => handlePolicyClick('contact')}
                 className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-[oklch(0.179_0.004_286)] text-[oklch(0.985_0.002_247)] text-xs font-semibold tracking-wide hover:bg-[oklch(0.683_0.102_82.6)] transition-all cursor-pointer shadow-xs"
               >
                 <Phone className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
@@ -248,7 +248,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
-                <button onClick={() => setIsContactOpen(true)} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left flex items-center space-x-1.5 font-medium">
+                <button onClick={() => handlePolicyClick('contact')} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left flex items-center space-x-1.5">
                   <Phone className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
                   <span>Contact Us & Concierge</span>
                 </button>
@@ -294,7 +294,7 @@ export const Footer: React.FC<FooterProps> = ({
             <button onClick={() => handlePolicyClick('terms')} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Terms</button>
             <button onClick={() => handlePolicyClick('shipping')} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Shipping SLA</button>
             <button onClick={() => handlePolicyClick('returns')} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Transit Guarantee</button>
-            <button onClick={() => setIsContactOpen(true)} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer font-semibold text-[oklch(0.683_0.102_82.6)]">Contact Us</button>
+            <button onClick={() => handlePolicyClick('contact')} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Contact Us</button>
             <button onClick={() => handlePolicyClick('concierge')} className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Concierge</button>
             <span className="hidden sm:inline text-[oklch(0.926_0.01_81.8)]">|</span>
             <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-[oklch(0.179_0.004_286)] cursor-pointer">Site Map</a>
