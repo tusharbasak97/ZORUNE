@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: oklch(0.98 0.005 78.3);
+  --color-canvas-subtle: oklch(0.959 0.01 87.5);
+  --color-surface: oklch(1 0 0);
+  --color-border: oklch(0.926 0.01 81.8);
+  --color-border-subtle: oklch(0.865 0.019 86.2);
+  
+  --color-noir: oklch(0.179 0.004 286);
+  --color-charcoal: oklch(0.262 0.007 286);
+  --color-slate: oklch(0.442 0.015 286);
+  --color-muted: oklch(0.552 0.014 286);
+  
+  --color-gold: oklch(0.683 0.102 82.6);
+  --color-gold-hover: oklch(0.588 0.096 80.7);
+  --color-gold-light: oklch(0.768 0.079 84.5);
+  --color-gold-subtle: oklch(0.977 0.013 86.8);
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    /* Luxury Alabaster & Onyx Design Tokens in OKLCH */
+    --color-canvas: oklch(0.98 0.005 78.3);
+    --color-canvas-subtle: oklch(0.959 0.01 87.5);
+    --color-surface: oklch(1 0 0);
+    --color-border: oklch(0.926 0.01 81.8);
+    
+    --color-noir: oklch(0.179 0.004 286);
+    --color-charcoal: oklch(0.262 0.007 286);
+    --color-slate: oklch(0.442 0.015 286);
+    --color-muted: oklch(0.552 0.014 286);
+    
+    --color-gold: oklch(0.683 0.102 82.6);
+    --color-gold-hover: oklch(0.588 0.096 80.7);
+    --color-gold-subtle: oklch(0.977 0.013 86.8);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: oklch(0.98 0.005 78.3);
+    color: oklch(0.179 0.004 286);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Luxury Scrollbar (Off-White Theme in OKLCH) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.98 0.005 78.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.865 0.019 86.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.683 0.102 82.6);
+}
+
+/* Light Mode Luxury Glassmorphism in OKLCH */
+.glass-panel {
+  background: oklch(1 0 0 / 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid oklch(0 0 0 / 0.06);
+}
+
+.glass-dropdown {
+  background: oklch(1 0 0 / 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid oklch(0.683 0.102 82.6 / 0.25);
+  box-shadow: 0 16px 36px -8px oklch(0 0 0 / 0.08);
+}
+
+/* Satin Gold & Onyx Gradients in OKLCH */
+.gold-gradient {
+  background: linear-gradient(135deg in oklch, oklch(0.768 0.079 84.5) 0%, oklch(0.683 0.102 82.6) 50%, oklch(0.588 0.096 80.7) 100%);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg in oklch, oklch(0.683 0.102 82.6) 0%, oklch(0.588 0.096 80.7) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 20px -5px oklch(0.683 0.102 82.6 / 0.2);
+}
+
+/* Quiet Luxury Card Hover Elevate in OKLCH */
+.luxury-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px -2px oklch(0 0 0 / 0.03), 0 1px 3px oklch(0 0 0 / 0.02);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  border-color: oklch(0.683 0.102 82.6 / 0.45);
+  box-shadow: 0 24px 40px -12px oklch(0 0 0 / 0.09), 0 0 24px -4px oklch(0.683 0.102 82.6 / 0.14);
+}
+
+/* Comprehensive Animation Suite */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 oklch(0.683 0.102 82.6 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px oklch(0.683 0.102 82.6 / 0);
+  }
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes sheenSweep {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg in oklch, oklch(1 0 0 / 0) 0%, oklch(0.683 0.102 82.6 / 0.15) 50%, oklch(1 0 0 / 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Hover Zoom for Flacon Images */
+.luxury-image-zoom {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .luxury-image-zoom {
+  transform: scale(1.08);
+}
+
+/* Lenis High-Response Smooth Scroll Integration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

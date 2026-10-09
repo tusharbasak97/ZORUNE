@@ -1,0 +1,231 @@
+// ZORUNE Database Schema (Prisma ORM)
+// Optimized for PostgreSQL 16+ with UUIDv7 and pgvector
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [pgvector(map: "vector")]
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  UNISEX
+}
+
+enum InventoryTier {
+  TIER_1_HERO
+  TIER_2_REVENUE
+  TIER_3_NICHE
+}
+
+enum Season {
+  SPRING
+  SUMMER
+  FALL
+  WINTER
+}
+
+enum TimeOfDay {
+  MORNING
+  DAY
+  EVENING
+  NIGHT
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+  RTO_RETURNED
+}
+
+enum PaymentMethod {
+  UPI_PREPAID
+  CARD_PREPAID
+  NET_BANKING
+  CASH_ON_DELIVERY
+}
+
+enum PaymentStatus {
+  INITIATED
+  SUCCESS
+  FAILED
+  REFUNDED
+}
+
+model Product {
+  id               String         @id @default(uuid())
+  sku              String         @unique // e.g. "ZR-03"
+  name             String         // e.g. "Imagination"
+  brand            String         @default("ZORUNE")
+  concentration    String         @default("Extrait de Parfum (28%)")
+  sizeMl           Int            @default(20) // Uniform 20ml Luxury Pocket Flacon
+  price            Decimal        @default(999.00) @db.Decimal(10, 2)
+  stock            Int            @default(100)
+  
+  gender           Gender
+  commercialScore  Int            // 1-100 score
+  commercialRank   Int            // 1-30 rank
+  tier             InventoryTier  // TIER_1_HERO (50%), TIER_2_REVENUE (35%), TIER_3_NICHE (15%)
+  
+  // Inspiration Details
+  inspiredBrand    String         // e.g. "Louis Vuitton"
+  originalName     String         // e.g. "Imagination"
+  originalPriceUsd Decimal?       @db.Decimal(10, 2)
+  arbitrageSavings Decimal?       @db.Decimal(5, 2) // e.g. 96.00%
+  
+  // Olfactive DNA
+  olfactiveFamily  String         // e.g. "Citrus Aromatic"
+  perfumers        String[]
+  launchYear       Int?
+  rating           Decimal?       @db.Decimal(3, 2) // Benchmark community rating (e.g. 4.52)
+  reviewsCount     Int?           @default(0)
+  
+  // Notes & Accords
+  mainAccords      String[]
+  topNotes         String[]
+  middleNotes      String[]
+  baseNotes        String[]
+  
+  // Wear Guidance
+  seasons          Season[]
+  timesOfDay       TimeOfDay[]
+  occasions        String[]
+  
+  // Media & Descriptions
+  description      String         @db.Text
+  tagline          String?
+  imageUrl         String
+  
+  // Rescue & Positioning Badges
+  isRescueSku      Boolean        @default(false)
+  rescueAngle      String?        // e.g. "1988 Vintage Marine Extrait" or "Connoisseur Strength"
+  longevityHours   Int            @default(8)
+  sillageRating    String         @default("Heavy") // Moderate, Heavy, Nuclear
+  
+  // Vector Embedding for Semantic Search / Matchmaker
+  embedding        Unsupported("vector(1536)")?
+
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  
+  orderItems       OrderItem[]
+  cartItems        CartItem[]
+
+  @@index([tier])
+  @@index([gender])
+  @@index([commercialRank])
+  @@index([commercialScore])
+}
+
+model Cart {
+  id         String     @id @default(uuid())
+  sessionId  String     @unique // Cookie or guest session ID
+  userId     String?
+  items      CartItem[]
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  cartId    String
+  cart      Cart     @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int      @default(1)
+  price     Decimal  @default(999.00) @db.Decimal(10, 2)
+  createdAt DateTime @default(now())
+
+  @@unique([cartId, productId])
+}
+
+model Order {
+  id                 String              @id @default(uuid())
+  orderNumber        String              @unique // e.g. "ZR-88492"
+  status             OrderStatus         @default(PENDING)
+  
+  // Customer & Shipping
+  customerName       String
+  customerEmail      String
+  customerPhone      String
+  shippingAddress    Json                // { address1, address2, city, state, pincode, country }
+  
+  // Financials
+  subtotal           Decimal             @db.Decimal(10, 2)
+  bundleDiscount     Decimal             @default(0.00) @db.Decimal(10, 2) // e.g. ₹200 off for Duo, ₹500 off for Trio
+  prepaidDiscount    Decimal             @default(0.00) @db.Decimal(10, 2) // e.g. ₹100 instant UPI discount
+  shippingFee        Decimal             @default(0.00) @db.Decimal(10, 2)
+  totalAmount        Decimal             @db.Decimal(10, 2)
+  
+  paymentMethod      PaymentMethod       @default(UPI_PREPAID)
+  paymentStatus      PaymentStatus       @default(INITIATED)
+  
+  // GoKwik Commerce Integration
+  gokwikOrderId      String?             @unique
+  gokwikRtoScore     Decimal?            @db.Decimal(5, 2) // 0-100 risk score
+  isRtoFlagged       Boolean             @default(false)
+  
+  // Blitznow Express Logistics
+  blitznowAwb        String?             @unique
+  blitznowStatus     String?
+  estimatedDelivery  DateTime?
+  deliveredAt        DateTime?
+  
+  items              OrderItem[]
+  gokwikLogs         GokwikTransaction[]
+  blitznowShipments  BlitznowShipment[]
+  
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  @@index([status])
+  @@index([customerPhone])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int      @default(1)
+  unitPrice Decimal  @default(999.00) @db.Decimal(10, 2)
+  total     Decimal  @db.Decimal(10, 2)
+}
+
+model GokwikTransaction {
+  id             String        @id @default(uuid())
+  orderId        String
+  order          Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  idempotencyKey String        @unique
+  checkoutSession String
+  rtoRiskLevel   String        // "LOW", "MEDIUM", "HIGH"
+  rawPayload     Json
+  createdAt      DateTime      @default(now())
+}
+
+model BlitznowShipment {
+  id             String        @id @default(uuid())
+  orderId        String
+  order          Order         @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  awbNumber      String        @unique
+  carrier        String        @default("Blitznow Metro Express")
+  originHub      String        // "Bhiwandi-MUM", "Gurugram-DEL", "ElectronicCity-BLR"
+  destinationPin String
+  currentStatus  String
+  trackingEvents Json          // Array of { timestamp, location, status, note }
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}

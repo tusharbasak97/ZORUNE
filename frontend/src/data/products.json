@@ -1,0 +1,2847 @@
+{
+  "metadata": {
+    "brand": "ZORUNE",
+    "catalog_name": "ZORUNE Fragrance Collection",
+    "description": "Product catalog and formulation specifications for ZORUNE luxury inspired fragrances.",
+    "total_products": 30,
+    "sorted_by": "commercial_rank_ascending",
+    "genders": {
+      "male": 13,
+      "female": 10,
+      "unisex": 7
+    },
+    "uniform_size": "20ml",
+    "uniform_price": 999,
+    "currency": "INR",
+    "tier_distribution": {
+      "tier_1_heroes": 10,
+      "tier_2_revenue": 13,
+      "tier_3_niche_and_rescue": 7
+    }
+  },
+  "products": [
+    {
+      "id": 15,
+      "sku": "ZR-15",
+      "name": "Savage",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Dior",
+        "original_name": "Sauvage Eau de Toilette"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 3.85,
+      "reviews_count": 34515,
+      "launch_year": 2015,
+      "olfactive_family": "Aromatic Fougere",
+      "perfumers": [
+        "François Demachy"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Casual",
+          "Office",
+          "Dates",
+          "Night Out"
+        ]
+      },
+      "main_accords": [
+        "fresh spicy",
+        "amber",
+        "citrus",
+        "aromatic",
+        "musky",
+        "woody",
+        "lavender",
+        "herbal",
+        "warm spicy"
+      ],
+      "notes": {
+        "top": [
+          "Calabrian bergamot",
+          "Pepper"
+        ],
+        "middle": [
+          "Sichuan Pepper",
+          "Lavender",
+          "Pink Pepper",
+          "Vetiver",
+          "Patchouli",
+          "Geranium",
+          "elemi"
+        ],
+        "base": [
+          "Ambroxan",
+          "Cedar",
+          "Labdanum"
+        ]
+      },
+      "description": "Sauvage by Dior is a Aromatic Fougere fragrance for men. Sauvage was launched in 2015. The nose behind this fragrance is François Demachy. Top notes are Calabrian bergamot and Pepper; middle notes are Sichuan Pepper, Lavender, Pink Pepper, Vetiver, Patchouli, Geranium and elemi; base notes are Ambroxan, Cedar and Labdanum.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.31861.jpg",
+      "commercial_score": 95,
+      "commercial_rank": 1,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 145,
+      "original_price_inr": 12035,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Sauvage Eau de Toilette Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 12,
+      "sillage_rating": "Heavy",
+      "all_notes": [
+        "Calabrian bergamot",
+        "Pepper",
+        "Sichuan Pepper",
+        "Lavender",
+        "Pink Pepper",
+        "Vetiver",
+        "Patchouli",
+        "Geranium",
+        "elemi",
+        "Ambroxan",
+        "Cedar",
+        "Labdanum"
+      ]
+    },
+    {
+      "id": 3,
+      "sku": "ZR-03",
+      "name": "Imagination",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Louis Vuitton",
+        "original_name": "Imagination"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.52,
+      "reviews_count": 14032,
+      "launch_year": 2021,
+      "olfactive_family": "Citrus Aromatic",
+      "perfumers": [
+        "Jacques Cavallier Belletrud"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Casual",
+          "Vacation"
+        ]
+      },
+      "main_accords": [
+        "citrus",
+        "fresh spicy",
+        "fresh",
+        "green",
+        "amber"
+      ],
+      "notes": {
+        "top": [
+          "Citron",
+          "Calabrian bergamot",
+          "Sicilian Orange"
+        ],
+        "middle": [
+          "Tunisian Neroli",
+          "Nigerian Ginger",
+          "Ceylon Cinnamon"
+        ],
+        "base": [
+          "Chinese Black Tea",
+          "Ambroxan",
+          "Guaiac Wood",
+          "Olibanum"
+        ]
+      },
+      "description": "Imagination by Louis Vuitton is a Citrus Aromatic fragrance for men. Imagination was launched in 2021. The nose behind this fragrance is Jacques Cavallier Belletrud. Top notes are Citron, Calabrian bergamot and Sicilian Orange; middle notes are Tunisian Neroli, Nigerian Ginger and Ceylon Cinnamon; base notes are Chinese Black Tea, Ambroxan, Guaiac Wood and Olibanum.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.67370.jpg",
+      "commercial_score": 94,
+      "commercial_rank": 1,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 350,
+      "original_price_inr": 29050,
+      "arbitrage_savings_percent": 97,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Imagination Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Citron",
+        "Calabrian bergamot",
+        "Sicilian Orange",
+        "Tunisian Neroli",
+        "Nigerian Ginger",
+        "Ceylon Cinnamon",
+        "Chinese Black Tea",
+        "Ambroxan",
+        "Guaiac Wood",
+        "Olibanum"
+      ]
+    },
+    {
+      "id": 27,
+      "sku": "ZR-27",
+      "name": "Rouge",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Maison Francis Kurkdjian",
+        "original_name": "Baccarat Rouge 540"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 3.74,
+      "reviews_count": 30022,
+      "launch_year": 2015,
+      "olfactive_family": "Oriental Floral",
+      "perfumers": [
+        "Francis Kurkdjian"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter",
+          "Spring",
+          "Summer"
+        ],
+        "time_of_day": [
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Luxury Evenings",
+          "Dates",
+          "Special Occasions",
+          "Signature"
+        ]
+      },
+      "main_accords": [
+        "woody",
+        "amber",
+        "warm spicy",
+        "metallic",
+        "fresh spicy",
+        "aromatic",
+        "white floral",
+        "animalic",
+        "fresh"
+      ],
+      "notes": {
+        "top": [
+          "Saffron",
+          "Jasmine"
+        ],
+        "middle": [
+          "Amberwood",
+          "Ambergris",
+          "Hedione"
+        ],
+        "base": [
+          "Fir Resin",
+          "Cedar",
+          "Sugar",
+          "Ambroxan",
+          "Oakmoss"
+        ]
+      },
+      "description": "Baccarat Rouge 540 by Maison Francis Kurkdjian is a Oriental Floral fragrance for women and men. Baccarat Rouge 540 was launched in 2015. The nose behind this fragrance is Francis Kurkdjian. Top notes are Saffron and Jasmine; middle notes are Amberwood, Ambergris and Hedione; base notes are Fir Resin, Cedar, Sugar, Ambroxan and Oakmoss.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.33519.jpg",
+      "commercial_score": 92,
+      "commercial_rank": 2,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 325,
+      "original_price_inr": 26975,
+      "arbitrage_savings_percent": 96,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Baccarat Rouge 540 Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Saffron",
+        "Jasmine",
+        "Amberwood",
+        "Ambergris",
+        "Hedione",
+        "Fir Resin",
+        "Cedar",
+        "Sugar",
+        "Ambroxan",
+        "Oakmoss"
+      ]
+    },
+    {
+      "id": 5,
+      "sku": "ZR-05",
+      "name": "Elixir",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Jean Paul Gaultier",
+        "original_name": "Le Male Elixir"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.5,
+      "reviews_count": 26361,
+      "launch_year": 2023,
+      "olfactive_family": "Oriental Fougere",
+      "perfumers": [
+        "Quentin Bisch"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Clubbing",
+          "Parties",
+          "Night Out"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "sweet",
+        "honey",
+        "aromatic",
+        "amber",
+        "lavender",
+        "tobacco",
+        "green",
+        "fresh spicy",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Lavender",
+          "Mint"
+        ],
+        "middle": [
+          "Vanilla",
+          "Benzoin"
+        ],
+        "base": [
+          "Honey",
+          "Tonka Bean",
+          "Tobacco"
+        ]
+      },
+      "description": "Le Male Elixir by Jean Paul Gaultier is a Oriental Fougere fragrance for men. Le Male Elixir was launched in 2023. The nose behind this fragrance is Quentin Bisch. Top notes are Lavender and Mint; middle notes are Vanilla and Benzoin; base notes are Honey, Tonka Bean and Tobacco.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.81642.jpg",
+      "commercial_score": 91,
+      "commercial_rank": 3,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 150,
+      "original_price_inr": 12450,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Le Male Elixir Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 12,
+      "sillage_rating": "Heavy",
+      "all_notes": [
+        "Lavender",
+        "Mint",
+        "Vanilla",
+        "Benzoin",
+        "Honey",
+        "Tonka Bean",
+        "Tobacco"
+      ]
+    },
+    {
+      "id": 12,
+      "sku": "ZR-12",
+      "name": "Ombre",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Louis Vuitton",
+        "original_name": "Ombre Nomade"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 4.55,
+      "reviews_count": 14000,
+      "launch_year": 2018,
+      "olfactive_family": "Oriental Woody",
+      "perfumers": [
+        "Jacques Cavallier-Belletrud"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Special Occasions",
+          "Formal",
+          "Dates",
+          "Evening"
+        ]
+      },
+      "main_accords": [
+        "oud",
+        "warm spicy",
+        "amber",
+        "rose",
+        "smoky",
+        "fruity",
+        "woody",
+        "leather",
+        "balsamic"
+      ],
+      "notes": {
+        "top": [
+          "Raspberry",
+          "Saffron",
+          "Geranium"
+        ],
+        "middle": [
+          "Rose",
+          "Incense",
+          "Benzoin"
+        ],
+        "base": [
+          "Oud",
+          "Birch",
+          "Amberwood"
+        ]
+      },
+      "description": "Ombre Nomade by Louis Vuitton is a Oriental Woody fragrance for women and men. Ombre Nomade was launched in 2018. The nose behind this fragrance is Jacques Cavallier-Belletrud. Designed for lovers of rare essences, Ombre Nomade concentrates that sensation of infinity into one of the most mythical ingredients in perfumery, oud wood. A rebellious material, intoxicatingly dark and beautifully paired with hints of benzoin, raspberry accents and smoky incense.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.49755.jpg",
+      "commercial_score": 93,
+      "commercial_rank": 4,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 410,
+      "original_price_inr": 34030,
+      "arbitrage_savings_percent": 97,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Ombre Nomade Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 14,
+      "sillage_rating": "Nuclear",
+      "all_notes": [
+        "Raspberry",
+        "Saffron",
+        "Geranium",
+        "Rose",
+        "Incense",
+        "Benzoin",
+        "Oud",
+        "Birch",
+        "Amberwood"
+      ]
+    },
+    {
+      "id": 10,
+      "sku": "ZR-10",
+      "name": "Angels",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "By Kilian",
+        "original_name": "Angels' Share"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 4.35,
+      "reviews_count": 24034,
+      "launch_year": 2020,
+      "olfactive_family": "Oriental Vanilla",
+      "perfumers": [
+        "Benoist Lapouza"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Special Occasions",
+          "Night Out",
+          "Parties"
+        ]
+      },
+      "main_accords": [
+        "warm spicy",
+        "woody",
+        "sweet",
+        "vanilla",
+        "cinnamon",
+        "amber",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Cognac"
+        ],
+        "middle": [
+          "Cinnamon",
+          "Tonka Bean",
+          "Oak",
+          "Hedione"
+        ],
+        "base": [
+          "Vanilla",
+          "Praline",
+          "Sandalwood",
+          "Candied Almond"
+        ]
+      },
+      "description": "Angels' Share by By Kilian is a Oriental Vanilla fragrance for women and men. Angels' Share was launched in 2020. The nose behind this fragrance is Benoist Lapouza. Top note is Cognac; middle notes are Cinnamon, Tonka Bean, Oak and Hedione; base notes are Vanilla, Praline, Sandalwood and Candied Almond.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.62615.jpg",
+      "commercial_score": 89,
+      "commercial_rank": 4,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 255,
+      "original_price_inr": 21165,
+      "arbitrage_savings_percent": 95,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Angels' Share Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Cognac",
+        "Cinnamon",
+        "Tonka Bean",
+        "Oak",
+        "Hedione",
+        "Vanilla",
+        "Praline",
+        "Sandalwood",
+        "Candied Almond"
+      ]
+    },
+    {
+      "id": 30,
+      "sku": "ZR-30",
+      "name": "Tobacco",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Tom Ford",
+        "original_name": "Tobacco Vanille Eau de Parfum"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 4.17,
+      "reviews_count": 31947,
+      "launch_year": 2007,
+      "olfactive_family": "Oriental Spicy",
+      "perfumers": [
+        "Olivier Gillotin"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Cozy Evenings",
+          "Intimate Gatherings",
+          "Winter Holidays"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "sweet",
+        "tobacco",
+        "warm spicy",
+        "fruity",
+        "woody",
+        "cacao",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Tobacco Leaf",
+          "Spicy Notes"
+        ],
+        "middle": [
+          "Vanilla",
+          "Cacao",
+          "Tonka Bean",
+          "Tobacco Blossom"
+        ],
+        "base": [
+          "Dried Fruits",
+          "Woody Notes"
+        ]
+      },
+      "description": "Tobacco Vanille by Tom Ford is a Oriental Spicy fragrance for women and men. Tobacco Vanille was launched in 2007. The nose behind this fragrance is Olivier Gillotin. Top notes are Tobacco Leaf and Spicy Notes; middle notes are Vanilla, Cacao, Tonka Bean and Tobacco blossom; base notes are Dried Fruits and Woody Notes.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.1825.jpg",
+      "commercial_score": 90,
+      "commercial_rank": 5,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 295,
+      "original_price_inr": 24485,
+      "arbitrage_savings_percent": 96,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Tobacco Vanille Eau de Parfum Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Tobacco Leaf",
+        "Spicy Notes",
+        "Vanilla",
+        "Cacao",
+        "Tonka Bean",
+        "Tobacco Blossom",
+        "Dried Fruits",
+        "Woody Notes"
+      ]
+    },
+    {
+      "id": 1,
+      "sku": "ZR-01",
+      "name": "Intense",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Giorgio Armani",
+        "original_name": "Emporio Armani Stronger With You Intensely"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.57,
+      "reviews_count": 27046,
+      "launch_year": 2019,
+      "olfactive_family": "Oriental Fougere",
+      "perfumers": [
+        "Cecile Matton"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Night Out",
+          "Winter Casual"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "sweet",
+        "amber",
+        "cinnamon",
+        "warm spicy",
+        "powdery",
+        "aromatic",
+        "soft spicy",
+        "caramel"
+      ],
+      "notes": {
+        "top": [
+          "Pink Pepper",
+          "Juniper",
+          "Violet"
+        ],
+        "middle": [
+          "Toffee",
+          "Cinnamon",
+          "Lavender",
+          "Sage"
+        ],
+        "base": [
+          "Vanilla",
+          "Amber",
+          "Tonka Bean",
+          "Suede"
+        ]
+      },
+      "description": "Emporio Armani Stronger With You Intensely by Giorgio Armani is a Oriental Fougere fragrance for men. Emporio Armani Stronger With You Intensely was launched in 2019. Top notes are Pink Pepper, Juniper and Violet; middle notes are Toffee, Cinnamon, Lavender and Sage; base notes are Vanilla, Amber, Tonka Bean and Suede. Emporio Armani Stronger With You Intensely is an oriental-woody fragrance with fougere accents. It tells a story of the excitement of a new and young love. Top notes include spices and violet, with the heart that combines lavender with sweet toffee caramel and cinnamon. The base ends with suede, vanilla and amber.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.52802.jpg",
+      "commercial_score": 88,
+      "commercial_rank": 5,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 160,
+      "original_price_inr": 13280,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Emporio Armani Stronger With You Intensely Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 12,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Pink Pepper",
+        "Juniper",
+        "Violet",
+        "Toffee",
+        "Cinnamon",
+        "Lavender",
+        "Sage",
+        "Vanilla",
+        "Amber",
+        "Tonka Bean",
+        "Suede"
+      ]
+    },
+    {
+      "id": 20,
+      "sku": "ZR-20",
+      "name": "Libre",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Yves Saint Laurent",
+        "original_name": "Libre"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.92,
+      "reviews_count": 22724,
+      "launch_year": 2019,
+      "olfactive_family": "Oriental Fougere",
+      "perfumers": [
+        "Anne Flipo",
+        "Carlos Benaïm"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Office",
+          "Business",
+          "Formal",
+          "Dates",
+          "Signature"
+        ]
+      },
+      "main_accords": [
+        "white floral",
+        "citrus",
+        "lavender",
+        "vanilla",
+        "aromatic",
+        "sweet",
+        "powdery",
+        "animalic",
+        "musky",
+        "woody"
+      ],
+      "notes": {
+        "top": [
+          "Lavender",
+          "Mandarin Orange",
+          "Black Currant",
+          "Petitgrain"
+        ],
+        "middle": [
+          "Lavender",
+          "Orange Blossom",
+          "Jasmine"
+        ],
+        "base": [
+          "Madagascar Vanilla",
+          "Musk",
+          "Cedar",
+          "Ambergris"
+        ]
+      },
+      "description": "Libre by Yves Saint Laurent is a Oriental Fougere fragrance for women. Libre was launched in 2019. Libre was created by Anne Flipo and Carlos Benaïm. Top notes are Lavender, Mandarin Orange, Black Currant and Petitgrain; middle notes are Lavender, Orange Blossom and Jasmine; base notes are Madagascar Vanilla, Musk, Cedar and Ambergris.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.56077.jpg",
+      "commercial_score": 87,
+      "commercial_rank": 6,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 165,
+      "original_price_inr": 13695,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Libre Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Lavender",
+        "Mandarin Orange",
+        "Black Currant",
+        "Petitgrain",
+        "Orange Blossom",
+        "Jasmine",
+        "Madagascar Vanilla",
+        "Musk",
+        "Cedar",
+        "Ambergris"
+      ]
+    },
+    {
+      "id": 13,
+      "sku": "ZR-13",
+      "name": "Goddess",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Burberry",
+        "original_name": "Goddess"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 4.15,
+      "reviews_count": 14756,
+      "launch_year": 2023,
+      "olfactive_family": "Aromatic",
+      "perfumers": [
+        "Amandine Clerc-Marie"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Dates",
+          "Casual",
+          "Cozy Evenings"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "lavender",
+        "fresh spicy",
+        "cacao",
+        "sweet"
+      ],
+      "notes": {
+        "top": [
+          "Vanilla",
+          "Lavender",
+          "Cacao",
+          "Ginger"
+        ],
+        "middle": [
+          "Vanilla Caviar"
+        ],
+        "base": [
+          "Vanilla Absolute"
+        ]
+      },
+      "description": "Goddess by Burberry is a Aromatic fragrance for women. Goddess was launched in 2023. The nose behind this fragrance is Amandine Clerc-Marie. Top notes are Vanilla, Lavender, Cacao and Ginger; middle note is Vanilla Caviar; base note is Vanilla Absolute.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.83483.jpg",
+      "commercial_score": 86,
+      "commercial_rank": 7,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 500,
+      "tier": "TIER_1_HERO",
+      "original_price_usd": 168,
+      "original_price_inr": 13944,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Goddess Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Vanilla",
+        "Lavender",
+        "Cacao",
+        "Ginger",
+        "Vanilla Caviar",
+        "Vanilla Absolute"
+      ]
+    },
+    {
+      "id": 24,
+      "sku": "ZR-24",
+      "name": "Eros",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Versace",
+        "original_name": "Eros Eau de Toilette"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.05,
+      "reviews_count": 31051,
+      "launch_year": 2012,
+      "olfactive_family": "Aromatic Fougere",
+      "perfumers": [
+        "Aurélien Guichard"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Night",
+          "Evening"
+        ],
+        "occasions": [
+          "Clubbing",
+          "Parties",
+          "Night Out",
+          "Dates"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "aromatic",
+        "green",
+        "fresh spicy",
+        "amber",
+        "citrus",
+        "fruity",
+        "woody",
+        "sweet",
+        "fresh"
+      ],
+      "notes": {
+        "top": [
+          "Mint",
+          "Green Apple",
+          "Lemon"
+        ],
+        "middle": [
+          "Tonka Bean",
+          "Ambroxan",
+          "Geranium"
+        ],
+        "base": [
+          "Madagascar Vanilla",
+          "Virginian Cedar",
+          "Atlas Cedar",
+          "Vetiver",
+          "Oakmoss"
+        ]
+      },
+      "description": "Eros by Versace is a Aromatic Fougere fragrance for men. Eros was launched in 2012. The nose behind this fragrance is Aurélien Guichard. Top notes are Mint, Green Apple and Lemon; middle notes are Tonka Bean, Ambroxan and Geranium; base notes are Madagascar Vanilla, Virginian Cedar, Atlas Cedar, Vetiver and Oakmoss.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.16657.jpg",
+      "commercial_score": 88,
+      "commercial_rank": 8,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 105,
+      "original_price_inr": 8715,
+      "arbitrage_savings_percent": 89,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Eros Eau de Toilette Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Mint",
+        "Green Apple",
+        "Lemon",
+        "Tonka Bean",
+        "Ambroxan",
+        "Geranium",
+        "Madagascar Vanilla",
+        "Virginian Cedar",
+        "Atlas Cedar",
+        "Vetiver",
+        "Oakmoss"
+      ]
+    },
+    {
+      "id": 7,
+      "sku": "ZR-07",
+      "name": "Apex",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Yves Saint Laurent",
+        "original_name": "Y Eau de Parfum"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.42,
+      "reviews_count": 29129,
+      "launch_year": 2018,
+      "olfactive_family": "Aromatic Fougere",
+      "perfumers": [
+        "Dominique Ropion",
+        "Claire Liégent"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Signature",
+          "Casual"
+        ]
+      },
+      "main_accords": [
+        "aromatic",
+        "fresh spicy",
+        "woody",
+        "fruity",
+        "fresh",
+        "amber",
+        "citrus",
+        "herbal",
+        "green",
+        "warm spicy"
+      ],
+      "notes": {
+        "top": [
+          "Apple",
+          "Ginger",
+          "Bergamot"
+        ],
+        "middle": [
+          "Sage",
+          "Juniper Berries",
+          "Geranium"
+        ],
+        "base": [
+          "Amberwood",
+          "Tonka Bean",
+          "Cedar",
+          "Vetiver",
+          "Olibanum"
+        ]
+      },
+      "description": "Y Eau de Parfum by Yves Saint Laurent is a Aromatic Fougere fragrance for men. Y Eau de Parfum was launched in 2018. Y Eau de Parfum was created by Dominique Ropion and Claire Liégent. Top notes are Apple, Ginger and Bergamot; middle notes are Sage, Juniper Berries and Geranium; base notes are Amberwood, Tonka Bean, Cedar, Vetiver and Olibanum.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.50757.jpg",
+      "commercial_score": 85,
+      "commercial_rank": 8,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 155,
+      "original_price_inr": 12865,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Y Eau de Parfum Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Apple",
+        "Ginger",
+        "Bergamot",
+        "Sage",
+        "Juniper Berries",
+        "Geranium",
+        "Amberwood",
+        "Tonka Bean",
+        "Cedar",
+        "Vetiver",
+        "Olibanum"
+      ]
+    },
+    {
+      "id": 29,
+      "sku": "ZR-29",
+      "name": "Million",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Paco Rabanne",
+        "original_name": "1 Million Eau de Toilette"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 3.73,
+      "reviews_count": 24559,
+      "launch_year": 2008,
+      "olfactive_family": "Woody Spicy",
+      "perfumers": [
+        "Christophe Raynaud",
+        "Olivier Pescheux",
+        "Michel Girard",
+        "Christian Dussoulier"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Night Out",
+          "Clubbing",
+          "Parties",
+          "Dates"
+        ]
+      },
+      "main_accords": [
+        "warm spicy",
+        "cinnamon",
+        "citrus",
+        "amber",
+        "woody",
+        "leather",
+        "rose",
+        "animalic",
+        "green",
+        "patchouli"
+      ],
+      "notes": {
+        "top": [
+          "Blood Mandarin",
+          "Grapefruit",
+          "Mint"
+        ],
+        "middle": [
+          "Cinnamon",
+          "Spicy Notes",
+          "Rose"
+        ],
+        "base": [
+          "Amber",
+          "Leather",
+          "Woody Notes",
+          "Indian Patchouli"
+        ]
+      },
+      "description": "1 Million by Paco Rabanne is a Woody Spicy fragrance for men. 1 Million was launched in 2008. 1 Million was created by Christophe Raynaud, Olivier Pescheux, Michel Girard and Christian Dussoulier. Top notes are Blood Mandarin, Grapefruit and Mint; middle notes are Cinnamon, Spicy Notes and Rose; base notes are Amber, Leather, Woody Notes and Indian Patchouli.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.3747.jpg",
+      "commercial_score": 85,
+      "commercial_rank": 9,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 115,
+      "original_price_inr": 9545,
+      "arbitrage_savings_percent": 90,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "1 Million Eau de Toilette Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Blood Mandarin",
+        "Grapefruit",
+        "Mint",
+        "Cinnamon",
+        "Spicy Notes",
+        "Rose",
+        "Amber",
+        "Leather",
+        "Woody Notes",
+        "Indian Patchouli"
+      ]
+    },
+    {
+      "id": 8,
+      "sku": "ZR-08",
+      "name": "Bleu",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Chanel",
+        "original_name": "Bleu de Chanel Eau de Parfum"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.42,
+      "reviews_count": 23295,
+      "launch_year": 2014,
+      "olfactive_family": "Woody Aromatic",
+      "perfumers": [
+        "Jacques Polge"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Formal",
+          "Dates"
+        ]
+      },
+      "main_accords": [
+        "citrus",
+        "amber",
+        "woody",
+        "fresh spicy",
+        "aromatic",
+        "warm spicy",
+        "fresh",
+        "smoky",
+        "balsamic",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Grapefruit",
+          "Lemon",
+          "Mint",
+          "Bergamot",
+          "Pink Pepper",
+          "Aldehydes",
+          "Coriander"
+        ],
+        "middle": [
+          "Ginger",
+          "Jasmine",
+          "Nutmeg",
+          "Melon"
+        ],
+        "base": [
+          "Incense",
+          "Amber",
+          "Cedar",
+          "Sandalwood",
+          "Amberwood",
+          "Patchouli",
+          "Labdanum"
+        ]
+      },
+      "description": "Bleu de Chanel Eau de Parfum by Chanel is a Woody Aromatic fragrance for men. Bleu de Chanel Eau de Parfum was launched in 2014. The nose behind this fragrance is Jacques Polge. Top notes are Grapefruit, Lemon, Mint, Bergamot, Pink Pepper, Aldehydes and Coriander; middle notes are Ginger, Jasmine, Nutmeg and Melon; base notes are Incense, Amber, Cedar, Sandalwood, Amberwood, Patchouli and Labdanum.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.25967.jpg",
+      "commercial_score": 84,
+      "commercial_rank": 9,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 175,
+      "original_price_inr": 14525,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Bleu de Chanel Eau de Parfum Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Grapefruit",
+        "Lemon",
+        "Mint",
+        "Bergamot",
+        "Pink Pepper",
+        "Aldehydes",
+        "Coriander",
+        "Ginger",
+        "Jasmine",
+        "Nutmeg",
+        "Melon",
+        "Incense",
+        "Amber",
+        "Cedar",
+        "Sandalwood",
+        "Amberwood",
+        "Patchouli",
+        "Labdanum"
+      ]
+    },
+    {
+      "id": 17,
+      "sku": "ZR-17",
+      "name": "Stiletto",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Carolina Herrera",
+        "original_name": "Good Girl"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.95,
+      "reviews_count": 26047,
+      "launch_year": 2016,
+      "olfactive_family": "Oriental Floral",
+      "perfumers": [
+        "Louise Turner",
+        "Quentin Bisch"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Night Out",
+          "Parties",
+          "Glamorous Events"
+        ]
+      },
+      "main_accords": [
+        "sweet",
+        "white floral",
+        "vanilla",
+        "warm spicy",
+        "amber",
+        "cacao",
+        "woody",
+        "tuberose",
+        "almond",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Almond",
+          "Coffee",
+          "Bergamot",
+          "Lemon"
+        ],
+        "middle": [
+          "Tuberose",
+          "Jasmine Sambac",
+          "Orange Blossom",
+          "Bulgarian Rose",
+          "Orris"
+        ],
+        "base": [
+          "Tonka Bean",
+          "Cacao",
+          "Vanilla",
+          "Praline",
+          "Sandalwood",
+          "Musk",
+          "Amber",
+          "Cashmere Wood",
+          "Patchouli",
+          "Cinnamon",
+          "Cedar"
+        ]
+      },
+      "description": "Good Girl by Carolina Herrera is a Oriental Floral fragrance for women. Good Girl was launched in 2016. Good Girl was created by Louise Turner and Quentin Bisch. Top notes are Almond, Coffee, Bergamot and Lemon; middle notes are Tuberose, Jasmine Sambac, Orange Blossom, Bulgarian Rose and Orris; base notes are Tonka Bean, Cacao, Vanilla, Praline, Sandalwood, Musk, Amber, Cashmere Wood, Patchouli, Cinnamon and Cedar.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.39681.jpg",
+      "commercial_score": 83,
+      "commercial_rank": 10,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 155,
+      "original_price_inr": 12865,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Good Girl Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Almond",
+        "Coffee",
+        "Bergamot",
+        "Lemon",
+        "Tuberose",
+        "Jasmine Sambac",
+        "Orange Blossom",
+        "Bulgarian Rose",
+        "Orris",
+        "Tonka Bean",
+        "Cacao",
+        "Vanilla",
+        "Praline",
+        "Sandalwood",
+        "Musk",
+        "Amber",
+        "Cashmere Wood",
+        "Patchouli",
+        "Cinnamon",
+        "Cedar"
+      ]
+    },
+    {
+      "id": 9,
+      "sku": "ZR-09",
+      "name": "Swim",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Louis Vuitton",
+        "original_name": "Afternoon Swim"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 4.4,
+      "reviews_count": 5321,
+      "launch_year": 2019,
+      "olfactive_family": "Citrus",
+      "perfumers": [
+        "Jacques Cavallier Belletrud"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Summer",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Summer Vacation",
+          "Beach",
+          "Casual Day",
+          "Outdoor"
+        ]
+      },
+      "main_accords": [
+        "citrus",
+        "fresh spicy",
+        "sweet",
+        "amber",
+        "aromatic"
+      ],
+      "notes": {
+        "top": [
+          "Mandarin Orange",
+          "Sicilian Orange",
+          "Bergamot"
+        ],
+        "middle": [
+          "Ginger"
+        ],
+        "base": [
+          "Ambergris"
+        ]
+      },
+      "description": "Afternoon Swim by Louis Vuitton is a Citrus fragrance for women and men. Afternoon Swim was launched in 2019. The nose behind this fragrance is Jacques Cavallier Belletrud. Top notes are Mandarin Orange, Sicilian Orange and Bergamot; middle note is Ginger; base note is Ambergris.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.53947.jpg",
+      "commercial_score": 82,
+      "commercial_rank": 11,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 350,
+      "original_price_inr": 29050,
+      "arbitrage_savings_percent": 97,
+      "is_rescue_sku": false,
+      "rescue_angle": "The Extrait Fix — Reformulated with 28% oil to deliver 8+ hours where the original fades in 2 hours",
+      "tagline": "Photorealistic Mediterranean Citrus Splash",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Mandarin Orange",
+        "Sicilian Orange",
+        "Bergamot",
+        "Ginger",
+        "Ambergris"
+      ]
+    },
+    {
+      "id": 2,
+      "sku": "ZR-02",
+      "name": "Wanted",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Azzaro",
+        "original_name": "The Most Wanted"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.57,
+      "reviews_count": 12226,
+      "launch_year": 2021,
+      "olfactive_family": "Oriental Spicy",
+      "perfumers": [
+        "Michel Girard",
+        "Nadège Le Garlantezec",
+        "Shyamala Maisondieu"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Night Out",
+          "Clubbing"
+        ]
+      },
+      "main_accords": [
+        "warm spicy",
+        "sweet",
+        "amber",
+        "woody",
+        "caramel",
+        "aromatic"
+      ],
+      "notes": {
+        "top": [
+          "Cardamom"
+        ],
+        "middle": [
+          "Toffee"
+        ],
+        "base": [
+          "Amberwood"
+        ]
+      },
+      "description": "The Most Wanted by Azzaro is a Oriental Spicy fragrance for men. The Most Wanted was created by Michel Girard, Nadège Le Garlantezec and Shyamala Maisondieu. Top note is Cardamom; middle note is Toffee; base note is Amberwood.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.66826.jpg",
+      "commercial_score": 81,
+      "commercial_rank": 12,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 130,
+      "original_price_inr": 10790,
+      "arbitrage_savings_percent": 91,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "The Most Wanted Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Cardamom",
+        "Toffee",
+        "Amberwood"
+      ]
+    },
+    {
+      "id": 11,
+      "sku": "ZR-11",
+      "name": "Aventus",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Creed",
+        "original_name": "Aventus"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.31,
+      "reviews_count": 28704,
+      "launch_year": 2010,
+      "olfactive_family": "Chypre Fruity",
+      "perfumers": [
+        "Jean-Christophe Hérault",
+        "Erwin Creed"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Business",
+          "Formal",
+          "Signature",
+          "Special Occasions"
+        ]
+      },
+      "main_accords": [
+        "fruity",
+        "sweet",
+        "woody",
+        "leather",
+        "citrus",
+        "smoky",
+        "musky",
+        "fresh",
+        "tropical",
+        "mossy"
+      ],
+      "notes": {
+        "top": [
+          "Bergamot",
+          "Black Currant",
+          "Apple",
+          "Lemon",
+          "Pink Pepper"
+        ],
+        "middle": [
+          "Pineapple",
+          "Patchouli",
+          "Moroccan Jasmine"
+        ],
+        "base": [
+          "Birch",
+          "Musk",
+          "oak moss",
+          "Cedarwood",
+          "Ambroxan"
+        ]
+      },
+      "description": "Aventus by Creed is a Chypre Fruity fragrance for men. Aventus was launched in 2010. Aventus was created by Jean-Christophe Hérault and Erwin Creed. Top notes are Bergamot, Black Currant, Apple, Lemon and Pink Pepper; middle notes are Pineapple, Patchouli and Moroccan Jasmine; base notes are Birch, Musk, oak moss, Cedarwood and Ambroxan.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.9828.jpg",
+      "commercial_score": 80,
+      "commercial_rank": 13,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 495,
+      "original_price_inr": 41085,
+      "arbitrage_savings_percent": 98,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Aventus Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Bergamot",
+        "Black Currant",
+        "Apple",
+        "Lemon",
+        "Pink Pepper",
+        "Pineapple",
+        "Patchouli",
+        "Moroccan Jasmine",
+        "Birch",
+        "Musk",
+        "oak moss",
+        "Cedarwood",
+        "Ambroxan"
+      ]
+    },
+    {
+      "id": 18,
+      "sku": "ZR-18",
+      "name": "Opium",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Yves Saint Laurent",
+        "original_name": "Black Opium"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.94,
+      "reviews_count": 35248,
+      "launch_year": 2014,
+      "olfactive_family": "Oriental Vanilla",
+      "perfumers": [
+        "Nathalie Lorson",
+        "Marie Salamagne",
+        "Olivier Cresp",
+        "Honorine Blanc"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Night Out",
+          "Dates",
+          "Clubbing",
+          "Parties"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "coffee",
+        "sweet",
+        "white floral",
+        "warm spicy",
+        "soft spicy",
+        "woody",
+        "fruity",
+        "balsamic",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Pear",
+          "Pink Pepper",
+          "Orange Blossom"
+        ],
+        "middle": [
+          "Coffee",
+          "Jasmine",
+          "Bitter Almond",
+          "Licorice"
+        ],
+        "base": [
+          "Vanilla",
+          "Patchouli",
+          "Cashmere Wood",
+          "Cedar"
+        ]
+      },
+      "description": "Black Opium by Yves Saint Laurent is a Oriental Vanilla fragrance for women. Black Opium was launched in 2014. Black Opium was created by Nathalie Lorson, Marie Salamagne, Olivier Cresp and Honorine Blanc. Top notes are Pear, Pink Pepper and Orange Blossom; middle notes are Coffee, Jasmine, Bitter Almond and Licorice; base notes are Vanilla, Patchouli, Cashmere Wood and Cedar.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.25324.jpg",
+      "commercial_score": 79,
+      "commercial_rank": 14,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 145,
+      "original_price_inr": 12035,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Black Opium Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Pear",
+        "Pink Pepper",
+        "Orange Blossom",
+        "Coffee",
+        "Jasmine",
+        "Bitter Almond",
+        "Licorice",
+        "Vanilla",
+        "Patchouli",
+        "Cashmere Wood",
+        "Cedar"
+      ]
+    },
+    {
+      "id": 19,
+      "sku": "ZR-19",
+      "name": "Gardenia",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Gucci",
+        "original_name": "Flora Gorgeous Gardenia"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.94,
+      "reviews_count": 7781,
+      "launch_year": 2021,
+      "olfactive_family": "Floral",
+      "perfumers": [
+        "Honorine Blanc"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Brunches",
+          "Casual",
+          "Spring Dates"
+        ]
+      },
+      "main_accords": [
+        "white floral",
+        "floral",
+        "sweet",
+        "fruity",
+        "lactonic",
+        "patchouli",
+        "citrus",
+        "fresh"
+      ],
+      "notes": {
+        "top": [
+          "Pear Blossom",
+          "Red Berries",
+          "Italian Mandarin"
+        ],
+        "middle": [
+          "Gardenia",
+          "Jasmine",
+          "Frangipani"
+        ],
+        "base": [
+          "Brown sugar",
+          "Patchouli"
+        ]
+      },
+      "description": "Flora Gorgeous Gardenia by Gucci is a Floral fragrance for women. Flora Gorgeous Gardenia was launched in 2021. The nose behind this fragrance is Honorine Blanc. Top notes are Pear Blossom, Red Berries and Italian Mandarin; middle notes are Gardenia, Jasmine and Frangipani; base notes are Brown sugar and Patchouli.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.68578.jpg",
+      "commercial_score": 78,
+      "commercial_rank": 15,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 168,
+      "original_price_inr": 13944,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Flora Gorgeous Gardenia Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Pear Blossom",
+        "Red Berries",
+        "Italian Mandarin",
+        "Gardenia",
+        "Jasmine",
+        "Frangipani",
+        "Brown sugar",
+        "Patchouli"
+      ]
+    },
+    {
+      "id": 6,
+      "sku": "ZR-06",
+      "name": "Tuxedo",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Yves Saint Laurent",
+        "original_name": "Tuxedo"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 4.43,
+      "reviews_count": 4894,
+      "launch_year": 2015,
+      "olfactive_family": "Chypre",
+      "perfumers": [
+        "Juliette Karagueuzoglou"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Formal",
+          "Black Tie",
+          "Dates",
+          "Special Occasions"
+        ]
+      },
+      "main_accords": [
+        "patchouli",
+        "vanilla",
+        "amber",
+        "ozonic",
+        "fresh spicy",
+        "warm spicy",
+        "balsamic",
+        "woody",
+        "rose",
+        "aquatic"
+      ],
+      "notes": {
+        "top": [
+          "Violet Leaf",
+          "Coriander",
+          "Bergamot"
+        ],
+        "middle": [
+          "Rose",
+          "Black Pepper",
+          "Lily-of-the-Valley"
+        ],
+        "base": [
+          "Patchouli",
+          "Bourbon Vanilla",
+          "Ambergris"
+        ]
+      },
+      "description": "Tuxedo by Yves Saint Laurent is a Chypre fragrance for women and men. Tuxedo was launched in 2015. The nose behind this fragrance is Juliette Karagueuzoglou. Top notes are Violet Leaf, Coriander and Bergamot; middle notes are Rose, Black Pepper and Lily-of-the-Valley; base notes are Patchouli, Bourbon Vanilla and Ambergris. In November 2015, Yves Saint Laurent presents its new collection of luxury fragrances Le Vestiaire des Parfums, which includes five new releases: Caban, Caftan, Tuxedo, Saharienne and Trench. The \"perfume wardrobe\" collection is inspired by the iconic pieces of Yves Saint Laurent clothing. Tuxedo is a bit masculine, elegant and dark with accords of patchouli and spices. All the fragrances are unisex. They are available as 125 ml Eau de Parfum.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.32269.jpg",
+      "commercial_score": 77,
+      "commercial_rank": 16,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 330,
+      "original_price_inr": 27390,
+      "arbitrage_savings_percent": 96,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Tuxedo Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Violet Leaf",
+        "Coriander",
+        "Bergamot",
+        "Rose",
+        "Black Pepper",
+        "Lily-of-the-Valley",
+        "Patchouli",
+        "Bourbon Vanilla",
+        "Ambergris"
+      ]
+    },
+    {
+      "id": 26,
+      "sku": "ZR-26",
+      "name": "Voyage",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Giorgio Armani",
+        "original_name": "My Way"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.77,
+      "reviews_count": 13911,
+      "launch_year": 2020,
+      "olfactive_family": "Floral",
+      "perfumers": [
+        "Carlos Benaïm",
+        "Bruno Jovanovic"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Travel",
+          "Casual Chic"
+        ]
+      },
+      "main_accords": [
+        "white floral",
+        "tuberose",
+        "citrus",
+        "animalic",
+        "vanilla"
+      ],
+      "notes": {
+        "top": [
+          "Orange Blossom",
+          "Bergamot"
+        ],
+        "middle": [
+          "Tuberose",
+          "Indian Jasmine"
+        ],
+        "base": [
+          "Madagascar Vanilla",
+          "White Musk",
+          "Virginian Cedar"
+        ]
+      },
+      "description": "My Way by Giorgio Armani is a Floral fragrance for women. My Way was launched in 2020. My Way was created by Carlos Benaïm and Bruno Jovanovic. Top notes are Orange Blossom and Bergamot; middle notes are Tuberose and Indian Jasmine; base notes are Madagascar Vanilla, White Musk and Virginian Cedar.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.62036.jpg",
+      "commercial_score": 75,
+      "commercial_rank": 18,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 145,
+      "original_price_inr": 12035,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "My Way Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Orange Blossom",
+        "Bergamot",
+        "Tuberose",
+        "Indian Jasmine",
+        "Madagascar Vanilla",
+        "White Musk",
+        "Virginian Cedar"
+      ]
+    },
+    {
+      "id": 28,
+      "sku": "ZR-28",
+      "name": "Crystal",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Versace",
+        "original_name": "Bright Crystal"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.74,
+      "reviews_count": 24610,
+      "launch_year": 2006,
+      "olfactive_family": "Floral Fruity",
+      "perfumers": [
+        "Alberto Morillas"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Hot Weather",
+          "Casual",
+          "Office"
+        ]
+      },
+      "main_accords": [
+        "floral",
+        "fresh",
+        "citrus",
+        "woody",
+        "rose",
+        "fresh spicy",
+        "aquatic"
+      ],
+      "notes": {
+        "top": [
+          "Yuzu",
+          "Pomegranate",
+          "Ice"
+        ],
+        "middle": [
+          "Peony",
+          "Lotus",
+          "Magnolia"
+        ],
+        "base": [
+          "Musk",
+          "Mahogany",
+          "Amber"
+        ]
+      },
+      "description": "Bright Crystal by Versace is a Floral Fruity fragrance for women. Bright Crystal was launched in 2006. The nose behind this fragrance is Alberto Morillas. Top notes are Yuzu, Pomegranate and Ice; middle notes are Peony, Lotus and Magnolia; base notes are Musk, Mahogany and Amber.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.632.jpg",
+      "commercial_score": 73,
+      "commercial_rank": 19,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 250,
+      "tier": "TIER_2_REVENUE",
+      "original_price_usd": 115,
+      "original_price_inr": 9545,
+      "arbitrage_savings_percent": 90,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Bright Crystal Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Yuzu",
+        "Pomegranate",
+        "Ice",
+        "Peony",
+        "Lotus",
+        "Magnolia",
+        "Musk",
+        "Mahogany",
+        "Amber"
+      ]
+    },
+    {
+      "id": 16,
+      "sku": "ZR-16",
+      "name": "Nomad",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Byredo",
+        "original_name": "Gypsy Water"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 3.98,
+      "reviews_count": 11563,
+      "launch_year": 2008,
+      "olfactive_family": "Woody Aromatic",
+      "perfumers": [
+        "Jérôme Epinette"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Casual",
+          "Intimate Gatherings"
+        ]
+      },
+      "main_accords": [
+        "woody",
+        "aromatic",
+        "fresh spicy",
+        "citrus",
+        "powdery",
+        "vanilla",
+        "amber",
+        "balsamic",
+        "warm spicy"
+      ],
+      "notes": {
+        "top": [
+          "Juniper",
+          "Lemon",
+          "Bergamot",
+          "Pepper"
+        ],
+        "middle": [
+          "Pine needles",
+          "Incense",
+          "Orris Root"
+        ],
+        "base": [
+          "Vanilla",
+          "Sandalwood",
+          "Amber"
+        ]
+      },
+      "description": "Gypsy Water by Byredo is a Woody Aromatic fragrance for women and men. Gypsy Water was launched in 2008. Top notes are Juniper, Lemon, Bergamot and Pepper; middle notes are Pine needles, Incense and Orris Root; base notes are Vanilla, Sandalwood and Amber.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.3575.jpg",
+      "commercial_score": 72,
+      "commercial_rank": 20,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 225,
+      "original_price_inr": 18675,
+      "arbitrage_savings_percent": 95,
+      "is_rescue_sku": false,
+      "rescue_angle": "The Extrait Fix — Rich woody-vanilla base engineered for intimate, sustained all-day skin projection",
+      "tagline": "Quiet Luxury Pine Needles & Soft Vanilla",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Juniper",
+        "Lemon",
+        "Bergamot",
+        "Pepper",
+        "Pine needles",
+        "Incense",
+        "Orris Root",
+        "Vanilla",
+        "Sandalwood",
+        "Amber"
+      ]
+    },
+    {
+      "id": 22,
+      "sku": "ZR-22",
+      "name": "Orchid",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Tom Ford",
+        "original_name": "Black Orchid"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Unisex",
+      "rating": 3.88,
+      "reviews_count": 32781,
+      "launch_year": 2006,
+      "olfactive_family": "Oriental Floral",
+      "perfumers": [
+        "David Apel",
+        "Pierre Negrin"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Formal",
+          "Dates",
+          "Night Out",
+          "Glamorous Evenings"
+        ]
+      },
+      "main_accords": [
+        "warm spicy",
+        "earthy",
+        "woody",
+        "sweet",
+        "amber",
+        "patchouli",
+        "floral",
+        "chocolate",
+        "powdery",
+        "balsamic"
+      ],
+      "notes": {
+        "top": [
+          "Truffle",
+          "Gardenia",
+          "Black Currant",
+          "Ylang-Ylang",
+          "Jasmine",
+          "Bergamot",
+          "Mandarin Orange",
+          "Amalfi Lemon"
+        ],
+        "middle": [
+          "Orchid",
+          "Spices",
+          "Gardenia",
+          "Fruity Notes",
+          "Ylang-Ylang",
+          "Jasmine",
+          "Lotus"
+        ],
+        "base": [
+          "Mexican chocolate",
+          "Patchouli",
+          "Vanille",
+          "Incense",
+          "Amber",
+          "Sandalwood",
+          "Vetiver",
+          "White Musk"
+        ]
+      },
+      "description": "Black Orchid by Tom Ford is a Oriental Floral fragrance for women. Black Orchid was launched in 2006. Black Orchid was created by David Apel and Pierre Negrin. Top notes are Truffle, Gardenia, Black Currant, Ylang-Ylang, Jasmine, Bergamot, Mandarin Orange and Amalfi Lemon; middle notes are Orchid, Spices, Gardenia, Fruity Notes, Ylang-Ylang, Jasmine and Lotus; base notes are Mexican chocolate, Patchouli, Vanille, Incense, Amber, Sandalwood, Vetiver and White Musk.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.1018.jpg",
+      "commercial_score": 71,
+      "commercial_rank": 21,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 210,
+      "original_price_inr": 17430,
+      "arbitrage_savings_percent": 94,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "Black Orchid Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Truffle",
+        "Gardenia",
+        "Black Currant",
+        "Ylang-Ylang",
+        "Jasmine",
+        "Bergamot",
+        "Mandarin Orange",
+        "Amalfi Lemon",
+        "Orchid",
+        "Spices",
+        "Fruity Notes",
+        "Lotus",
+        "Mexican chocolate",
+        "Patchouli",
+        "Vanille",
+        "Incense",
+        "Amber",
+        "Sandalwood",
+        "Vetiver",
+        "White Musk"
+      ]
+    },
+    {
+      "id": 4,
+      "sku": "ZR-04",
+      "name": "Absolute",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Giorgio Armani",
+        "original_name": "Emporio Armani Stronger With You Absolutely"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.52,
+      "reviews_count": 10414,
+      "launch_year": 2021,
+      "olfactive_family": "Oriental Fougere",
+      "perfumers": [
+        "Cecile Matton"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Fall",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Dates",
+          "Special Occasions",
+          "Night Out"
+        ]
+      },
+      "main_accords": [
+        "vanilla",
+        "woody",
+        "balsamic",
+        "rum",
+        "aromatic",
+        "warm spicy",
+        "nutty",
+        "powdery",
+        "lavender",
+        "sweet"
+      ],
+      "notes": {
+        "top": [
+          "Rum",
+          "elemi",
+          "Bergamot"
+        ],
+        "middle": [
+          "Lavender",
+          "Davana"
+        ],
+        "base": [
+          "Madagascar Vanilla",
+          "Chestnut",
+          "Cedar",
+          "Patchouli"
+        ]
+      },
+      "description": "Emporio Armani Stronger With You Absolutely by Giorgio Armani is a Oriental Fougere fragrance for men. Emporio Armani Stronger With You Absolutely was launched in 2021. The nose behind this fragrance is Cecile Matton. Top notes are Rum, elemi and Bergamot; middle notes are Lavender and Davana; base notes are Madagascar Vanilla, Chestnut, Cedar and Patchouli.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.64501.jpg",
+      "commercial_score": 70,
+      "commercial_rank": 22,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 150,
+      "original_price_inr": 12450,
+      "arbitrage_savings_percent": 92,
+      "is_rescue_sku": true,
+      "rescue_angle": "The Connoisseur Reserve Flanker — Rum liqueur and glazed chestnuts for intimate formal dinners",
+      "tagline": "Aged French Rum & Glazed Chestnut Reserve",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Rum",
+        "elemi",
+        "Bergamot",
+        "Lavender",
+        "Davana",
+        "Madagascar Vanilla",
+        "Chestnut",
+        "Cedar",
+        "Patchouli"
+      ]
+    },
+    {
+      "id": 23,
+      "sku": "ZR-23",
+      "name": "Freesia",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Jo Malone London",
+        "original_name": "English Pear & Freesia"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.82,
+      "reviews_count": 9983,
+      "launch_year": 2010,
+      "olfactive_family": "Chypre Fruity",
+      "perfumers": [
+        "Christine Nagel"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Daily Wear",
+          "Office",
+          "Brunches",
+          "Daytime Events"
+        ]
+      },
+      "main_accords": [
+        "floral",
+        "fruity",
+        "rose",
+        "sweet",
+        "aquatic",
+        "musky",
+        "fresh",
+        "patchouli",
+        "green",
+        "powdery"
+      ],
+      "notes": {
+        "top": [
+          "Pear",
+          "Melon"
+        ],
+        "middle": [
+          "Freesia",
+          "Rose"
+        ],
+        "base": [
+          "Musk",
+          "Patchouli",
+          "Rhuburb",
+          "Amber"
+        ]
+      },
+      "description": "English Pear & Freesia by Jo Malone London is a Chypre Fruity fragrance for women. English Pear & Freesia was launched in 2010. The nose behind this fragrance is Christine Nagel. Top notes are Pear and Melon; middle notes are Freesia and Rose; base notes are Musk, Patchouli, Rhuburb and Amber.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.10314.jpg",
+      "commercial_score": 69,
+      "commercial_rank": 23,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 165,
+      "original_price_inr": 13695,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "English Pear & Freesia Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Pear",
+        "Melon",
+        "Freesia",
+        "Rose",
+        "Musk",
+        "Patchouli",
+        "Rhuburb",
+        "Amber"
+      ]
+    },
+    {
+      "id": 25,
+      "sku": "ZR-25",
+      "name": "Adore",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Dior",
+        "original_name": "J'adore"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 3.8,
+      "reviews_count": 29908,
+      "launch_year": 1999,
+      "olfactive_family": "Floral Fruity",
+      "perfumers": [
+        "Calice Becker"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "occasions": [
+          "Weddings",
+          "Formal",
+          "Daytime Elegance",
+          "Office"
+        ]
+      },
+      "main_accords": [
+        "white floral",
+        "floral",
+        "fruity",
+        "sweet",
+        "fresh",
+        "aquatic",
+        "citrus",
+        "powdery",
+        "ozonic",
+        "tuberose"
+      ],
+      "notes": {
+        "top": [
+          "Pear",
+          "Melon",
+          "Magnolia",
+          "Peach",
+          "Mandarin Orange",
+          "Bergamot"
+        ],
+        "middle": [
+          "Jasmine",
+          "Lily-of-the-Valley",
+          "Tuberose",
+          "Freesia",
+          "Rose",
+          "Orchid",
+          "Violet",
+          "Plum"
+        ],
+        "base": [
+          "Musk",
+          "Vanilla",
+          "Cedar",
+          "Blackberry"
+        ]
+      },
+      "description": "J'adore by Dior is a Floral Fruity fragrance for women. J'adore was launched in 1999. The nose behind this fragrance is Calice Becker. Top notes are Pear, Melon, Magnolia, Peach, Mandarin Orange and Bergamot; middle notes are Jasmine, Lily-of-the-Valley, Tuberose, Freesia, Rose, Orchid, Violet and Plum; base notes are Musk, Vanilla, Cedar and Blackberry.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.210.jpg",
+      "commercial_score": 68,
+      "commercial_rank": 24,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 175,
+      "original_price_inr": 14525,
+      "arbitrage_savings_percent": 93,
+      "is_rescue_sku": false,
+      "rescue_angle": null,
+      "tagline": "J'adore Reimagined in 28% Extrait de Parfum",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Pear",
+        "Melon",
+        "Magnolia",
+        "Peach",
+        "Mandarin Orange",
+        "Bergamot",
+        "Jasmine",
+        "Lily-of-the-Valley",
+        "Tuberose",
+        "Freesia",
+        "Rose",
+        "Orchid",
+        "Violet",
+        "Plum",
+        "Musk",
+        "Vanilla",
+        "Cedar",
+        "Blackberry"
+      ]
+    },
+    {
+      "id": 14,
+      "sku": "ZR-14",
+      "name": "Interlude",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Amouage",
+        "original_name": "Interlude Man"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 4.12,
+      "reviews_count": 9230,
+      "launch_year": 2012,
+      "olfactive_family": "Oriental Woody",
+      "perfumers": [
+        "Pierre Negrin"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Winter",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Formal",
+          "Special Occasions",
+          "Cold Winter Nights"
+        ]
+      },
+      "main_accords": [
+        "amber",
+        "balsamic",
+        "fresh spicy",
+        "smoky",
+        "warm spicy",
+        "woody",
+        "oud"
+      ],
+      "notes": {
+        "top": [
+          "Oregano",
+          "Pepper",
+          "Bergamot"
+        ],
+        "middle": [
+          "Incense",
+          "Opoponax",
+          "Amber",
+          "Labdanum"
+        ],
+        "base": [
+          "Agarwood (Oud)",
+          "Leather",
+          "Sandalwood",
+          "Patchouli"
+        ]
+      },
+      "description": "Interlude Man by Amouage is a Oriental Woody fragrance for men. Interlude Man was launched in 2012. The nose behind this fragrance is Pierre Negrin. Top notes are Oregano, Pepper and Bergamot; middle notes are Incense, Opoponax, Amber and Labdanum; base notes are Agarwood (Oud), Leather, Sandalwood and Patchouli.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.15294.jpg",
+      "commercial_score": 60,
+      "commercial_rank": 27,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 395,
+      "original_price_inr": 32785,
+      "arbitrage_savings_percent": 97,
+      "is_rescue_sku": true,
+      "rescue_angle": "Connoisseur Strength — Nuclear smoky resinous projection (Recommended for experienced perfume enthusiasts)",
+      "tagline": "Royal Blue Frankincense & Nuclear Smoke",
+      "longevity_hours": 14,
+      "sillage_rating": "Nuclear",
+      "all_notes": [
+        "Oregano",
+        "Pepper",
+        "Bergamot",
+        "Incense",
+        "Opoponax",
+        "Amber",
+        "Labdanum",
+        "Agarwood (Oud)",
+        "Leather",
+        "Sandalwood",
+        "Patchouli"
+      ]
+    },
+    {
+      "id": 21,
+      "sku": "ZR-21",
+      "name": "Wave",
+      "brand": "ZORUNE",
+      "inspired_by": {
+        "brand": "Davidoff",
+        "original_name": "Cool Water"
+      },
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Male",
+      "rating": 3.89,
+      "reviews_count": 20777,
+      "launch_year": 1988,
+      "olfactive_family": "Aromatic Aquatic",
+      "perfumers": [
+        "Pierre Bourdon"
+      ],
+      "when_to_apply": {
+        "seasons": [
+          "Summer",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day"
+        ],
+        "occasions": [
+          "Gym",
+          "Casual",
+          "Summer Days",
+          "Beach"
+        ]
+      },
+      "main_accords": [
+        "aromatic",
+        "green",
+        "marine",
+        "fresh spicy",
+        "lavender",
+        "woody",
+        "salty"
+      ],
+      "notes": {
+        "top": [
+          "Sea water",
+          "Lavender",
+          "Mint",
+          "Green Notes",
+          "Rosemary",
+          "Calone",
+          "Coriander"
+        ],
+        "middle": [
+          "Sandalwood",
+          "Neroli",
+          "Geranium",
+          "Jasmine"
+        ],
+        "base": [
+          "Musk",
+          "Oakmoss",
+          "Cedar",
+          "Tobacco",
+          "Ambergris"
+        ]
+      },
+      "description": "Cool Water by Davidoff is a Aromatic Aquatic fragrance for men. Cool Water was launched in 1988. The nose behind this fragrance is Pierre Bourdon. Top notes are Sea water, Lavender, Mint, Green Notes, Rosemary, Calone and Coriander; middle notes are Sandalwood, Neroli, Geranium and Jasmine; base notes are Musk, Oakmoss, Cedar, Tobacco and Ambergris. Cool Water is fresh and sharp, simple and very masculine.  Top notes include  mint and green nuances,  lavender, coriander and rosemary. The heart notes include geranium, neroli, jasmine and sandalwood. The base is composed of cedarwood, musk, amber and tobacco. It was created by Pierre Bourdon in 1988.",
+      "image_url": "https://fimgs.net/mdimg/perfume/375x500.507.jpg",
+      "commercial_score": 49,
+      "commercial_rank": 29,
+      "size_ml": 20,
+      "price": 999,
+      "stock": 100,
+      "tier": "TIER_3_NICHE",
+      "original_price_usd": 35,
+      "original_price_inr": 2905,
+      "arbitrage_savings_percent": 66,
+      "is_rescue_sku": true,
+      "rescue_angle": "1988 Vintage Marine Extrait (30% concentration — outlasts modern watery reformulations)",
+      "tagline": "The Original 1988 High-Concentration Marine Wave",
+      "longevity_hours": 8,
+      "sillage_rating": "Moderate to Heavy",
+      "all_notes": [
+        "Sea water",
+        "Lavender",
+        "Mint",
+        "Green Notes",
+        "Rosemary",
+        "Calone",
+        "Coriander",
+        "Sandalwood",
+        "Neroli",
+        "Geranium",
+        "Jasmine",
+        "Musk",
+        "Oakmoss",
+        "Cedar",
+        "Tobacco",
+        "Ambergris"
+      ]
+    }
+  ]
+}
