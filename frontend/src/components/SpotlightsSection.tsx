@@ -322,10 +322,12 @@ export const SpotlightsSection: React.FC = () => {
           aria-modal="true"
           aria-labelledby="modal-article-title"
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-in fade-in duration-200"
+          data-lenis-prevent
         >
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto bg-white rounded-3xl border border-[oklch(0.926_0.01_81.8)] shadow-2xl p-6 sm:p-10"
+            className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto bg-white rounded-3xl border border-[oklch(0.926_0.01_81.8)] shadow-2xl p-6 sm:p-10 overscroll-contain popup-scroll-pane"
+            data-lenis-prevent
           >
             
             {/* Close Button */}

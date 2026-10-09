@@ -23,6 +23,17 @@ export const CheckoutModal: React.FC = () => {
   const [pincode, setPincode] = useState(userPincode || '400050');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  React.useEffect(() => {
+    if (isCheckoutOpen) {
+      document.body.style.overflow = 'hidden';
+      if ((window as any).lenis) (window as any).lenis.stop();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      if ((window as any).lenis) (window as any).lenis.start();
+    };
+  }, [isCheckoutOpen]);
+
   if (!isCheckoutOpen) return null;
 
   const handleCompleteOrder = (e: React.FormEvent) => {
@@ -50,8 +61,18 @@ export const CheckoutModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 sm:p-8 overflow-hidden">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-200"
+      onClick={() => setIsCheckoutOpen(false)}
+      data-lenis-prevent
+      role="dialog"
+      aria-modal="true"
+    >
+      <div 
+        className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 sm:p-8 overscroll-contain popup-scroll-pane"
+        onClick={(e) => e.stopPropagation()}
+        data-lenis-prevent
+      >
         
         {/* Close Button */}
         <button

@@ -14,10 +14,26 @@ export const CartDrawer: React.FC = () => {
     setIsWardrobeOpen
   } = useCart();
 
+  React.useEffect(() => {
+    if (isCartOpen) {
+      document.body.style.overflow = 'hidden';
+      if ((window as any).lenis) (window as any).lenis.stop();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      if ((window as any).lenis) (window as any).lenis.start();
+    };
+  }, [isCartOpen]);
+
   if (!isCartOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden">
+    <div 
+      className="fixed inset-0 z-50 overflow-hidden"
+      data-lenis-prevent
+      role="dialog"
+      aria-modal="true"
+    >
       {/* Backdrop */}
       <div 
         onClick={() => setIsCartOpen(false)}
@@ -65,7 +81,10 @@ export const CartDrawer: React.FC = () => {
           </div>
 
           {/* Cart Items List */}
-          <div className="flex-1 overflow-y-auto my-4 pr-1 space-y-3">
+          <div 
+            className="flex-1 overflow-y-auto my-4 pr-1 space-y-3 min-h-0 overscroll-contain popup-scroll-pane"
+            data-lenis-prevent
+          >
             {cart.length === 0 ? (
               <div className="py-20 text-center">
                 <ShoppingBag className="w-12 h-12 text-[oklch(0.926_0.01_81.8)] mx-auto mb-3" />

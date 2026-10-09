@@ -12,6 +12,17 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
   const [selectedSkus, setSelectedSkus] = useState<string[]>(['ZR-03', 'ZR-05', 'ZR-01']); // Defaults: Imagination, Elixir, Intense
   const [activeTab, setActiveTab] = useState<'custom' | 'curated'>('custom');
 
+  React.useEffect(() => {
+    if (isWardrobeOpen) {
+      document.body.style.overflow = 'hidden';
+      if ((window as any).lenis) (window as any).lenis.stop();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      if ((window as any).lenis) (window as any).lenis.start();
+    };
+  }, [isWardrobeOpen]);
+
   if (!isWardrobeOpen) return null;
 
   const count = selectedSkus.length;
@@ -90,8 +101,18 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-5 sm:p-8">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-200"
+      onClick={() => setIsWardrobeOpen(false)}
+      data-lenis-prevent
+      role="dialog"
+      aria-modal="true"
+    >
+      <div 
+        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-5 sm:p-8 overscroll-contain popup-scroll-pane"
+        onClick={(e) => e.stopPropagation()}
+        data-lenis-prevent
+      >
         
         {/* Close Button */}
         <button
@@ -203,7 +224,10 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
 
             {/* Catalog Selector Grid */}
             <p className="text-xs font-semibold text-[oklch(0.442_0.015_286)] mb-3">Tap any perfume to add or remove from your wardrobe:</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 max-h-[300px] overflow-y-auto pr-1 mb-6">
+            <div 
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 max-h-[300px] overflow-y-auto pr-1 mb-6 overscroll-contain popup-scroll-pane"
+              data-lenis-prevent
+            >
               {products.map(p => {
                 const isSelected = selectedSkus.includes(p.sku);
                 return (

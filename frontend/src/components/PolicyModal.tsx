@@ -69,6 +69,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   const [submittedTicket, setSubmittedTicket] = useState<{ id: string; name: string } | null>(null);
   const [cooldownRemaining, setCooldownRemaining] = useState<number>(0);
   const formRenderTimeRef = useRef<number>(Date.now());
+  const contentPaneRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (initialTab) {
@@ -90,6 +91,12 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   }, [activeTab]);
 
   useEffect(() => {
+    if (contentPaneRef.current) {
+      contentPaneRef.current.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
     if (cooldownRemaining > 0) {
       const timer = setTimeout(() => {
         setCooldownRemaining(prev => prev - 1);
@@ -105,10 +112,16 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
     if (isOpen) {
       window.addEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'hidden';
+      if ((window as any).lenis) {
+        (window as any).lenis.stop();
+      }
     }
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
+      if ((window as any).lenis) {
+        (window as any).lenis.start();
+      }
     };
   }, [isOpen, onClose]);
 
@@ -257,10 +270,17 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[oklch(0.179_0.004_286)]/60 backdrop-blur-md animate-fade-in">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[oklch(0.179_0.004_286)]/60 backdrop-blur-md animate-fade-in"
+      onClick={onClose}
+      data-lenis-prevent
+      role="dialog"
+      aria-modal="true"
+    >
       <div 
         className="relative w-full max-w-4xl h-[90vh] max-h-[820px] bg-[oklch(0.98_0.005_78.3)] rounded-2xl shadow-2xl border border-[oklch(0.926_0.01_81.8)] flex flex-col overflow-hidden text-[oklch(0.179_0.004_286)]"
         onClick={(e) => e.stopPropagation()}
+        data-lenis-prevent
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[oklch(0.926_0.01_81.8)] bg-white/80 backdrop-blur-md flex-shrink-0">
@@ -288,10 +308,13 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
         </div>
 
         {/* Body Layout: Sidebar Tabs + Scrollable Content */}
-        <div className="flex-1 flex flex-col md:flex-row min-h-0 overflow-hidden">
+        <div className="flex-1 flex flex-col md:flex-row min-h-0 overflow-hidden" data-lenis-prevent>
           
           {/* Navigation Sidebar */}
-          <div className="w-full md:w-64 bg-[oklch(0.959_0.01_87.5)]/80 border-b md:border-b-0 md:border-r border-[oklch(0.926_0.01_81.8)] p-3 sm:p-4 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-1.5 flex-shrink-0">
+          <div 
+            className="w-full md:w-64 bg-[oklch(0.959_0.01_87.5)]/80 border-b md:border-b-0 md:border-r border-[oklch(0.926_0.01_81.8)] p-3 sm:p-4 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-1.5 flex-shrink-0 min-h-0 overscroll-contain popup-scroll-pane"
+            data-lenis-prevent
+          >
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -314,7 +337,13 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
           </div>
 
           {/* Content Pane */}
-          <div className="flex-1 p-6 sm:p-8 overflow-y-auto space-y-6 text-sm leading-relaxed text-[oklch(0.442_0.015_286)] bg-[oklch(0.98_0.005_78.3)]">
+          <div 
+            ref={contentPaneRef}
+            className="flex-1 p-6 sm:p-8 overflow-y-auto min-h-0 overscroll-contain popup-scroll-pane space-y-6 text-sm leading-relaxed text-[oklch(0.442_0.015_286)] bg-[oklch(0.98_0.005_78.3)]"
+            data-lenis-prevent
+            tabIndex={0}
+            onWheel={(e) => e.stopPropagation()}
+          >
             
             {/* 1. PRIVACY POLICY */}
             {activeTab === 'privacy' && (

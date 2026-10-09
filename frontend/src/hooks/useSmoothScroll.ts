@@ -25,6 +25,17 @@ export function useSmoothScroll(isScrollable: boolean = true) {
       wheelMultiplier: 1.25,
       touchMultiplier: 1.5,
       infinite: false,
+      prevent: (node) => {
+        if (!node || typeof (node as HTMLElement).closest !== 'function') return false;
+        const el = node as HTMLElement;
+        return (
+          el.hasAttribute?.('data-lenis-prevent') ||
+          Boolean(el.closest?.('[data-lenis-prevent]')) ||
+          Boolean(el.closest?.('[role="dialog"]')) ||
+          Boolean(el.closest?.('.overflow-y-auto')) ||
+          Boolean(el.closest?.('.overflow-auto'))
+        );
+      },
     });
 
     lenisRef.current = lenis;

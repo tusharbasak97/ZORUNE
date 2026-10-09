@@ -21,8 +21,16 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
         onClose();
       }
     };
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      if ((window as any).lenis) (window as any).lenis.stop();
+    }
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+      if ((window as any).lenis) (window as any).lenis.start();
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
@@ -58,8 +66,18 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
     : [];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center p-3 sm:p-6 bg-black/50 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-3xl bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 mt-6 sm:mt-12 overflow-hidden flex flex-col max-h-[85vh]">
+    <div 
+      className="fixed inset-0 z-50 flex items-start justify-center p-3 sm:p-6 bg-black/50 backdrop-blur-md animate-in fade-in duration-200"
+      onClick={onClose}
+      data-lenis-prevent
+      role="dialog"
+      aria-modal="true"
+    >
+      <div 
+        className="relative w-full max-w-3xl bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 mt-6 sm:mt-12 overflow-hidden flex flex-col max-h-[85vh]"
+        onClick={(e) => e.stopPropagation()}
+        data-lenis-prevent
+      >
         
         {/* Top Input Bar */}
         <div className="relative flex items-center border-b border-[oklch(0.926_0.01_81.8)] pb-4 mb-4">
@@ -102,7 +120,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
 
         {/* Results List */}
         {query.trim() && (
-          <div className="flex-1 overflow-y-auto pr-1 space-y-3">
+          <div 
+            className="flex-1 overflow-y-auto pr-1 space-y-3 min-h-0 overscroll-contain popup-scroll-pane"
+            data-lenis-prevent
+          >
             <div className="flex justify-between items-center text-xs text-[oklch(0.552_0.014_286)] pb-1">
               <span>Results for &ldquo;{query}&rdquo;</span>
               <span>{filtered.length} found</span>
