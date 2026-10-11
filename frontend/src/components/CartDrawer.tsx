@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight, ShieldCheck, Zap, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 export const CartDrawer: React.FC = () => {
   const { 
@@ -13,6 +14,8 @@ export const CartDrawer: React.FC = () => {
     setIsCheckoutOpen,
     setIsWardrobeOpen
   } = useCart();
+
+  const { containerRef: itemsListRef } = useSmoothScroll<HTMLDivElement>(isCartOpen, true);
 
   React.useEffect(() => {
     if (isCartOpen) {
@@ -41,8 +44,8 @@ export const CartDrawer: React.FC = () => {
       />
 
       {/* Drawer Panel */}
-      <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white border-l border-[oklch(0.926_0.01_81.8)] p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
+      <div className="absolute inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-full sm:w-[420px] max-w-full bg-white border-l border-[oklch(0.926_0.01_81.8)] p-4 sm:p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
           
           {/* Top Bar */}
           <div>
@@ -54,6 +57,7 @@ export const CartDrawer: React.FC = () => {
               <button
                 onClick={() => setIsCartOpen(false)}
                 className="p-1.5 rounded-full bg-[oklch(0.98_0.005_78.3)] hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.552_0.014_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer border border-[oklch(0.926_0.01_81.8)]"
+                aria-label="Close Cart"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -80,10 +84,10 @@ export const CartDrawer: React.FC = () => {
             </div>
           </div>
 
-          {/* Cart Items List */}
+          {/* Cart Items List (Lenis Smooth Scroll) */}
           <div 
+            ref={itemsListRef}
             className="flex-1 overflow-y-auto my-4 pr-1 space-y-3 min-h-0 overscroll-contain popup-scroll-pane"
-            data-lenis-prevent
           >
             {cart.length === 0 ? (
               <div className="py-20 text-center">

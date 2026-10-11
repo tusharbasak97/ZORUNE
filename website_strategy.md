@@ -5,7 +5,7 @@ ZORUNE is an enterprise-grade luxury fragrance commerce engine engineered for th
 
 > **The Uniform 20ml / ₹999 Model:** Rather than forcing customers into overpriced, high-commitment 50ml or 100ml bottles, ZORUNE formulates every single fragrance in a uniform **20ml Luxury Pocket Flacon (Extrait de Parfum @ 28% concentration) at a flat price of ₹999 ($12–$15)**. 
 > 
-> A 20ml flacon provides ~280–300 precision sprays—yielding 2 full months of daily wear—delivering 90%+ olfactive accuracy to ₹18,000–₹42,000 luxury originals while breaking the psychological ₹1,000 barrier in Indian e-commerce.
+> A 20ml flacon provides ~280–300 precision sprays—yielding 2 full months of daily wear—delivering ~95% olfactive match to expensive luxury OGs (₹18,000–₹42,000 retail originals) using high-grade French perfume oils at 28% Extrait de Parfum concentration while breaking the psychological ₹1,000 barrier in Indian e-commerce.
 
 This document serves as the **Single Unified Planning Blueprint** integrating:
 1. **The 30-Product Catalog ([zorune_perfumes.json](file:///home/tushar/Documents/Github/ZORUNE/zorune_perfumes.json))**

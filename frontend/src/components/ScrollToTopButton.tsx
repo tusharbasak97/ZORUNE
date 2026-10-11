@@ -101,7 +101,7 @@ export const ScrollToTopButton: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-24 md:bottom-8 right-5 md:right-8 z-40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`fixed bottom-20 min-[600px]:bottom-8 right-4 min-[600px]:right-18 sm:right-20 lg:right-22 xl:right-8 z-40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isVisible
           ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
           : 'opacity-0 translate-y-8 scale-75 pointer-events-none'
@@ -110,7 +110,7 @@ export const ScrollToTopButton: React.FC = () => {
       <button
         onClick={scrollToTop}
         aria-label="Move to top"
-        className="group relative w-12 h-12 rounded-full bg-[oklch(0.179_0.004_286)] text-[oklch(0.98_0.005_78.3)] flex items-center justify-center border border-[oklch(0.683_0.102_82.6)]/40 hover:border-[oklch(0.683_0.102_82.6)] shadow-xl hover:shadow-[0_0_25px_oklch(0.683_0.102_82.6/0.35)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none"
+        className="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[oklch(0.179_0.004_286)] text-[oklch(0.98_0.005_78.3)] flex items-center justify-center border border-[oklch(0.683_0.102_82.6)]/40 hover:border-[oklch(0.683_0.102_82.6)] shadow-xl hover:shadow-[0_0_25px_oklch(0.683_0.102_82.6/0.35)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none"
       >
         {/* Realtime Circular SVG Scroll Progress Ring */}
         <svg

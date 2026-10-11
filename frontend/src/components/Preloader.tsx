@@ -139,7 +139,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
 
         {/* Dynamic Micro Status Copy */}
         <div className="h-6 flex items-center justify-center text-xs text-[oklch(0.442_0.015_286)]">
-          {stage === 'drawing' && <span>Harmonizing Grasse Olfactive Extracts...</span>}
+          {stage === 'drawing' && <span>Harmonizing High-Grade Olfactive Extracts...</span>}
           {stage === 'formulating' && <span>Calibrating 28% Extrait de Parfum Concentration...</span>}
           {(stage === 'complete' || stage === 'fading') && (
             <span className="text-emerald-700 font-semibold flex items-center space-x-1">
@@ -150,7 +150,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
         </div>
 
         <p className="text-[10px] text-[oklch(0.552_0.014_286)] tracking-wider uppercase mt-6">
-          Formulated in Grasse • Bottled in Mumbai • Flat ₹999
+          Formulated with High-Grade Oils • Bottled in Mumbai • Flat ₹999
         </p>
 
       </div>

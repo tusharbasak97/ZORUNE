@@ -2031,7 +2031,7 @@ Below is the exhaustive, 360-degree commercial viability analysis for each of th
 | **Total Score** | **100** | **68 / 100** | **Ranked #24 overall in commercial viability.** |
 
 ### Product-Level Olfactive & Sensory Analysis
-- **Fragrance Profile Summary:** The grand dame of French floral perfumery: opulent golden bouquet of ylang-ylang, Damascus rose, and Grasse jasmine bathed in sweet melon and velvety pear.
+- **Fragrance Profile Summary:** The grand dame of French floral perfumery: opulent golden bouquet of ylang-ylang, Damascus rose, and jasmine bathed in sweet melon and velvety pear.
 - **Main Accords:** floral, fruity, white floral, sweet, aquatic, fresh.
 - **Top Notes:** Pear, Melon, Magnolia, Peach, Mandarin Orange, Bergamot
 - **Middle Notes:** Jasmine, Lily-of-the-Valley, Tuberose, Freesia, Rose, Orchid, Plum, Violet
@@ -2068,7 +2068,7 @@ Below is the exhaustive, 360-degree commercial viability analysis for each of th
 
 - **Recommended Commercial Positioning:** The Timeless French Golden Floral Elegance.
 - **High-Converting Marketing Angle:** 'The eternal golden floral bouquet worn by icons.' Market as the ultimate luxury gift for the women who inspire you.
-- **Short-Form Content Hook (TikTok / Reels / Ads):** *"'The perfume that defined golden French luxury for 25 years. Smells like pure gold, Grasse jasmine, and Damascus rose.'"*
+- **Short-Form Content Hook (TikTok / Reels / Ads):** *"'The perfume that defined golden French luxury for 25 years. Smells like pure gold, jasmine, and Damascus rose.'"*
 - **Pricing & Value Architecture:** Gift-tier pricing ($38 / 50ml).
 - **Bundling & Cross-Selling Synergy:** Bundle with ZR-28 (Crystal) or ZR-26 (Voyage) as 'The Ultimate Mother's Day Floral Gift Box'.
 - **Sampling & Discovery Strategy:** Promote during Mother's Day and holiday gift guides.
@@ -2571,7 +2571,7 @@ A critical commercial hazard in the ZORUNE catalog is that certain products comp
   - **ZR-28 Crystal:** Chilled Yuzu & Peony (Fresh, casual everyday, zero-risk office/gym).
   - **ZR-19 Gardenia:** Pear Blossom & Brown Sugar (Sweet, playful, pastel weekend brunch).
   - **ZR-26 Voyage:** Bubblegum Tuberose & Orange Blossom (Vibrant, radiant vacation & travel).
-  - **ZR-25 Adore:** Golden Grasse Jasmine & Damascus Rose (Formal, regal, mature luxury gala).
+  - **ZR-25 Adore:** Golden Jasmine & Damascus Rose (Formal, regal, mature luxury gala).
 
 ---
 

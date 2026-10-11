@@ -119,19 +119,28 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setSelectedProduct(null);
     window.history.pushState({}, '', `/product/${sku.toUpperCase()}`);
     window.dispatchEvent(new PopStateEvent('popstate'));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
   };
 
   const navigateToHome = () => {
     window.history.pushState({}, '', '/');
     window.dispatchEvent(new PopStateEvent('popstate'));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
   };
 
   const navigateTo404 = () => {
     window.history.pushState({}, '', '/404');
     window.dispatchEvent(new PopStateEvent('popstate'));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
   };
 
   const removeFromCart = (sku: string) => {

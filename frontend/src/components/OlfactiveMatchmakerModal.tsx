@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Sparkles, Check, ArrowRight, RotateCcw } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 interface OlfactiveMatchmakerModalProps {
   products: Product[];
@@ -14,6 +15,11 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
   const [selectedAccords, setSelectedAccords] = useState<string[]>(['warm spicy', 'vanilla']);
   const [selectedGender, setSelectedGender] = useState<string>('All');
   const [results, setResults] = useState<{ product: Product; match: number }[]>([]);
+  const { containerRef: quizScrollRef, scrollToTop } = useSmoothScroll<HTMLDivElement>(isQuizOpen, true);
+
+  React.useEffect(() => {
+    scrollToTop(true);
+  }, [step]);
 
   React.useEffect(() => {
     if (isQuizOpen) {
@@ -113,9 +119,9 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
       aria-modal="true"
     >
       <div 
+        ref={quizScrollRef}
         className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 sm:p-8 overscroll-contain popup-scroll-pane"
         onClick={(e) => e.stopPropagation()}
-        data-lenis-prevent
       >
         
         {/* Close Button */}
@@ -127,12 +133,12 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
         </button>
 
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 px-6 sm:px-0">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[oklch(0.98_0.005_78.3)] border border-[oklch(0.926_0.01_81.8)] text-[oklch(0.552_0.014_286)] text-xs font-bold uppercase tracking-wider mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
             <span>AI Olfactive Concierge</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[oklch(0.179_0.004_286)]">
+          <h2 className="font-serif text-xl sm:text-3xl font-extrabold text-[oklch(0.179_0.004_286)]">
             Find Your Signature Scent Profile<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
           <p className="text-xs text-[oklch(0.442_0.015_286)] mt-1">
@@ -335,13 +341,13 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-[oklch(0.926_0.01_81.8)]">
               <span className="text-xs text-[oklch(0.442_0.015_286)]">
-                Get all 3 in a <strong className="text-[oklch(0.179_0.004_286)]">Wardrobe Trio for ₹2,499</strong> (Save ₹500 + Free Pouch)
+                Get all 3 in a <strong className="text-[oklch(0.179_0.004_286)]">Wardrobe Trio for ₹2,799</strong> (Save ₹198 + Free Priority Dispatch)
               </span>
               <button
                 onClick={handleAddAllMatches}
                 className="w-full sm:w-auto px-6 py-3 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-bold text-xs uppercase tracking-wider cursor-pointer shadow-xs"
               >
-                Add All 3 to Cart (₹2,499)
+                Add All 3 to Cart (₹2,799)
               </button>
             </div>
           </div>

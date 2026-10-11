@@ -16,6 +16,7 @@ import {
   Clock,
   Send
 } from 'lucide-react';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 export type PolicyTab = 
   | 'privacy'
@@ -69,7 +70,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   const [submittedTicket, setSubmittedTicket] = useState<{ id: string; name: string } | null>(null);
   const [cooldownRemaining, setCooldownRemaining] = useState<number>(0);
   const formRenderTimeRef = useRef<number>(Date.now());
-  const contentPaneRef = useRef<HTMLDivElement>(null);
+  const { containerRef: contentPaneRef, scrollToTop, resize } = useSmoothScroll<HTMLDivElement>(isOpen, true);
 
   useEffect(() => {
     if (initialTab) {
@@ -91,9 +92,14 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   }, [activeTab]);
 
   useEffect(() => {
-    if (contentPaneRef.current) {
-      contentPaneRef.current.scrollTo({ top: 0, behavior: 'instant' });
-    }
+    scrollToTop(true);
+    resize();
+    const t1 = setTimeout(() => resize(), 50);
+    const t2 = setTimeout(() => resize(), 200);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, [activeTab]);
 
   useEffect(() => {
@@ -283,16 +289,16 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
         data-lenis-prevent
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[oklch(0.926_0.01_81.8)] bg-white/80 backdrop-blur-md flex-shrink-0">
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-serif font-bold text-sm">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-[oklch(0.926_0.01_81.8)] bg-white/80 backdrop-blur-md flex-shrink-0">
+          <div className="flex items-center space-x-3 min-w-0 pr-2">
+            <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-serif font-bold text-sm flex-shrink-0">
               Z
             </div>
-            <div>
-              <h2 className="font-serif text-lg sm:text-xl font-bold tracking-tight text-[oklch(0.179_0.004_286)]">
+            <div className="min-w-0">
+              <h2 className="font-serif text-base sm:text-xl font-bold tracking-tight text-[oklch(0.179_0.004_286)] truncate sm:whitespace-normal">
                 ZORUNE<span className="text-[oklch(0.683_0.102_82.6)]">.</span> Editorial Policies & Customer Care
               </h2>
-              <p className="text-[11px] text-[oklch(0.552_0.014_286)] tracking-wider uppercase font-semibold">
+              <p className="text-[10px] sm:text-[11px] text-[oklch(0.552_0.014_286)] tracking-wider uppercase font-semibold truncate">
                 Haute Parfumerie Atelier Guidelines • 2026 Edition
               </p>
             </div>
@@ -300,7 +306,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer"
+            className="p-2 rounded-full hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer flex-shrink-0"
             aria-label="Close Modal"
           >
             <X className="w-5 h-5" />
@@ -312,7 +318,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
           
           {/* Navigation Sidebar */}
           <div 
-            className="w-full md:w-64 bg-[oklch(0.959_0.01_87.5)]/80 border-b md:border-b-0 md:border-r border-[oklch(0.926_0.01_81.8)] p-3 sm:p-4 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-1.5 flex-shrink-0 min-h-0 overscroll-contain popup-scroll-pane"
+            className="w-full md:w-64 bg-[oklch(0.959_0.01_87.5)]/80 border-b md:border-b-0 md:border-r border-[oklch(0.926_0.01_81.8)] p-2.5 sm:p-4 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-1.5 flex-shrink-0 min-h-0 overscroll-contain popup-scroll-pane no-scrollbar"
             data-lenis-prevent
           >
             {tabs.map((tab) => {
@@ -336,13 +342,11 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
             })}
           </div>
 
-          {/* Content Pane */}
+          {/* Content Pane (Lenis Smooth Scroll) */}
           <div 
             ref={contentPaneRef}
-            className="flex-1 p-6 sm:p-8 overflow-y-auto min-h-0 overscroll-contain popup-scroll-pane space-y-6 text-sm leading-relaxed text-[oklch(0.442_0.015_286)] bg-[oklch(0.98_0.005_78.3)]"
-            data-lenis-prevent
+            className="flex-1 p-6 sm:p-8 pb-16 sm:pb-20 overflow-y-auto min-h-0 overscroll-contain popup-scroll-pane space-y-6 text-sm leading-relaxed text-[oklch(0.442_0.015_286)] bg-[oklch(0.98_0.005_78.3)]"
             tabIndex={0}
-            onWheel={(e) => e.stopPropagation()}
           >
             
             {/* 1. PRIVACY POLICY */}
@@ -412,7 +416,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">2. Olfactive Interpretation & Trademark Disclaimer</h4>
                     <p>
-                      All 30 formulations presented by ZORUNE are independent olfactive interpretations handcrafted using 28% Extrait de Parfum compounds. Any references to designer fragrances, brand names, or registered trademarks belong exclusively to their respective intellectual property holders and are used purely for comparative scent family categorization. ZORUNE maintains zero legal association with original designer houses.
+                      All 30 formulations presented by ZORUNE are independent ~95% close clone formulations engineered with high-grade French oils at 28% Extrait de Parfum concentration. Any references to expensive designer fragrances, brand names, or registered trademarks belong exclusively to their respective intellectual property holders and are used purely for comparative scent family categorization. ZORUNE maintains zero legal association with original designer houses.
                     </p>
                   </div>
 
@@ -532,10 +536,17 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                     <span>28% Extrait Standard</span>
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-[oklch(0.179_0.004_286)]">Authenticity & Olfactive Purity</h3>
-                  <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Mastercrafted in Grasse, Bottled Fresh in India</p>
+                  <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Mastercrafted with High-Grade Oils, Bottled Fresh in India</p>
                 </div>
 
                 <div className="space-y-4">
+                  <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">~95% Olfactive Fidelity & High-Grade French Oils</h4>
+                    <p>
+                      Our master perfumers reverse-engineer expensive luxury originals (OGs) to achieve a verified ~95% olfactive match. Utilizing premium-grade French perfume oils without cheap synthetic fillers, our formulations deliver identical drydowns to ₹15,000–₹45,000 retail bottles.
+                    </p>
+                  </div>
+
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">28% Extrait de Parfum Concentration</h4>
                     <p>

@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, onNavigateSection 
                 ZORUNE<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
               </span>
               <span className="text-[9px] tracking-[0.35em] text-[oklch(0.552_0.014_286)] uppercase font-semibold mt-1">
-                Haute Parfumerie • 20ml Flacons
+                Haute Parfumerie • 28% Extrait
               </span>
             </div>
           </div>

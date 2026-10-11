@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { X, Crown, Clock, MapPin, Plus, Zap } from 'lucide-react';
+import { X, Crown, Clock, MapPin, Plus, Zap, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 export const ProductDetailModal: React.FC = () => {
   const { 
@@ -16,6 +17,7 @@ export const ProductDetailModal: React.FC = () => {
 
   const [inputPin, setInputPin] = useState<string>(userPincode);
   const [pinChecked, setPinChecked] = useState<boolean>(true);
+  const { containerRef: modalScrollRef } = useSmoothScroll<HTMLDivElement>(Boolean(selectedProduct), true);
 
   React.useEffect(() => {
     if (selectedProduct) {
@@ -56,9 +58,9 @@ export const ProductDetailModal: React.FC = () => {
       aria-modal="true"
     >
       <div 
+        ref={modalScrollRef}
         className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-5 sm:p-8 overscroll-contain popup-scroll-pane"
         onClick={(e) => e.stopPropagation()}
-        data-lenis-prevent
       >
         
         {/* Close Button */}
@@ -126,8 +128,11 @@ export const ProductDetailModal: React.FC = () => {
                 </span>
               </div>
               <div>
-                <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-semibold block mb-0.5">Sprays</span>
-                <span className="text-xs font-bold text-[oklch(0.179_0.004_286)]">~300 Sprays</span>
+                <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-semibold block mb-0.5">Scent Match</span>
+                <span className="text-xs font-bold text-emerald-700 flex items-center justify-center space-x-1">
+                  <Sparkles className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
+                  <span>~95% Close</span>
+                </span>
               </div>
             </div>
           </div>
@@ -150,11 +155,19 @@ export const ProductDetailModal: React.FC = () => {
               
               {/* Inspired By Transparency Box */}
               <div className="p-3.5 rounded-xl bg-[oklch(0.959_0.01_87.5)] border border-[oklch(0.926_0.01_81.8)] mb-3">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)]">
+                    ~95% Olfactive Match
+                  </span>
+                  <span className="text-[10px] font-semibold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                    High-Grade Oils
+                  </span>
+                </div>
                 <p className="text-xs text-[oklch(0.262_0.007_286)]">
-                  Direct Olfactory Extraction of <strong className="text-[oklch(0.179_0.004_286)]">{product.inspired_by.brand} {product.inspired_by.original_name}</strong>
+                  Inspired by <strong className="text-[oklch(0.179_0.004_286)]">{product.inspired_by.brand} {product.inspired_by.original_name}</strong>
                 </p>
                 <p className="text-[11px] text-[oklch(0.552_0.014_286)] mt-0.5">
-                  Original Luxury MSRP: ₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd}) • ZORUNE: ₹999
+                  Original Luxury MSRP: ₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd}) • ZORUNE: ₹999 (Save {product.arbitrage_savings_percent}%)
                 </p>
               </div>
 

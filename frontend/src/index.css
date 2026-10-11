@@ -205,6 +205,10 @@
 }
 
 /* Lenis High-Response Smooth Scroll Integration */
+html {
+  scroll-behavior: auto !important;
+}
+
 html.lenis, html.lenis body {
   height: auto;
 }
@@ -223,4 +227,14 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+/* Scrollbar Utility for smooth scroll areas */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

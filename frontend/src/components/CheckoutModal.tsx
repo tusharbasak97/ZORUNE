@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, ShieldCheck, Lock, CheckCircle2, CreditCard, Banknote } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { OrderConfirmation } from '../types';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 export const CheckoutModal: React.FC = () => {
   const { 
@@ -22,6 +23,7 @@ export const CheckoutModal: React.FC = () => {
   const [address, setAddress] = useState('Flat 402, Signature Towers, Bandra West');
   const [pincode, setPincode] = useState(userPincode || '400050');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { containerRef: checkoutScrollRef } = useSmoothScroll<HTMLDivElement>(isCheckoutOpen, true);
 
   React.useEffect(() => {
     if (isCheckoutOpen) {
@@ -69,9 +71,9 @@ export const CheckoutModal: React.FC = () => {
       aria-modal="true"
     >
       <div 
+        ref={checkoutScrollRef}
         className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 sm:p-8 overscroll-contain popup-scroll-pane"
         onClick={(e) => e.stopPropagation()}
-        data-lenis-prevent
       >
         
         {/* Close Button */}
@@ -83,16 +85,18 @@ export const CheckoutModal: React.FC = () => {
         </button>
 
         {/* Secure Checkout Header */}
-        <div className="flex items-center space-x-2.5 pb-4 border-b border-[oklch(0.926_0.01_81.8)] mb-6">
-          <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-extrabold text-sm">
+        <div className="flex items-center space-x-2.5 pb-4 border-b border-[oklch(0.926_0.01_81.8)] mb-6 pr-10">
+          <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-extrabold text-sm flex-shrink-0">
             <ShieldCheck className="w-5 h-5 text-[oklch(0.683_0.102_82.6)]" />
           </div>
-          <div>
-            <h3 className="font-serif text-lg font-bold text-[oklch(0.179_0.004_286)] flex items-center space-x-2">
-              <span>Instant 1-Click Secure Checkout<span className="text-[oklch(0.683_0.102_82.6)]">.</span></span>
-              <span className="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-sans font-bold border border-emerald-200">Encrypted</span>
-            </h3>
-            <p className="text-[11px] text-[oklch(0.552_0.014_286)]">Fast-track verified checkout for luxury fragrance</p>
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-1.5">
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[oklch(0.179_0.004_286)] truncate">
+                Instant Secure Checkout<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
+              </h3>
+              <span className="text-[10px] bg-emerald-50 text-emerald-700 px-1.5 py-0.2 rounded font-sans font-bold border border-emerald-200">Encrypted</span>
+            </div>
+            <p className="text-[11px] text-[oklch(0.552_0.014_286)] truncate">Fast-track verified checkout for luxury fragrance</p>
           </div>
         </div>
 

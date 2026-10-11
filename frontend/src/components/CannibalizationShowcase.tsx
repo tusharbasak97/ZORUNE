@@ -94,7 +94,7 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
       description: 'Lavish golden honey, warm benzoin, and rich roasted tonka bean. An explosive, opulent clubbing statement that cuts through any crowded venue.',
       accords: 'Golden Honey, Warm Tonka, Benzoin',
       bestFor: 'Nightclubs, Parties & Winter Nights',
-      longevity: '12+ Hours (Nuclear Longevity)'
+      longevity: '12+ Hours (Extrait Longevity)'
     },
     {
       sku: 'ZR-01',
@@ -144,8 +144,8 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
       name: 'Adore',
       inspiration: "Dior J'adore",
       archetype: 'Royal French Golden Bouquet',
-      description: 'Regal Grasse grandiflorum jasmine, Damascus rose, and golden Comorian ylang-ylang. An architectural triumph of timeless French haute perfumerie.',
-      accords: 'Grasse Jasmine, Damascena Rose, Ylang',
+      description: 'Regal grandiflorum jasmine, Damascus rose, and golden Comorian ylang-ylang. An architectural triumph of timeless French haute perfumerie.',
+      accords: 'Jasmine, Damascena Rose, Ylang',
       bestFor: 'Formal Galas & Diplomatic Events',
       longevity: '9–10 Hours (Opulent Floral)'
     }
@@ -160,7 +160,7 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
         {/* Top Header Pill & SKU */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <span className="text-[11px] font-bold text-[oklch(0.683_0.102_82.6)] uppercase tracking-wider truncate">
-            {item.sku} • {item.inspiration}
+            {item.sku} • Inspired by {item.inspiration}
           </span>
           <span className="text-[10px] font-semibold text-[oklch(0.442_0.015_286)] bg-[oklch(0.959_0.01_87.5)] px-2 py-0.5 rounded-full border border-[oklch(0.926_0.01_81.8)] shrink-0">
             20ml • ₹999
@@ -205,72 +205,72 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
   );
 
   return (
-    <section id="cannibalization" className="py-16 sm:py-24 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="cannibalization" className="py-6 sm:py-10 md:py-14 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white border border-[oklch(0.926_0.01_81.8)] mb-3 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)]">
-              Connoisseur Olfactory Comparisons
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+          <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-white border border-[oklch(0.926_0.01_81.8)] mb-2 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)]">
+              ~95% Close OG Clone Comparisons
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-[oklch(0.179_0.004_286)] mb-3">
-            Navigating Overlapping Masterpieces<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[oklch(0.179_0.004_286)] mb-2">
+            Navigating Iconic OG Scent Profiles<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
-          <p className="text-sm text-[oklch(0.442_0.015_286)] leading-relaxed">
-            Similar scent profiles serve completely different lifestyles. Here is how our perfumers recommend pairing and distinguishing between iconic fragrances.
+          <p className="text-[11px] sm:text-xs md:text-sm text-[oklch(0.442_0.015_286)] leading-relaxed px-2">
+            Our ~95% close impressions of iconic luxury masterpieces are formulated with high-grade oils. Compare and pair overlapping scent families to build your custom wardrobe without paying ₹15,000+ retail.
           </p>
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex justify-center gap-2 mb-10 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex justify-start sm:justify-center gap-1.5 sm:gap-2 mb-6 sm:mb-8 overflow-x-auto pb-2 scrollbar-none">
           <button
             onClick={() => setActiveTab('blue')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
               activeTab === 'blue'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
             }`}
           >
-            The Blue Trinity (Apex vs Bleu vs Savage)
+            Blue Trinity
           </button>
           <button
             onClick={() => setActiveTab('swy')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
               activeTab === 'swy'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
             }`}
           >
-            Armani SWY Flankers (Intense vs Absolute)
+            Armani SWY Flankers
           </button>
           <button
             onClick={() => setActiveTab('sweet')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
               activeTab === 'sweet'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
             }`}
           >
-            Sweet Nightlife (Elixir vs Intense vs Wanted)
+            Sweet Nightlife
           </button>
           <button
             onClick={() => setActiveTab('floral')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
               activeTab === 'floral'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
             }`}
           >
-            Feminine Florals (Gardenia vs Voyage vs Adore)
+            Feminine Florals
           </button>
         </div>
 
         {/* Tab Content Display */}
         {activeTab === 'blue' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-5">
             {blueItems.map(renderCard)}
           </div>
         )}

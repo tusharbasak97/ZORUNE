@@ -42,6 +42,9 @@ export const AppContent: React.FC = () => {
   // Brand landing preloader on every page load
   const [showIntro, setShowIntro] = useState<boolean>(true);
 
+  // Active section state for mobile/tablet to ensure single-section visibility
+  const [mobileActiveSection, setMobileActiveSection] = useState<string>('hero');
+
   // High-sensitivity luxury smooth scroll animation
   useSmoothScroll(!showIntro);
 
@@ -90,10 +93,22 @@ export const AppContent: React.FC = () => {
   useEffect(() => {
     const handlePopState = () => {
       setCurrentRoute(resolveRoute());
+      window.scrollTo(0, 0);
+      if ((window as any).lenis) {
+        (window as any).lenis.scrollTo(0, { immediate: true });
+      }
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  // Reset scroll immediately when navigating between routes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
+  }, [currentRoute.type]);
 
   // Keyboard shortcut Ctrl+K / Cmd+K
   useEffect(() => {
@@ -111,6 +126,15 @@ export const AppContent: React.FC = () => {
     if (currentRoute.type !== 'home') {
       navigateToHome();
     }
+    
+    // Update active section for mobile/tablet single-section view
+    setMobileActiveSection(sectionId);
+
+    window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
+
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -119,6 +143,9 @@ export const AppContent: React.FC = () => {
         } else {
           el.scrollIntoView({ behavior: 'smooth' });
         }
+      } else {
+        // Fallback: scroll to top if section not found (e.g. mobile virtual sections)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }, 80);
   };
@@ -141,12 +168,14 @@ export const AppContent: React.FC = () => {
       {/* VIEW 1: DEDICATED PRODUCT PAGE */}
       {currentRoute.type === 'product' && (
         <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative">
-          {/* Upper Sheet: All page content and footer existing on a layer above the brand */}
-          <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-[260px] sm:mb-[340px] lg:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
-            <Navbar 
-              onOpenSearch={() => setIsSearchOpen(true)}
-              onNavigateSection={handleNavigateSection}
-            />
+          {/* Upper Sheet */}
+          <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-0 xl:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
+            <div className="hidden xl:block">
+              <Navbar 
+                onOpenSearch={() => setIsSearchOpen(true)}
+                onNavigateSection={handleNavigateSection}
+              />
+            </div>
 
             <ProductDetailPage
               product={currentRoute.product}
@@ -162,8 +191,10 @@ export const AppContent: React.FC = () => {
             />
           </div>
 
-          {/* Statically Anchored Brand Name at Bottom */}
-          <ParallaxFooterReveal />
+          {/* Statically Anchored Brand Name at Bottom (Desktop Only) */}
+          <div className="hidden xl:block">
+            <ParallaxFooterReveal />
+          </div>
         </div>
       )}
 
@@ -180,41 +211,97 @@ export const AppContent: React.FC = () => {
       {/* VIEW 3: MAIN BOUTIQUE HOMEPAGE */}
       {currentRoute.type === 'home' && (
         <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative">
-          {/* Upper Sheet: All page content and footer existing on a layer above the brand */}
-          <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-[260px] sm:mb-[340px] lg:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
-            <Navbar 
-              onOpenSearch={() => setIsSearchOpen(true)}
-              onNavigateSection={handleNavigateSection}
-            />
+          {/* Upper Sheet: All page content */}
+          <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-0 xl:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
+            {/* Desktop Top Navbar: Strictly hidden on mobile, tablet, and foldable screens */}
+            <div className="hidden xl:block">
+              <Navbar 
+                onOpenSearch={() => setIsSearchOpen(true)}
+                onNavigateSection={handleNavigateSection}
+              />
+            </div>
 
-            <main className="flex-1">
-              <Hero onExploreCatalog={() => handleNavigateSection('catalog')} />
+            {/* Desktop View (xl and up, >= 1280px): all sections visible with standard scrolling */}
+            <main className="hidden xl:block flex-1">
+              <Hero 
+                products={products}
+                onExploreCatalog={() => handleNavigateSection('catalog')} 
+                onNavigateSection={handleNavigateSection}
+                onSelectProduct={(p) => navigateToProduct(p.sku)}
+              />
               <Tier1Showcase products={products} />
               <ProductGrid products={products} />
               <CannibalizationShowcase products={products} />
-              
-              {/* Belvish Homepage Ending Sections */}
               <TestimonialsSection />
               <SpotlightsSection />
               <NewsletterClub />
+              <Footer 
+                onNavigateSection={handleNavigateSection} 
+                onReplayIntro={handleReplayIntro}
+                onOpenPolicy={(tab) => setPolicyTab(tab)}
+              />
             </main>
 
-            <Footer 
-              onNavigateSection={handleNavigateSection} 
-              onReplayIntro={handleReplayIntro}
-              onOpenPolicy={(tab) => setPolicyTab(tab)}
-            />
+            {/* Mobile, Tablet, and Foldable View (< 1280px):
+                Exclusively ONE section visible at a time. No endless scrolling.
+                Right-hand floating navbar safe right-padding (min-[600px]:pr-16 lg:pr-20)
+                Bottom mobile navbar safe bottom-padding (pb-20 min-[600px]:pb-8) */}
+            <main className="block xl:hidden flex-1 pb-20 min-[600px]:pb-8 min-[600px]:pr-16 lg:pr-20">
+              {mobileActiveSection === 'hero' && (
+                <Hero 
+                  products={products}
+                  onExploreCatalog={() => handleNavigateSection('catalog')} 
+                  onNavigateSection={handleNavigateSection}
+                  onSelectProduct={(p) => navigateToProduct(p.sku)}
+                />
+              )}
+
+              {mobileActiveSection === 'tier1' && (
+                <Tier1Showcase products={products} />
+              )}
+
+              {mobileActiveSection === 'catalog' && (
+                <ProductGrid products={products} />
+              )}
+
+              {mobileActiveSection === 'cannibalization' && (
+                <CannibalizationShowcase products={products} />
+              )}
+
+              {mobileActiveSection === 'editorial' && (
+                <>
+                  <SpotlightsSection />
+                  <NewsletterClub />
+                </>
+              )}
+
+              {/* Universal Collapsible Accordion Footer for all mobile/tablet sections */}
+              <Footer 
+                onNavigateSection={handleNavigateSection} 
+                onReplayIntro={handleReplayIntro}
+                onOpenPolicy={(tab) => setPolicyTab(tab)}
+              />
+            </main>
           </div>
 
-          {/* Statically Anchored Brand Name at Bottom */}
-          <ParallaxFooterReveal />
+          {/* Statically Anchored Brand Name at Bottom (Desktop Only to prevent mobile empty gaps) */}
+          <div className="hidden xl:block">
+            <ParallaxFooterReveal />
+          </div>
         </div>
       )}
 
-      {/* Mobile Bottom Fixed Navigation */}
+      {/* Global Bottom Navigation (Mobile < 600px) & Right-hand Floating Navigation (Tablets/Foldables >= 600px to < 1280px) */}
       <MobileBottomNav 
+        activeSection={mobileActiveSection}
         onOpenSearch={() => setIsSearchOpen(true)}
         onNavigateSection={handleNavigateSection}
+        isProductPage={currentRoute.type === 'product'}
+        product={currentRoute.type === 'product' ? currentRoute.product : null}
+        onBackToCatalog={() => {
+          navigateToHome();
+          setMobileActiveSection('catalog');
+        }}
       />
 
       {/* Floating Animated Move To Top Button */}

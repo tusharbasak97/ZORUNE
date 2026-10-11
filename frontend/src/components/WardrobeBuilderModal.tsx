@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Layers, Plus, Trash2, Check, ArrowRight } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
+import { useSmoothScroll } from '../hooks/useSmoothScroll';
 
 interface WardrobeBuilderModalProps {
   products: Product[];
@@ -11,6 +12,8 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
   const { isWardrobeOpen, setIsWardrobeOpen, addToCart, setIsCartOpen } = useCart();
   const [selectedSkus, setSelectedSkus] = useState<string[]>(['ZR-03', 'ZR-05', 'ZR-01']); // Defaults: Imagination, Elixir, Intense
   const [activeTab, setActiveTab] = useState<'custom' | 'curated'>('custom');
+  const { containerRef: modalScrollRef } = useSmoothScroll<HTMLDivElement>(isWardrobeOpen, true);
+  const { containerRef: gridScrollRef } = useSmoothScroll<HTMLDivElement>(isWardrobeOpen && activeTab === 'custom', true);
 
   React.useEffect(() => {
     if (isWardrobeOpen) {
@@ -109,9 +112,9 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
       aria-modal="true"
     >
       <div 
+        ref={modalScrollRef}
         className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-5 sm:p-8 overscroll-contain popup-scroll-pane"
         onClick={(e) => e.stopPropagation()}
-        data-lenis-prevent
       >
         
         {/* Close Button */}
@@ -123,12 +126,12 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
         </button>
 
         {/* Modal Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-6 px-6 sm:px-0">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[oklch(0.98_0.005_78.3)] border border-[oklch(0.926_0.01_81.8)] text-[oklch(0.552_0.014_286)] text-xs font-bold uppercase tracking-wider mb-2">
             <Layers className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
             <span>Multi-Bottle Wardrobe Builder</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[oklch(0.179_0.004_286)] mb-2">
+          <h2 className="font-serif text-xl sm:text-3xl font-extrabold text-[oklch(0.179_0.004_286)] mb-2">
             Build Your 20ml Fragrance Wardrobe<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
           <p className="text-xs sm:text-sm text-[oklch(0.442_0.015_286)]">
@@ -197,20 +200,20 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
                   Select at least 2 perfumes from the catalog below to unlock bundle savings.
                 </p>
               ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-2.5">
                   {selectedSkus.map(sku => {
                     const prod = products.find(p => p.sku === sku);
                     if (!prod) return null;
                     return (
-                      <div key={sku} className="relative p-2.5 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] flex items-center space-x-2.5 shadow-2xs">
-                        <img src={prod.image_url} alt={prod.name} className="w-10 h-10 object-contain rounded-lg border border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)] p-0.5" />
+                      <div key={sku} className="relative p-2 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)] flex items-center space-x-2 shadow-2xs">
+                        <img src={prod.image_url} alt={prod.name} className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-lg border border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)] p-0.5 flex-shrink-0" />
                         <div className="flex-1 min-w-0">
                           <p className="text-xs font-bold text-[oklch(0.179_0.004_286)] truncate">{prod.name}</p>
                           <p className="text-[10px] text-[oklch(0.552_0.014_286)] truncate">20ml Extrait</p>
                         </div>
                         <button
                           onClick={() => toggleSelect(sku)}
-                          className="p-1 rounded text-[oklch(0.552_0.014_286)] hover:text-red-600 hover:bg-[oklch(0.98_0.005_78.3)] cursor-pointer"
+                          className="p-1 rounded text-[oklch(0.552_0.014_286)] hover:text-red-600 hover:bg-[oklch(0.98_0.005_78.3)] cursor-pointer flex-shrink-0"
                           title="Remove"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
@@ -222,11 +225,11 @@ export const WardrobeBuilderModal: React.FC<WardrobeBuilderModalProps> = ({ prod
               )}
             </div>
 
-            {/* Catalog Selector Grid */}
+            {/* Catalog Selector Grid (Lenis Smooth Scroll) */}
             <p className="text-xs font-semibold text-[oklch(0.442_0.015_286)] mb-3">Tap any perfume to add or remove from your wardrobe:</p>
             <div 
+              ref={gridScrollRef}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 max-h-[300px] overflow-y-auto pr-1 mb-6 overscroll-contain popup-scroll-pane"
-              data-lenis-prevent
             >
               {products.map(p => {
                 const isSelected = selectedSkus.includes(p.sku);

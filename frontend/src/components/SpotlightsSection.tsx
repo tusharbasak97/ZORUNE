@@ -22,7 +22,7 @@ const articles: SpotlightArticle[] = [
       'Commercial fragrances dilute oils down to 10–14% Eau de Toilette. Discover why 28% pure perfume extract forms an intimate lipid bond with your skin for 12+ hours without synthetic fixatives.',
     content: [
       'In commercial mass-market perfumery, designer houses dilute concentrates down to 10%–14% Eau de Toilette or 15% Eau de Parfum to minimize manufacturing costs and drive inventory turnover. The high-proof denatured alcohol acts as an explosive carrier, creating an artificial blast of top notes that violently evaporates within 90 minutes.',
-      'At ZORUNE, our formulation thesis begins at the polar opposite: pure 28% Extrait de Parfum. By maintaining an extraordinarily dense concentration of Grasse-sourced botanical absolutes and pure aroma compounds, the fragrance does not flash off into an alcohol cloud. Instead, it forms an intimate, continuous lipid bond with the natural warmth of your skin.',
+      'At ZORUNE, our formulation thesis begins at the polar opposite: pure 28% Extrait de Parfum. By maintaining an extraordinarily dense concentration of high-grade botanical absolutes and pure aroma compounds, the fragrance does not flash off into an alcohol cloud. Instead, it forms an intimate, continuous lipid bond with the natural warmth of your skin.',
       'This molecular density delivers what French perfumers call the "aura of presence" — expansive volumetric projection for the first 3 hours that gracefully transitions into an intoxicating, persistent drydown lingering for 10 to 14 hours.'
     ]
   },
@@ -50,7 +50,7 @@ const articles: SpotlightArticle[] = [
       'Why parched skin consumes perfume oils like a desert sponge, and how unscented ceramide or squalane priming locks aromatic molecules on your skin surface for 14 hours.',
     content: [
       'When fragrance connoisseurs complain of disappointing longevity despite wearing high-concentration Extrait, the culprit is rarely the formulation — it is trans-epidermal hydration. Dry, unconditioned skin is lipid-deficient; it acts like a sponge, pulling carrier alcohol and fragile aroma compounds deep into the stratum corneum, effectively smothering outward sillage.',
-      'Master formulation chemists in Grasse rely on a simple physiological principle: apply a rich, fragrance-free ceramide lotion, squalane oil, or pure shea butter immediately after stepping out of the shower while your pores are still warm and receptive.',
+      'Master formulation chemists rely on a simple physiological principle: apply a rich, fragrance-free ceramide lotion, squalane oil, or pure shea butter immediately after stepping out of the shower while your pores are still warm and receptive.',
       'By saturating your skin’s outer barrier with non-competing lipids, you create a hydrophobic shield that prevents perfume absorption. The 28% Extrait oils are forced to remain suspended on the surface, where body warmth slowly volatilizes the molecules over 12 to 14 hours, increasing projection by up to 40%.'
     ]
   },
@@ -65,7 +65,7 @@ const articles: SpotlightArticle[] = [
     content: [
       'During priority express transit, your flacon is subjected to pressurized aircraft cargo bays, significant altitude and temperature fluctuations, and continuous road vibration. In artisanal 28% Extrait de Parfum blends, where dense botanical resinoids and delicate essential oils coexist, kinetic energy induces temporary molecular agitation.',
       'Upon receiving your delivery, we advise spraying 3 priming pumps into the open air to clear any stagnant liquid from the micro-mist atomizer straw. Then, place your flacon inside a dark drawer, wardrobe, or cupboard at a stable room temperature (20°C to 24°C) for 24 to 48 hours.',
-      'This resting window allows the volatile monoterpenes and heavier base fixatives to reorganize and reach thermodynamic equilibrium. The brief patience is rewarded with an instantly richer, rounder bouquet, eliminating temporary transit sharpness and revealing authentic Grasse depth.'
+      'This resting window allows the volatile monoterpenes and heavier base fixatives to reorganize and reach thermodynamic equilibrium. The brief patience is rewarded with an instantly richer, rounder bouquet, eliminating temporary transit sharpness and revealing authentic depth.'
     ]
   },
   {

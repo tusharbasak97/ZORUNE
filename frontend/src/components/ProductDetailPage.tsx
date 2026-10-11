@@ -38,11 +38,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    }
     setSelectedImage(product.image_url);
 
     // Update document title for SEO
     const prevTitle = document.title;
-    document.title = `ZORUNE. ${product.sku} - ${product.name} | 20ml Extrait de Parfum (28%) Inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name}`;
+    document.title = `ZORUNE. ${product.sku} - ${product.name} | Inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name} (20ml Extrait @ 28%)`;
 
     // Update meta description if element exists
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -53,7 +56,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     }
     metaDesc.setAttribute(
       'content',
-      `${product.name} (${product.sku}) by ZORUNE. Pure 28% Extrait de Parfum inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name}. 20ml pocket flacon for flat ₹999. ${product.longevity_hours}h longevity.`
+      `${product.name} (${product.sku}) by ZORUNE. Inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name}. Formulated with high-grade oils in 28% Extrait de Parfum. 20ml pocket flacon for flat ₹999. ${product.longevity_hours}h longevity.`
     );
 
     // Inject JSON-LD Schema.org Product structured data for Google SEO
@@ -136,6 +139,23 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     .filter(p => p.olfactive_family === product.olfactive_family || p.tier === product.tier)
     .slice(0, 3);
 
+  // Format performance metrics display cleanly to prevent wrapping and alignment issues
+  const sillageDisplay = product.sillage_rating === 'Moderate to Heavy' 
+    ? 'Mod–Heavy' 
+    : product.sillage_rating;
+
+  const sillageSubtitle = product.sillage_rating === 'Nuclear' 
+    ? 'Room-Filling' 
+    : product.sillage_rating === 'Heavy' 
+    ? '8–10 Ft Aura' 
+    : '6–8 Ft Radius';
+
+  const longevitySubtitle = product.longevity_hours >= 14
+    ? 'Beast-Mode Wear'
+    : product.longevity_hours >= 12
+    ? 'All-Day Wear'
+    : '8h+ Persistence';
+
   return (
     <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white">
       
@@ -179,7 +199,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       </div>
 
       {/* Main PDP Grid */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 pb-28 sm:pb-20 min-[600px]:pr-16 lg:pr-20 xl:pr-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14">
           
           {/* Left Column: Visual Flacon Showcase (5 cols) */}
@@ -217,34 +237,73 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               </div>
 
               {/* Performance Metrics Trio */}
-              <div className="grid grid-cols-3 gap-3 mt-4">
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
-                  <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
-                    Skin Longevity
-                  </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Clock className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>{product.longevity_hours} Hours</span>
+              <div className="grid grid-cols-3 gap-2.5 sm:gap-3 mt-4">
+                {/* Card 1: Skin Longevity */}
+                <div 
+                  className="group p-3 sm:p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.683_0.102_82.6)]/50 hover:shadow-xs transition-all duration-300 text-center flex flex-col items-center justify-between min-h-[114px]"
+                  title={`Tested Skin Longevity: ${product.longevity_hours} Hours`}
+                >
+                  <div className="w-8 h-8 rounded-full bg-[oklch(0.977_0.013_86.8)] border border-[oklch(0.926_0.01_81.8)] flex items-center justify-center text-[oklch(0.683_0.102_82.6)] group-hover:scale-105 group-hover:bg-[oklch(0.683_0.102_82.6)] group-hover:text-white transition-all duration-300 shadow-2xs">
+                    <Clock className="w-4 h-4" />
+                  </div>
+                  <div className="my-auto py-1">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-0.5">
+                      Longevity
+                    </span>
+                    <span className="font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm leading-tight block">
+                      {product.longevity_hours} Hours
+                    </span>
+                  </div>
+                  <div className="pt-1.5 border-t border-[oklch(0.959_0.01_87.5)] w-full">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-medium block truncate">
+                      {longevitySubtitle}
+                    </span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
-                  <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
-                    Sillage Radius
-                  </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Wind className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>{product.sillage_rating}</span>
+                {/* Card 2: Sillage Radius */}
+                <div 
+                  className="group p-3 sm:p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.683_0.102_82.6)]/50 hover:shadow-xs transition-all duration-300 text-center flex flex-col items-center justify-between min-h-[114px]"
+                  title={`Projection & Sillage: ${product.sillage_rating}`}
+                >
+                  <div className="w-8 h-8 rounded-full bg-[oklch(0.977_0.013_86.8)] border border-[oklch(0.926_0.01_81.8)] flex items-center justify-center text-[oklch(0.683_0.102_82.6)] group-hover:scale-105 group-hover:bg-[oklch(0.683_0.102_82.6)] group-hover:text-white transition-all duration-300 shadow-2xs">
+                    <Wind className="w-4 h-4" />
+                  </div>
+                  <div className="my-auto py-1">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-0.5">
+                      Sillage
+                    </span>
+                    <span className="font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm leading-tight block">
+                      {sillageDisplay}
+                    </span>
+                  </div>
+                  <div className="pt-1.5 border-t border-[oklch(0.959_0.01_87.5)] w-full">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-medium block truncate">
+                      {sillageSubtitle}
+                    </span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
-                  <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
-                    Authenticity
-                  </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Award className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>Pure French Oils</span>
+                {/* Card 3: Scent Match to OG & Oils */}
+                <div 
+                  className="group p-3 sm:p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.683_0.102_82.6)]/50 hover:shadow-xs transition-all duration-300 text-center flex flex-col items-center justify-between min-h-[114px]"
+                  title={`Engineered with high-grade oils for ~95% olfactory closeness to original ${product.inspired_by.brand} ${product.inspired_by.original_name}`}
+                >
+                  <div className="w-8 h-8 rounded-full bg-[oklch(0.977_0.013_86.8)] border border-[oklch(0.926_0.01_81.8)] flex items-center justify-center text-[oklch(0.683_0.102_82.6)] group-hover:scale-105 group-hover:bg-[oklch(0.683_0.102_82.6)] group-hover:text-white transition-all duration-300 shadow-2xs">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div className="my-auto py-1">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-0.5">
+                      Scent Match
+                    </span>
+                    <span className="font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm leading-tight block text-emerald-700">
+                      ~95% Close
+                    </span>
+                  </div>
+                  <div className="pt-1.5 border-t border-[oklch(0.959_0.01_87.5)] w-full">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-medium block truncate">
+                      High-Grade Oils
+                    </span>
                   </div>
                 </div>
               </div>
@@ -298,18 +357,23 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </span>
               </div>
 
-              {/* Olfactory Extraction Transparency Callout */}
+              {/* Luxury OG Clone Comparison Callout */}
               <div className="p-4 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] mb-6 shadow-2xs">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.552_0.014_286)] block mb-0.5">
-                      Direct Olfactory Extraction
-                    </span>
+                    <div className="flex items-center space-x-2 mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)] bg-[oklch(0.977_0.013_86.8)] px-2 py-0.5 rounded border border-[oklch(0.926_0.01_81.8)]">
+                        ~95% Olfactive Match
+                      </span>
+                      <span className="text-[10px] font-semibold text-emerald-700">
+                        High-Grade Oils
+                      </span>
+                    </div>
                     <p className="text-sm font-semibold text-[oklch(0.179_0.004_286)]">
                       Inspired by {product.inspired_by.brand} {product.inspired_by.original_name}
                     </p>
                     <p className="text-xs text-[oklch(0.442_0.015_286)] mt-1">
-                      Original Luxury Retail: <span className="line-through text-[oklch(0.552_0.014_286)]">₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd})</span>
+                      Expensive Original Retail: <span className="line-through text-[oklch(0.552_0.014_286)]">₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd})</span>
                     </p>
                   </div>
                   <span className="text-[11px] font-bold px-2.5 py-1 rounded bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.683_0.102_82.6)] border border-[oklch(0.926_0.01_81.8)] whitespace-nowrap">
@@ -335,6 +399,27 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   <span className="font-bold text-[oklch(0.179_0.004_286)] block">Multi-Flacon Direct Tiers</span>
                   <span className="text-[oklch(0.683_0.102_82.6)] font-semibold">2 for ₹1,899 • 3 for ₹2,799</span>
                 </div>
+              </div>
+
+              {/* Immediate Quick Purchase Buttons (Above the Fold) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                <button
+                  onClick={handleInstantBuy}
+                  className="w-full py-3.5 px-4 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.98]"
+                >
+                  <Zap className="w-4 h-4 text-[oklch(0.683_0.102_82.6)]" />
+                  <span>Instant Buy Now (₹999)</span>
+                </button>
+                <button
+                  onClick={() => {
+                    addToCart(product, 1);
+                    setIsCartOpen(true);
+                  }}
+                  className="w-full py-3.5 px-4 rounded-full bg-white hover:bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] font-bold text-xs uppercase tracking-wider border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.179_0.004_286)] transition-all shadow-2xs flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.98]"
+                >
+                  <Plus className="w-4 h-4 text-[oklch(0.683_0.102_82.6)]" />
+                  <span>Add to Fragrance Wardrobe</span>
+                </button>
               </div>
 
             </div>
