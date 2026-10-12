@@ -39,42 +39,42 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden xl:flex items-center space-x-6 2xl:space-x-8 text-xs font-semibold uppercase tracking-wider shrink-0">
+          <nav className="hidden xl:flex items-center justify-center gap-[clamp(0.5rem,1.2vw,1.75rem)] text-xs font-semibold uppercase tracking-wider shrink-0">
             <button
               onClick={() => onNavigateSection('catalog')}
-              className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer py-1"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer whitespace-nowrap"
             >
               The 30 Icons
             </button>
             <button
               onClick={() => onNavigateSection('tier1')}
-              className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer py-1 flex items-center space-x-1.5"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer flex items-center space-x-1.5 whitespace-nowrap"
             >
               <span>Tier 1 Heroes</span>
             </button>
             <button
               onClick={() => onNavigateSection('cannibalization')}
-              className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer py-1"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer whitespace-nowrap"
             >
               Comparisons
             </button>
             <button
               onClick={() => setIsQuizOpen(true)}
-              className="text-[oklch(0.683_0.102_82.6)] hover:text-[oklch(0.588_0.096_80.7)] transition-colors cursor-pointer py-1 flex items-center space-x-1.5 font-bold"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.683_0.102_82.6)] hover:text-[oklch(0.588_0.096_80.7)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer flex items-center space-x-1.5 font-bold whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Matchmaker</span>
             </button>
             <button
               onClick={() => setIsWardrobeOpen(true)}
-              className="text-[oklch(0.179_0.004_286)] hover:text-black transition-colors cursor-pointer px-3.5 py-1.5 rounded-full bg-white border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.683_0.102_82.6)] shadow-xs flex items-center space-x-1.5"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.179_0.004_286)] hover:text-black hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer flex items-center space-x-1.5 whitespace-nowrap"
             >
               <Layers className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
               <span>Wardrobe Builder</span>
             </button>
             <button
               onClick={() => setIsContactOpen(true)}
-              className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer py-1 flex items-center space-x-1.5"
+              className="px-2.5 xl:px-3 py-1.5 rounded-full text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer flex items-center space-x-1.5 whitespace-nowrap"
               title="Speak with Atelier Concierge"
             >
               <Phone className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
