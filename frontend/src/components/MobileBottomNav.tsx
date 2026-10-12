@@ -12,10 +12,10 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
 
   return (
     <>
-      {/* 1. TABLET MODE (md to lg, 768px-1023px): Floating Right-Hand Side Navbar */}
+      {/* 1. TABLET & MID-SCREEN MODE (768px - 1279px): Floating Right-Hand Side Navbar */}
       <nav 
         aria-label="Tablet Floating Navigation"
-        className="hidden md:flex lg:hidden fixed right-4 top-1/2 -translate-y-1/2 z-50 flex-col items-center bg-white/90 backdrop-blur-2xl border border-[oklch(0.926_0.01_81.8)] shadow-2xl rounded-full py-4 px-2 space-y-3.5 transition-all duration-300"
+        className="hidden md:flex xl:hidden fixed right-4 top-1/2 -translate-y-1/2 z-50 flex-col items-center bg-white/90 backdrop-blur-2xl border border-[oklch(0.926_0.01_81.8)] shadow-2xl rounded-full py-4 px-2 space-y-3.5 transition-all duration-300"
       >
         {/* Home */}
         <div className="relative group">

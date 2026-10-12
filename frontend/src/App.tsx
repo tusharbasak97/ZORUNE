@@ -15,6 +15,7 @@ import { Preloader } from './components/Preloader';
 import { WardrobeBuilderModal } from './components/WardrobeBuilderModal';
 import { OlfactiveMatchmakerModal } from './components/OlfactiveMatchmakerModal';
 import { SearchModal } from './components/SearchModal';
+import { AccountModal, UserAccount } from './components/AccountModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
 import { OrderConfirmationModal } from './components/OrderConfirmationModal';
@@ -35,9 +36,23 @@ type RouteState =
 
 export const AppContent: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isAccountOpen, setIsAccountOpen] = useState(false);
   const [policyTab, setPolicyTab] = useState<PolicyTab | null>(null);
   const { isContactOpen, setIsContactOpen } = useCart();
   const products: Product[] = (productsData as any).products;
+
+  // Patron user session state
+  const [currentUser, setCurrentUser] = useState<UserAccount | null>(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('zorune_patron_user');
+        return saved ? JSON.parse(saved) : null;
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  });
 
   // Brand landing preloader on every page load
   const [showIntro, setShowIntro] = useState<boolean>(true);
@@ -51,6 +66,14 @@ export const AppContent: React.FC = () => {
     const path = window.location.pathname;
 
     if (path === '/' || path === '') {
+      return { type: 'home' };
+    }
+
+    if (path === '/account') {
+      setIsAccountOpen(true);
+      if (typeof window !== 'undefined') {
+        window.history.replaceState({ zoruneRoute: '/' }, '', '/');
+      }
       return { type: 'home' };
     }
 
@@ -146,6 +169,8 @@ export const AppContent: React.FC = () => {
             <Navbar 
               onOpenSearch={() => setIsSearchOpen(true)}
               onNavigateSection={handleNavigateSection}
+              onOpenAccount={() => setIsAccountOpen(true)}
+              user={currentUser}
             />
 
             <ProductDetailPage
@@ -185,6 +210,8 @@ export const AppContent: React.FC = () => {
             <Navbar 
               onOpenSearch={() => setIsSearchOpen(true)}
               onNavigateSection={handleNavigateSection}
+              onOpenAccount={() => setIsAccountOpen(true)}
+              user={currentUser}
             />
 
             <main className="flex-1">
@@ -227,6 +254,19 @@ export const AppContent: React.FC = () => {
         isOpen={isSearchOpen} 
         onClose={() => setIsSearchOpen(false)} 
         products={products} 
+      />
+      <AccountModal 
+        isOpen={isAccountOpen} 
+        onClose={() => setIsAccountOpen(false)} 
+        user={currentUser}
+        onLogin={(u) => {
+          setCurrentUser(u);
+          localStorage.setItem('zorune_patron_user', JSON.stringify(u));
+        }}
+        onLogout={() => {
+          setCurrentUser(null);
+          localStorage.removeItem('zorune_patron_user');
+        }}
       />
       <CartDrawer />
       <CheckoutModal />

@@ -225,43 +225,43 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex justify-center gap-2 mb-10 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 max-w-4xl mx-auto px-2">
           <button
             onClick={() => setActiveTab('blue')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
               activeTab === 'blue'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
-                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
+                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
             The Blue Trinity (Apex vs Bleu vs Savage)
           </button>
           <button
             onClick={() => setActiveTab('swy')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
               activeTab === 'swy'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
-                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
+                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
             Armani SWY Flankers (Intense vs Absolute)
           </button>
           <button
             onClick={() => setActiveTab('sweet')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
               activeTab === 'sweet'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
-                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
+                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
             Sweet Nightlife (Elixir vs Intense vs Wanted)
           </button>
           <button
             onClick={() => setActiveTab('floral')}
-            className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer whitespace-nowrap ${
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
               activeTab === 'floral'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
-                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]'
+                : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
             Feminine Florals (Gardenia vs Voyage vs Adore)
