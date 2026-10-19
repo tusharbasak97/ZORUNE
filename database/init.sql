@@ -13,15 +13,15 @@ CREATE TYPE order_status_type AS ENUM ('PENDING', 'CONFIRMED', 'PROCESSING', 'SH
 CREATE TYPE payment_method_type AS ENUM ('UPI_PREPAID', 'CARD_PREPAID', 'NET_BANKING', 'CASH_ON_DELIVERY');
 CREATE TYPE payment_status_type AS ENUM ('INITIATED', 'SUCCESS', 'FAILED', 'REFUNDED');
 
--- Products Table (All 30 SKUs: 20ml @ ₹999)
+-- Products Table (The 7 Master Formulations: 20ml @ ₹999)
 CREATE TABLE products (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     sku VARCHAR(20) UNIQUE NOT NULL,
     name VARCHAR(100) NOT NULL,
     brand VARCHAR(50) DEFAULT 'ZORUNE',
-    concentration VARCHAR(50) DEFAULT 'Extrait de Parfum (28%)',
-    size_ml INT DEFAULT 20,
-    price DECIMAL(10, 2) DEFAULT 999.00,
+    concentration VARCHAR(50) DEFAULT 'Extrait de Parfum (30%)',
+    size_ml INT DEFAULT 50,
+    price DECIMAL(10, 2) DEFAULT 19500.00,
     stock INT DEFAULT 100,
     gender gender_type NOT NULL,
     commercial_score INT NOT NULL,

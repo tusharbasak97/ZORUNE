@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BookOpen, ArrowRight, Clock, X, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 
+
 interface SpotlightArticle {
   id: string;
   category: string;
@@ -15,15 +16,15 @@ const articles: SpotlightArticle[] = [
   {
     id: 'art-1',
     category: 'FORMULATION CHEMISTRY',
-    title: 'The Extrait Advantage: Why 28% Concentration Transforms Skin Sillage',
+    title: 'The 30% Elixir Advantage: Why Gravimetric Concentration Defeats Extreme Heat',
     readTime: '4 min read',
     date: 'L’Atelier Journal • Issue 14',
     excerpt:
-      'Commercial fragrances dilute oils down to 10–14% Eau de Toilette. Discover why 28% pure perfume extract forms an intimate lipid bond with your skin for 12+ hours without synthetic fixatives.',
+      'Commercial fragrances dilute oils down to 10–14% Eau de Toilette. Discover why 30% pure perfume extract with Quad Co-Solvents forms an intimate lipid bond with your skin for 14+ hours without synthetic fixatives.',
     content: [
       'In commercial mass-market perfumery, designer houses dilute concentrates down to 10%–14% Eau de Toilette or 15% Eau de Parfum to minimize manufacturing costs and drive inventory turnover. The high-proof denatured alcohol acts as an explosive carrier, creating an artificial blast of top notes that violently evaporates within 90 minutes.',
-      'At ZORUNE, our formulation thesis begins at the polar opposite: pure 28% Extrait de Parfum. By maintaining an extraordinarily dense concentration of Grasse-sourced botanical absolutes and pure aroma compounds, the fragrance does not flash off into an alcohol cloud. Instead, it forms an intimate, continuous lipid bond with the natural warmth of your skin.',
-      'This molecular density delivers what French perfumers call the "aura of presence" — expansive volumetric projection for the first 3 hours that gracefully transitions into an intoxicating, persistent drydown lingering for 10 to 14 hours.'
+      'At ZORUNE, our formulation thesis begins at the polar opposite: pure 30.00% Extrait de Parfum / Elixir. Compounded via an analytical 1,000 PPT system with a calibrated Quad Co-Solvent Matrix (IPM, TEC, DPG, Glucam P-20), the fragrance does not flash off into an alcohol cloud. Instead, it forms an intimate, continuous lipid bond with the natural warmth of your skin.',
+      'This molecular density delivers what French perfumers call the "aura of presence" — expansive volumetric projection for the first 3 hours that gracefully transitions into an intoxicating, persistent drydown lingering for 14 to 20 hours.'
     ]
   },
   {
@@ -51,7 +52,7 @@ const articles: SpotlightArticle[] = [
     content: [
       'When fragrance connoisseurs complain of disappointing longevity despite wearing high-concentration Extrait, the culprit is rarely the formulation — it is trans-epidermal hydration. Dry, unconditioned skin is lipid-deficient; it acts like a sponge, pulling carrier alcohol and fragile aroma compounds deep into the stratum corneum, effectively smothering outward sillage.',
       'Master formulation chemists in Grasse rely on a simple physiological principle: apply a rich, fragrance-free ceramide lotion, squalane oil, or pure shea butter immediately after stepping out of the shower while your pores are still warm and receptive.',
-      'By saturating your skin’s outer barrier with non-competing lipids, you create a hydrophobic shield that prevents perfume absorption. The 28% Extrait oils are forced to remain suspended on the surface, where body warmth slowly volatilizes the molecules over 12 to 14 hours, increasing projection by up to 40%.'
+      'By saturating your skin’s outer barrier with non-competing lipids, you create a hydrophobic shield that prevents perfume absorption. The 30% Elixir oils are forced to remain suspended on the surface, where body warmth slowly volatilizes the molecules over 14 to 20 hours, increasing projection by up to 40%.'
     ]
   },
   {
@@ -63,7 +64,7 @@ const articles: SpotlightArticle[] = [
     excerpt:
       'High-concentration artisanal extraits experience severe kinetic agitation during priority air transit. Why resting your pocket flacon in dark cedar restores accord equilibrium.',
     content: [
-      'During priority express transit, your flacon is subjected to pressurized aircraft cargo bays, significant altitude and temperature fluctuations, and continuous road vibration. In artisanal 28% Extrait de Parfum blends, where dense botanical resinoids and delicate essential oils coexist, kinetic energy induces temporary molecular agitation.',
+      'During priority express transit, your flacon is subjected to pressurized aircraft cargo bays, significant altitude and temperature fluctuations, and continuous road vibration. In artisanal 30% Extrait de Parfum blends, where dense botanical resinoids and delicate essential oils coexist, kinetic energy induces temporary molecular agitation.',
       'Upon receiving your delivery, we advise spraying 3 priming pumps into the open air to clear any stagnant liquid from the micro-mist atomizer straw. Then, place your flacon inside a dark drawer, wardrobe, or cupboard at a stable room temperature (20°C to 24°C) for 24 to 48 hours.',
       'This resting window allows the volatile monoterpenes and heavier base fixatives to reorganize and reach thermodynamic equilibrium. The brief patience is rewarded with an instantly richer, rounder bouquet, eliminating temporary transit sharpness and revealing authentic Grasse depth.'
     ]
@@ -106,8 +107,8 @@ const articles: SpotlightArticle[] = [
       'Wearing one perfume year-round is the olfactory equivalent of wearing a heavy wool suit in July. How to curate an agile 3-scent rotation for daytime, corporate, and nocturnal wear.',
     content: [
       'Ambient temperature, relative humidity, and social setting radically alter how perfume molecules expand into the air. A rich, sweet toffee-vanilla gourmand that smells breathtaking in air-conditioned evening air will turn suffocating and cloying under a 36°C tropical summer sun.',
-      'A sophisticated fragrance wardrobe requires 3 specialized pillars: A High-Heat Daylight Driver (like ZR-03 Imagination DNA) featuring sparkling citrus and Chinese black tea that cuts cleanly through humidity; an Executive Corporate Anchor (like ZR-08 Bleu de Chanel DNA) delivering disciplined incense and cedar for boardroom presence; and an Intimate Nocturnal Seducer (like ZR-01 SWY Intensely or ZR-10 Angels’ Share DNA) offering warm amber and spices for date nights.',
-      'Standardizing our collection in uniform 20ml luxury pocket flacons (2 for ₹1,899, 3 for ₹2,799) eliminates the archaic barrier of spending ₹50,000 on oversized 100ml bottles that spoil before being finished, enabling discerning patrons to own a versatile, complete fragrance wardrobe.'
+      'A sophisticated fragrance wardrobe requires 3 specialized pillars: A High-Heat Daylight Driver (like ZR-U01 Yuzu Kōdō or ZR-M01 Vetiver Terroir) featuring sparkling Japanese citrus, cold green tea, and Haitian vetiver that cuts cleanly through 90% humidity; an Executive Corporate Anchor (like ZR-U02 Hinoki Mistral or ZR-M03 Atlas Cedarwood) delivering sacred Japanese temple hinoki and disciplined Moroccan cedar; and an Intimate Nocturnal Seducer (like ZR-M04 Buchu Noir or ZR-U05 Saffron Sovereign) offering Cape buchu, wild blackcurrant, and biodynamic Kashmiri saffron.',
+      'Presenting our collection in 50ml 40% PCR Super-Flint flacons with refillable threaded SNI-15 necks and Zamac 3 magnetic closures enables discerning patrons to experience and curate an uncompromising, authentic sovereign eco-luxury fragrance wardrobe.'
     ]
   },
   {
@@ -115,7 +116,7 @@ const articles: SpotlightArticle[] = [
     category: 'WARDROBE CURATION',
     title: 'The Keratin & Textile Scent Reservoir: Unlocking 24-Hour Diffusion Beyond Skin',
     readTime: '4 min read',
-    date: 'L’Atelier Journal • Issue 21',
+    date: 'L’Atelier Journal • Issue 20',
     excerpt:
       'Skin lipids and body heat consume perfume compounds over time. How natural cashmere, cotton, and hair keratin hold pure heart notes in an unaltered state for days.',
     content: [
@@ -199,8 +200,8 @@ export const SpotlightsSection: React.FC = () => {
   }, [maxIndex]);
 
   return (
-    <section id="spotlights" className="py-20 sm:py-28 border-b border-[oklch(0.926_0.01_81.8)] bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="spotlights" className="relative py-20 sm:py-28 border-b border-[oklch(0.926_0.01_81.8)] bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header (Belvish 'Spotlights' Inspiration) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
@@ -365,7 +366,7 @@ export const SpotlightsSection: React.FC = () => {
                 <span>ZORUNE Formulation Atelier Standard</span>
               </div>
               <p className="leading-snug">
-                Every ZORUNE flacon is engineered to 28% Extrait de Parfum concentration using authentic French compounds, bypassing industrial retailer markup to deliver uncompromising longevity and accord clarity at flat ₹999.
+                Every ZORUNE flacon is engineered to 30% Extrait de Parfum concentration with our Quad Co-Solvent Matrix, Super-Flint crystal flacon architecture, and zero added water.
               </p>
             </div>
 

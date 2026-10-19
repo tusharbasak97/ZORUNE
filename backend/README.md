@@ -12,12 +12,11 @@ The ZORUNE Backend is an enterprise-grade RESTful Node.js / Express microservice
 
 ### Scent Matchmaker & Wardrobe Builder
 - `POST /api/matchmaker`: Algorithmic quiz scoring matching user preferences (vibe, accords, gender, season) against the 30 formulations.
-- `POST /api/wardrobe/calculate`: Dynamic tier pricing:
-  - 1 Bottle: ₹999
-  - 2 Bottles: ₹1,799 (Save ₹199)
-  - 3 Bottles: ₹2,499 (Save ₹498)
-  - 4+ Bottles: ₹799 / bottle
-  - UPI Prepaid: Instant ₹100 extra discount
+- `POST /api/wardrobe/calculate`: Sovereign Collection acquisition calculation:
+  - 50ml Master Flacons: ₹18,500 – ₹24,500
+  - The Sovereign Discovery Coffret (7 × 3ml): ₹4,500
+  - White-Glove Insured Courier: Complimentary on all orders
+  - Numbered presentation casket certificate verification
 
 ### Indian E-Commerce Operations
 - `GET /api/blitznow/pincode/:pincode`: Real-time Indian PIN code validator with Same-Day SLA detection for Mumbai, Delhi-NCR, Bengaluru, Hyderabad, Chennai, and Pune.

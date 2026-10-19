@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { CartProvider, useCart } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Tier1Showcase } from './components/Tier1Showcase';
 import { ProductGrid } from './components/ProductGrid';
 import { CannibalizationShowcase } from './components/CannibalizationShowcase';
 import { TestimonialsSection } from './components/TestimonialsSection';
@@ -12,7 +11,6 @@ import { ParallaxFooterReveal } from './components/ParallaxFooterReveal';
 import { ProductDetailPage } from './components/ProductDetailPage';
 import { NotFound } from './components/NotFound';
 import { Preloader } from './components/Preloader';
-import { WardrobeBuilderModal } from './components/WardrobeBuilderModal';
 import { OlfactiveMatchmakerModal } from './components/OlfactiveMatchmakerModal';
 import { SearchModal } from './components/SearchModal';
 import { AccountModal, UserAccount } from './components/AccountModal';
@@ -107,7 +105,7 @@ export const AppContent: React.FC = () => {
     }
   }, [currentRoute]);
 
-  const { setIsQuizOpen, setIsWardrobeOpen, navigateToHome, navigateToProduct, navigateTo404 } = useCart();
+  const { setIsQuizOpen, navigateToHome, navigateToProduct, navigateTo404 } = useCart();
 
   // Listen to popstate for browser Back/Forward & URL changes
   useEffect(() => {
@@ -163,8 +161,8 @@ export const AppContent: React.FC = () => {
 
       {/* VIEW 1: DEDICATED PRODUCT PAGE */}
       {currentRoute.type === 'product' && (
-        <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative">
-          {/* Upper Sheet: All page content and footer existing on a layer above the brand */}
+        <div className="min-h-screen text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative bg-[oklch(0.98_0.005_78.3)]">
+          {/* Upper Sheet: 100% Solid Opaque Haute Parfumerie Layer */}
           <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-[260px] sm:mb-[340px] lg:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
             <Navbar 
               onOpenSearch={() => setIsSearchOpen(true)}
@@ -198,14 +196,13 @@ export const AppContent: React.FC = () => {
           onReturnHome={navigateToHome}
           onOpenSearch={() => setIsSearchOpen(true)}
           onOpenQuiz={() => setIsQuizOpen(true)}
-          onOpenWardrobe={() => setIsWardrobeOpen(true)}
         />
       )}
 
       {/* VIEW 3: MAIN BOUTIQUE HOMEPAGE */}
       {currentRoute.type === 'home' && (
-        <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative">
-          {/* Upper Sheet: All page content and footer existing on a layer above the brand */}
+        <div className="min-h-screen text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white relative bg-[oklch(0.98_0.005_78.3)]">
+          {/* Upper Sheet: 100% Solid Opaque Haute Parfumerie Layer */}
           <div className="relative z-10 bg-[oklch(0.98_0.005_78.3)] mb-[260px] sm:mb-[340px] lg:mb-[380px] shadow-[0_25px_50px_-12px_oklch(0_0_0/0.12)] border-b border-[oklch(0.926_0.01_81.8)]">
             <Navbar 
               onOpenSearch={() => setIsSearchOpen(true)}
@@ -216,7 +213,6 @@ export const AppContent: React.FC = () => {
 
             <main className="flex-1">
               <Hero onExploreCatalog={() => handleNavigateSection('catalog')} />
-              <Tier1Showcase products={products} />
               <ProductGrid products={products} />
               <CannibalizationShowcase products={products} />
               
@@ -248,7 +244,6 @@ export const AppContent: React.FC = () => {
       <ScrollToTopButton />
 
       {/* Interactive Global Modals */}
-      <WardrobeBuilderModal products={products} />
       <OlfactiveMatchmakerModal products={products} />
       <SearchModal 
         isOpen={isSearchOpen} 

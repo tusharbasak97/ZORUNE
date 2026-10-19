@@ -382,7 +382,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">4. Cookies & Scent Profile Persistence</h4>
                     <p>
-                      We utilize modern browser local storage and essential session cookies strictly to preserve your cart flacons, custom 3-bottle wardrobe bundles, and AI Olfactive Matchmaker quiz results across visits.
+                      We utilize modern browser local storage and essential session cookies strictly to preserve your cart flacons and AI Olfactive Matchmaker quiz results across visits.
                     </p>
                   </div>
                 </div>
@@ -403,16 +403,16 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
 
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">1. Transparent Fixed Atelier Pricing</h4>
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">1. Sovereign Haute Parfumerie Pricing</h4>
                     <p>
-                      ZORUNE upholds an uncompromising direct pricing philosophy: <strong>1 flacon for ₹999, 2 flacons for ₹1,899, and 3 flacons for ₹2,799</strong>. We never run inflated MRP fake sales, arbitrary discount codes, or surprise fees. Every price displayed is all-inclusive of applicable GST and express courier freight.
+                      ZORUNE upholds an uncompromising haute niche pricing philosophy: 50ml Master Presentation Flacons are individually valued at €165 – €300 (₹14,800 – ₹27,000). We never run inflated MRP fake sales, discount codes, or promotional gimmicks. Every price displayed is all-inclusive of applicable GST/VAT and complimentary white-glove insured express courier.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">2. Olfactive Interpretation & Trademark Disclaimer</h4>
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">2. Original Master Formulations & Intellectual Integrity</h4>
                     <p>
-                      All 30 formulations presented by ZORUNE are independent olfactive interpretations handcrafted using 28% Extrait de Parfum compounds. Any references to designer fragrances, brand names, or registered trademarks belong exclusively to their respective intellectual property holders and are used purely for comparative scent family categorization. ZORUNE maintains zero legal association with original designer houses.
+                      All 20 master formulations presented by ZORUNE (Women&apos;s ZR-W01–W05, Men&apos;s ZR-M01–M05, Unisex ZR-U01–U10) are original, proprietary single-origin terroir creations codified in <em>The Perfumer&apos;s Master Compendium</em> and compounded at pure 20%–30% w/w Extrait de Parfum concentration adhering to IFRA 51st Amendment standards, EU Regulation (EC) No 1223/2009, and Japanese PMD Act requirements. Encased in refillable 40% PCR super-flint glass with SNI-15 screw necks and biodegradable mycelium secondary packaging.
                     </p>
                   </div>
 
@@ -474,7 +474,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">Thermal & Shock Protective Packaging</h4>
                     <p>
-                      High-concentration (28%) Extrait de Parfum requires careful handling. Every 20ml flacon is encased in custom high-density EVA foam and rigid magnetic gift packaging to shield delicate aromatic molecules from extreme transit heat and mechanical shock.
+                      High-concentration (30%) Extrait de Parfum requires careful handling. Every 50ml super-flint crystal flacon is encased in custom high-density EVA foam and rigid 1500 gsm velvet-lined presentation caskets with 100g Zamac 3 die-cast magnetic closures to shield delicate aromatic molecules from extreme transit heat and mechanical shock.
                     </p>
                   </div>
                 </div>
@@ -497,7 +497,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
                     <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">Artisanal Hygiene Policy</h4>
                     <p>
-                      Due to the intimate, hygienic nature of personal fine fragrance and Extrait de Parfum compounds, once a flacon has been unsealed, test-sprayed, or used, it cannot be returned or resold. We engineered our uniform 20ml format precisely so connoisseurs can experience haute parfumerie without the commitment risk of costly 100ml blind buys.
+                      Due to the intimate, hygienic nature of personal fine fragrance and Extrait de Parfum compounds, once a flacon has been unsealed, test-sprayed, or used, it cannot be returned or resold. We encourage patrons to utilize our AI Olfactive Matchmaker and direct concierge consultation prior to ordering a 50ml Master Flacon.
                     </p>
                   </div>
 
@@ -529,7 +529,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                 <div>
                   <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.683_0.102_82.6)] text-xs font-bold uppercase tracking-wider mb-2">
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    <span>28% Extrait Standard</span>
+                    <span>30% Extrait Standard</span>
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-[oklch(0.179_0.004_286)]">Authenticity & Olfactive Purity</h3>
                   <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Mastercrafted in Grasse, Bottled Fresh in India</p>
@@ -537,9 +537,9 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
 
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">28% Extrait de Parfum Concentration</h4>
+                    <h4 className="font-semibold text-xs uppercase tracking-wider text-[oklch(0.179_0.004_286)] mb-1">30% Extrait de Parfum Concentration</h4>
                     <p>
-                      While commercial designers dilute their mass-market fragrances into Eau de Toilette (8–12%) or Eau de Parfum (15–18%), ZORUNE formulates exclusively in <strong>28% Extrait de Parfum</strong>. This guarantees dense sillage, nuclear skin projection, and true 8–12+ hour longevity across Indian tropical climates.
+                      While commercial designers dilute their mass-market fragrances into Eau de Toilette (8–12%) or Eau de Parfum (15–18%), ZORUNE formulates exclusively in <strong>30% Extrait de Parfum</strong> with zero added water (0.00% H2O) and a Quad Co-Solvent Matrix. This guarantees dense sillage, nuclear skin projection, and true 12–16+ hour longevity across Indian tropical climates.
                     </p>
                   </div>
 
@@ -682,11 +682,13 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                       {/* Row 1: Name & Email */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                          <label htmlFor="policy-contact-name" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
                             Your Name <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
                           </label>
                           <input
                             type="text"
+                            id="policy-contact-name"
+                            name="name"
                             required
                             maxLength={60}
                             value={name}
@@ -711,11 +713,13 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                          <label htmlFor="policy-contact-email" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
                             Email Address <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
                           </label>
                           <input
                             type="email"
+                            id="policy-contact-email"
+                            name="email"
                             required
                             maxLength={100}
                             value={email}
@@ -743,7 +747,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                       {/* Row 2: Phone & Topic */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                          <label htmlFor="policy-contact-phone" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
                             Indian Mobile <span className="text-[oklch(0.552_0.014_286)] font-normal lowercase">(optional)</span>
                           </label>
                           <div className="relative">
@@ -752,6 +756,8 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                             </span>
                             <input
                               type="tel"
+                              id="policy-contact-phone"
+                              name="phone"
                               maxLength={10}
                               value={phone}
                               onChange={(e) => {
@@ -777,10 +783,12 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
+                          <label htmlFor="policy-contact-topic" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] mb-1.5">
                             Inquiry Topic
                           </label>
                           <select
+                            id="policy-contact-topic"
+                            name="topic"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             className="w-full px-3.5 py-2.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border border-[oklch(0.926_0.01_81.8)] text-xs text-[oklch(0.179_0.004_286)] focus:outline-none focus:border-[oklch(0.683_0.102_82.6)] focus:bg-white transition-all"
@@ -797,7 +805,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                       {/* Row 3: Message */}
                       <div>
                         <div className="flex items-center justify-between mb-1.5">
-                          <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)]">
+                          <label htmlFor="policy-contact-message" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)]">
                             Inquiry Details <span className="text-[oklch(0.637_0.237_25.331)]">*</span>
                           </label>
                           <span className={`text-[10px] font-mono ${message.length > 950 ? 'text-[oklch(0.669_0.169_70.08)] font-bold' : 'text-[oklch(0.552_0.014_286)]'}`}>
@@ -805,6 +813,8 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                           </span>
                         </div>
                         <textarea
+                          id="policy-contact-message"
+                          name="message"
                           rows={4}
                           required
                           maxLength={1000}
@@ -951,30 +961,23 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
 
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How many sprays are in a 20ml flacon?</h4>
+                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How many sprays are in a 50ml Master Flacon?</h4>
                     <p>
-                      Each ZORUNE 20ml flacon is fitted with an ultra-fine Italian micro-mist atomizer delivering approximately <strong>300 precision sprays</strong>. If you apply 4 to 5 sprays daily, one flacon lasts approximately 60 to 70 days.
+                      Each ZORUNE 50ml Master Flacon is fitted with an ultra-fine micro-mist atomizer delivering approximately <strong>750 precision sprays</strong>. If you apply 4 to 5 sprays daily, one 50ml flacon lasts approximately 5 to 6 months.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: Why do you standardize in 20ml instead of 100ml?</h4>
+                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How do I select the right fragrance for my skin chemistry and lifestyle?</h4>
                     <p>
-                      Most fragrance buyers never finish a 100ml bottle before the top notes oxidize. 20ml pocket flacons allow you to own multiple world-class icons without blind-buy risk, switch scents with occasions, and travel effortlessly with pocket portability.
+                      We recommend utilizing our interactive AI Olfactive Matchmaker or contacting our Atelier Concierge for bespoke guidance based on your climate, skin profile, and seasonal requirements.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How should I apply 28% Extrait for maximum longevity?</h4>
+                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How should I apply 30% Extrait for maximum longevity?</h4>
                     <p>
                       Apply 2 sprays directly to warm pulse points (clavicle/collarbone and base of the neck). Never vigorously rub your wrists together, as friction destroys the delicate volatile top-note molecules. For 14+ hour projection, apply 1 spray to the shoulders of a dark shirt or jacket.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-white border border-[oklch(0.926_0.01_81.8)]">
-                    <h4 className="font-semibold text-sm text-[oklch(0.179_0.004_286)] mb-1">Q: How does the bundle pricing work?</h4>
-                    <p>
-                      Our bundle pricing is automatic: 1 bottle is ₹999, 2 bottles are ₹1,899 (Save ₹99), and 3 bottles are ₹2,799 (Save ₹198). Any combination of the 30 icons automatically qualifies at checkout.
                     </p>
                   </div>
                 </div>

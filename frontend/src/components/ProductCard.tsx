@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Plus, Eye, Zap } from 'lucide-react';
+import { Star, Plus, Eye, Zap, MapPin, Sparkles } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
 
@@ -11,7 +11,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { addToCart, navigateToProduct } = useCart();
 
   const isTier1 = product.tier === 'TIER_1_HERO';
-  const isTier2 = product.tier === 'TIER_2_REVENUE';
 
   return (
     <div className="group relative flex flex-col rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.683_0.102_82.6)]/60 transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl overflow-hidden shadow-2xs">
@@ -34,34 +33,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
         {/* Tier Badge */}
         <div className="absolute top-3 left-3 z-10 flex flex-col gap-1.5">
-          {isTier1 && (
+          {isTier1 ? (
             <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[oklch(0.179_0.004_286)] text-white shadow-xs">
-              <span>Hero Icon</span>
+              <span>Masterpiece</span>
             </span>
-          )}
-          {isTier2 && (
+          ) : (
             <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/90 text-[oklch(0.442_0.015_286)] border border-[oklch(0.926_0.01_81.8)] backdrop-blur-xs">
-              <span>Signature</span>
-            </span>
-          )}
-          {!isTier1 && !isTier2 && (
-            <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-[oklch(0.977_0.013_86.8)] text-[oklch(0.588_0.096_80.7)] border border-[oklch(0.926_0.01_81.8)]">
-              <span>Connoisseur</span>
-            </span>
-          )}
-
-          {/* Rescue specialized formulation tag */}
-          {product.is_rescue_sku && (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.442_0.015_286)] border border-[oklch(0.926_0.01_81.8)]">
-              Extrait Fix
+              <span>Sovereign Terroir</span>
             </span>
           )}
         </div>
 
-        {/* Savings Pill */}
+        {/* Concentration Pill */}
         <div className="absolute top-3 right-3 z-10">
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/90 text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] backdrop-blur-xs shadow-2xs">
-            Save {product.arbitrage_savings_percent}%
+          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/95 text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] backdrop-blur-xs shadow-2xs">
+            {product.concentration.includes('(') ? product.concentration.split('(')[1].replace(')', '') : '30% Extrait'}
           </span>
         </div>
 
@@ -87,6 +73,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <span className="px-2 py-0.5 rounded bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.442_0.015_286)] border border-[oklch(0.926_0.01_81.8)] text-[10px] font-medium">{product.gender}</span>
         </div>
 
+        {/* Terroir Location Tag */}
+        {product.terroir && (
+          <div className="flex items-center space-x-1 text-[10px] text-[oklch(0.552_0.014_286)] mb-1">
+            <MapPin className="w-3 h-3 text-[oklch(0.683_0.102_82.6)] shrink-0" />
+            <span className="truncate font-medium">{product.terroir.origin}</span>
+          </div>
+        )}
+
         {/* Perfume Name */}
         <h3 
           onClick={() => navigateToProduct(product.sku)}
@@ -95,9 +89,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {product.name}
         </h3>
 
-        {/* Inspired By Transparency Note */}
-        <p className="text-xs text-[oklch(0.442_0.015_286)] mb-2.5 line-clamp-1">
-          Inspired by <span className="text-[oklch(0.179_0.004_286)] font-medium">{product.inspired_by.brand}</span> {product.inspired_by.original_name}
+        {/* Master Formulary Note */}
+        <p className="text-xs text-[oklch(0.683_0.102_82.6)] font-medium mb-2.5 line-clamp-1">
+          {product.inspired_by?.original_name || product.tagline}
         </p>
 
         {/* Olfactive Family & Accords */}
@@ -112,13 +106,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           ))}
         </div>
 
-        {/* Rating and Longevity */}
+        {/* Batch Status and Longevity */}
         <div className="flex items-center justify-between text-xs text-[oklch(0.552_0.014_286)] pt-2 border-t border-[oklch(0.944_0.012_84.6)] mb-4">
-          <div className="flex items-center space-x-1">
-            <Star className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)] fill-[oklch(0.683_0.102_82.6)]" />
-            <span className="font-semibold text-[oklch(0.179_0.004_286)]">{product.rating}</span>
-            <span className="text-[10px] text-[oklch(0.552_0.014_286)]">({(product.reviews_count / 1000).toFixed(1)}k)</span>
-          </div>
+          {product.reviews_count > 0 ? (
+            <div className="flex items-center space-x-1">
+              <Star className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)] fill-[oklch(0.683_0.102_82.6)]" />
+              <span className="font-semibold text-[oklch(0.179_0.004_286)]">{product.rating}</span>
+              <span className="text-[10px] text-[oklch(0.552_0.014_286)]">({product.reviews_count})</span>
+            </div>
+          ) : (
+            <div className="flex items-center space-x-1.5 text-[oklch(0.683_0.102_82.6)]">
+              <Sparkles className="w-3 h-3" />
+              <span className="text-[10px] font-semibold uppercase tracking-wider">Inaugural 2026 Batch</span>
+            </div>
+          )}
           <div className="flex items-center space-x-1 text-[oklch(0.442_0.015_286)]">
             <Zap className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
             <span className="text-[11px] font-medium">{product.longevity_hours}h Wear</span>
@@ -129,21 +130,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="mt-auto flex items-center justify-between pt-2">
           <div>
             <div className="flex items-baseline space-x-1.5">
-              <span className="text-base font-extrabold text-[oklch(0.179_0.004_286)]">₹999</span>
-              <span className="text-[11px] text-[oklch(0.552_0.014_286)] line-through">₹{product.original_price_inr.toLocaleString('en-IN')}</span>
+              {product.price_eur ? (
+                <span className="text-base font-extrabold text-[oklch(0.179_0.004_286)]">€{product.price_eur}</span>
+              ) : null}
+              <span className="text-xs text-[oklch(0.442_0.015_286)] font-semibold">
+                (₹{product.price.toLocaleString('en-IN')})
+              </span>
             </div>
             <span className="text-[10px] text-[oklch(0.683_0.102_82.6)] uppercase font-bold tracking-wider block">
-              20ml Extrait (28%)
+              50ml Refillable PCR Glass
             </span>
           </div>
 
           <button
             onClick={() => addToCart(product)}
             className="px-3.5 py-2 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.683_0.102_82.6)] text-white text-xs font-semibold tracking-wide transition-all duration-200 shadow-xs hover:shadow-md hover:scale-105 active:scale-95 flex items-center space-x-1 cursor-pointer"
-            title="Add 20ml Flacon to Wardrobe"
+            title="Acquire Flacon"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>Add Flacon</span>
+            <span>Acquire</span>
           </button>
         </div>
 

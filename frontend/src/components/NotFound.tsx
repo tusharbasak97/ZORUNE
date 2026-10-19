@@ -1,19 +1,17 @@
 import React from 'react';
-import { Compass, Search, Layers, ArrowLeft, Sparkles, MessageCircle } from 'lucide-react';
+import { Compass, Search, ArrowLeft, Sparkles, MessageCircle } from 'lucide-react';
 import { FluidWaterCanvas } from './FluidWaterCanvas';
 
 interface NotFoundProps {
   onReturnHome: () => void;
   onOpenSearch: () => void;
   onOpenQuiz: () => void;
-  onOpenWardrobe: () => void;
 }
 
 export const NotFound: React.FC<NotFoundProps> = ({
   onReturnHome,
   onOpenSearch,
-  onOpenQuiz,
-  onOpenWardrobe
+  onOpenQuiz
 }) => {
   return (
     <div className="relative min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col justify-between selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white overflow-hidden">
@@ -104,15 +102,6 @@ export const NotFound: React.FC<NotFoundProps> = ({
               <span>Search Scent Notes (Ctrl+K)</span>
             </button>
 
-            <span className="text-[oklch(0.926_0.01_81.8)]">•</span>
-
-            <button
-              onClick={onOpenWardrobe}
-              className="flex items-center space-x-1.5 hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer"
-            >
-              <Layers className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-              <span>3-Wardrobe (₹2,799)</span>
-            </button>
 
             <span className="text-[oklch(0.926_0.01_81.8)]">•</span>
 

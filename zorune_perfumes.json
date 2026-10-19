@@ -1,108 +1,473 @@
 {
   "metadata": {
     "brand": "ZORUNE",
-    "catalog_name": "ZORUNE Fragrance Collection",
-    "description": "Product catalog and formulation specifications for ZORUNE luxury inspired fragrances.",
-    "total_products": 30,
-    "sorted_by": "commercial_rank_ascending",
-    "genders": {
-      "male": 13,
-      "female": 10,
-      "unisex": 7
-    }
+    "house_title": "Sovereign Haute Parfumerie Atelier",
+    "catalog_name": "The Sovereign Masterpiece & Terroir Collection",
+    "description": "Twenty publication-grade 20% to 30% concentration climate-resilient perfume elixirs formulated according to The Perfumer's Master Compendium and global terroir sourcing standards.",
+    "total_products": 20,
+    "concentration_standard": "Extrait de Parfum / Elixir (20.00% to 30.00% w/w Pure Aromatic Compound)",
+    "formulation_architecture": "1,000 Parts Per Thousand (PPT) Analytical Gravimetric Compounding with Quad Co-Solvent Matrix (0.00% Added H2O)",
+    "flacon_architecture": "50mL Heavy 40% PCR Super-Flint Crystal Flacon (24mm Punt, 240g Tare Mass), Threaded SNI-15 Neck (Infinite Refill), Zamac 3 Magnetic Cap (100g Mass)",
+    "presentation_casket": "Backyard-Compostable Mycelium & Flax Casket with FSC Cotton-Seed Slipcover and Numbered Certificate of Authenticity",
+    "flagship_currency": "INR",
+    "international_currencies": [
+      "EUR",
+      "USD",
+      "JPY"
+    ],
+    "compliance": "IFRA 51st Amendment | ISO 22716 GMP | EU (EC) No 1223/2009 | Japan PMD Act (MHLW) | India CDSCO 2020 | South Africa SANS 98",
+    "flacon_format": "50mL Master Super-Flint Crystal Flacon (Refillable)"
   },
   "products": [
     {
-      "id": 15,
-      "sku": "ZR-15",
-      "name": "Savage",
+      "id": 1,
+      "sku": "ZR-W01",
+      "name": "Orris Soie",
+      "formula_code": "Formula W-01",
       "brand": "ZORUNE",
+      "collection": "Women's Haute Parfumerie",
+      "subtitle": "The Velvet Pallida • Florentine Orris Butter & Royal Suede",
+      "concept": "Inspired by Renaissance Tuscan silk draperies and noble powder chambers. An aristocratic second-skin aura marrying 3-year cured Florentine Orris Butter (15% Irone) with Grasse Jasmine and warm New Caledonian Sandalwood.",
       "inspired_by": {
-        "brand": "Dior",
-        "original_name": "Sauvage Eau de Toilette"
+        "brand": "Tuscan Iris Guild",
+        "original_name": "Florentine Orris Butter (15% Irone) & Grasse Jasmine"
       },
-      "concentration": "Eau de Toilette",
-      "gender": "Male",
-      "rating": 3.85,
-      "reviews_count": 34515,
-      "launch_year": 2015,
-      "olfactive_family": "Aromatic Fougere",
+      "concentration": "Extrait de Parfum (28%)",
+      "gender": "Female",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Powdery Woody Floral / Haute Suede",
       "perfumers": [
-        "François Demachy"
+        "Master Formulation Research Group",
+        "Grasse Haute Parfumerie Atelier"
       ],
+      "climate_role": "Cool Dry Autumn & Winter Formal Shield",
       "when_to_apply": {
         "seasons": [
-          "Spring",
-          "Summer",
-          "Fall",
-          "Winter"
+          "Autumn",
+          "Winter",
+          "Spring"
         ],
         "time_of_day": [
-          "Day",
+          "Afternoon",
           "Evening",
           "Night"
         ],
         "occasions": [
-          "Casual",
-          "Office",
-          "Dates",
-          "Night Out"
+          "Gala & Evening Wear",
+          "Private Salon",
+          "Formal Authority"
         ]
       },
       "main_accords": [
-        "fresh spicy",
-        "amber",
-        "citrus",
-        "aromatic",
-        "musky",
+        "iris",
+        "powdery",
         "woody",
-        "lavender",
-        "herbal",
-        "warm spicy"
+        "suede",
+        "white floral",
+        "musky"
       ],
+      "terroir": {
+        "origin": "Florence, Tuscany, Italy",
+        "cooperative": "Tuscan Artisan Iris Guild (Organic certified, 3-yr rhizome cure)",
+        "coordinates": "43.7696° N, 11.2558° E",
+        "elevation": "320m",
+        "harvest_season": "July–August"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint (24mm punt, 240g tare)",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac (Zero Plastic)"
+      },
       "notes": {
         "top": [
-          "Calabrian bergamot",
-          "Pepper"
+          "Calabrian Bergamot FCF",
+          "Ambrette Seed CO2",
+          "Pink Pepper Co-Distillate"
         ],
         "middle": [
-          "Sichuan Pepper",
-          "Lavender",
-          "Pink Pepper",
-          "Vetiver",
-          "Patchouli",
-          "Geranium",
-          "elemi"
+          "Florentine Orris Butter (15% Irone)",
+          "Grasse Jasmine Grandiflorum",
+          "Silk Accord"
         ],
         "base": [
-          "Ambroxan",
-          "Cedar",
-          "Labdanum"
+          "New Caledonian Sandalwood",
+          "White Suede Accord",
+          "Exaltolide Total",
+          "Cedarwood Heart"
         ]
       },
-      "description": "Sauvage by Dior is a Aromatic Fougere fragrance for men. Sauvage was launched in 2015. The nose behind this fragrance is François Demachy. Top notes are Calabrian bergamot and Pepper; middle notes are Sichuan Pepper, Lavender, Pink Pepper, Vetiver, Patchouli, Geranium and elemi; base notes are Ambroxan, Cedar and Labdanum.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.31861.jpg",
+      "chemical_dossier": {
+        "key_molecules": [
+          "Orris Pallida 15% Irone 140 PPT",
+          "Grasse Jasmine Abs 45 PPT",
+          "Javanol 18 PPT",
+          "Ambrette CO2 35 PPT",
+          "Exaltolide 70 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Grape Ethanol + IPM (7.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w (Strict Anhydrous)",
+        "carrier": "96% Organic Bio-Ethanol (Zero Added Water)"
+      },
+      "description": "An aristocratic second-skin aura. Three-year cured Florentine Orris Butter containing 15% pure natural irones, enveloped in Grasse jasmine absolute and creamy New Caledonian sandalwood.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 97,
+      "commercial_rank": 1,
+      "size_ml": 50,
+      "price": 26500,
+      "price_eur": 290,
+      "price_usd": 315,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal (24mm punt), Threaded SNI-15 Neck, Zamac 3 Cap, Numbered Casket",
+      "stock": 65,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Aristocratic Florentine Iris Pallida (15% Irone)",
+      "longevity_hours": 18,
+      "sillage_rating": "Intimate to Enveloping Suede Aura (16–18h)"
+    },
+    {
+      "id": 2,
+      "sku": "ZR-W02",
+      "name": "Madurai Lune",
+      "formula_code": "Formula W-02",
+      "brand": "ZORUNE",
+      "collection": "Women's Haute Parfumerie",
+      "subtitle": "Midnight Sambac • Night-Blooming Jasmine & Pink Peppercorn",
+      "concept": "Night-blooming temple gardens under a tropical monsoon sky. Intoxicating, humid, ethereal jasmine sambac harvested before sunrise, accented with pink peppercorn and lush Indian tuberose resting on clean vetiver.",
+      "inspired_by": {
+        "brand": "Tamil Nadu Growers Cooperative",
+        "original_name": "Dawn-Harvested Madurai Jasmine Sambac"
+      },
+      "concentration": "Extrait de Parfum (25%)",
+      "gender": "Female",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Solar Indolic White Floral / Green Petal",
+      "perfumers": [
+        "Master Formulation Research Group",
+        "LMR Naturals Grasse"
+      ],
+      "climate_role": "Tropical Humidity & Warm Evening Luminescence",
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Monsoon"
+        ],
+        "time_of_day": [
+          "Dusk",
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Romantic Dinner",
+          "High Humidity Gala",
+          "Sensual Intimacy"
+        ]
+      },
+      "main_accords": [
+        "white floral",
+        "indolic",
+        "green",
+        "tuberose",
+        "soft spicy",
+        "fresh"
+      ],
+      "terroir": {
+        "origin": "Madurai, Tamil Nadu, India",
+        "cooperative": "Madurai Flower Growers Association / LMR Naturals Fair Trade",
+        "coordinates": "9.9252° N, 78.1198° E",
+        "elevation": "136m",
+        "harvest_season": "April–July (Pre-dawn pick)"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Madurai Green Leaves",
+          "Pink Pepper CO2",
+          "Mandarin Essence"
+        ],
+        "middle": [
+          "Madurai Jasmine Sambac Absolute",
+          "Mysore Tuberose Absolute",
+          "Orange Blossom"
+        ],
+        "base": [
+          "Haitian Vetiver LMR",
+          "Solar Musks (Helvetolide)",
+          "Clearwood"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Jasmine Sambac LMR 110 PPT",
+          "Tuberose Abs 30 PPT",
+          "Pink Pepper CO2 25 PPT",
+          "Helvetolide 80 PPT"
+        ],
+        "co_solvent_matrix": "IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An intoxicating nocturnal white floral. Hand-plucked Indian jasmine sambac buds blossoming into narcotic solar radiance with pink pepper and Haitian vetiver.",
+      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
       "commercial_score": 95,
-      "commercial_rank": 1
+      "commercial_rank": 2,
+      "size_ml": 50,
+      "price": 19800,
+      "price_eur": 220,
+      "price_usd": 240,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 80,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Pre-Dawn Madurai Jasmine Sambac",
+      "longevity_hours": 16,
+      "sillage_rating": "Hypnotic White-Floral Projection (14–16h)"
     },
     {
       "id": 3,
-      "sku": "ZR-03",
-      "name": "Imagination",
+      "sku": "ZR-W03",
+      "name": "Rose de Grasse Éternelle",
+      "formula_code": "Formula W-03",
       "brand": "ZORUNE",
+      "collection": "Women's Haute Parfumerie",
+      "subtitle": "May Petal & Green Dew • Pays de Grasse Centifolia Rose",
+      "concept": "The crisp 6:00 AM dawn harvest in Grasse when mountain dew clings to thousands of Centifolia rose petals. Honeyed, green, luminous, kissed with cold-pressed Calabrian bergamot and Somalian frankincense tears.",
       "inspired_by": {
-        "brand": "Louis Vuitton",
-        "original_name": "Imagination"
+        "brand": "Pays de Grasse Bio-Holdings",
+        "original_name": "May Rose Centifolia Organic Absolute"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.52,
-      "reviews_count": 14032,
-      "launch_year": 2021,
-      "olfactive_family": "Citrus Aromatic",
+      "concentration": "Extrait de Parfum (26%)",
+      "gender": "Female",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Classical Green-Dew Floral / Sheer Chiffon",
       "perfumers": [
-        "Jacques Cavallier Belletrud"
+        "Pays de Grasse Master Perfumers",
+        "ZORUNE Creative Directorate"
       ],
+      "climate_role": "Temperate Spring Daywear & Floral Radiance",
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Afternoon"
+        ],
+        "occasions": [
+          "Executive Office",
+          "High Tea",
+          "Weddings & Celebrations"
+        ]
+      },
+      "main_accords": [
+        "rose",
+        "floral",
+        "green",
+        "dewy",
+        "citrus",
+        "honey"
+      ],
+      "terroir": {
+        "origin": "Grasse, Alpes-Maritimes, France",
+        "cooperative": "Grasse Producers Cooperative (UNESCO Heritage Protected Cultivation)",
+        "coordinates": "43.6602° N, 6.9287° E",
+        "elevation": "350m",
+        "harvest_season": "Month of May (Daily 5 AM–9 AM)"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Calabrian Bergamot FCF",
+          "Morning Dew Accord",
+          "Pink Peppercorn"
+        ],
+        "middle": [
+          "Grasse Centifolia Rose Absolute",
+          "Bulgarian Damask Hydrosol",
+          "Peony Dew"
+        ],
+        "base": [
+          "Somalian Frankincense Rivae",
+          "White Cedar Heart",
+          "Ambrox Super"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Rose Centifolia Abs 85 PPT",
+          "Geraniol ex-Palmarosa 22 PPT",
+          "PEA Natural 40 PPT",
+          "Bergamot FCF 60 PPT"
+        ],
+        "co_solvent_matrix": "IPM (6.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "The golden standard of rose perfumery. Pure Grasse Centifolia rose absolute distilled within hours of picking, balanced with crisp dew and golden frankincense.",
+      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 96,
+      "commercial_rank": 3,
+      "size_ml": 50,
+      "price": 23500,
+      "price_eur": 260,
+      "price_usd": 285,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 70,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "UNESCO Heritage Grasse Centifolia Rose",
+      "longevity_hours": 15,
+      "sillage_rating": "Radiant Luminous Floral Halo (14–15h)"
+    },
+    {
+      "id": 4,
+      "sku": "ZR-W04",
+      "name": "Fleur de Fynbos",
+      "formula_code": "Formula W-04",
+      "brand": "ZORUNE",
+      "collection": "Women's Haute Parfumerie",
+      "subtitle": "Cape Blossom & Wild Honey • Namaqualand Wildflora & Honeybush",
+      "concept": "The post-winter miracle across the Cape Floral Kingdom when arid fynbos hillsides burst into billions of honeyed blossoms. Featuring rare Cape Snowbush, honeyed Cederberg wild honeybush, and Bourbon vanilla.",
+      "inspired_by": {
+        "brand": "Heiveld Cooperative Nieuwoudtville",
+        "original_name": "Wild Cape Snowbush & Cederberg Honeybush"
+      },
+      "concentration": "Extrait de Parfum (22%)",
+      "gender": "Female",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Honeyed Herbal Floral / Sun-Warmed Nectar",
+      "perfumers": [
+        "Western Cape Botanical Atelier",
+        "Grasse Haute Parfumerie"
+      ],
+      "climate_role": "Dry Summer Warmth & Breezy Coastal Evenings",
+      "when_to_apply": {
+        "seasons": [
+          "Spring",
+          "Summer",
+          "Autumn"
+        ],
+        "time_of_day": [
+          "Day",
+          "Golden Hour",
+          "Evening"
+        ],
+        "occasions": [
+          "Resort & Travel",
+          "Artistic Events",
+          "Garden Soirées"
+        ]
+      },
+      "main_accords": [
+        "honey",
+        "herbal",
+        "floral",
+        "sweet",
+        "warm spicy",
+        "aromatic"
+      ],
+      "terroir": {
+        "origin": "Cederberg & Namaqualand, Western Cape, South Africa",
+        "cooperative": "Heiveld Cooperative & Indigenous Agathosma Trust",
+        "coordinates": "31.3719° S, 19.1158° E",
+        "elevation": "780m",
+        "harvest_season": "September–November"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Cape Snowbush (Eriocephalus)",
+          "Wild Mandarin",
+          "Crushed Mint"
+        ],
+        "middle": [
+          "Cederberg Wild Honeybush Absolute",
+          "South African Rose Geranium",
+          "Neroli"
+        ],
+        "base": [
+          "Madagascar Bourbon Vanilla CO2",
+          "Blonde Cedar",
+          "Clean Ambrette"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Honeybush Abs 75 PPT",
+          "Cape Snowbush 30 PPT",
+          "Geranium Oil SA 45 PPT",
+          "Vanilla CO2 40 PPT"
+        ],
+        "co_solvent_matrix": "IPM (7.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A sun-drenched Cape floral nectar. Golden honeybush tea and wild chamomilic snowbush sweetened with raw vanilla pod and sparkling rose geranium.",
+      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 93,
+      "commercial_rank": 4,
+      "size_ml": 50,
+      "price": 17500,
+      "price_eur": 195,
+      "price_usd": 215,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 60,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Endemic Cape Floral Kingdom Honeybush",
+      "longevity_hours": 14,
+      "sillage_rating": "Intimate Sun-Warmed Honey Trail (14h)"
+    },
+    {
+      "id": 5,
+      "sku": "ZR-W05",
+      "name": "Nectar d'Agrumes",
+      "formula_code": "Formula W-05",
+      "brand": "ZORUNE",
+      "collection": "Women's Haute Parfumerie",
+      "subtitle": "The Mediterranean Solstice • Tunisian Orange Blossom & Blood Orange",
+      "concept": "Midday sunlight warming coastal citrus groves and stone terraces on the Mediterranean coast. Sparkling Sicilian blood orange, radiant Tunisian orange blossom absolute, and wild linden blossom resting on warm Atlas cedarwood.",
+      "inspired_by": {
+        "brand": "Nabeul Citrus Artisan Guild",
+        "original_name": "Tunisian Neroli & Orange Blossom Absolute"
+      },
+      "concentration": "Extrait de Parfum (22%)",
+      "gender": "Female",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Sparkling Citrus Gourmand / Radiant Neroli",
+      "perfumers": [
+        "Grasse Haute Parfumerie Atelier"
+      ],
+      "climate_role": "High Summer Daytime Heat & Coastal Humidity",
       "when_to_apply": {
         "seasons": [
           "Spring",
@@ -113,201 +478,317 @@
           "Day"
         ],
         "occasions": [
-          "Daily Wear",
-          "Office",
-          "Casual",
-          "Vacation"
+          "Brunch",
+          "Yacht & Coastal",
+          "Casual Chic"
         ]
       },
       "main_accords": [
         "citrus",
-        "fresh spicy",
-        "fresh",
-        "green",
-        "amber"
-      ],
-      "notes": {
-        "top": [
-          "Citron",
-          "Calabrian bergamot",
-          "Sicilian Orange"
-        ],
-        "middle": [
-          "Tunisian Neroli",
-          "Nigerian Ginger",
-          "Ceylon Cinnamon"
-        ],
-        "base": [
-          "Chinese Black Tea",
-          "Ambroxan",
-          "Guaiac Wood",
-          "Olibanum"
-        ]
-      },
-      "description": "Imagination by Louis Vuitton is a Citrus Aromatic fragrance for men. Imagination was launched in 2021. The nose behind this fragrance is Jacques Cavallier Belletrud. Top notes are Citron, Calabrian bergamot and Sicilian Orange; middle notes are Tunisian Neroli, Nigerian Ginger and Ceylon Cinnamon; base notes are Chinese Black Tea, Ambroxan, Guaiac Wood and Olibanum.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.67370.jpg",
-      "commercial_score": 94,
-      "commercial_rank": 1
-    },
-    {
-      "id": 27,
-      "sku": "ZR-27",
-      "name": "Rouge",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Maison Francis Kurkdjian",
-        "original_name": "Baccarat Rouge 540"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Unisex",
-      "rating": 3.74,
-      "reviews_count": 30022,
-      "launch_year": 2015,
-      "olfactive_family": "Oriental Floral",
-      "perfumers": [
-        "Francis Kurkdjian"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter",
-          "Spring",
-          "Summer"
-        ],
-        "time_of_day": [
-          "Day",
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Luxury Evenings",
-          "Dates",
-          "Special Occasions",
-          "Signature"
-        ]
-      },
-      "main_accords": [
-        "woody",
-        "amber",
-        "warm spicy",
-        "metallic",
-        "fresh spicy",
-        "aromatic",
         "white floral",
-        "animalic",
-        "fresh"
+        "neroli",
+        "sweet",
+        "fruity",
+        "woody"
       ],
+      "terroir": {
+        "origin": "Cap Bon, Nabeul, Tunisia & Mount Etna, Sicily",
+        "cooperative": "Nabeul Citrus Artisan Guild & Sicilian Organic Agro-Groves",
+        "coordinates": "36.4561° N, 10.7376° E",
+        "elevation": "45m",
+        "harvest_season": "March–April"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Saffron",
-          "Jasmine"
+          "Sicilian Blood Orange",
+          "Green Mandarin",
+          "Petitgrain Bigarade"
         ],
         "middle": [
-          "Amberwood",
-          "Ambergris",
-          "Hedione"
+          "Tunisian Orange Blossom Absolute",
+          "Wild Linden Blossom",
+          "Freesia"
         ],
         "base": [
-          "Fir Resin",
-          "Cedar",
-          "Sugar",
-          "Ambroxan",
-          "Oakmoss"
+          "Atlas Cedarwood Morocco",
+          "White Amber",
+          "Solar Musk"
         ]
       },
-      "description": "Baccarat Rouge 540 by Maison Francis Kurkdjian is a Oriental Floral fragrance for women and men. Baccarat Rouge 540 was launched in 2015. The nose behind this fragrance is Francis Kurkdjian. Top notes are Saffron and Jasmine; middle notes are Amberwood, Ambergris and Hedione; base notes are Fir Resin, Cedar, Sugar, Ambroxan and Oakmoss.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.33519.jpg",
-      "commercial_score": 92,
-      "commercial_rank": 2
+      "chemical_dossier": {
+        "key_molecules": [
+          "Orange Blossom Abs 65 PPT",
+          "Blood Orange Cold-Press 90 PPT",
+          "Linalyl Acetate 40 PPT",
+          "Cedarwood Atlas 60 PPT"
+        ],
+        "co_solvent_matrix": "IPM (6.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An effervescent citrus-blossom elixir. Sun-soaked blood orange and opulent Tunisian orange blossom grounded in smooth Moroccan cedarwood.",
+      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 91,
+      "commercial_rank": 5,
+      "size_ml": 50,
+      "price": 15800,
+      "price_eur": 175,
+      "price_usd": 190,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 75,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Cap Bon Sun-Drenched Orange Blossom",
+      "longevity_hours": 13,
+      "sillage_rating": "Luminous Citrus Radiance (12–13h)"
     },
     {
-      "id": 5,
-      "sku": "ZR-05",
-      "name": "Elixir",
+      "id": 6,
+      "sku": "ZR-M01",
+      "name": "Kiso Silence",
+      "formula_code": "Formula M-01",
       "brand": "ZORUNE",
+      "collection": "Men's Haute Parfumerie",
+      "subtitle": "The Temple Cryptomeria • Kiso Valley Hinoki & Yakushima Sugi",
+      "concept": "Walking the ancient forested Nakasendo post-town trail in winter. Serene, dry, resinous cedarwood, therapeutic Japanese Hinoki heartwood, damp moss, and cold temple incense rising into misty alpine air.",
       "inspired_by": {
-        "brand": "Jean Paul Gaultier",
-        "original_name": "Le Male Elixir"
+        "brand": "Kiso Forestry Union Nagano",
+        "original_name": "Kanbatsu-Harvested Kiso Valley Hinoki"
       },
-      "concentration": "Parfum",
+      "concentration": "Extrait de Parfum (25%)",
       "gender": "Male",
-      "rating": 4.5,
-      "reviews_count": 26361,
-      "launch_year": 2023,
-      "olfactive_family": "Oriental Fougere",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Resinous Smoky Conifer / Dry Meditative Wood",
       "perfumers": [
-        "Quentin Bisch"
+        "Kyoto Olfactive Lab",
+        "Master Formulation Research Group"
       ],
+      "climate_role": "Cold Crisp Air & Executive Focus",
       "when_to_apply": {
         "seasons": [
-          "Fall",
+          "Autumn",
           "Winter",
           "Spring"
         ],
         "time_of_day": [
-          "Evening",
-          "Night"
+          "Morning",
+          "Day",
+          "Evening"
         ],
         "occasions": [
-          "Dates",
-          "Clubbing",
-          "Parties",
-          "Night Out"
+          "Boardroom Authority",
+          "Mindful Focus",
+          "Bespoke Tailoring"
         ]
       },
       "main_accords": [
-        "vanilla",
-        "sweet",
-        "honey",
+        "woody",
+        "conifer",
         "aromatic",
+        "smoky",
         "amber",
-        "lavender",
-        "tobacco",
-        "green",
-        "fresh spicy",
-        "powdery"
+        "balsamic"
       ],
+      "terroir": {
+        "origin": "Kiso Valley, Nagano Prefecture, Japan",
+        "cooperative": "Kiso Forestry Union (Sustainable Kanbatsu forest-thinning)",
+        "coordinates": "35.8456° N, 137.6942° E",
+        "elevation": "940m",
+        "harvest_season": "Year-round sustainable forestry"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Lavender",
-          "Mint"
+          "Kiso Hinoki Leaf",
+          "Japanese Black Pepper",
+          "Elemi Gum"
         ],
         "middle": [
-          "Vanilla",
-          "Benzoin"
+          "Kiso Hinoki Heartwood",
+          "Yakushima Sugi Needle",
+          "Guizhou Cedar"
         ],
         "base": [
-          "Honey",
-          "Tonka Bean",
-          "Tobacco"
+          "Smoked Frankincense",
+          "Vetiver Root",
+          "Iso E Super",
+          "Amber Core"
         ]
       },
-      "description": "Le Male Elixir by Jean Paul Gaultier is a Oriental Fougere fragrance for men. Le Male Elixir was launched in 2023. The nose behind this fragrance is Quentin Bisch. Top notes are Lavender and Mint; middle notes are Vanilla and Benzoin; base notes are Honey, Tonka Bean and Tobacco.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.81642.jpg",
-      "commercial_score": 91,
-      "commercial_rank": 3
+      "chemical_dossier": {
+        "key_molecules": [
+          "Hinoki Wood Oil 120 PPT",
+          "Sugi Needle Abs 35 PPT",
+          "Cedrol Crystals 80 PPT",
+          "Iso E Super 190 PPT",
+          "Olibanum Resin 50 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Grape Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An architectural wooden temple in winter. Sacred Japanese Hinoki heartwood and Yakushima cedarwood elevated by cold resins and crisp black pepper.",
+      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 98,
+      "commercial_rank": 6,
+      "size_ml": 50,
+      "price": 21500,
+      "price_eur": 240,
+      "price_usd": 260,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 90,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Kiso Valley Ancient Hinoki Wood",
+      "longevity_hours": 17,
+      "sillage_rating": "Sovereign Resinous Wood Sillage (16–17h)"
     },
     {
-      "id": 12,
-      "sku": "ZR-12",
-      "name": "Ombre",
+      "id": 7,
+      "sku": "ZR-M02",
+      "name": "Cederberg Fynbos",
+      "formula_code": "Formula M-02",
       "brand": "ZORUNE",
+      "collection": "Men's Haute Parfumerie",
+      "subtitle": "The Mountain Ridge • Wild Buchu, Labdanum & Chaco Guaiacwood",
+      "concept": "Dawn scrambling across the iron-red sandstone ridges of the Western Cape mountains. Brushed by wild aromatic buchu leaves releasing dark cassis and camphor, supported by Spanish labdanum and smoky guaiacwood.",
       "inspired_by": {
-        "brand": "Louis Vuitton",
-        "original_name": "Ombre Nomade"
+        "brand": "Indigenous Agathosma Trust Cederberg",
+        "original_name": "Wild Cederberg Buchu (Agathosma Betulina)"
       },
-      "concentration": "Eau de Toilette",
-      "gender": "Unisex",
-      "rating": 4.55,
-      "reviews_count": 14000,
-      "launch_year": 2018,
-      "olfactive_family": "Oriental Woody",
+      "concentration": "Extrait de Parfum (24%)",
+      "gender": "Male",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Aromatic Herbal Leather / Wild Chrysobalanaceae",
       "perfumers": [
-        "Jacques Cavallier-Belletrud"
+        "Cape Botanical Collective",
+        "Grasse Haute Parfumerie"
       ],
+      "climate_role": "All-Terrain Climate Shield & Rugged Luxury",
       "when_to_apply": {
         "seasons": [
-          "Fall",
+          "All Season",
+          "Autumn",
+          "Spring"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Sunset"
+        ],
+        "occasions": [
+          "Outdoor Expeditions",
+          "Architectural Work",
+          "Weekend Travel"
+        ]
+      },
+      "main_accords": [
+        "aromatic",
+        "herbal",
+        "leather",
+        "woody",
+        "cassis",
+        "smoky"
+      ],
+      "terroir": {
+        "origin": "Cederberg Wilderness, Western Cape, South Africa",
+        "cooperative": "Cederberg Indigenous Agathosma Trust (FairWild & UEBT Certified)",
+        "coordinates": "32.1842° S, 19.1415° E",
+        "elevation": "1,050m",
+        "harvest_season": "January–March"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Cederberg Buchu Leaf",
+          "Bitter Orange Pith",
+          "Crushed Thyme"
+        ],
+        "middle": [
+          "Overberg Blue Sage",
+          "Spanish Cistus Labdanum",
+          "Wild Lavender"
+        ],
+        "base": [
+          "Paraguayan Guaiacwood FairWood",
+          "Botanical Leather",
+          "Patchouli Dark"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Buchu Leaf Abs 35 PPT",
+          "Labdanum Cistus 65 PPT",
+          "Guaiacol FairWood 55 PPT",
+          "Patchoulol 70 PPT"
+        ],
+        "co_solvent_matrix": "IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A rugged mountain herbal leather. Wild Cederberg buchu leaf offering deep blackcurrant-herbal facets resting on amber resin and dark leathered guaiacwood.",
+      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 93,
+      "commercial_rank": 7,
+      "size_ml": 50,
+      "price": 17000,
+      "price_eur": 190,
+      "price_usd": 210,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 70,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Wild Harvested Cederberg Mountain Buchu",
+      "longevity_hours": 16,
+      "sillage_rating": "Assertive Herbal-Leather Trail (15–16h)"
+    },
+    {
+      "id": 8,
+      "sku": "ZR-M03",
+      "name": "Oud Samarkhand",
+      "formula_code": "Formula M-03",
+      "brand": "ZORUNE",
+      "collection": "Men's Haute Parfumerie",
+      "subtitle": "The Silk Road Caravan • Assam Wild Oud, Kashmiri Saffron & Green Hojari",
+      "concept": "The grand caravanserais of Samarkand. Cedar chests laden with wild Assam Aquilaria oud, bittersweet Kashmiri saffron stigmas, and smoldering Omani Royal Green Hojari frankincense tears.",
+      "inspired_by": {
+        "brand": "Assam Ethical Aquilaria Plantations",
+        "original_name": "Sustainable Assam Wild Aquilaria Agallocha"
+      },
+      "concentration": "Extrait de Parfum (30%)",
+      "gender": "Male",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Balsamic Smoky Amber-Oud / Animalic Warmth",
+      "perfumers": [
+        "Master Formulation Research Group",
+        "Heritage Indian Distillers"
+      ],
+      "climate_role": "Freezing Winter Cold & Ultra-Luxury Evening Presence",
+      "when_to_apply": {
+        "seasons": [
+          "Autumn",
           "Winter"
         ],
         "time_of_day": [
@@ -315,1305 +796,953 @@
           "Night"
         ],
         "occasions": [
-          "Special Occasions",
-          "Formal",
-          "Dates",
-          "Evening"
+          "State Banquet",
+          "Private Collection Showcase",
+          "High-Stakes Negotiations"
         ]
       },
       "main_accords": [
         "oud",
         "warm spicy",
         "amber",
-        "rose",
         "smoky",
-        "fruity",
-        "woody",
-        "leather",
+        "saffron",
         "balsamic"
       ],
+      "terroir": {
+        "origin": "Hojai, Assam, India & Dhofar Plateau, Oman",
+        "cooperative": "Hojai Sustainable Agroforestry & Dhofar Frankincense Guild",
+        "coordinates": "26.0028° N, 92.8597° E",
+        "elevation": "110m",
+        "harvest_season": "Winter mature extraction"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Raspberry",
-          "Saffron",
-          "Geranium"
+          "Pampore Saffron Stigma CO2",
+          "Dhofar Green Hojari Olibanum",
+          "Wild Nutmeg"
         ],
         "middle": [
-          "Rose",
-          "Incense",
-          "Benzoin"
+          "Assam Aquilaria Agallocha Pure Oil",
+          "Cured Leather Complex",
+          "Smoked Birch"
         ],
         "base": [
-          "Oud",
-          "Birch",
-          "Amberwood"
+          "Ambergris Australe",
+          "Laotian Benzoin",
+          "Indonesian Patchouli Dark"
         ]
       },
-      "description": "Ombre Nomade by Louis Vuitton is a Oriental Woody fragrance for women and men. Ombre Nomade was launched in 2018. The nose behind this fragrance is Jacques Cavallier-Belletrud. Designed for lovers of rare essences, Ombre Nomade concentrates that sensation of infinity into one of the most mythical ingredients in perfumery, oud wood. A rebellious material, intoxicatingly dark and beautifully paired with hints of benzoin, raspberry accents and smoky incense.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.49755.jpg",
-      "commercial_score": 93,
-      "commercial_rank": 4
-    },
-    {
-      "id": 10,
-      "sku": "ZR-10",
-      "name": "Angels",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "By Kilian",
-        "original_name": "Angels' Share"
+      "chemical_dossier": {
+        "key_molecules": [
+          "Assam Oud Oil 95 PPT",
+          "Saffron Extract 30 PPT",
+          "Green Hojari Olibanum 80 PPT",
+          "Cistus Labdanum 75 PPT",
+          "Ambrox Super 40 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + Glucam P-20 (2.0%) + IPM (8.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Unisex",
-      "rating": 4.35,
-      "reviews_count": 24034,
-      "launch_year": 2020,
-      "olfactive_family": "Oriental Vanilla",
-      "perfumers": [
-        "Benoist Lapouza"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Special Occasions",
-          "Night Out",
-          "Parties"
-        ]
-      },
-      "main_accords": [
-        "warm spicy",
-        "woody",
-        "sweet",
-        "vanilla",
-        "cinnamon",
-        "amber",
-        "powdery"
-      ],
-      "notes": {
-        "top": [
-          "Cognac"
-        ],
-        "middle": [
-          "Cinnamon",
-          "Tonka Bean",
-          "Oak",
-          "Hedione"
-        ],
-        "base": [
-          "Vanilla",
-          "Praline",
-          "Sandalwood",
-          "Candied Almond"
-        ]
-      },
-      "description": "Angels' Share by By Kilian is a Oriental Vanilla fragrance for women and men. Angels' Share was launched in 2020. The nose behind this fragrance is Benoist Lapouza. Top note is Cognac; middle notes are Cinnamon, Tonka Bean, Oak and Hedione; base notes are Vanilla, Praline, Sandalwood and Candied Almond.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.62615.jpg",
-      "commercial_score": 89,
-      "commercial_rank": 4
-    },
-    {
-      "id": 30,
-      "sku": "ZR-30",
-      "name": "Tobacco",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Tom Ford",
-        "original_name": "Tobacco Vanille Eau de Parfum"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Unisex",
-      "rating": 4.17,
-      "reviews_count": 31947,
-      "launch_year": 2007,
-      "olfactive_family": "Oriental Spicy",
-      "perfumers": [
-        "Olivier Gillotin"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Cozy Evenings",
-          "Intimate Gatherings",
-          "Winter Holidays"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "sweet",
-        "tobacco",
-        "warm spicy",
-        "fruity",
-        "woody",
-        "cacao",
-        "powdery"
-      ],
-      "notes": {
-        "top": [
-          "Tobacco Leaf",
-          "Spicy Notes"
-        ],
-        "middle": [
-          "Vanilla",
-          "Cacao",
-          "Tonka Bean",
-          "Tobacco Blossom"
-        ],
-        "base": [
-          "Dried Fruits",
-          "Woody Notes"
-        ]
-      },
-      "description": "Tobacco Vanille by Tom Ford is a Oriental Spicy fragrance for women and men. Tobacco Vanille was launched in 2007. The nose behind this fragrance is Olivier Gillotin. Top notes are Tobacco Leaf and Spicy Notes; middle notes are Vanilla, Cacao, Tonka Bean and Tobacco blossom; base notes are Dried Fruits and Woody Notes.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.1825.jpg",
-      "commercial_score": 90,
-      "commercial_rank": 5
-    },
-    {
-      "id": 1,
-      "sku": "ZR-01",
-      "name": "Intense",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Giorgio Armani",
-        "original_name": "Emporio Armani Stronger With You Intensely"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.57,
-      "reviews_count": 27046,
-      "launch_year": 2019,
-      "olfactive_family": "Oriental Fougere",
-      "perfumers": [
-        "Cecile Matton"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Night Out",
-          "Winter Casual"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "sweet",
-        "amber",
-        "cinnamon",
-        "warm spicy",
-        "powdery",
-        "aromatic",
-        "soft spicy",
-        "caramel"
-      ],
-      "notes": {
-        "top": [
-          "Pink Pepper",
-          "Juniper",
-          "Violet"
-        ],
-        "middle": [
-          "Toffee",
-          "Cinnamon",
-          "Lavender",
-          "Sage"
-        ],
-        "base": [
-          "Vanilla",
-          "Amber",
-          "Tonka Bean",
-          "Suede"
-        ]
-      },
-      "description": "Emporio Armani Stronger With You Intensely by Giorgio Armani is a Oriental Fougere fragrance for men. Emporio Armani Stronger With You Intensely was launched in 2019. Top notes are Pink Pepper, Juniper and Violet; middle notes are Toffee, Cinnamon, Lavender and Sage; base notes are Vanilla, Amber, Tonka Bean and Suede. Emporio Armani Stronger With You Intensely is an oriental-woody fragrance with fougere accents. It tells a story of the excitement of a new and young love. Top notes include spices and violet, with the heart that combines lavender with sweet toffee caramel and cinnamon. The base ends with suede, vanilla and amber.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.52802.jpg",
-      "commercial_score": 88,
-      "commercial_rank": 5
-    },
-    {
-      "id": 20,
-      "sku": "ZR-20",
-      "name": "Libre",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Yves Saint Laurent",
-        "original_name": "Libre"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.92,
-      "reviews_count": 22724,
-      "launch_year": 2019,
-      "olfactive_family": "Oriental Fougere",
-      "perfumers": [
-        "Anne Flipo",
-        "Carlos Benaïm"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Spring",
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Morning",
-          "Day",
-          "Evening"
-        ],
-        "occasions": [
-          "Office",
-          "Business",
-          "Formal",
-          "Dates",
-          "Signature"
-        ]
-      },
-      "main_accords": [
-        "white floral",
-        "citrus",
-        "lavender",
-        "vanilla",
-        "aromatic",
-        "sweet",
-        "powdery",
-        "animalic",
-        "musky",
-        "woody"
-      ],
-      "notes": {
-        "top": [
-          "Lavender",
-          "Mandarin Orange",
-          "Black Currant",
-          "Petitgrain"
-        ],
-        "middle": [
-          "Lavender",
-          "Orange Blossom",
-          "Jasmine"
-        ],
-        "base": [
-          "Madagascar Vanilla",
-          "Musk",
-          "Cedar",
-          "Ambergris"
-        ]
-      },
-      "description": "Libre by Yves Saint Laurent is a Oriental Fougere fragrance for women. Libre was launched in 2019. Libre was created by Anne Flipo and Carlos Benaïm. Top notes are Lavender, Mandarin Orange, Black Currant and Petitgrain; middle notes are Lavender, Orange Blossom and Jasmine; base notes are Madagascar Vanilla, Musk, Cedar and Ambergris.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.56077.jpg",
-      "commercial_score": 87,
-      "commercial_rank": 6
-    },
-    {
-      "id": 13,
-      "sku": "ZR-13",
-      "name": "Goddess",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Burberry",
-        "original_name": "Goddess"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 4.15,
-      "reviews_count": 14756,
-      "launch_year": 2023,
-      "olfactive_family": "Aromatic",
-      "perfumers": [
-        "Amandine Clerc-Marie"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter",
-          "Spring"
-        ],
-        "time_of_day": [
-          "Morning",
-          "Day",
-          "Evening"
-        ],
-        "occasions": [
-          "Daily Wear",
-          "Dates",
-          "Casual",
-          "Cozy Evenings"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "lavender",
-        "fresh spicy",
-        "cacao",
-        "sweet"
-      ],
-      "notes": {
-        "top": [
-          "Vanilla",
-          "Lavender",
-          "Cacao",
-          "Ginger"
-        ],
-        "middle": [
-          "Vanilla Caviar"
-        ],
-        "base": [
-          "Vanilla Absolute"
-        ]
-      },
-      "description": "Goddess by Burberry is a Aromatic fragrance for women. Goddess was launched in 2023. The nose behind this fragrance is Amandine Clerc-Marie. Top notes are Vanilla, Lavender, Cacao and Ginger; middle note is Vanilla Caviar; base note is Vanilla Absolute.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.83483.jpg",
-      "commercial_score": 86,
-      "commercial_rank": 7
-    },
-    {
-      "id": 24,
-      "sku": "ZR-24",
-      "name": "Eros",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Versace",
-        "original_name": "Eros Eau de Toilette"
-      },
-      "concentration": "Eau de Toilette",
-      "gender": "Male",
-      "rating": 4.05,
-      "reviews_count": 31051,
-      "launch_year": 2012,
-      "olfactive_family": "Aromatic Fougere",
-      "perfumers": [
-        "Aurélien Guichard"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter",
-          "Spring"
-        ],
-        "time_of_day": [
-          "Night",
-          "Evening"
-        ],
-        "occasions": [
-          "Clubbing",
-          "Parties",
-          "Night Out",
-          "Dates"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "aromatic",
-        "green",
-        "fresh spicy",
-        "amber",
-        "citrus",
-        "fruity",
-        "woody",
-        "sweet",
-        "fresh"
-      ],
-      "notes": {
-        "top": [
-          "Mint",
-          "Green Apple",
-          "Lemon"
-        ],
-        "middle": [
-          "Tonka Bean",
-          "Ambroxan",
-          "Geranium"
-        ],
-        "base": [
-          "Madagascar Vanilla",
-          "Virginian Cedar",
-          "Atlas Cedar",
-          "Vetiver",
-          "Oakmoss"
-        ]
-      },
-      "description": "Eros by Versace is a Aromatic Fougere fragrance for men. Eros was launched in 2012. The nose behind this fragrance is Aurélien Guichard. Top notes are Mint, Green Apple and Lemon; middle notes are Tonka Bean, Ambroxan and Geranium; base notes are Madagascar Vanilla, Virginian Cedar, Atlas Cedar, Vetiver and Oakmoss.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.16657.jpg",
-      "commercial_score": 88,
-      "commercial_rank": 8
-    },
-    {
-      "id": 7,
-      "sku": "ZR-07",
-      "name": "Apex",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Yves Saint Laurent",
-        "original_name": "Y Eau de Parfum"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.42,
-      "reviews_count": 29129,
-      "launch_year": 2018,
-      "olfactive_family": "Aromatic Fougere",
-      "perfumers": [
-        "Dominique Ropion",
-        "Claire Liégent"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Spring",
-          "Summer",
-          "Fall"
-        ],
-        "time_of_day": [
-          "Morning",
-          "Day",
-          "Evening"
-        ],
-        "occasions": [
-          "Daily Wear",
-          "Office",
-          "Signature",
-          "Casual"
-        ]
-      },
-      "main_accords": [
-        "aromatic",
-        "fresh spicy",
-        "woody",
-        "fruity",
-        "fresh",
-        "amber",
-        "citrus",
-        "herbal",
-        "green",
-        "warm spicy"
-      ],
-      "notes": {
-        "top": [
-          "Apple",
-          "Ginger",
-          "Bergamot"
-        ],
-        "middle": [
-          "Sage",
-          "Juniper Berries",
-          "Geranium"
-        ],
-        "base": [
-          "Amberwood",
-          "Tonka Bean",
-          "Cedar",
-          "Vetiver",
-          "Olibanum"
-        ]
-      },
-      "description": "Y Eau de Parfum by Yves Saint Laurent is a Aromatic Fougere fragrance for men. Y Eau de Parfum was launched in 2018. Y Eau de Parfum was created by Dominique Ropion and Claire Liégent. Top notes are Apple, Ginger and Bergamot; middle notes are Sage, Juniper Berries and Geranium; base notes are Amberwood, Tonka Bean, Cedar, Vetiver and Olibanum.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.50757.jpg",
-      "commercial_score": 85,
-      "commercial_rank": 8
-    },
-    {
-      "id": 29,
-      "sku": "ZR-29",
-      "name": "Million",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Paco Rabanne",
-        "original_name": "1 Million Eau de Toilette"
-      },
-      "concentration": "Eau de Toilette",
-      "gender": "Male",
-      "rating": 3.73,
-      "reviews_count": 24559,
-      "launch_year": 2008,
-      "olfactive_family": "Woody Spicy",
-      "perfumers": [
-        "Christophe Raynaud",
-        "Olivier Pescheux",
-        "Michel Girard",
-        "Christian Dussoulier"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Night Out",
-          "Clubbing",
-          "Parties",
-          "Dates"
-        ]
-      },
-      "main_accords": [
-        "warm spicy",
-        "cinnamon",
-        "citrus",
-        "amber",
-        "woody",
-        "leather",
-        "rose",
-        "animalic",
-        "green",
-        "patchouli"
-      ],
-      "notes": {
-        "top": [
-          "Blood Mandarin",
-          "Grapefruit",
-          "Mint"
-        ],
-        "middle": [
-          "Cinnamon",
-          "Spicy Notes",
-          "Rose"
-        ],
-        "base": [
-          "Amber",
-          "Leather",
-          "Woody Notes",
-          "Indian Patchouli"
-        ]
-      },
-      "description": "1 Million by Paco Rabanne is a Woody Spicy fragrance for men. 1 Million was launched in 2008. 1 Million was created by Christophe Raynaud, Olivier Pescheux, Michel Girard and Christian Dussoulier. Top notes are Blood Mandarin, Grapefruit and Mint; middle notes are Cinnamon, Spicy Notes and Rose; base notes are Amber, Leather, Woody Notes and Indian Patchouli.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.3747.jpg",
-      "commercial_score": 85,
-      "commercial_rank": 9
-    },
-    {
-      "id": 8,
-      "sku": "ZR-08",
-      "name": "Bleu",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Chanel",
-        "original_name": "Bleu de Chanel Eau de Parfum"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.42,
-      "reviews_count": 23295,
-      "launch_year": 2014,
-      "olfactive_family": "Woody Aromatic",
-      "perfumers": [
-        "Jacques Polge"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Spring",
-          "Summer",
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Morning",
-          "Day",
-          "Evening"
-        ],
-        "occasions": [
-          "Daily Wear",
-          "Office",
-          "Formal",
-          "Dates"
-        ]
-      },
-      "main_accords": [
-        "citrus",
-        "amber",
-        "woody",
-        "fresh spicy",
-        "aromatic",
-        "warm spicy",
-        "fresh",
-        "smoky",
-        "balsamic",
-        "powdery"
-      ],
-      "notes": {
-        "top": [
-          "Grapefruit",
-          "Lemon",
-          "Mint",
-          "Bergamot",
-          "Pink Pepper",
-          "Aldehydes",
-          "Coriander"
-        ],
-        "middle": [
-          "Ginger",
-          "Jasmine",
-          "Nutmeg",
-          "Melon"
-        ],
-        "base": [
-          "Incense",
-          "Amber",
-          "Cedar",
-          "Sandalwood",
-          "Amberwood",
-          "Patchouli",
-          "Labdanum"
-        ]
-      },
-      "description": "Bleu de Chanel Eau de Parfum by Chanel is a Woody Aromatic fragrance for men. Bleu de Chanel Eau de Parfum was launched in 2014. The nose behind this fragrance is Jacques Polge. Top notes are Grapefruit, Lemon, Mint, Bergamot, Pink Pepper, Aldehydes and Coriander; middle notes are Ginger, Jasmine, Nutmeg and Melon; base notes are Incense, Amber, Cedar, Sandalwood, Amberwood, Patchouli and Labdanum.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.25967.jpg",
-      "commercial_score": 84,
-      "commercial_rank": 9
-    },
-    {
-      "id": 17,
-      "sku": "ZR-17",
-      "name": "Stiletto",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Carolina Herrera",
-        "original_name": "Good Girl"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.95,
-      "reviews_count": 26047,
-      "launch_year": 2016,
-      "olfactive_family": "Oriental Floral",
-      "perfumers": [
-        "Louise Turner",
-        "Quentin Bisch"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Night Out",
-          "Parties",
-          "Glamorous Events"
-        ]
-      },
-      "main_accords": [
-        "sweet",
-        "white floral",
-        "vanilla",
-        "warm spicy",
-        "amber",
-        "cacao",
-        "woody",
-        "tuberose",
-        "almond",
-        "powdery"
-      ],
-      "notes": {
-        "top": [
-          "Almond",
-          "Coffee",
-          "Bergamot",
-          "Lemon"
-        ],
-        "middle": [
-          "Tuberose",
-          "Jasmine Sambac",
-          "Orange Blossom",
-          "Bulgarian Rose",
-          "Orris"
-        ],
-        "base": [
-          "Tonka Bean",
-          "Cacao",
-          "Vanilla",
-          "Praline",
-          "Sandalwood",
-          "Musk",
-          "Amber",
-          "Cashmere Wood",
-          "Patchouli",
-          "Cinnamon",
-          "Cedar"
-        ]
-      },
-      "description": "Good Girl by Carolina Herrera is a Oriental Floral fragrance for women. Good Girl was launched in 2016. Good Girl was created by Louise Turner and Quentin Bisch. Top notes are Almond, Coffee, Bergamot and Lemon; middle notes are Tuberose, Jasmine Sambac, Orange Blossom, Bulgarian Rose and Orris; base notes are Tonka Bean, Cacao, Vanilla, Praline, Sandalwood, Musk, Amber, Cashmere Wood, Patchouli, Cinnamon and Cedar.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.39681.jpg",
-      "commercial_score": 83,
-      "commercial_rank": 10
+      "description": "The pinnacle of oriental resinous perfumery. Certified sustainable Assam wild oud infused with rare Kashmiri saffron and imperial Omani frankincense.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 99,
+      "commercial_rank": 8,
+      "size_ml": 50,
+      "price": 27000,
+      "price_eur": 300,
+      "price_usd": 330,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 50,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Sustainable Assam Wild Aquilaria Oud (30% Extrait)",
+      "longevity_hours": 20,
+      "sillage_rating": "Nuclear Opulent Sillage (18–20h+)"
     },
     {
       "id": 9,
-      "sku": "ZR-09",
-      "name": "Swim",
+      "sku": "ZR-M04",
+      "name": "Vetiver Monsoon",
+      "formula_code": "Formula M-04",
       "brand": "ZORUNE",
+      "collection": "Men's Haute Parfumerie",
+      "subtitle": "The Kannauj Rainmaker • Traditional Copper-Deg Ruh Khus & Geosmin",
+      "concept": "The transformative instant when the first drops of the summer monsoon break months of blistering heat, soaking sun-baked clay. Hydro-distilled Kannauj Ruh Khus in ancient copper vessels, paired with green mandarin and riverbed geosmin.",
       "inspired_by": {
-        "brand": "Louis Vuitton",
-        "original_name": "Afternoon Swim"
+        "brand": "Kannauj Traditional Distillers Guild",
+        "original_name": "Copper-Distilled North Indian Wild Ruh Khus"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Unisex",
-      "rating": 4.4,
-      "reviews_count": 5321,
-      "launch_year": 2019,
-      "olfactive_family": "Citrus",
+      "concentration": "Extrait de Parfum (25%)",
+      "gender": "Male",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Earthy Green Mineral Chypre / Wet Soil",
       "perfumers": [
-        "Jacques Cavallier Belletrud"
+        "Master Formulation Research Group",
+        "Kannauj Heritage Guild"
       ],
+      "climate_role": "45°C Heat Resistor & Intense Humidity Neutralizer",
       "when_to_apply": {
         "seasons": [
           "Summer",
+          "Monsoon",
           "Spring"
         ],
         "time_of_day": [
           "Morning",
-          "Day"
-        ],
-        "occasions": [
-          "Summer Vacation",
-          "Beach",
-          "Casual Day",
-          "Outdoor"
-        ]
-      },
-      "main_accords": [
-        "citrus",
-        "fresh spicy",
-        "sweet",
-        "amber",
-        "aromatic"
-      ],
-      "notes": {
-        "top": [
-          "Mandarin Orange",
-          "Sicilian Orange",
-          "Bergamot"
-        ],
-        "middle": [
-          "Ginger"
-        ],
-        "base": [
-          "Ambergris"
-        ]
-      },
-      "description": "Afternoon Swim by Louis Vuitton is a Citrus fragrance for women and men. Afternoon Swim was launched in 2019. The nose behind this fragrance is Jacques Cavallier Belletrud. Top notes are Mandarin Orange, Sicilian Orange and Bergamot; middle note is Ginger; base note is Ambergris.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.53947.jpg",
-      "commercial_score": 82,
-      "commercial_rank": 11
-    },
-    {
-      "id": 2,
-      "sku": "ZR-02",
-      "name": "Wanted",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Azzaro",
-        "original_name": "The Most Wanted"
-      },
-      "concentration": "Eau de Parfum Intense",
-      "gender": "Male",
-      "rating": 4.57,
-      "reviews_count": 12226,
-      "launch_year": 2021,
-      "olfactive_family": "Oriental Spicy",
-      "perfumers": [
-        "Michel Girard",
-        "Nadège Le Garlantezec",
-        "Shyamala Maisondieu"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Night Out",
-          "Clubbing"
-        ]
-      },
-      "main_accords": [
-        "warm spicy",
-        "sweet",
-        "amber",
-        "woody",
-        "caramel",
-        "aromatic"
-      ],
-      "notes": {
-        "top": [
-          "Cardamom"
-        ],
-        "middle": [
-          "Toffee"
-        ],
-        "base": [
-          "Amberwood"
-        ]
-      },
-      "description": "The Most Wanted by Azzaro is a Oriental Spicy fragrance for men. The Most Wanted was created by Michel Girard, Nadège Le Garlantezec and Shyamala Maisondieu. Top note is Cardamom; middle note is Toffee; base note is Amberwood.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.66826.jpg",
-      "commercial_score": 81,
-      "commercial_rank": 12
-    },
-    {
-      "id": 11,
-      "sku": "ZR-11",
-      "name": "Aventus",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Creed",
-        "original_name": "Aventus"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.31,
-      "reviews_count": 28704,
-      "launch_year": 2010,
-      "olfactive_family": "Chypre Fruity",
-      "perfumers": [
-        "Jean-Christophe Hérault",
-        "Erwin Creed"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Spring",
-          "Summer",
-          "Fall"
-        ],
-        "time_of_day": [
-          "Morning",
           "Day",
-          "Evening"
+          "Afternoon"
         ],
         "occasions": [
-          "Business",
-          "Formal",
-          "Signature",
-          "Special Occasions"
+          "Executive Office",
+          "High Heat Resilience",
+          "Active Sports"
         ]
       },
       "main_accords": [
-        "fruity",
-        "sweet",
+        "earthy",
         "woody",
-        "leather",
-        "citrus",
-        "smoky",
-        "musky",
-        "fresh",
-        "tropical",
-        "mossy"
+        "green",
+        "mineral",
+        "aromatic",
+        "citrus"
       ],
+      "terroir": {
+        "origin": "Kannauj, Uttar Pradesh, India",
+        "cooperative": "Kannauj Artisan Distillers Guild (400-year copper deg-bhapka heritage)",
+        "coordinates": "27.0543° N, 79.9134° E",
+        "elevation": "139m",
+        "harvest_season": "December–February (Wild roots)"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Bergamot",
-          "Black Currant",
-          "Apple",
-          "Lemon",
-          "Pink Pepper"
+          "Italian Green Mandarin",
+          "Calabrian Bergamot FCF",
+          "Crisp Pink Pepper"
         ],
         "middle": [
-          "Pineapple",
-          "Patchouli",
-          "Moroccan Jasmine"
+          "Kannauj Ruh Khus (Wild Vetiver)",
+          "Mitti Attar Co-Distillate (Geosmin)",
+          "Cypress"
         ],
         "base": [
-          "Birch",
-          "Musk",
-          "oak moss",
-          "Cedarwood",
-          "Ambroxan"
-        ]
-      },
-      "description": "Aventus by Creed is a Chypre Fruity fragrance for men. Aventus was launched in 2010. Aventus was created by Jean-Christophe Hérault and Erwin Creed. Top notes are Bergamot, Black Currant, Apple, Lemon and Pink Pepper; middle notes are Pineapple, Patchouli and Moroccan Jasmine; base notes are Birch, Musk, oak moss, Cedarwood and Ambroxan.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.9828.jpg",
-      "commercial_score": 80,
-      "commercial_rank": 13
-    },
-    {
-      "id": 18,
-      "sku": "ZR-18",
-      "name": "Opium",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Yves Saint Laurent",
-        "original_name": "Black Opium"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.94,
-      "reviews_count": 35248,
-      "launch_year": 2014,
-      "olfactive_family": "Oriental Vanilla",
-      "perfumers": [
-        "Nathalie Lorson",
-        "Marie Salamagne",
-        "Olivier Cresp",
-        "Honorine Blanc"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Night Out",
-          "Dates",
-          "Clubbing",
-          "Parties"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "coffee",
-        "sweet",
-        "white floral",
-        "warm spicy",
-        "soft spicy",
-        "woody",
-        "fruity",
-        "balsamic",
-        "powdery"
-      ],
-      "notes": {
-        "top": [
-          "Pear",
-          "Pink Pepper",
-          "Orange Blossom"
-        ],
-        "middle": [
-          "Coffee",
-          "Jasmine",
-          "Bitter Almond",
-          "Licorice"
-        ],
-        "base": [
-          "Vanilla",
-          "Patchouli",
-          "Cashmere Wood",
+          "Indonesian Patchouli Dark Iron-Free",
+          "Clearwood",
+          "Clean Ambroxan",
           "Cedar"
         ]
       },
-      "description": "Black Opium by Yves Saint Laurent is a Oriental Vanilla fragrance for women. Black Opium was launched in 2014. Black Opium was created by Nathalie Lorson, Marie Salamagne, Olivier Cresp and Honorine Blanc. Top notes are Pear, Pink Pepper and Orange Blossom; middle notes are Coffee, Jasmine, Bitter Almond and Licorice; base notes are Vanilla, Patchouli, Cashmere Wood and Cedar.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.25324.jpg",
-      "commercial_score": 79,
-      "commercial_rank": 14
+      "chemical_dossier": {
+        "key_molecules": [
+          "Ruh Khus Copper Distillate 110 PPT",
+          "Geosmin Natural 2 PPT",
+          "Mandarin Oil 70 PPT",
+          "Clearwood 80 PPT",
+          "Ambroxan 50 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "The authentic scent of rain on baked earth. Pure copper-distilled North Indian Ruh Khus vetiver infused with natural petrichor geosmin and zesty green mandarin.",
+      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 96,
+      "commercial_rank": 9,
+      "size_ml": 50,
+      "price": 18900,
+      "price_eur": 210,
+      "price_usd": 230,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 85,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Copper-Distilled Kannauj Petrichor Ruh Khus",
+      "longevity_hours": 16,
+      "sillage_rating": "Crisp Cooling Earth Sillage (15–16h)"
     },
     {
-      "id": 19,
-      "sku": "ZR-19",
-      "name": "Gardenia",
+      "id": 10,
+      "sku": "ZR-M05",
+      "name": "Cuir d'Andalousie",
+      "formula_code": "Formula M-05",
       "brand": "ZORUNE",
+      "collection": "Men's Haute Parfumerie",
+      "subtitle": "The Cordoba Saddlery • Spanish Cade Wood, Birch Tar & Resins",
+      "concept": "The historic leather-working ateliers of Moorish Cordoba. Bitter orange peels dried over smoldering cade embers, polished harness hides, and deep Somalian opoponax resin.",
       "inspired_by": {
-        "brand": "Gucci",
-        "original_name": "Flora Gorgeous Gardenia"
+        "brand": "Sierra de Grazalema Co-op Spain",
+        "original_name": "Rectified Pyrogenic-Safe Spanish Cade Wood"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.94,
-      "reviews_count": 7781,
-      "launch_year": 2021,
-      "olfactive_family": "Floral",
+      "concentration": "Extrait de Parfum (26%)",
+      "gender": "Male",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Smoky Dry Leather / Birch & Resins",
       "perfumers": [
-        "Honorine Blanc"
+        "Andalusian Botanical Co.",
+        "Grasse Haute Parfumerie"
       ],
+      "climate_role": "Chilly Autumn & Crisp Evening Armor",
+      "when_to_apply": {
+        "seasons": [
+          "Autumn",
+          "Winter"
+        ],
+        "time_of_day": [
+          "Evening",
+          "Night"
+        ],
+        "occasions": [
+          "Private Club",
+          "Cigar & Whiskey Lounge",
+          "Winter Formal"
+        ]
+      },
+      "main_accords": [
+        "leather",
+        "smoky",
+        "woody",
+        "balsamic",
+        "warm spicy",
+        "amber"
+      ],
+      "terroir": {
+        "origin": "Sierra de Grazalema, Andalusia, Spain",
+        "cooperative": "Sierra de Grazalema Wild Harvesters Guild",
+        "coordinates": "36.7592° N, 5.3683° W",
+        "elevation": "820m",
+        "harvest_season": "Autumn"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Seville Bitter Orange",
+          "Spanish Thyme",
+          "Cardamom"
+        ],
+        "middle": [
+          "Spanish Cade Wood Rectified",
+          "Russian Birch Tar (Safe)",
+          "Styrax Purified"
+        ],
+        "base": [
+          "Somalian Opoponax Tears",
+          "Cistus Labdanum",
+          "Dark Cedar"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Cade Rectified 45 PPT",
+          "Birch Tar Fraction 35 PPT",
+          "Opoponax Abs 60 PPT",
+          "Labdanum 70 PPT"
+        ],
+        "co_solvent_matrix": "IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An uncompromising dry Spanish leather. Smoldering cade wood and purified birch tar softened with bitter orange and golden opoponax resin.",
+      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 94,
+      "commercial_rank": 10,
+      "size_ml": 50,
+      "price": 22500,
+      "price_eur": 250,
+      "price_usd": 275,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 60,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Pyrogenic-Safe Spanish Cade Leather",
+      "longevity_hours": 17,
+      "sillage_rating": "Dark Enveloping Leather Presence (16–17h)"
+    },
+    {
+      "id": 11,
+      "sku": "ZR-U01",
+      "name": "Yuzu Céleste",
+      "formula_code": "Formula U-01",
+      "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Glacier Spring • Kōchi Yuzu, Hokkaido Mint & Mountain Juniper",
+      "concept": "Pristine mountain onsens in Shikoku surrounded by snow-covered yuzu branches. Sparkling, sharp, joyful Kōchi yuzu cold-pressed oil, Japanese white mint, and Himalayan juniper berry over crystalline biotech ambroxan.",
+      "inspired_by": {
+        "brand": "Umaji Village Cooperative Kōchi",
+        "original_name": "Cold-Pressed Wild Mountain Kōchi Yuzu"
+      },
+      "concentration": "Extrait de Parfum (24%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Crystalline Citrus Aquatic / Mineral Mountain Stream",
+      "perfumers": [
+        "Tokyo Fragrance Laboratory",
+        "Grasse Haute Parfumerie"
+      ],
+      "climate_role": "Extreme Summer Heat & High Humidity Neutralizer",
       "when_to_apply": {
         "seasons": [
           "Spring",
-          "Summer"
+          "Summer",
+          "Monsoon"
         ],
         "time_of_day": [
           "Morning",
           "Day"
         ],
         "occasions": [
-          "Daily Wear",
-          "Brunches",
-          "Casual",
-          "Spring Dates"
+          "High Heat Travel",
+          "Daily Casual",
+          "Summer Escapes"
         ]
       },
       "main_accords": [
-        "white floral",
-        "floral",
-        "sweet",
-        "fruity",
-        "lactonic",
-        "patchouli",
         "citrus",
-        "fresh"
+        "fresh",
+        "aromatic",
+        "mineral",
+        "green",
+        "aquatic"
       ],
+      "terroir": {
+        "origin": "Umaji Village, Kōchi Prefecture, Japan",
+        "cooperative": "Umaji Village Cooperative (Circular zero-waste fruit peel harvest)",
+        "coordinates": "33.5647° N, 134.0042° E",
+        "elevation": "620m",
+        "harvest_season": "November–January"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Pear Blossom",
-          "Red Berries",
-          "Italian Mandarin"
+          "Kōchi Yuzu Cold-Press",
+          "Hokkaido White Mint (Hakku)",
+          "Japanese Lemon"
         ],
         "middle": [
-          "Gardenia",
-          "Jasmine",
-          "Frangipani"
+          "Himalayan Juniper Berry CO2",
+          "Green Tea Accord",
+          "Mineral Ozone"
         ],
         "base": [
-          "Brown sugar",
-          "Patchouli"
+          "Biotech Ambroxan (Renewable)",
+          "White Cedarwood",
+          "Clean Musks"
         ]
       },
-      "description": "Flora Gorgeous Gardenia by Gucci is a Floral fragrance for women. Flora Gorgeous Gardenia was launched in 2021. The nose behind this fragrance is Honorine Blanc. Top notes are Pear Blossom, Red Berries and Italian Mandarin; middle notes are Gardenia, Jasmine and Frangipani; base notes are Brown sugar and Patchouli.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.68578.jpg",
-      "commercial_score": 78,
-      "commercial_rank": 15
+      "chemical_dossier": {
+        "key_molecules": [
+          "Yuzu Cold-Press 110 PPT",
+          "L-Menthol Natural 15 PPT",
+          "Juniper Berry CO2 40 PPT",
+          "Ambroxan Renewable 65 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (7.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A glacier-cold mountain citrus. Pristine Kōchi yuzu fruit and crisp Japanese mint bursting over mineral spring water and clean ambergris.",
+      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 98,
+      "commercial_rank": 11,
+      "size_ml": 50,
+      "price": 16500,
+      "price_eur": 185,
+      "price_usd": 200,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 95,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Single-Origin Mountain Kōchi Yuzu",
+      "longevity_hours": 15,
+      "sillage_rating": "Crystalline Sparkling Halo (14–15h)"
     },
     {
-      "id": 6,
-      "sku": "ZR-06",
-      "name": "Tuxedo",
+      "id": 12,
+      "sku": "ZR-U02",
+      "name": "Saffron Nomade",
+      "formula_code": "Formula U-02",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Golden Stigma • Pampore Kashmiri Saffron & Somalian Myrrh",
+      "concept": "High-altitude spice routes crossing the Pir Panjal mountains. Bittersweet golden Pampore saffron stigmas drying on woven blankets, enriched with Somalian myrrh, Guatemalan cardamom, and golden amber.",
       "inspired_by": {
-        "brand": "Yves Saint Laurent",
-        "original_name": "Tuxedo"
+        "brand": "Pampore Smallholders Saffron Co.",
+        "original_name": "Grade-1 Mongra Kashmiri Saffron CO2"
       },
-      "concentration": "Eau de Parfum",
+      "concentration": "Extrait de Parfum (28%)",
       "gender": "Unisex",
-      "rating": 4.43,
-      "reviews_count": 4894,
-      "launch_year": 2015,
-      "olfactive_family": "Chypre",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Spiced Resinous Leather / Golden Amber",
       "perfumers": [
-        "Juliette Karagueuzoglou"
+        "Master Formulation Research Group",
+        "Kashmir Terroir Guild"
       ],
+      "climate_role": "Chilly Autumn, Winter & Highland Luxury",
       "when_to_apply": {
         "seasons": [
-          "Fall",
+          "Autumn",
           "Winter",
           "Spring"
         ],
         "time_of_day": [
+          "Afternoon",
           "Evening",
           "Night"
         ],
         "occasions": [
-          "Formal",
-          "Black Tie",
-          "Dates",
-          "Special Occasions"
+          "Exclusive Dinners",
+          "Art Exhibitions",
+          "Luxury Lounging"
         ]
       },
       "main_accords": [
-        "patchouli",
-        "vanilla",
-        "amber",
-        "ozonic",
-        "fresh spicy",
         "warm spicy",
-        "balsamic",
-        "woody",
-        "rose",
-        "aquatic"
+        "saffron",
+        "amber",
+        "leather",
+        "resinous",
+        "woody"
       ],
+      "terroir": {
+        "origin": "Pampore, Kashmir Valley, India",
+        "cooperative": "Pampore Smallholders Saffron Co. (100% Grade-1 Mongra Stigmas)",
+        "coordinates": "34.0182° N, 74.9315° E",
+        "elevation": "1,620m",
+        "harvest_season": "October–November (2-week dawn bloom)"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Violet Leaf",
-          "Coriander",
-          "Bergamot"
+          "Guatemalan Cardamom CO2",
+          "Calabrian Bergamot FCF",
+          "Coriander Seed"
         ],
         "middle": [
-          "Rose",
-          "Black Pepper",
-          "Lily-of-the-Valley"
+          "Pampore Kashmiri Saffron CO2",
+          "Somalian Myrrh Resinoid",
+          "Rose Petal"
         ],
         "base": [
-          "Patchouli",
-          "Bourbon Vanilla",
-          "Ambergris"
+          "Golden Ambergris",
+          "Plant-Derived Leather",
+          "Patchouli Heart",
+          "Vanilla"
         ]
       },
-      "description": "Tuxedo by Yves Saint Laurent is a Chypre fragrance for women and men. Tuxedo was launched in 2015. The nose behind this fragrance is Juliette Karagueuzoglou. Top notes are Violet Leaf, Coriander and Bergamot; middle notes are Rose, Black Pepper and Lily-of-the-Valley; base notes are Patchouli, Bourbon Vanilla and Ambergris. In November 2015, Yves Saint Laurent presents its new collection of luxury fragrances Le Vestiaire des Parfums, which includes five new releases: Caban, Caftan, Tuxedo, Saharienne and Trench. The \"perfume wardrobe\" collection is inspired by the iconic pieces of Yves Saint Laurent clothing. Tuxedo is a bit masculine, elegant and dark with accords of patchouli and spices. All the fragrances are unisex. They are available as 125 ml Eau de Parfum.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.32269.jpg",
-      "commercial_score": 77,
-      "commercial_rank": 16
+      "chemical_dossier": {
+        "key_molecules": [
+          "Safranal Natural CO2 45 PPT",
+          "Myrrh Resinoid 70 PPT",
+          "Cardamom CO2 35 PPT",
+          "Ambrox Super 50 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A luminous golden spice elixir. Genuine Kashmiri Mongra saffron stigmas imparting warm bittersweet leather nuances against Somalian myrrh and amber.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 97,
+      "commercial_rank": 12,
+      "size_ml": 50,
+      "price": 24800,
+      "price_eur": 275,
+      "price_usd": 300,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 65,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "High-Altitude Kashmiri Mongra Saffron",
+      "longevity_hours": 18,
+      "sillage_rating": "Golden Velvet Projection (16–18h)"
     },
     {
-      "id": 26,
-      "sku": "ZR-26",
-      "name": "Voyage",
+      "id": 13,
+      "sku": "ZR-U03",
+      "name": "Hinoki Sanctuary",
+      "formula_code": "Formula U-03",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Temple of Dawn • Kiso Hinoki, Kyoto Kuromoji & Frankincense",
+      "concept": "The morning prayer bell at Ryoan-ji, Kyoto. Cedar and Hinoki temple walkways washed with mountain spring water reflecting pale dawn light, infused with spicy-floral Kuromoji branches and sheer incense.",
       "inspired_by": {
-        "brand": "Giorgio Armani",
-        "original_name": "My Way"
+        "brand": "Mount Hiei Forest Keepers Kyoto",
+        "original_name": "Wild Kyoto Kuromoji & Kiso Hinoki"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.77,
-      "reviews_count": 13911,
-      "launch_year": 2020,
-      "olfactive_family": "Floral",
+      "concentration": "Extrait de Parfum (25%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Meditative Transparent Woody / Zen Incense",
       "perfumers": [
-        "Carlos Benaïm",
-        "Bruno Jovanovic"
+        "Kyoto Olfactive Lab",
+        "Master Formulation Research Group"
       ],
+      "climate_role": "Year-Round Meditative Sanctuary & Zen Equilibrium",
+      "when_to_apply": {
+        "seasons": [
+          "All Season",
+          "Spring",
+          "Autumn"
+        ],
+        "time_of_day": [
+          "Morning",
+          "Day",
+          "Night"
+        ],
+        "occasions": [
+          "Mindfulness & Yoga",
+          "Creative Writing",
+          "Discreet Luxury"
+        ]
+      },
+      "main_accords": [
+        "woody",
+        "aromatic",
+        "conifer",
+        "clean",
+        "incense",
+        "herbal"
+      ],
+      "terroir": {
+        "origin": "Kyoto & Nagano, Japan",
+        "cooperative": "Mount Hiei Forest Keepers & Kiso Forestry Union",
+        "coordinates": "35.0705° N, 135.8402° E",
+        "elevation": "848m",
+        "harvest_season": "Spring/Autumn sustainable pruning"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Kyoto Kuromoji Branch",
+          "Pink Pepper",
+          "Cold Water Accord"
+        ],
+        "middle": [
+          "Kiso Hinoki Heartwood",
+          "Frankincense Carterii LMR",
+          "Clary Sage"
+        ],
+        "base": [
+          "Clean White Musk (Galaxolide-Free)",
+          "Texas Cedarwood",
+          "Vetiver Acetate"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Hinoki Wood Oil 90 PPT",
+          "Kuromoji Oil 35 PPT",
+          "Olibanum LMR 45 PPT",
+          "Habanolide 70 PPT",
+          "Iso E Super 160 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A serene Japanese sanctuary in scent. Pristine Hinoki wood washed with cold morning water, spiced with wild Kuromoji twigs and clean temple incense.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 96,
+      "commercial_rank": 13,
+      "size_ml": 50,
+      "price": 20700,
+      "price_eur": 230,
+      "price_usd": 250,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 80,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Kyoto Kuromoji & Kiso Hinoki Sanctuary",
+      "longevity_hours": 16,
+      "sillage_rating": "Intimate Meditative Radiance (14–16h)"
+    },
+    {
+      "id": 14,
+      "sku": "ZR-U04",
+      "name": "Buchu Sauvage",
+      "formula_code": "Formula U-04",
+      "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Cape Storm • Wild Cederberg Buchu & Atlantic Seaweed",
+      "concept": "The dramatic convergence of the Atlantic and Indian Oceans at the Cape of Good Hope during a winter gale. Aromatic cassis-mint buchu leaves swept up in salty ocean spray, blue eucalyptus, and wild Pyrenean rosemary.",
+      "inspired_by": {
+        "brand": "Indigenous Agathosma Trust Cederberg",
+        "original_name": "Wild Cederberg Buchu & Breton Seaweed Absolute"
+      },
+      "concentration": "Extrait de Parfum (24%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Aromatic Cassis Fynbos / Green Oceanic",
+      "perfumers": [
+        "Cape Botanical Collective",
+        "Grasse Haute Parfumerie"
+      ],
+      "climate_role": "Crisp Maritime Humidity & Energetic Outdoor Shield",
       "when_to_apply": {
         "seasons": [
           "Spring",
           "Summer",
-          "Fall"
+          "Autumn"
         ],
         "time_of_day": [
           "Morning",
           "Day"
         ],
         "occasions": [
-          "Daily Wear",
-          "Office",
-          "Travel",
-          "Casual Chic"
+          "Coastal Travel",
+          "Active Lifestyle",
+          "Summer Sailing"
         ]
       },
       "main_accords": [
-        "white floral",
-        "tuberose",
-        "citrus",
-        "animalic",
-        "vanilla"
+        "aromatic",
+        "marine",
+        "green",
+        "cassis",
+        "salty",
+        "herbal"
       ],
+      "terroir": {
+        "origin": "Cederberg & Atlantic Coast, South Africa",
+        "cooperative": "Cederberg Indigenous Agathosma Trust & Brittany Seaweed Harvesters",
+        "coordinates": "34.3568° S, 18.4725° E",
+        "elevation": "Sea level to 900m",
+        "harvest_season": "January–March"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Orange Blossom",
-          "Bergamot"
+          "Cederberg Buchu Leaf",
+          "Atlantic Sea Spray Accord",
+          "Peppermint Eucalyptus"
         ],
         "middle": [
-          "Tuberose",
-          "Indian Jasmine"
+          "Brittany Seaweed Absolute (Fucus)",
+          "Spanish Rosemary Verbenone",
+          "Green Melon"
         ],
         "base": [
-          "Madagascar Vanilla",
-          "White Musk",
-          "Virginian Cedar"
+          "Driftwood Accord",
+          "Ambroxan Renewable",
+          "Vetiver Roots"
         ]
       },
-      "description": "My Way by Giorgio Armani is a Floral fragrance for women. My Way was launched in 2020. My Way was created by Carlos Benaïm and Bruno Jovanovic. Top notes are Orange Blossom and Bergamot; middle notes are Tuberose and Indian Jasmine; base notes are Madagascar Vanilla, White Musk and Virginian Cedar.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.62036.jpg",
-      "commercial_score": 75,
-      "commercial_rank": 18
+      "chemical_dossier": {
+        "key_molecules": [
+          "Buchu Oil 30 PPT",
+          "Seaweed Abs 18 PPT",
+          "Ambroxan 60 PPT",
+          "Rosemary Verbenone 25 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An electrifying aromatic oceanic creation. Dark blackcurrant-green buchu leaves whipping through cold salty Atlantic surf and sun-bleached driftwood.",
+      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 93,
+      "commercial_rank": 14,
+      "size_ml": 50,
+      "price": 17500,
+      "price_eur": 195,
+      "price_usd": 215,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 70,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Atlantic Surf & Wild Cederberg Buchu",
+      "longevity_hours": 15,
+      "sillage_rating": "Crisp Oceanic Sillage (14–15h)"
     },
     {
-      "id": 28,
-      "sku": "ZR-28",
-      "name": "Crystal",
+      "id": 15,
+      "sku": "ZR-U05",
+      "name": "Mysore Santal",
+      "formula_code": "Formula U-05",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Sacred Carving • Karnataka Sandalwood & Siamese Benzoin",
+      "concept": "Ancient Chola temple sanctums with doors carved from single aged sandalwood timbers, polished by centuries of devotion. Pure plantation Santalum album, Australian sandalwood, ambrette seeds, and golden Siamese benzoin tears.",
       "inspired_by": {
-        "brand": "Versace",
-        "original_name": "Bright Crystal"
+        "brand": "Karnataka State Forest Plantations",
+        "original_name": "Certified Sustainable Karnataka Santalum Album"
       },
-      "concentration": "Eau de Toilette",
-      "gender": "Female",
-      "rating": 3.74,
-      "reviews_count": 24610,
-      "launch_year": 2006,
-      "olfactive_family": "Floral Fruity",
+      "concentration": "Extrait de Parfum (30%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Classical Milky Woody / Balsamic Comfort",
       "perfumers": [
-        "Alberto Morillas"
+        "Master Formulation Research Group",
+        "Karnataka Heritage Scent Guild"
       ],
+      "climate_role": "All-Season Sacred Aura & Executive Distinction",
       "when_to_apply": {
         "seasons": [
-          "Spring",
-          "Summer"
+          "All Season",
+          "Autumn",
+          "Winter"
         ],
         "time_of_day": [
-          "Morning",
-          "Day"
+          "Day",
+          "Evening",
+          "Night"
         ],
         "occasions": [
-          "Daily Wear",
-          "Hot Weather",
-          "Casual",
-          "Office"
+          "Bespoke Events",
+          "Signature Everyday Presence",
+          "Spiritual Contemplation"
         ]
       },
       "main_accords": [
-        "floral",
-        "fresh",
-        "citrus",
         "woody",
-        "rose",
-        "fresh spicy",
-        "aquatic"
+        "sandalwood",
+        "milky",
+        "warm spicy",
+        "amber",
+        "powdery"
       ],
+      "terroir": {
+        "origin": "Karnataka, South India & Western Australia",
+        "cooperative": "Karnataka Certified Sustainable Plantations & Dutjahn Indigenous Sandalwood Guild",
+        "coordinates": "12.2958° N, 76.6394° E",
+        "elevation": "763m",
+        "harvest_season": "15-20 year sustainable rotation"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Yuzu",
-          "Pomegranate",
-          "Ice"
+          "Cardamom Pod Green",
+          "Ambrette Seed CO2",
+          "Carrot Seed Absolute"
         ],
         "middle": [
-          "Peony",
-          "Lotus",
-          "Magnolia"
+          "Karnataka Santalum Album Heartwood",
+          "Australian Sandalwood",
+          "Milk Accord"
         ],
         "base": [
-          "Musk",
-          "Mahogany",
-          "Amber"
+          "Benzoin Siam Tears (Luang Prabang)",
+          "White Musk Matrix",
+          "Cedar"
         ]
       },
-      "description": "Bright Crystal by Versace is a Floral Fruity fragrance for women. Bright Crystal was launched in 2006. The nose behind this fragrance is Alberto Morillas. Top notes are Yuzu, Pomegranate and Ice; middle notes are Peony, Lotus and Magnolia; base notes are Musk, Mahogany and Amber.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.632.jpg",
-      "commercial_score": 73,
-      "commercial_rank": 19
+      "chemical_dossier": {
+        "key_molecules": [
+          "Santalum Album Oil 140 PPT (Free Santalol >90%)",
+          "Santalum Spicatum 50 PPT",
+          "Benzoin Siam 65 PPT",
+          "Javanol 12 PPT",
+          "Ambrette Abs 30 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + Glucam P-20 (2.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "The golden benchmark of authentic sandalwood. Certified sustainable Karnataka Santalum album delivering creamy, buttery balsamic wood warmth with immense skin longevity.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 99,
+      "commercial_rank": 15,
+      "size_ml": 50,
+      "price": 26800,
+      "price_eur": 295,
+      "price_usd": 325,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 55,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Govt Certified Karnataka Santalum Album (30% Extrait)",
+      "longevity_hours": 20,
+      "sillage_rating": "Sensual Enveloping Wood Radiance (18–20h)"
     },
     {
       "id": 16,
-      "sku": "ZR-16",
-      "name": "Nomad",
+      "sku": "ZR-U06",
+      "name": "Immortelle Corsique",
+      "formula_code": "Formula U-06",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Maquis Wildfire • Balagne Corsican Immortelle & Spanish Cistus",
+      "concept": "Sun-baked granite hillsides of Corsica where the wind carries the dry, honey-spicy aroma of yellow everlasting flowers out to sea. Sun-drenched immortelle, golden honeybush, and aromatic Spanish cistus resins.",
       "inspired_by": {
-        "brand": "Byredo",
-        "original_name": "Gypsy Water"
+        "brand": "Balagne Artisanal Distillers Corsica",
+        "original_name": "Organic Wild Corsican Immortelle (Helichrysum Italicum)"
       },
-      "concentration": "Eau de Parfum",
+      "concentration": "Extrait de Parfum (25%)",
       "gender": "Unisex",
-      "rating": 3.98,
-      "reviews_count": 11563,
-      "launch_year": 2008,
-      "olfactive_family": "Woody Aromatic",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Sun-Drenched Herbal Amber / Spicy Maple Hay",
       "perfumers": [
-        "Jérôme Epinette"
+        "Corsican Botanical Guild",
+        "Grasse Haute Parfumerie"
       ],
+      "climate_role": "High Summer Dry Heat & Warm Sunset Contemplation",
       "when_to_apply": {
         "seasons": [
-          "Spring",
           "Summer",
+          "Autumn"
+        ],
+        "time_of_day": [
+          "Afternoon",
+          "Sunset",
+          "Evening"
+        ],
+        "occasions": [
+          "Mediterranean Travel",
+          "Al Fresco Dinners",
+          "Artistic Salons"
+        ]
+      },
+      "main_accords": [
+        "warm spicy",
+        "herbal",
+        "amber",
+        "sweet",
+        "honey",
+        "woody"
+      ],
+      "terroir": {
+        "origin": "Balagne Plateau, Corsica, France",
+        "cooperative": "Balagne Artisanal Distillers (Organic wild-crafted Helichrysum)",
+        "coordinates": "42.5683° N, 8.9419° E",
+        "elevation": "420m",
+        "harvest_season": "June–July"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
+      "notes": {
+        "top": [
+          "Corsican Bitter Orange",
+          "Wild Thyme",
+          "Pink Pepper"
+        ],
+        "middle": [
+          "Corsican Immortelle Absolute",
+          "French Clary Sage Sclarene",
+          "Wild Honeybush"
+        ],
+        "base": [
+          "Spanish Cistus Labdanum",
+          "Oakwood Heart",
+          "Golden Amber"
+        ]
+      },
+      "chemical_dossier": {
+        "key_molecules": [
+          "Helichrysum Italicum Abs 60 PPT",
+          "Cistus Labdanum 70 PPT",
+          "Sclarene Natural 25 PPT",
+          "Honeybush Extract 35 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An evocative sun-baked amber. Rare Corsican immortelle flowers releasing maple-curry warmth, wild maquis herbs, and deep golden labdanum.",
+      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 93,
+      "commercial_rank": 16,
+      "size_ml": 50,
+      "price": 19500,
+      "price_eur": 215,
+      "price_usd": 235,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 65,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Balagne Wild Corsican Immortelle",
+      "longevity_hours": 17,
+      "sillage_rating": "Sun-Drenched Honeyed Resin Aura (16–17h)"
+    },
+    {
+      "id": 17,
+      "sku": "ZR-U07",
+      "name": "Kuromoji Glacé",
+      "formula_code": "Formula U-07",
+      "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Alpine Forest • Kyoto Kuromoji Twigs & Sichuan Pepper",
+      "concept": "Ceremonial Japanese Kuromoji tea sticks whittled fresh in high alpine winter air. Delicate floral-linalool wood nuances, tingling Sichuan peppercorn, and Yakushima Sugi conifer needles.",
+      "inspired_by": {
+        "brand": "Kyoto Mountain Wood Artisans",
+        "original_name": "Wild Kyoto Lindera Umbellata (Kuromoji)"
+      },
+      "concentration": "Extrait de Parfum (23%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Floral Spice Herbal / Cool Ethereal Wood",
+      "perfumers": [
+        "Tokyo Fragrance Laboratory",
+        "Kyoto Terroir Lab"
+      ],
+      "climate_role": "Winter-Spring Thaw & Intellectual Clarity",
+      "when_to_apply": {
+        "seasons": [
+          "Winter",
+          "Spring",
           "Fall"
         ],
         "time_of_day": [
@@ -1621,287 +1750,211 @@
           "Day"
         ],
         "occasions": [
-          "Daily Wear",
-          "Office",
-          "Casual",
-          "Intimate Gatherings"
+          "Tea Ceremony",
+          "Creative Work",
+          "Refined Gallery Visits"
         ]
       },
       "main_accords": [
-        "woody",
-        "aromatic",
         "fresh spicy",
-        "citrus",
-        "powdery",
-        "vanilla",
-        "amber",
-        "balsamic",
-        "warm spicy"
-      ],
-      "notes": {
-        "top": [
-          "Juniper",
-          "Lemon",
-          "Bergamot",
-          "Pepper"
-        ],
-        "middle": [
-          "Pine needles",
-          "Incense",
-          "Orris Root"
-        ],
-        "base": [
-          "Vanilla",
-          "Sandalwood",
-          "Amber"
-        ]
-      },
-      "description": "Gypsy Water by Byredo is a Woody Aromatic fragrance for women and men. Gypsy Water was launched in 2008. Top notes are Juniper, Lemon, Bergamot and Pepper; middle notes are Pine needles, Incense and Orris Root; base notes are Vanilla, Sandalwood and Amber.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.3575.jpg",
-      "commercial_score": 72,
-      "commercial_rank": 20
-    },
-    {
-      "id": 22,
-      "sku": "ZR-22",
-      "name": "Orchid",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Tom Ford",
-        "original_name": "Black Orchid"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Unisex",
-      "rating": 3.88,
-      "reviews_count": 32781,
-      "launch_year": 2006,
-      "olfactive_family": "Oriental Floral",
-      "perfumers": [
-        "David Apel",
-        "Pierre Negrin"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Formal",
-          "Dates",
-          "Night Out",
-          "Glamorous Evenings"
-        ]
-      },
-      "main_accords": [
-        "warm spicy",
-        "earthy",
         "woody",
-        "sweet",
-        "amber",
-        "patchouli",
         "floral",
-        "chocolate",
-        "powdery",
-        "balsamic"
-      ],
-      "notes": {
-        "top": [
-          "Truffle",
-          "Gardenia",
-          "Black Currant",
-          "Ylang-Ylang",
-          "Jasmine",
-          "Bergamot",
-          "Mandarin Orange",
-          "Amalfi Lemon"
-        ],
-        "middle": [
-          "Orchid",
-          "Spices",
-          "Gardenia",
-          "Fruity Notes",
-          "Ylang-Ylang",
-          "Jasmine",
-          "Lotus"
-        ],
-        "base": [
-          "Mexican chocolate",
-          "Patchouli",
-          "Vanille",
-          "Incense",
-          "Amber",
-          "Sandalwood",
-          "Vetiver",
-          "White Musk"
-        ]
-      },
-      "description": "Black Orchid by Tom Ford is a Oriental Floral fragrance for women. Black Orchid was launched in 2006. Black Orchid was created by David Apel and Pierre Negrin. Top notes are Truffle, Gardenia, Black Currant, Ylang-Ylang, Jasmine, Bergamot, Mandarin Orange and Amalfi Lemon; middle notes are Orchid, Spices, Gardenia, Fruity Notes, Ylang-Ylang, Jasmine and Lotus; base notes are Mexican chocolate, Patchouli, Vanille, Incense, Amber, Sandalwood, Vetiver and White Musk.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.1018.jpg",
-      "commercial_score": 71,
-      "commercial_rank": 21
-    },
-    {
-      "id": 4,
-      "sku": "ZR-04",
-      "name": "Absolute",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Giorgio Armani",
-        "original_name": "Emporio Armani Stronger With You Absolutely"
-      },
-      "concentration": "Parfum",
-      "gender": "Male",
-      "rating": 4.52,
-      "reviews_count": 10414,
-      "launch_year": 2021,
-      "olfactive_family": "Oriental Fougere",
-      "perfumers": [
-        "Cecile Matton"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Fall",
-          "Winter"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Dates",
-          "Special Occasions",
-          "Night Out"
-        ]
-      },
-      "main_accords": [
-        "vanilla",
-        "woody",
-        "balsamic",
-        "rum",
         "aromatic",
-        "warm spicy",
-        "nutty",
-        "powdery",
-        "lavender",
-        "sweet"
+        "citrus",
+        "conifer"
       ],
+      "terroir": {
+        "origin": "Kyoto Prefecture & Sichuan Highlands, East Asia",
+        "cooperative": "Kyoto Mountain Wood Artisans & High-Altitude Foragers",
+        "coordinates": "35.0116° N, 135.7681° E",
+        "elevation": "750m",
+        "harvest_season": "Early Spring"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Rum",
-          "elemi",
-          "Bergamot"
+          "Sichuan Pepper CO2",
+          "Yuzu Zest",
+          "Cardamom"
         ],
         "middle": [
-          "Lavender",
-          "Davana"
+          "Kyoto Kuromoji Leaf & Twig Oil",
+          "Japanese White Rose",
+          "Geraniol"
         ],
         "base": [
-          "Madagascar Vanilla",
-          "Chestnut",
-          "Cedar",
-          "Patchouli"
+          "Yakushima Sugi Conifer",
+          "Bio-Catalytic Vetiver Acetate",
+          "Cedar"
         ]
       },
-      "description": "Emporio Armani Stronger With You Absolutely by Giorgio Armani is a Oriental Fougere fragrance for men. Emporio Armani Stronger With You Absolutely was launched in 2021. The nose behind this fragrance is Cecile Matton. Top notes are Rum, elemi and Bergamot; middle notes are Lavender and Davana; base notes are Madagascar Vanilla, Chestnut, Cedar and Patchouli.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.64501.jpg",
-      "commercial_score": 70,
-      "commercial_rank": 22
+      "chemical_dossier": {
+        "key_molecules": [
+          "Kuromoji Oil (High Linalool) 55 PPT",
+          "Sichuan Pepper CO2 30 PPT",
+          "Vetiver Acetate 60 PPT",
+          "Cedrol 45 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (7.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An ethereal floral-spice conifer creation. Hand-distilled Kyoto Kuromoji twigs sparkling with electric Sichuan pepper and crisp Japanese Sugi wood.",
+      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 94,
+      "commercial_rank": 17,
+      "size_ml": 50,
+      "price": 20200,
+      "price_eur": 225,
+      "price_usd": 245,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 70,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Kyoto Ceremonial Kuromoji & Sugi Wood",
+      "longevity_hours": 15,
+      "sillage_rating": "Cool Floral-Spice Projection (14–15h)"
     },
     {
-      "id": 23,
-      "sku": "ZR-23",
-      "name": "Freesia",
+      "id": 18,
+      "sku": "ZR-U08",
+      "name": "Ambergris Australe",
+      "formula_code": "Formula U-08",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Oceanic Drift • Ethical Beach-Combed Ambergris & Irish Moss",
+      "concept": "The solitude of the Southern Ocean. Decades-aged fossilized ambergris washed ashore on remote windswept New Zealand coastlines, paired with cold ocean foam, Irish moss, and sun-bleached driftwood.",
       "inspired_by": {
-        "brand": "Jo Malone London",
-        "original_name": "English Pear & Freesia"
+        "brand": "Licensed New Zealand Foragers",
+        "original_name": "Ethical Beach-Combed Ambergris Tincture (3%)"
       },
-      "concentration": "Cologne",
-      "gender": "Female",
-      "rating": 3.82,
-      "reviews_count": 9983,
-      "launch_year": 2010,
-      "olfactive_family": "Chypre Fruity",
+      "concentration": "Extrait de Parfum (26%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Saline Marine Amber / Sun-Bleached Driftwood",
       "perfumers": [
-        "Christine Nagel"
+        "Master Formulation Research Group",
+        "Oceanic Scent Lab"
       ],
+      "climate_role": "All-Weather Contemplative Aura & Maritime Sophistication",
       "when_to_apply": {
         "seasons": [
-          "Spring",
-          "Summer",
-          "Fall"
+          "All Season",
+          "Autumn",
+          "Spring"
         ],
         "time_of_day": [
-          "Morning",
-          "Day"
+          "Day",
+          "Twilight",
+          "Night"
         ],
         "occasions": [
-          "Daily Wear",
-          "Office",
-          "Brunches",
-          "Daytime Events"
+          "Intimate Gatherings",
+          "Quiet Luxury",
+          "Private Jet & Sea Travel"
         ]
       },
       "main_accords": [
-        "floral",
-        "fruity",
-        "rose",
-        "sweet",
-        "aquatic",
-        "musky",
-        "fresh",
-        "patchouli",
-        "green",
-        "powdery"
+        "ambergris",
+        "marine",
+        "salty",
+        "woody",
+        "mineral",
+        "amber"
       ],
+      "terroir": {
+        "origin": "South Island, New Zealand & Kerry Coast, Ireland",
+        "cooperative": "Licensed Coastal Beach-Combers Co-op (100% Cruelty-Free / CITES Compliant)",
+        "coordinates": "44.0407° S, 168.6182° E",
+        "elevation": "Sea Level",
+        "harvest_season": "Natural tidal drifts"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Pear",
-          "Melon"
+          "Oceanic Mist Accord",
+          "Sea Salt",
+          "Italian Bergamot FCF"
         ],
         "middle": [
-          "Freesia",
-          "Rose"
+          "Irish Moss Absolute (Chondrus crispus)",
+          "Somalian Opoponax Tears",
+          "Clary Sage"
         ],
         "base": [
-          "Musk",
-          "Patchouli",
-          "Rhuburb",
-          "Amber"
+          "Natural Beach-Combed Ambergris Tincture",
+          "Virginian Cedar Heart",
+          "Ambroxan"
         ]
       },
-      "description": "English Pear & Freesia by Jo Malone London is a Chypre Fruity fragrance for women. English Pear & Freesia was launched in 2010. The nose behind this fragrance is Christine Nagel. Top notes are Pear and Melon; middle notes are Freesia and Rose; base notes are Musk, Patchouli, Rhuburb and Amber.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.10314.jpg",
-      "commercial_score": 69,
-      "commercial_rank": 23
+      "chemical_dossier": {
+        "key_molecules": [
+          "Ambergris 3% Tincture 120 PPT",
+          "Irish Moss Abs 25 PPT",
+          "Ambrox Super 55 PPT",
+          "Cedramber 70 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A transcendent oceanic amber. Certified ethical beach-combed ambergris tincture providing unparalleled mineral warmth, salt spray, and ancient driftwood.",
+      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 97,
+      "commercial_rank": 18,
+      "size_ml": 50,
+      "price": 25200,
+      "price_eur": 280,
+      "price_usd": 305,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 55,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Cruelty-Free Beach-Combed Natural Ambergris",
+      "longevity_hours": 19,
+      "sillage_rating": "Hypnotic Saline-Skin Sillage (18–19h)"
     },
     {
-      "id": 25,
-      "sku": "ZR-25",
-      "name": "Adore",
+      "id": 19,
+      "sku": "ZR-U09",
+      "name": "Ruh Khus Terroir",
+      "formula_code": "Formula U-09",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Earth's Respiration • Wild Kannauj Khus & Himalayan Spikenard",
+      "concept": "The Ayurvedic science of thermodynamic equilibrium. Deep wild vetiver roots hydro-distilled in Kannauj copper vessels, Himalayan spikenard, crushed green cardamom pods, and organic virgin sesame extract.",
       "inspired_by": {
-        "brand": "Dior",
-        "original_name": "J'adore"
+        "brand": "Kannauj Traditional Distillers Guild",
+        "original_name": "Traditional Copper Deg-Bhapka Wild Ruh Khus"
       },
-      "concentration": "Eau de Parfum",
-      "gender": "Female",
-      "rating": 3.8,
-      "reviews_count": 29908,
-      "launch_year": 1999,
-      "olfactive_family": "Floral Fruity",
+      "concentration": "Extrait de Parfum (25%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Raw Earth Balsamic / Deep Botanical Coolant",
       "perfumers": [
-        "Calice Becker"
+        "Master Formulation Research Group",
+        "Kannauj Heritage Guild"
       ],
+      "climate_role": "45°C Extreme Heat Shield & Mental Calming",
       "when_to_apply": {
         "seasons": [
-          "Spring",
           "Summer",
-          "Fall"
+          "Monsoon",
+          "Spring"
         ],
         "time_of_day": [
           "Morning",
@@ -1909,192 +1962,179 @@
           "Evening"
         ],
         "occasions": [
-          "Weddings",
-          "Formal",
-          "Daytime Elegance",
-          "Office"
+          "Extreme Heat Travel",
+          "Mindful Focus",
+          "Signature Earthy Aura"
         ]
       },
       "main_accords": [
-        "white floral",
-        "floral",
-        "fruity",
-        "sweet",
-        "fresh",
-        "aquatic",
-        "citrus",
-        "powdery",
-        "ozonic",
-        "tuberose"
-      ],
-      "notes": {
-        "top": [
-          "Pear",
-          "Melon",
-          "Magnolia",
-          "Peach",
-          "Mandarin Orange",
-          "Bergamot"
-        ],
-        "middle": [
-          "Jasmine",
-          "Lily-of-the-Valley",
-          "Tuberose",
-          "Freesia",
-          "Rose",
-          "Orchid",
-          "Violet",
-          "Plum"
-        ],
-        "base": [
-          "Musk",
-          "Vanilla",
-          "Cedar",
-          "Blackberry"
-        ]
-      },
-      "description": "J'adore by Dior is a Floral Fruity fragrance for women. J'adore was launched in 1999. The nose behind this fragrance is Calice Becker. Top notes are Pear, Melon, Magnolia, Peach, Mandarin Orange and Bergamot; middle notes are Jasmine, Lily-of-the-Valley, Tuberose, Freesia, Rose, Orchid, Violet and Plum; base notes are Musk, Vanilla, Cedar and Blackberry.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.210.jpg",
-      "commercial_score": 68,
-      "commercial_rank": 24
-    },
-    {
-      "id": 14,
-      "sku": "ZR-14",
-      "name": "Interlude",
-      "brand": "ZORUNE",
-      "inspired_by": {
-        "brand": "Amouage",
-        "original_name": "Interlude Man"
-      },
-      "concentration": "Eau de Parfum",
-      "gender": "Male",
-      "rating": 4.12,
-      "reviews_count": 9230,
-      "launch_year": 2012,
-      "olfactive_family": "Oriental Woody",
-      "perfumers": [
-        "Pierre Negrin"
-      ],
-      "when_to_apply": {
-        "seasons": [
-          "Winter",
-          "Fall"
-        ],
-        "time_of_day": [
-          "Evening",
-          "Night"
-        ],
-        "occasions": [
-          "Formal",
-          "Special Occasions",
-          "Cold Winter Nights"
-        ]
-      },
-      "main_accords": [
-        "amber",
-        "balsamic",
-        "fresh spicy",
-        "smoky",
-        "warm spicy",
+        "earthy",
         "woody",
-        "oud"
+        "green",
+        "balsamic",
+        "warm spicy",
+        "aromatic"
       ],
+      "terroir": {
+        "origin": "Kannauj, Uttar Pradesh & Uttarakhand Himalayas, India",
+        "cooperative": "Kannauj Distillers Guild & Nepal Mountain Harvesters (CITES Certified)",
+        "coordinates": "27.0543° N, 79.9134° E",
+        "elevation": "139m to 2,200m",
+        "harvest_season": "Winter root harvest"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Oregano",
-          "Pepper",
-          "Bergamot"
+          "Green Cardamom Absolute",
+          "Bitter Grapefruit Pith",
+          "Coriander"
         ],
         "middle": [
-          "Incense",
-          "Opoponax",
-          "Amber",
-          "Labdanum"
+          "Kannauj Ruh Khus (Wild Vetiver)",
+          "Himalayan Spikenard (Jatamansi)",
+          "Cypress"
         ],
         "base": [
-          "Agarwood (Oud)",
-          "Leather",
-          "Sandalwood",
-          "Patchouli"
+          "Virgin Cold-Pressed Sesame Extract",
+          "Clearwood",
+          "Haitian Vetiver LMR"
         ]
       },
-      "description": "Interlude Man by Amouage is a Oriental Woody fragrance for men. Interlude Man was launched in 2012. The nose behind this fragrance is Pierre Negrin. Top notes are Oregano, Pepper and Bergamot; middle notes are Incense, Opoponax, Amber and Labdanum; base notes are Agarwood (Oud), Leather, Sandalwood and Patchouli.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.15294.jpg",
-      "commercial_score": 60,
-      "commercial_rank": 27
+      "chemical_dossier": {
+        "key_molecules": [
+          "Khus Copper Distillate 125 PPT",
+          "Spikenard Oil 25 PPT",
+          "Cardamom Abs 30 PPT",
+          "Clearwood 75 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (8.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "An ancient botanical cooling matrix. Wild North Indian Ruh Khus distilled in copper cauldrons with calming Himalayan spikenard and green cardamom.",
+      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 95,
+      "commercial_rank": 19,
+      "size_ml": 50,
+      "price": 18500,
+      "price_eur": 205,
+      "price_usd": 225,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 75,
+      "tier": "TIER_1_HERO",
+      "is_rescue_sku": false,
+      "tagline": "Copper-Distilled Wild North Indian Ruh Khus",
+      "longevity_hours": 17,
+      "sillage_rating": "Deep Calming Earthy Sillage (16–17h)"
     },
     {
-      "id": 21,
-      "sku": "ZR-21",
-      "name": "Wave",
+      "id": 20,
+      "sku": "ZR-U10",
+      "name": "Figuier Éthiopien",
+      "formula_code": "Formula U-10",
       "brand": "ZORUNE",
+      "collection": "Unisex Terroir Collection",
+      "subtitle": "The Highland Oasis • Wild Fig Leaf, Yirgacheffe Green Coffee & Geranium",
+      "concept": "Wild fig trees shading high-altitude coffee terraces in Oromia, Ethiopia. Lush green fig leaves dripping with milky sap, sun-warmed Yirgacheffe green coffee beans, and sweet Egyptian geranium over Moroccan cedar.",
       "inspired_by": {
-        "brand": "Davidoff",
-        "original_name": "Cool Water"
+        "brand": "Oromia Coffee Farmers Union Ethiopia",
+        "original_name": "Highland Yirgacheffe Green Coffee CO2 & Wild Fig Leaf"
       },
-      "concentration": "Eau de Toilette",
-      "gender": "Male",
-      "rating": 3.89,
-      "reviews_count": 20777,
-      "launch_year": 1988,
-      "olfactive_family": "Aromatic Aquatic",
+      "concentration": "Extrait de Parfum (20%)",
+      "gender": "Unisex",
+      "rating": 0,
+      "reviews_count": 0,
+      "launch_year": 2026,
+      "olfactive_family": "Lush Green Fruity Woody / Milky Leaf",
       "perfumers": [
-        "Pierre Bourdon"
+        "Master Formulation Research Group",
+        "Grasse Haute Parfumerie"
       ],
+      "climate_role": "Spring & Summer Crisp Daytime Radiance",
       "when_to_apply": {
         "seasons": [
-          "Summer",
-          "Spring"
+          "Spring",
+          "Summer"
         ],
         "time_of_day": [
           "Morning",
           "Day"
         ],
         "occasions": [
-          "Gym",
-          "Casual",
-          "Summer Days",
-          "Beach"
+          "Brunch & Garden Events",
+          "Creative Work",
+          "Casual Luxury"
         ]
       },
       "main_accords": [
-        "aromatic",
         "green",
-        "marine",
-        "fresh spicy",
-        "lavender",
+        "fruity",
         "woody",
-        "salty"
+        "coffee",
+        "sweet",
+        "fresh"
       ],
+      "terroir": {
+        "origin": "Oromia Highlands, Ethiopia & Provence, France",
+        "cooperative": "Oromia Coffee Farmers Union & Provençal Botanical Extractors",
+        "coordinates": "6.1628° N, 38.2058° E",
+        "elevation": "1,850m",
+        "harvest_season": "November–January"
+      },
+      "eco_packaging": {
+        "glass": "40% PCR French Super-Flint",
+        "neck": "SNI-15 Threaded Unglued (Infinite Refill)",
+        "secondary": "Backyard-Compostable Mycelium & Flax Casket",
+        "cap": "100% Recyclable Friction-Fit Zamac"
+      },
       "notes": {
         "top": [
-          "Sea water",
-          "Lavender",
-          "Mint",
-          "Green Notes",
-          "Rosemary",
-          "Calone",
-          "Coriander"
+          "Wild Fig Leaf Accord (Stemone-Free)",
+          "Green Mandarin",
+          "Bergamot FCF"
         ],
         "middle": [
-          "Sandalwood",
-          "Neroli",
-          "Geranium",
-          "Jasmine"
+          "Ethiopian Yirgacheffe Green Coffee CO2",
+          "Egyptian Geranium Bourbon",
+          "Ripe Fig"
         ],
         "base": [
-          "Musk",
-          "Oakmoss",
-          "Cedar",
-          "Tobacco",
-          "Ambergris"
+          "Atlas Cedarwood Morocco",
+          "Milky Coconut Water",
+          "White Amber"
         ]
       },
-      "description": "Cool Water by Davidoff is a Aromatic Aquatic fragrance for men. Cool Water was launched in 1988. The nose behind this fragrance is Pierre Bourdon. Top notes are Sea water, Lavender, Mint, Green Notes, Rosemary, Calone and Coriander; middle notes are Sandalwood, Neroli, Geranium and Jasmine; base notes are Musk, Oakmoss, Cedar, Tobacco and Ambergris. Cool Water is fresh and sharp, simple and very masculine.  Top notes include  mint and green nuances,  lavender, coriander and rosemary. The heart notes include geranium, neroli, jasmine and sandalwood. The base is composed of cedarwood, musk, amber and tobacco. It was created by Pierre Bourdon in 1988.",
-      "image_url": "https://fimgs.net/mdimg/perfume/375x500.507.jpg",
-      "commercial_score": 49,
-      "commercial_rank": 29
+      "chemical_dossier": {
+        "key_molecules": [
+          "Fig Leaf Natural Complex 70 PPT",
+          "Green Coffee CO2 35 PPT",
+          "Geranium Bourbon 40 PPT",
+          "Cedarwood Atlas 65 PPT"
+        ],
+        "co_solvent_matrix": "Bio-Fermented Ethanol + IPM (7.0%) + TEC (5.0%)",
+        "water_content": "0.00% w/w",
+        "carrier": "96% Organic Bio-Ethanol"
+      },
+      "description": "A verdant highland oasis. Lush green wild fig leaves, fresh raw green coffee beans from Ethiopia, and warm Atlas cedarwood.",
+      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "commercial_score": 92,
+      "commercial_rank": 20,
+      "size_ml": 50,
+      "price": 14800,
+      "price_eur": 165,
+      "price_usd": 180,
+      "flacon_spec": "50mL Heavy PCR Super-Flint Crystal, Threaded SNI-15 Neck, Zamac 3 Cap",
+      "stock": 75,
+      "tier": "TIER_2_REVENUE",
+      "is_rescue_sku": false,
+      "tagline": "Oromia Green Coffee & Wild Fig Leaf",
+      "longevity_hours": 14,
+      "sillage_rating": "Crisp Green Leaf & Coffee Halo (13–14h)"
     }
   ]
 }

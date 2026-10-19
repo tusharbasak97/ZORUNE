@@ -73,38 +73,48 @@ export const ProductDetailModal: React.FC = () => {
           
           {/* Left Column: Image & Highlights */}
           <div className="space-y-4">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[oklch(0.97_0.007_88.6)] border border-[oklch(0.926_0.01_81.8)] shadow-xs p-6 flex items-center justify-center">
-              <img
-                src={product.image_url}
-                alt={product.name}
-                className="w-full h-full object-contain"
-              />
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[oklch(0.97_0.007_88.6)] border border-[oklch(0.926_0.01_81.8)] shadow-xs p-4 sm:p-5 flex flex-col justify-between group">
+              {/* Subtle Flacon Glow */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[oklch(0.98_0.005_78.3)]/50 via-transparent to-[oklch(0.959_0.01_87.5)]/40 pointer-events-none" />
 
-              {/* Tier Badge */}
-              <div className="absolute top-3 left-3">
-                {isTier1 ? (
-                  <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[oklch(0.179_0.004_286)] text-white shadow-xs">
-                    <Crown className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>Tier 1 • Crown Icon</span>
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/95 text-[oklch(0.442_0.015_286)] border border-[oklch(0.926_0.01_81.8)] backdrop-blur-xs">
-                    <span>{product.tier === 'TIER_2_REVENUE' ? 'Signature Workhorse' : 'Connoisseur Pick'}</span>
-                  </span>
-                )}
+              {/* Sovereign Badge (Elevated z-20) */}
+              <div className="w-full flex items-center justify-between z-20 relative pointer-events-none">
+                <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[oklch(0.179_0.004_286)] text-white shadow-xs pointer-events-auto">
+                  <Crown className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                  <span>Masterpiece Flacon</span>
+                </span>
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/95 text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs">
+                  {product.concentration}
+                </span>
               </div>
 
-              {/* Price & Savings Pill */}
-              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-white/95 backdrop-blur-xs border border-[oklch(0.926_0.01_81.8)] flex items-center justify-between shadow-2xs">
+              {/* Centered Flacon Bottle */}
+              <div className="flex-1 w-full flex items-center justify-center py-2 relative z-10">
+                <img
+                  src={product.image_url}
+                  alt={product.name}
+                  className="max-h-[250px] sm:max-h-[290px] w-auto max-w-full object-contain filter drop-shadow-lg group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Price & Presentation Pill (Elevated z-20) */}
+              <div className="w-full z-20 relative p-3 rounded-xl bg-white/95 backdrop-blur-xs border border-[oklch(0.926_0.01_81.8)] flex items-center justify-between shadow-2xs">
                 <div>
-                  <span className="text-[11px] text-[oklch(0.552_0.014_286)] block font-medium">Uniform Luxury Price</span>
+                  <span className="text-[11px] text-[oklch(0.552_0.014_286)] block font-medium">
+                    50ml Master Presentation Casket
+                  </span>
                   <div className="flex items-baseline space-x-1.5">
-                    <span className="text-xl font-extrabold text-[oklch(0.179_0.004_286)]">₹999</span>
-                    <span className="text-xs text-[oklch(0.552_0.014_286)] line-through">₹{product.original_price_inr.toLocaleString('en-IN')}</span>
+                    {product.price_eur && (
+                      <span className="text-xl font-extrabold text-[oklch(0.179_0.004_286)]">€{product.price_eur}</span>
+                    )}
+                    <span className="text-sm font-bold text-[oklch(0.442_0.015_286)]">(₹{product.price.toLocaleString('en-IN')})</span>
+                    <span className="text-[11px] text-[oklch(0.442_0.015_286)] font-serif italic">
+                      {product.concentration}
+                    </span>
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]">
-                  Save {product.arbitrage_savings_percent}%
+                <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)]">
+                  Numbered Certificate
                 </span>
               </div>
             </div>
@@ -127,7 +137,9 @@ export const ProductDetailModal: React.FC = () => {
               </div>
               <div>
                 <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-semibold block mb-0.5">Sprays</span>
-                <span className="text-xs font-bold text-[oklch(0.179_0.004_286)]">~300 Sprays</span>
+                <span className="text-xs font-bold text-[oklch(0.179_0.004_286)]">
+                  ~750 Sprays
+                </span>
               </div>
             </div>
           </div>
@@ -142,19 +154,19 @@ export const ProductDetailModal: React.FC = () => {
                 <span>•</span>
                 <span>{product.gender}</span>
                 <span>•</span>
-                <span>20ml Extrait (28%)</span>
+                <span>50ml Master Flacon (30% Extrait)</span>
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[oklch(0.179_0.004_286)] mb-2">
                 {product.name}<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
               </h2>
               
-              {/* Inspired By Transparency Box */}
+              {/* Master Formulary Transparency Box */}
               <div className="p-3.5 rounded-xl bg-[oklch(0.959_0.01_87.5)] border border-[oklch(0.926_0.01_81.8)] mb-3">
-                <p className="text-xs text-[oklch(0.262_0.007_286)]">
-                  Direct Olfactory Extraction of <strong className="text-[oklch(0.179_0.004_286)]">{product.inspired_by.brand} {product.inspired_by.original_name}</strong>
+                <p className="text-xs text-[oklch(0.262_0.007_286)] font-medium">
+                  {product.tagline || product.concept}
                 </p>
                 <p className="text-[11px] text-[oklch(0.552_0.014_286)] mt-0.5">
-                  Original Luxury MSRP: ₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd}) • ZORUNE: ₹999
+                  Super-Flint Crystal (24mm Punt) • Zamac 3 Die-Cast Magnetic Closure • Zero Added H₂O
                 </p>
               </div>
 
@@ -269,8 +281,10 @@ export const ProductDetailModal: React.FC = () => {
                 onClick={handleOneClickBuy}
                 className="w-full py-3.5 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm flex items-center justify-center space-x-2 cursor-pointer"
               >
-                <span>1-Click Buy Now (₹999)</span>
-                <span className="text-[11px] font-normal opacity-70">• Instant Fast Checkout</span>
+                <span>Acquire Flacon {product.price_eur ? `(€${product.price_eur} • ₹${product.price.toLocaleString('en-IN')})` : `(₹${product.price.toLocaleString('en-IN')})`}</span>
+                <span className="text-[11px] font-normal opacity-70">
+                  • Refillable PCR Super-Flint Casket
+                </span>
               </button>
 
               <button
@@ -281,7 +295,7 @@ export const ProductDetailModal: React.FC = () => {
                 className="w-full py-3 rounded-full bg-white hover:bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] font-semibold text-xs tracking-wider uppercase border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.179_0.004_286)] transition-all flex items-center justify-center space-x-1.5 cursor-pointer"
               >
                 <Plus className="w-4 h-4 text-[oklch(0.683_0.102_82.6)]" />
-                <span>Add 20ml to Wardrobe (Duo ₹1,899 / Trio ₹2,799)</span>
+                <span>Add to Private Collection {product.price_eur ? `(€${product.price_eur} • ₹${product.price.toLocaleString('en-IN')})` : `(₹${product.price.toLocaleString('en-IN')})`}</span>
               </button>
             </div>
 

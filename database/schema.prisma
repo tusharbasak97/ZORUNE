@@ -68,9 +68,9 @@ model Product {
   sku              String         @unique // e.g. "ZR-03"
   name             String         // e.g. "Imagination"
   brand            String         @default("ZORUNE")
-  concentration    String         @default("Extrait de Parfum (28%)")
-  sizeMl           Int            @default(20) // Uniform 20ml Luxury Pocket Flacon
-  price            Decimal        @default(999.00) @db.Decimal(10, 2)
+  concentration    String         @default("Extrait de Parfum (30%)")
+  sizeMl           Int            @default(50) // 50ml Master Crystal Presentation Flacon
+  price            Decimal        @default(19500.00) @db.Decimal(10, 2)
   stock            Int            @default(100)
   
   gender           Gender

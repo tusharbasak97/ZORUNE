@@ -198,7 +198,7 @@ This document details every prerequisite, architecture change, security hardenin
 - [ ] **6.3 Structured Data & E-Commerce SEO**
   - [ ] In [`frontend/index.html`](frontend/index.html), add JSON-LD structured data for:
     - `Organization` (ZORUNE Haute Parfumerie, Atelier locations in Kanpur & Mumbai).
-    - `Product` schema for each perfume (price: ₹999, currency: INR, availability: InStock, Extrait de Parfum 28%).
+    - `Product` schema for each perfume (price: ₹999, currency: INR, availability: InStock, Extrait de Parfum Elixir 30%).
     - `FAQPage` schema corresponding to the policy FAQ items.
   - [ ] Add Open Graph (`og:image`, `og:title`, `og:description`) and Twitter card tags.
   - [ ] Deploy dynamic or static `sitemap.xml` and `robots.txt` in `frontend/public/`.

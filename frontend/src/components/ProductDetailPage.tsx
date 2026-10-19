@@ -24,7 +24,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     addToCart, 
     setIsCartOpen, 
     setIsCheckoutOpen, 
-    setIsWardrobeOpen,
     userPincode, 
     setUserPincode, 
     pincodeDeliveryText, 
@@ -42,7 +41,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
     // Update document title for SEO
     const prevTitle = document.title;
-    document.title = `ZORUNE. ${product.sku} - ${product.name} | 20ml Extrait de Parfum (28%) Inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name}`;
+    document.title = `ZORUNE. ${product.sku} - ${product.name} | 50ml Master Extrait de Parfum (30%)`;
 
     // Update meta description if element exists
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -51,9 +50,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       metaDesc.setAttribute('name', 'description');
       document.head.appendChild(metaDesc);
     }
+    const formularyName = product.tagline || product.concept || product.name;
     metaDesc.setAttribute(
       'content',
-      `${product.name} (${product.sku}) by ZORUNE. Pure 28% Extrait de Parfum inspired by ${product.inspired_by.brand} ${product.inspired_by.original_name}. 20ml pocket flacon for flat ₹999. ${product.longevity_hours}h longevity.`
+      `${product.name} (${product.sku}) by ZORUNE. Pure 30% Extrait de Parfum (${formularyName}). 50ml Super-Flint crystal master flacon with Zamac 3 magnetic closure. ${product.longevity_hours}h longevity.`
     );
 
     // Inject JSON-LD Schema.org Product structured data for Google SEO
@@ -69,7 +69,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      'name': `ZORUNE ${product.sku} ${product.name} (20ml Extrait de Parfum)`,
+      'name': `ZORUNE ${product.sku} ${product.name} (50ml Master Extrait de Parfum)`,
       'image': product.image_url,
       'description': product.description,
       'sku': product.sku,
@@ -81,7 +81,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         '@type': 'Offer',
         'url': window.location.href,
         'priceCurrency': 'INR',
-        'price': 999,
+        'price': product.price,
         'availability': 'https://schema.org/InStock',
         'itemCondition': 'https://schema.org/NewCondition',
         'seller': {
@@ -89,11 +89,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           'name': 'ZORUNE'
         }
       },
-      'aggregateRating': {
-        '@type': 'AggregateRating',
-        'ratingValue': product.rating,
-        'reviewCount': product.reviews_count
-      }
+      ...(product.reviews_count > 0 ? {
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': product.rating,
+          'reviewCount': product.reviews_count
+        }
+      } : {})
     };
     script.text = JSON.stringify(jsonLd);
 
@@ -125,7 +127,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     setIsCheckoutOpen(true);
   };
 
-  // Find complementary fragrance for Duo recommendation (2 for ₹1,899)
+  // Find complementary fragrance for curated pairing recommendation
   const complementaryProduct = allProducts.find(
     p => p.sku !== product.sku && (p.tier === 'TIER_1_HERO' || p.gender === product.gender)
   ) || allProducts.find(p => p.sku !== product.sku);
@@ -140,7 +142,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     <div className="min-h-screen bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] flex flex-col font-sans selection:bg-[oklch(0.683_0.102_82.6)] selection:text-white">
       
       {/* Editorial Breadcrumbs & Back Navigation Bar */}
-      <div className="w-full bg-white border-b border-[oklch(0.926_0.01_81.8)] py-3.5 px-4 sm:px-8 sticky top-0 z-30 shadow-2xs backdrop-blur-md bg-white/95">
+      <div className="w-full bg-white border-b border-[oklch(0.926_0.01_81.8)] py-3.5 px-4 sm:px-8 relative z-20">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs">
           <div className="flex items-center space-x-2 text-[oklch(0.442_0.015_286)]">
             <button
@@ -148,7 +150,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               className="hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer flex items-center space-x-1 font-medium"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>The 30 Masterpieces</span>
+              <span>Our Collection</span>
             </button>
             <ChevronRight className="w-3.5 h-3.5 text-[oklch(0.926_0.01_81.8)]" />
             <span className="text-[oklch(0.552_0.014_286)] hidden sm:inline">{product.olfactive_family}</span>
@@ -184,35 +186,45 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           
           {/* Left Column: Visual Flacon Showcase (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="sticky top-20">
+            <div className="sticky top-24">
               
               {/* Flacon Main Media Container */}
-              <div className="relative aspect-square w-full rounded-3xl bg-white border border-[oklch(0.926_0.01_81.8)] p-8 shadow-xs flex items-center justify-center overflow-hidden">
-                <img
-                  src={selectedImage}
-                  alt={product.name}
-                  className="w-full h-full object-contain filter drop-shadow-xl hover:scale-105 transition-transform duration-500"
-                />
+              <div className="relative aspect-square w-full rounded-3xl bg-white border border-[oklch(0.926_0.01_81.8)] p-4 sm:p-5 shadow-xs flex flex-col justify-between overflow-hidden group">
+                {/* Subtle Ambient Flacon Glow Backdrop */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[oklch(0.98_0.005_78.3)]/50 via-transparent to-[oklch(0.959_0.01_87.5)]/40 pointer-events-none" />
 
-                {/* Extrait Seal Pill */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-[oklch(0.179_0.004_286)] text-white tracking-wider uppercase flex items-center space-x-1 shadow-sm">
-                    <Droplets className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>28% Extrait</span>
+                {/* Top Badges Bar (Elevated z-20 so NEVER covered by image) */}
+                <div className="w-full flex items-center justify-between z-20 relative pointer-events-none">
+                  {/* Extrait Seal Pill */}
+                  <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-[oklch(0.179_0.004_286)] text-white tracking-wider uppercase flex items-center space-x-1.5 shadow-sm pointer-events-auto">
+                    <Droplets className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                    <span>30% Elixir</span>
+                  </span>
+
+                  {/* Sovereign Edition Badge */}
+                  <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-white/95 backdrop-blur-sm text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs pointer-events-auto">
+                    Masterpiece Flacon
                   </span>
                 </div>
 
-                {/* Arbitrage Savings Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-white text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs">
-                    Save {product.arbitrage_savings_percent}%
-                  </span>
+                {/* Main Flacon Bottle Image - Centered with Dedicated Vertical Clearance */}
+                <div className="flex-1 w-full flex items-center justify-center py-2 sm:py-3 relative z-10">
+                  <img
+                    src={selectedImage}
+                    alt={product.name}
+                    className="max-h-[290px] sm:max-h-[340px] w-auto max-w-full object-contain filter drop-shadow-xl hover:scale-105 transition-transform duration-500 select-none"
+                  />
                 </div>
 
-                {/* Subtle Flacon Specification Tag */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[11px] text-[oklch(0.552_0.014_286)] bg-[oklch(0.98_0.005_78.3)]/90 backdrop-blur-xs px-3.5 py-1.5 rounded-xl border border-[oklch(0.926_0.01_81.8)]">
-                  <span>Uniform 20ml Pocket Flacon</span>
-                  <span>~300 Precision Sprays</span>
+                {/* Bottom Specification Banner (Elevated z-20 so NEVER covered by image) */}
+                <div className="w-full flex items-center justify-between text-xs font-medium text-[oklch(0.35_0.01_286)] bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-[oklch(0.926_0.01_81.8)] shadow-2xs z-20 relative">
+                  <span className="flex items-center space-x-1.5 font-semibold text-[oklch(0.179_0.004_286)]">
+                    <span className="w-2 h-2 rounded-full bg-[oklch(0.683_0.102_82.6)] inline-block" />
+                    <span>50ml Super-Flint Crystal</span>
+                  </span>
+                  <span className="text-[oklch(0.552_0.014_286)] text-[11px] font-mono">
+                    ~750 Precision Sprays
+                  </span>
                 </div>
               </div>
 
@@ -256,7 +268,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   <span>The 48-Hour Transit Rest Protocol</span>
                 </div>
                 <p className="leading-relaxed text-[11px] text-[oklch(0.442_0.015_286)]">
-                  High-concentration 28% Extraits experience kinetic pressure during priority air transit. 
+                  High-concentration 30% Extraits experience kinetic pressure during priority air transit. 
                   After arrival, spray 3 test pumps and allow your flacon to rest for 24–48 hours in dark storage for peak accord equilibrium.
                 </p>
               </div>
@@ -282,15 +294,24 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               </h1>
 
               {/* Ratings and Reviews count */}
-              <div className="flex items-center space-x-3 text-xs text-[oklch(0.552_0.014_286)] mb-4">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-[oklch(0.683_0.102_82.6)] fill-[oklch(0.683_0.102_82.6)]" />
-                  ))}
-                  <span className="font-bold text-[oklch(0.179_0.004_286)] ml-1.5">{product.rating}</span>
-                </div>
-                <span className="text-[oklch(0.926_0.01_81.8)]">•</span>
-                <span>{(product.reviews_count / 1000).toFixed(1)}k verified connoisseur reviews</span>
+              <div className="flex flex-wrap items-center gap-2.5 text-xs text-[oklch(0.552_0.014_286)] mb-4">
+                {product.reviews_count > 0 ? (
+                  <>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-[oklch(0.683_0.102_82.6)] fill-[oklch(0.683_0.102_82.6)]" />
+                      ))}
+                      <span className="font-bold text-[oklch(0.179_0.004_286)] ml-1.5">{product.rating}</span>
+                    </div>
+                    <span className="text-[oklch(0.926_0.01_81.8)]">•</span>
+                    <span>{product.reviews_count} verified connoisseur reviews</span>
+                  </>
+                ) : (
+                  <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[oklch(0.977_0.013_86.8)] border border-[oklch(0.926_0.01_81.8)] text-[oklch(0.683_0.102_82.6)] font-semibold text-xs">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Inaugural 2026 Harvest • Be Among the First Patrons to Review</span>
+                  </div>
+                )}
                 <span className="text-[oklch(0.926_0.01_81.8)]">•</span>
                 <span className="text-emerald-700 font-semibold flex items-center space-x-1">
                   <CheckCircle2 className="w-3.5 h-3.5" />
@@ -298,42 +319,50 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </span>
               </div>
 
-              {/* Olfactory Extraction Transparency Callout */}
+              {/* Master Formulary Callout */}
               <div className="p-4 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] mb-6 shadow-2xs">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.552_0.014_286)] block mb-0.5">
-                      Direct Olfactory Extraction
+                      Haute Parfumerie Master Formulary
                     </span>
                     <p className="text-sm font-semibold text-[oklch(0.179_0.004_286)]">
-                      Inspired by {product.inspired_by.brand} {product.inspired_by.original_name}
+                      {product.inspired_by?.original_name || product.tagline}
                     </p>
                     <p className="text-xs text-[oklch(0.442_0.015_286)] mt-1">
-                      Original Luxury Retail: <span className="line-through text-[oklch(0.552_0.014_286)]">₹{product.original_price_inr.toLocaleString('en-IN')} (${product.original_price_usd})</span>
+                      Pure 30% Concentration • Quad Co-Solvent Carrier Matrix (0.00% Added H₂O)
                     </p>
                   </div>
                   <span className="text-[11px] font-bold px-2.5 py-1 rounded bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.683_0.102_82.6)] border border-[oklch(0.926_0.01_81.8)] whitespace-nowrap">
-                    28% Extrait Formulation
+                    30% Elixir Formulation
                   </span>
                 </div>
               </div>
 
-              {/* Transparent Direct Pricing */}
+              {/* Sovereign Flacon Architecture & Price */}
               <div className="p-5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.552_0.014_286)] block mb-0.5">
-                    Direct Atelier Price (20ml Pocket Flacon)
+                    50ml Refillable Master Flacon
                   </span>
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-3xl font-extrabold text-[oklch(0.179_0.004_286)]">₹999</span>
-                    <span className="text-xs text-[oklch(0.552_0.014_286)] line-through">₹{product.original_price_inr.toLocaleString('en-IN')}</span>
-                    <span className="text-xs font-bold text-emerald-700">Save {product.arbitrage_savings_percent}%</span>
+                    {product.price_eur && (
+                      <span className="text-3xl font-extrabold text-[oklch(0.179_0.004_286)]">€{product.price_eur}</span>
+                    )}
+                    <span className="text-lg font-bold text-[oklch(0.442_0.015_286)]">
+                      (₹{product.price.toLocaleString('en-IN')})
+                    </span>
+                    <span className="text-xs font-serif italic text-[oklch(0.442_0.015_286)]">
+                      {product.concentration}
+                    </span>
                   </div>
                 </div>
 
                 <div className="text-left sm:text-right text-xs">
-                  <span className="font-bold text-[oklch(0.179_0.004_286)] block">Multi-Flacon Direct Tiers</span>
-                  <span className="text-[oklch(0.683_0.102_82.6)] font-semibold">2 for ₹1,899 • 3 for ₹2,799</span>
+                  <span className="font-bold text-[oklch(0.179_0.004_286)] block">Packaging Spec</span>
+                  <span className="text-[oklch(0.683_0.102_82.6)] font-semibold">
+                    40% PCR Super-Flint • Threaded SNI-15
+                  </span>
                 </div>
               </div>
 
@@ -346,6 +375,50 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {product.description}
               </p>
             </div>
+
+            {/* Terroir & Ethical Cooperative Provenance */}
+            {product.terroir && (
+              <div className="p-5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs space-y-3">
+                <div className="flex items-center justify-between pb-2 border-b border-[oklch(0.926_0.01_81.8)]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[oklch(0.179_0.004_286)] flex items-center space-x-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                    <span>Terroir Provenance & Cooperative</span>
+                  </span>
+                  <span className="text-[10px] font-mono text-[oklch(0.552_0.014_286)] bg-[oklch(0.959_0.01_87.5)] px-2 py-0.5 rounded border border-[oklch(0.926_0.01_81.8)]">
+                    {product.terroir.coordinates}
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  <div>
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-semibold block mb-0.5">Sourcing Origin:</span>
+                    <p className="font-medium text-[oklch(0.179_0.004_286)]">{product.terroir.origin}</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-semibold block mb-0.5">Harvest Season:</span>
+                    <p className="font-medium text-[oklch(0.179_0.004_286)]">{product.terroir.harvest_season} ({product.terroir.elevation})</p>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] font-semibold block mb-0.5">Ethical Agricultural Alliance:</span>
+                    <p className="font-medium text-[oklch(0.442_0.015_286)]">{product.terroir.cooperative}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Circular Packaging & Refill Specs */}
+            {product.eco_packaging && (
+              <div className="p-4 rounded-xl bg-[oklch(0.959_0.01_87.5)] border border-[oklch(0.926_0.01_81.8)] text-xs space-y-1.5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[oklch(0.262_0.007_286)] block">
+                  100% Circular Packaging Architecture
+                </span>
+                <p className="text-[11px] text-[oklch(0.442_0.015_286)]">
+                  • Flacon: <strong className="text-[oklch(0.179_0.004_286)]">{product.eco_packaging.glass}</strong> with <strong className="text-[oklch(0.179_0.004_286)]">{product.eco_packaging.neck}</strong>.
+                </p>
+                <p className="text-[11px] text-[oklch(0.442_0.015_286)]">
+                  • Secondary: <strong className="text-[oklch(0.179_0.004_286)]">{product.eco_packaging.secondary}</strong> • Cap: <strong className="text-[oklch(0.179_0.004_286)]">{product.eco_packaging.cap}</strong>.
+                </p>
+              </div>
+            )}
 
             {/* Scent Pyramid Breakdown */}
             <div className="p-6 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs space-y-5">
@@ -466,6 +539,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <form onSubmit={handlePincodeCheck} className="flex gap-2">
                 <input
                   type="text"
+                  id="pincode-sla-input"
+                  name="pincode"
+                  aria-label="Enter 6-digit postal pincode for delivery SLA estimation"
                   maxLength={6}
                   value={inputPin}
                   onChange={(e) => setInputPin(e.target.value)}
@@ -494,8 +570,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 onClick={handleInstantBuy}
                 className="w-full py-4 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2 cursor-pointer"
               >
-                <span>Instant 1-Click Buy Now (₹999)</span>
-                <span className="text-[11px] font-normal opacity-70">• 20ml Flacon</span>
+                <span>Acquire Flacon {product.price_eur ? `(€${product.price_eur} • ₹${product.price.toLocaleString('en-IN')})` : `(₹${product.price.toLocaleString('en-IN')})`}</span>
+                <span className="text-[11px] font-normal opacity-70">
+                  • Refillable PCR Super-Flint Casket
+                </span>
               </button>
 
               <button
@@ -506,11 +584,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 className="w-full py-3.5 rounded-full bg-white hover:bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] font-semibold text-xs uppercase tracking-wider border border-[oklch(0.926_0.01_81.8)] hover:border-[oklch(0.179_0.004_286)] transition-all shadow-2xs flex items-center justify-center space-x-2 cursor-pointer"
               >
                 <Plus className="w-4 h-4 text-[oklch(0.683_0.102_82.6)]" />
-                <span>Add to Fragrance Wardrobe (Duo ₹1,899 / Trio ₹2,799)</span>
+                <span>Add to Private Collection {product.price_eur ? `(€${product.price_eur} • ₹${product.price.toLocaleString('en-IN')})` : `(₹${product.price.toLocaleString('en-IN')})`}</span>
               </button>
             </div>
 
-            {/* Strategic Duo Upgrade Suggestion */}
+            {/* Curated Olfactory Harmony Pairing */}
             {complementaryProduct && (
               <div className="p-4 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] shadow-2xs flex items-center justify-between gap-3">
                 <div className="flex items-center space-x-3 min-w-0">
@@ -521,13 +599,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   />
                   <div className="min-w-0">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[oklch(0.683_0.102_82.6)] block">
-                      Recommended Duo Pairing (Save ₹99)
+                      Curated Olfactory Pairing
                     </span>
                     <p className="text-xs font-bold text-[oklch(0.179_0.004_286)] truncate">
                       Pair with {complementaryProduct.name} ({complementaryProduct.sku})
                     </p>
                     <p className="text-[10px] text-[oklch(0.552_0.014_286)]">
-                      Both 20ml Flacons for ₹1,899 + Free Express Air
+                      Master Extrait Formulation • ₹{complementaryProduct.price.toLocaleString('en-IN')}
                     </p>
                   </div>
                 </div>
@@ -540,7 +618,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   }}
                   className="px-4 py-2 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white text-[11px] font-semibold uppercase tracking-wider whitespace-nowrap cursor-pointer flex-shrink-0"
                 >
-                  Add Both (₹1,899)
+                  Acquire Both
                 </button>
               </div>
             )}
@@ -564,7 +642,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               onClick={onNavigateHome}
               className="text-xs font-semibold text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer"
             >
-              Explore All 30 Formulations →
+              Explore Our Collection →
             </button>
           </div>
 
@@ -586,11 +664,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   <h4 className="font-serif font-bold text-[oklch(0.179_0.004_286)] text-base group-hover:text-[oklch(0.683_0.102_82.6)] transition-colors truncate">
                     {p.name}
                   </h4>
-                  <p className="text-xs text-[oklch(0.552_0.014_286)] truncate mb-2">
-                    Inspired by {p.inspired_by.brand} {p.inspired_by.original_name}
+                  <p className="text-xs text-[oklch(0.683_0.102_82.6)] truncate mb-2 font-medium">
+                    {p.inspired_by?.original_name || p.tagline}
                   </p>
                   <div className="flex items-center justify-between pt-2 border-t border-[oklch(0.944_0.012_84.6)]">
-                    <span className="text-sm font-extrabold text-[oklch(0.179_0.004_286)]">₹999 / 20ml</span>
+                    <span className="text-sm font-extrabold text-[oklch(0.179_0.004_286)]">
+                      ₹{p.price.toLocaleString('en-IN')}
+                    </span>
                     <span className="text-[11px] font-bold text-[oklch(0.683_0.102_82.6)]">View Details →</span>
                   </div>
                 </div>

@@ -34,3 +34,6 @@ Thumbs.db
 # Temporary media & caches
 .tempmediaStorage/
 *.tmp
+
+# Root lockfile (subfolder lockfiles tracked in frontend/ and backend/)
+/package-lock.json

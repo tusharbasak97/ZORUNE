@@ -30,37 +30,25 @@ try {
 // In-memory store for demo orders & tracking
 const ordersDb = new Map();
 
-// Cannibalization defusal pair mappings
+// Olfactory Architecture pairing mappings for the Sovereign Terroir Formulations
 const COMPARISON_MAP = {
-  'ZR-01': {
-    conflictingSku: 'ZR-04',
-    title: 'The Armani SWY Flanker Decision',
-    difference: 'ZR-01 (Intense) is warm, sweet toffee and cinnamon for dates and parties. ZR-04 (Absolute) is a mature, boozy rum and glazed chestnut blend for intimate dinners.',
-    bundleSuggestion: 'The Sweet & Boozy Duo (Get Both for ₹1,799)'
+  'ZR-U01': {
+    conflictingSku: 'ZR-M04',
+    title: 'Japanese Mountain Yuzu vs Kannauj Ruh Khus Monsoon',
+    difference: 'ZR-U01 (Yuzu Céleste) is a crystalline glacial citrus shield with cold-pressed Kōchi yuzu and Hokkaido mint. ZR-M04 (Vetiver Monsoon) is an earthy, wet-soil fortress featuring Kannauj copper-deg distilled Ruh Khus and clay geosmin.',
+    pairingNotes: 'The Daytime Terroir Rotation: Yuzu Céleste for high-heat humidity and Vetiver Monsoon for deep grounding executive presence.'
   },
-  'ZR-04': {
-    conflictingSku: 'ZR-01',
-    title: 'The Armani SWY Flanker Decision',
-    difference: 'ZR-04 (Absolute) offers aged French rum and smoky vanilla reserve. ZR-01 (Intense) delivers projecting toffee-cinnamon sweetness.',
-    bundleSuggestion: 'The Sweet & Boozy Duo (Get Both for ₹1,799)'
+  'ZR-W01': {
+    conflictingSku: 'ZR-U05',
+    title: 'Florentine Orris Butter vs Mysore Santalum Album',
+    difference: 'ZR-W01 (Orris Soie) delivers aristocratic Tuscan iris butter (15% irone) and haute suede powder. ZR-U05 (Mysore Santal) centers on ancient Karnataka sandalwood heartwood and golden benzoin tears.',
+    pairingNotes: 'The Haute Aristocracy Wardrobe: Orris Soie for formal galas and Mysore Santal for serene meditative authority.'
   },
-  'ZR-07': {
-    conflictingSku: 'ZR-08',
-    title: 'The Blue Fragrance Persona',
-    difference: 'ZR-07 (Apex) is crisp green apple and sage for high-energy daily wear and gym. ZR-08 (Bleu) is refined grapefruit and smoky incense for executive boardrooms.',
-    bundleSuggestion: 'The Executive & Everyday Duo (Get Both for ₹1,799)'
-  },
-  'ZR-08': {
-    conflictingSku: 'ZR-15',
-    title: 'The Blue Fragrance Persona',
-    difference: 'ZR-08 (Bleu) is poised Chanel-style boardroom elegance. ZR-15 (Savage) is raw, magnetic spicy mandarin and sandalwood projection for nightlife.',
-    bundleSuggestion: 'The Day & Night Blue Duo (Get Both for ₹1,799)'
-  },
-  'ZR-15': {
-    conflictingSku: 'ZR-08',
-    title: 'The Blue Fragrance Persona',
-    difference: 'ZR-15 (Savage) cuts through cool night air with spicy mandarin and olibanum. ZR-08 (Bleu) is quieter, aristocratic incense.',
-    bundleSuggestion: 'The Day & Night Blue Duo (Get Both for ₹1,799)'
+  'ZR-M03': {
+    conflictingSku: 'ZR-U02',
+    title: 'Assam Wild Oud vs High-Altitude Kashmiri Saffron',
+    difference: 'ZR-M03 (Oud Samarkhand) pairs sustainable Assam Aquilaria oud with royal green hojari frankincense. ZR-U02 (Saffron Nomade) illuminates Pampore saffron stigmas with golden amber and somalian myrrh.',
+    pairingNotes: 'The Sovereign Nocturnal Duo: Oud Samarkhand for command presence and Saffron Nomade for magnetic evening warmth.'
   }
 };
 
@@ -118,13 +106,13 @@ app.get('/api/products', (req, res) => {
   } else if (sort === 'score') {
     products.sort((a, b) => (b.commercial_score || 0) - (a.commercial_score || 0));
   } else {
-    // Default: Sort by commercial_rank ascending (#1 to #30)
+    // Default: Sort by commercial_rank ascending (#1 to #20)
     products.sort((a, b) => (a.commercial_rank || 99) - (b.commercial_rank || 99));
   }
 
   res.json({
     total: products.length,
-    uniform_format: '20ml Extrait de Parfum (28%) @ ₹999',
+    format: '50ml Refillable Super-Flint PCR Flacon (20%–30% Extrait)',
     products
   });
 });
@@ -143,7 +131,7 @@ app.get('/api/products/:sku', (req, res) => {
   res.json({
     product,
     comparison,
-    guarantee: 'Authentic 28% Extrait de Parfum in 20ml Obsidian Flacon (~300 sprays / 2 months daily wear).'
+    guarantee: 'Authentic 20%–30% Extrait de Parfum in 50ml 40% PCR Super-Flint Refillable Flacon with SNI-15 Threaded Neck, Cold Zamac Magnetic Closure, and Numbered Single-Origin Certificate.'
   });
 });
 
@@ -176,8 +164,9 @@ app.get('/api/search', (req, res) => {
     name: p.name,
     inspired_by: p.inspired_by,
     tier: p.tier,
-    price: 999,
-    size: '20ml',
+    price: p.price,
+    price_eur: p.price_eur || Math.round(p.price / 90),
+    size: '50ml Super-Flint Flacon',
     image_url: p.image_url,
     rating: p.rating,
     commercial_score: p.commercial_score
@@ -225,39 +214,30 @@ app.post('/api/matchmaker', (req, res) => {
   res.json({ recommendations });
 });
 
-// 5. POST /api/wardrobe/calculate — Dynamic Wardrobe Pricing
+// 5. POST /api/wardrobe/calculate — Sovereign Collection Pricing
 app.post('/api/wardrobe/calculate', (req, res) => {
-  const { items = [], isPrepaidUpi = true } = req.body;
+  const { items = [] } = req.body;
   const count = items.length;
 
-  const basePricePerBottle = 999;
-  const originalSubtotal = count * basePricePerBottle;
+  const originalSubtotal = items.reduce((sum, item) => {
+    const sku = typeof item === 'string' ? item : (item.sku || item.product?.sku);
+    const prod = catalogData.products.find(p => p.sku === sku);
+    const qty = item.quantity || 1;
+    return sum + ((prod ? prod.price : 19500) * qty);
+  }, 0);
 
-  let bundleDiscount = 0;
-  let bundleName = 'Solo Flacon';
-
-  if (count === 2) {
-    bundleDiscount = 199; // 2 x 999 = 1998 -> 1,799
-    bundleName = 'Day & Night Duo (Save ₹199)';
-  } else if (count === 3) {
-    bundleDiscount = 498; // 3 x 999 = 2997 -> 2,499
-    bundleName = 'The 3-Season Wardrobe (Save ₹498)';
-  } else if (count >= 4) {
-    bundleDiscount = (count * 999) - (count * 799); // ₹799 per bottle for 4+
-    bundleName = `The Connoisseur's Collection (${count} Bottles @ ₹799/ea)`;
-  }
-
-  const subtotalAfterBundle = originalSubtotal - bundleDiscount;
-  const prepaidDiscount = isPrepaidUpi && count > 0 ? 100 : 0;
-  const finalTotal = Math.max(0, subtotalAfterBundle - prepaidDiscount);
+  const bundleDiscount = 0;
+  const bundleName = count > 1 ? `Sovereign Collection (${count} Flacons)` : 'Haute Parfumerie Flacon';
+  const prepaidDiscount = 0;
+  const finalTotal = originalSubtotal;
 
   res.json({
     bottleCount: count,
     originalSubtotal,
     bundleName,
-    bundleDiscount,
-    prepaidDiscount,
-    freeShipping: count >= 2 || finalTotal >= 999,
+    bundleDiscount: 0,
+    prepaidDiscount: 0,
+    freeShipping: true,
     finalTotal
   });
 });
@@ -312,11 +292,13 @@ app.post('/api/gokwik/checkout', (req, res) => {
   const rtoScore = isHighRiskPhone ? 88.5 : 12.3;
   const isRtoFlagged = rtoScore > 60;
 
-  // Pricing calculation
-  const count = items.length;
-  let bundleDiscount = count === 2 ? 199 : count === 3 ? 498 : count >= 4 ? (count * 200) : 0;
-  let prepaidDiscount = paymentMethod === 'UPI' ? 100 : 0;
-  let total = (count * 999) - bundleDiscount - prepaidDiscount;
+  // Sovereign Pricing calculation
+  const total = items.reduce((sum, item) => {
+    const sku = typeof item === 'string' ? item : (item.sku || item.product?.sku);
+    const prod = catalogData.products.find(p => p.sku === sku);
+    const qty = item.quantity || 1;
+    return sum + ((prod ? prod.price : 19500) * qty);
+  }, 0);
 
   const orderNumber = 'ZR-' + Math.floor(100000 + Math.random() * 900000);
   const orderData = {
@@ -359,7 +341,7 @@ app.get('/api/orders/:orderNumber', (req, res) => {
     ],
     whatsappMacerationCard: {
       headline: 'The Connoisseur Resting Protocol',
-      instruction: 'Artisanal Extrait de Parfum (28%) experiences kinetic agitation in transit. Allow 24 hours of resting in room temperature darkness for the top bergamot and heart notes to blossom.'
+      instruction: 'Artisanal Extrait de Parfum Elixir (30%) experiences kinetic agitation in transit. Follow the 48-hour transit rest protocol in a cool, dark drawer before testing to let the quad co-solvent matrix stabilize.'
     }
   });
 });

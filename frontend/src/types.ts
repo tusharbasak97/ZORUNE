@@ -19,12 +19,31 @@ export interface Notes {
   base: string[];
 }
 
+export interface TerroirData {
+  origin: string;
+  cooperative: string;
+  coordinates: string;
+  elevation: string;
+  harvest_season: string;
+}
+
+export interface EcoPackaging {
+  glass: string;
+  neck: string;
+  secondary: string;
+  cap: string;
+}
+
 export interface Product {
   id: number;
   sku: string;
   name: string;
   brand: string;
   inspired_by: InspiredBy;
+  formula_code?: string;
+  subtitle?: string;
+  concept?: string;
+  climate_role?: string;
   concentration: string;
   gender: Gender;
   rating: number;
@@ -40,8 +59,9 @@ export interface Product {
   image_url: string;
   commercial_score: number;
   commercial_rank: number;
-  size_ml: number; // 20
-  price: number; // 999
+  size_ml: number;
+  price: number;
+  price_eur?: number;
   stock: number;
   tier: InventoryTier;
   original_price_usd: number;
@@ -52,6 +72,8 @@ export interface Product {
   tagline?: string;
   longevity_hours: number;
   sillage_rating: string;
+  terroir?: TerroirData;
+  eco_packaging?: EcoPackaging;
 }
 
 export interface CartItem {

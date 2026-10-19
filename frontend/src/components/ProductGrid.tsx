@@ -12,45 +12,35 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('rank');
 
-  const categories = [
-    { id: 'all', label: 'All 30 Icons', count: products.length },
-    { id: 'tier1', label: 'Tier 1 Heroes', count: products.filter(p => p.tier === 'TIER_1_HERO').length, isCrown: true },
-    { id: 'male', label: "Men's Collection", count: products.filter(p => p.gender === 'Male').length },
+  interface CategoryItem {
+    id: string;
+    label: string;
+    count: number;
+    isCrown?: boolean;
+  }
+
+  const categories: CategoryItem[] = [
+    { id: 'all', label: 'All Creations', count: products.length, isCrown: true },
+    { id: 'unisex', label: 'Unisex Terroir', count: products.filter(p => p.gender === 'Unisex').length },
     { id: 'female', label: "Women's Collection", count: products.filter(p => p.gender === 'Female').length },
-    { id: 'unisex', label: 'Shared / Unisex', count: products.filter(p => p.gender === 'Unisex').length },
-    { id: 'fresh', label: 'Fresh Citrus & Aquatic', count: products.filter(p => p.main_accords.some(a => ['citrus', 'fresh', 'fresh spicy', 'marine', 'aquatic', 'green'].includes(a.toLowerCase()))).length },
-    { id: 'gourmand', label: 'Warm Spices & Gourmand', count: products.filter(p => p.main_accords.some(a => ['vanilla', 'sweet', 'cinnamon', 'warm spicy', 'caramel'].includes(a.toLowerCase()))).length },
-    { id: 'woody', label: 'Woody & Resins', count: products.filter(p => p.main_accords.some(a => ['woody', 'amber', 'oud', 'smoky', 'balsamic', 'leather'].includes(a.toLowerCase()))).length },
-    { id: 'floral', label: 'Floral Elegance', count: products.filter(p => p.main_accords.some(a => ['white floral', 'floral', 'rose', 'powdery', 'fruity'].includes(a.toLowerCase()))).length },
+    { id: 'male', label: "Men's Structured", count: products.filter(p => p.gender === 'Male').length },
+    { id: 'japan', label: 'Japan Terroir', count: products.filter(p => p.terroir?.origin.includes('Japan')).length },
+    { id: 'africa', label: 'South Africa Fynbos', count: products.filter(p => p.terroir?.origin.includes('South Africa')).length },
+    { id: 'southasia', label: 'South Asia Terroir', count: products.filter(p => p.terroir?.origin.includes('India') || p.terroir?.origin.includes('Kashmir')).length },
+    { id: 'europe', label: 'European Botanicals', count: products.filter(p => p.terroir?.origin.includes('France') || p.terroir?.origin.includes('Italy') || p.terroir?.origin.includes('Spain') || p.terroir?.origin.includes('Tunisia') || p.terroir?.origin.includes('Corsica')).length },
   ];
 
   const filteredProducts = useMemo(() => {
     return products.filter(p => {
       // Category filter
-      if (selectedCategory === 'tier1' && p.tier !== 'TIER_1_HERO') return false;
-      if (selectedCategory === 'male' && p.gender !== 'Male') return false;
-      if (selectedCategory === 'female' && p.gender !== 'Female') return false;
       if (selectedCategory === 'unisex' && p.gender !== 'Unisex') return false;
-      
-      if (selectedCategory === 'fresh') {
-        const isFresh = p.main_accords.some(a => ['citrus', 'fresh', 'fresh spicy', 'marine', 'aquatic', 'green'].includes(a.toLowerCase()));
-        if (!isFresh) return false;
-      }
-
-      if (selectedCategory === 'gourmand') {
-        const isGourmand = p.main_accords.some(a => ['vanilla', 'sweet', 'cinnamon', 'warm spicy', 'caramel'].includes(a.toLowerCase()));
-        if (!isGourmand) return false;
-      }
-
-      if (selectedCategory === 'woody') {
-        const isWoody = p.main_accords.some(a => ['woody', 'amber', 'oud', 'smoky', 'balsamic', 'leather'].includes(a.toLowerCase()));
-        if (!isWoody) return false;
-      }
-
-      if (selectedCategory === 'floral') {
-        const isFloral = p.main_accords.some(a => ['white floral', 'floral', 'rose', 'powdery', 'fruity'].includes(a.toLowerCase()));
-        if (!isFloral) return false;
-      }
+      if (selectedCategory === 'female' && p.gender !== 'Female') return false;
+      if (selectedCategory === 'male' && p.gender !== 'Male') return false;
+      if (selectedCategory === 'japan' && !p.terroir?.origin.includes('Japan')) return false;
+      if (selectedCategory === 'africa' && !p.terroir?.origin.includes('South Africa')) return false;
+      if (selectedCategory === 'southasia' && !p.terroir?.origin.includes('India') && !p.terroir?.origin.includes('Kashmir')) return false;
+      if (selectedCategory === 'europe' && !['France', 'Italy', 'Spain', 'Tunisia', 'Corsica'].some(c => p.terroir?.origin.includes(c))) return false;
+      if (selectedCategory === 'tier1' && p.tier !== 'TIER_1_HERO') return false;
 
       // Search filter
       if (searchQuery.trim()) {
@@ -58,43 +48,47 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
         const allNotes = p.all_notes || [];
         const matchesName = p.name.toLowerCase().includes(q);
         const matchesSku = p.sku.toLowerCase().includes(q);
-        const matchesBrand = p.inspired_by.brand.toLowerCase().includes(q);
-        const matchesOriginal = p.inspired_by.original_name.toLowerCase().includes(q);
+        const matchesBrand = p.inspired_by?.brand?.toLowerCase().includes(q) ?? false;
+        const matchesOriginal = p.inspired_by?.original_name?.toLowerCase().includes(q) ?? false;
         const matchesFamily = p.olfactive_family.toLowerCase().includes(q);
         const matchesAccords = p.main_accords.some(a => a.toLowerCase().includes(q));
         const matchesNotes = allNotes.some(n => n.toLowerCase().includes(q));
+        const matchesTerroir = p.terroir ? (p.terroir.origin.toLowerCase().includes(q) || p.terroir.cooperative.toLowerCase().includes(q)) : false;
 
-        if (!matchesName && !matchesSku && !matchesBrand && !matchesOriginal && !matchesFamily && !matchesAccords && !matchesNotes) {
+        if (!matchesName && !matchesSku && !matchesBrand && !matchesOriginal && !matchesFamily && !matchesAccords && !matchesNotes && !matchesTerroir) {
           return false;
         }
       }
 
       return true;
     }).sort((a, b) => {
-      if (sortBy === 'rating') return (b.rating || 0) - (a.rating || 0);
-      if (sortBy === 'reviews') return (b.reviews_count || 0) - (a.reviews_count || 0);
-      if (sortBy === 'score') return (b.commercial_score || 0) - (a.commercial_score || 0);
+      if (sortBy === 'price_asc') return (a.price_eur || a.price) - (b.price_eur || b.price);
+      if (sortBy === 'price_desc') return (b.price_eur || b.price) - (a.price_eur || a.price);
       if (sortBy === 'longevity') return b.longevity_hours - a.longevity_hours;
+      if (sortBy === 'concentration') {
+        const getConc = (p: Product) => parseInt(p.concentration.replace(/\D/g, '')) || 25;
+        return getConc(b) - getConc(a);
+      }
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
       // Default: Commercial Rank
       return (a.commercial_rank || 99) - (b.commercial_rank || 99);
     });
   }, [products, selectedCategory, searchQuery, sortBy]);
 
   return (
-    <section id="catalog" className="py-16 sm:py-24 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="catalog" className="relative py-16 sm:py-24 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[oklch(0.683_0.102_82.6)] mb-2 block">
-            THE COMPLETE COLLECTION
+            SOVEREIGN HAUTE PARFUMERIE
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[oklch(0.179_0.004_286)] mb-4">
-            Curated 30 Olfactive Formulations<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
+            Our Collection<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
-          <p className="text-sm sm:text-base text-[oklch(0.442_0.015_286)] font-light leading-relaxed">
-            Every bottle is an uncompromised 20ml Extrait de Parfum (28% perfume oil concentration). 
-            Explore by commercial rank, olfactory accords, or inspired designer house.
+          <p className="text-sm sm:text-base text-[oklch(0.442_0.015_286)] font-light leading-relaxed max-w-2xl mx-auto">
+            Single-origin terroir botanicals compounded into sovereign extraits, encased in sculptural refillable crystal and presentation coffrets.
           </p>
         </div>
 
@@ -103,10 +97,16 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
           
           {/* Live Search Input */}
           <div className="relative flex-1">
+            <label htmlFor="catalog-search" className="sr-only">
+              Search fragrances by note or name
+            </label>
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[oklch(0.683_0.102_82.6)]" />
             <input
               type="text"
-              placeholder="Search by perfume, notes (e.g. vanilla, bergamot), or inspired brand..."
+              id="catalog-search"
+              name="catalog-search"
+              aria-label="Search fragrances by note or name"
+              placeholder="Search by perfume name, notes (e.g. yuzu, orris, saffron, buchu), or terroir..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] text-xs sm:text-sm pl-10 pr-10 py-2.5 rounded-xl border border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)] focus:outline-none transition-all placeholder:text-[oklch(0.552_0.014_286)]"
@@ -114,6 +114,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
             {searchQuery && (
               <button 
                 onClick={() => setSearchQuery('')}
+                aria-label="Clear search query"
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[oklch(0.552_0.014_286)] hover:text-[oklch(0.179_0.004_286)] cursor-pointer"
               >
                 <X className="w-4 h-4" />
@@ -125,18 +126,22 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
           <div className="flex items-center space-x-3 self-end md:self-auto">
             <span className="text-xs text-[oklch(0.442_0.015_286)] flex items-center space-x-1">
               <ArrowUpDown className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-              <span className="hidden sm:inline font-medium">Sort by:</span>
+              <label htmlFor="catalog-sort" className="hidden sm:inline font-medium cursor-pointer">Sort by:</label>
             </span>
             <select
+              id="catalog-sort"
+              name="catalog-sort"
+              aria-label="Sort master formulations"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="bg-[oklch(0.98_0.005_78.3)] text-[oklch(0.179_0.004_286)] text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-[oklch(0.926_0.01_81.8)] focus:border-[oklch(0.683_0.102_82.6)] focus:outline-none cursor-pointer font-medium"
             >
-              <option value="rank">Commercial Rank (#1 to #30)</option>
-              <option value="score">Commercial Viability Score</option>
-              <option value="rating">Community Rating (★)</option>
-              <option value="reviews">Review Count</option>
-              <option value="longevity">Longevity (Hours)</option>
+              <option value="rank">Master Formulary Rank (#1 to #20)</option>
+              <option value="price_asc">Investment: € Low to High</option>
+              <option value="price_desc">Investment: € High to Low</option>
+              <option value="longevity">Skin Longevity (Hours)</option>
+              <option value="concentration">Pure Extrait Concentration (%)</option>
+              <option value="name">Olfactive Creation (A–Z)</option>
             </select>
           </div>
 
@@ -168,7 +173,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
 
         {/* Matching Count / Active Filter Feedback */}
         <div className="flex items-center justify-between text-xs text-[oklch(0.442_0.015_286)] mb-6 px-1">
-          <span>Showing <strong className="text-[oklch(0.179_0.004_286)]">{filteredProducts.length}</strong> of 30 formulations</span>
+          <span>Showing <strong className="text-[oklch(0.179_0.004_286)]">{filteredProducts.length}</strong> of {products.length} creations</span>
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}

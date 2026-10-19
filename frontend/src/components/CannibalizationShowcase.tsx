@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Thermometer, ShieldCheck } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
 
@@ -10,17 +10,18 @@ interface CannibalizationShowcaseProps {
 interface ComparisonItem {
   sku: string;
   name: string;
-  inspiration: string;
+  formula: string;
   archetype: string;
   description: string;
   accords: string;
   bestFor: string;
   longevity: string;
+  climateFeature: string;
 }
 
 export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = ({ products }) => {
   const { addToCart } = useCart();
-  const [activeTab, setActiveTab] = useState<'blue' | 'swy' | 'sweet' | 'floral'>('blue');
+  const [activeTab, setActiveTab] = useState<'climate' | 'aristocracy' | 'nocturnal' | 'lifestyle'>('climate');
 
   const getProduct = (sku: string) => products.find(p => p.sku === sku);
 
@@ -29,125 +30,103 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
     if (p) addToCart(p, 1);
   };
 
-  const blueItems: ComparisonItem[] = [
+  const climateItems: ComparisonItem[] = [
     {
-      sku: 'ZR-07',
-      name: 'Apex',
-      inspiration: 'YSL Y EDP',
-      archetype: 'The Crisp Daily Engine',
-      description: 'Bursting with tart green apple, fresh ginger, and herbaceous sage. Engineered for high-energy productivity, gym sessions, and daily office wear.',
-      accords: 'Green Apple, Fresh Ginger, Amberwood',
-      bestFor: 'Daily Office, Workouts & High Energy',
-      longevity: '8–10 Hours (Crisp Projection)'
+      sku: 'ZR-U01',
+      name: 'Yuzu Céleste',
+      formula: 'Formula U-01',
+      archetype: 'The Glacier Spring & High Humidity Resistor',
+      description: 'Pristine Kōchi yuzu cold-pressed oil, Japanese white mint, and Himalayan juniper berry over crystalline biotech ambroxan. Engineered to resist 45°C heat without souring.',
+      accords: 'Kōchi Yuzu, Hokkaido Mint, Juniper CO2, Biotech Ambroxan',
+      bestFor: 'High Summer Heat, Humid Monsoons & Active Mountain Travel',
+      longevity: '15+ Hours (Glacier Sparkling Halo)',
+      climateFeature: 'Active Quad Co-Solvent Volatility Retarder'
     },
     {
-      sku: 'ZR-08',
-      name: 'Bleu',
-      inspiration: 'Chanel BDC EDP',
-      archetype: 'The Boardroom Standard',
-      description: 'Refined grapefruit, pink pepper, and aristocratic cedarwood. Never loud, always authoritative. The universal benchmark for understated luxury.',
-      accords: 'Pink Pepper, Grapefruit, Incense Cedar',
-      bestFor: 'Executive Meetings & Formal Events',
-      longevity: '8–10 Hours (Discrete Radiance)'
-    },
-    {
-      sku: 'ZR-15',
-      name: 'Savage',
-      inspiration: 'Dior Sauvage Parfum',
-      archetype: 'The Magnetic Nighttime Force',
-      description: 'Deep Calabrian bergamot, creamy Sri Lankan sandalwood, and nocturnal vanilla. Projects through cool evening air with raw masculine charisma.',
-      accords: 'Calabrian Bergamot, Sandalwood, Olibanum',
-      bestFor: 'Nightlife, Clubbing & Cold Evenings',
-      longevity: '10–12 Hours (Nuclear Sillage)'
+      sku: 'ZR-M04',
+      name: 'Vetiver Monsoon',
+      formula: 'Formula M-04',
+      archetype: 'The Kannauj Rainmaker • Wet Earth & Geosmin',
+      description: 'Traditional copper-deg hydro-distilled Kannauj Ruh Khus paired with natural riverbed clay geosmin and Italian green mandarin. Cuts through monsoon downpours.',
+      accords: 'Kannauj Ruh Khus, Mitti Attar (Geosmin), Green Mandarin, Patchouli',
+      bestFor: 'Monsoon Humidity, High-Heat Executive Wear & Deep Grounding',
+      longevity: '16+ Hours (Crisp Cooling Earth Sillage)',
+      climateFeature: 'Non-Indolic Hydrophobic Earth Matrix'
     }
   ];
 
-  const swyItems: ComparisonItem[] = [
+  const aristocracyItems: ComparisonItem[] = [
     {
-      sku: 'ZR-01',
-      name: 'Intense',
-      inspiration: 'Armani SWY Intensely',
-      archetype: 'The Seductive Gourmand Flame',
-      description: 'Cozy toffee caramel, warm cinnamon, and intoxicating Madagascar vanilla. The viral compliment beast engineered for cold weather dates and social romance.',
-      accords: 'Toffee Caramel, Warm Cinnamon, Vanilla',
-      bestFor: 'Winter Dates, Socials & Young Pros',
-      longevity: '10–12 Hours (Warm Cloud)'
+      sku: 'ZR-W01',
+      name: 'Orris Soie',
+      formula: 'Formula W-01',
+      archetype: 'Florentine Orris Butter (15% Irone) & Haute Suede',
+      description: 'Three-year cured organic Florentine Iris butter enriched with Grasse jasmine grandiflorum and New Caledonian sandalwood. Aristocratic luxury with zero synthetic sweetness.',
+      accords: 'Florentine Orris (15% Irone), Grasse Jasmine, Suede, Sandalwood',
+      bestFor: 'Executive Boardrooms, Black-Tie Galas & Quiet Luxury',
+      longevity: '18+ Hours (Regal Powdery Sillage)',
+      climateFeature: 'Anhydrous Non-Sweetening Resin Stabilizer'
     },
     {
-      sku: 'ZR-04',
-      name: 'Absolute',
-      inspiration: 'Armani SWY Absolutely',
-      archetype: "The Connoisseur's Boozy Reserve",
-      description: 'Aged French rum liqueur, glazed smoky chestnuts, and dark bourbon vanilla. Substantially less sweet, deeper, and steeped in smoky woody depth.',
-      accords: 'French Rum Liqueur, Glazed Chestnut, Cedar',
-      bestFor: 'Black-Tie Dinners & Private Evenings',
-      longevity: '10–12 Hours (Velvety Depth)'
+      sku: 'ZR-U05',
+      name: 'Mysore Santal',
+      formula: 'Formula U-05',
+      archetype: 'Ancient Chola Temple Santalum Album',
+      description: 'Certified sustainable Karnataka Santalum album heartwood paired with Australian sandalwood, ambrette seeds, and golden Siamese benzoin tears.',
+      accords: 'Karnataka Santalum Album, Australian Sandalwood, Benzoin Siam, Ambrette',
+      bestFor: 'High-Stakes Presence, Signature Dignity & Spiritual Comfort',
+      longevity: '20+ Hours (Milky Balsamic Resonance)',
+      climateFeature: 'High-Free-Santalol (>90%) Fixative Skeleton'
     }
   ];
 
-  const sweetItems: ComparisonItem[] = [
+  const nocturnalItems: ComparisonItem[] = [
     {
-      sku: 'ZR-05',
-      name: 'Elixir',
-      inspiration: 'JPG Le Male Elixir',
-      archetype: 'The Liquid Honey Titan',
-      description: 'Lavish golden honey, warm benzoin, and rich roasted tonka bean. An explosive, opulent clubbing statement that cuts through any crowded venue.',
-      accords: 'Golden Honey, Warm Tonka, Benzoin',
-      bestFor: 'Nightclubs, Parties & Winter Nights',
-      longevity: '12+ Hours (Nuclear Longevity)'
+      sku: 'ZR-M03',
+      name: 'Oud Samarkhand',
+      formula: 'Formula M-03',
+      archetype: 'Assam Wild Oud, Kashmiri Saffron & Green Hojari',
+      description: 'Sustainable Assam wild Aquilaria oud infused with rare Kashmiri saffron and imperial Omani Royal Green Hojari frankincense. Deep, animalic, and resinous.',
+      accords: 'Assam Wild Oud (30%), Pampore Saffron, Green Hojari Frankincense',
+      bestFor: 'Freezing Winter Galas, Private Salons & Royal Evening Presence',
+      longevity: '20+ Hours (Magnetic Enveloping Cloud)',
+      climateFeature: 'Anti-Collapse Thermal Cold Matrix'
     },
     {
-      sku: 'ZR-01',
-      name: 'Intense',
-      inspiration: 'Armani SWY Intensely',
-      archetype: 'Cashmere Caramel Romance',
-      description: 'Decadent toffee, pink pepper, and sweet cinnamon spun into a cozy cashmere sweater effect. Irresistible proximity scent for intimate dinners.',
-      accords: 'Pink Pepper, Toffee Caramel, Suede',
-      bestFor: 'Intimate Dinners & Cozy Dates',
-      longevity: '10–12 Hours (Enveloping Sillage)'
-    },
-    {
-      sku: 'ZR-02',
-      name: 'Wanted',
-      inspiration: 'Azzaro Most Wanted',
-      archetype: 'Midnight Cardamom Weapon',
-      description: 'Minimalist three-note perfection of fiery green cardamom, molten caramel, and bourbon amberwood. Ultra-clean, potent, and effortlessly seductive.',
-      accords: 'Fiery Cardamom, Toffee, Bourbon Amberwood',
-      bestFor: 'Evening Socials & Lounge Bars',
-      longevity: '10–12 Hours (Sharp Projection)'
+      sku: 'ZR-U02',
+      name: 'Saffron Nomade',
+      formula: 'Formula U-02',
+      archetype: 'The Golden Stigma • Pampore Saffron & Somalian Myrrh',
+      description: 'High-altitude Grade-1 Mongra Kashmiri saffron stigmas paired with Somalian myrrh, green Guatemalan cardamom, and golden ambergris.',
+      accords: 'Pampore Saffron CO2, Somalian Myrrh, Cardamom, Golden Amber',
+      bestFor: 'High-Altitude Travel, Intimate Dinners & Creative Elegance',
+      longevity: '18+ Hours (Spiced Golden Aura)',
+      climateFeature: 'Skin-Temperature Osmotic Diffusion Engine'
     }
   ];
 
-  const floralItems: ComparisonItem[] = [
+  const lifestyleItems: ComparisonItem[] = [
     {
-      sku: 'ZR-28',
-      name: 'Crystal',
-      inspiration: 'Versace Bright Crystal',
-      archetype: 'Iced Yuzu & Peony Sparkler',
-      description: 'Sparkling frosted pomegranate, iced yuzu, and translucent peony petals. An invigorating, clean, crystalline floral for high heat and casual days.',
-      accords: 'Frosted Pomegranate, Peony, Lotus Flower',
-      bestFor: 'High Heat Summers, Gym & Casual Days',
-      longevity: '7–8 Hours (Fresh Aura)'
+      sku: 'ZR-M01',
+      name: 'Kiso Silence',
+      formula: 'Formula M-01',
+      archetype: 'The Temple Cryptomeria • Kiso Valley Hinoki',
+      description: 'Serene, dry, resinous cedarwood, therapeutic Japanese Hinoki heartwood, damp moss, and cold temple incense rising into misty alpine air.',
+      accords: 'Kiso Hinoki Heartwood, Yakushima Sugi, Elemi, Smoked Incense',
+      bestFor: 'Boardroom Authority, Mindful Focus & Bespoke Tailoring',
+      longevity: '17+ Hours (Sovereign Resinous Wood Sillage)',
+      climateFeature: 'Zero-Water Phase-Stable Conifer Shield'
     },
     {
-      sku: 'ZR-19',
-      name: 'Gardenia',
-      inspiration: 'Gucci Flora Gardenia',
-      archetype: 'Sunlit Pear & Brown Sugar Glow',
-      description: 'Playful white gardenia absolute sweetened with sun-ripened Italian pear and warm brown sugar. Joyful, uplifting, and tailored for weekend brunches.',
-      accords: 'White Gardenia, Solar Pear, Brown Sugar',
-      bestFor: 'Weekend Brunches & Garden Parties',
-      longevity: '8–9 Hours (Radiant Cloud)'
-    },
-    {
-      sku: 'ZR-25',
-      name: 'Adore',
-      inspiration: "Dior J'adore",
-      archetype: 'Royal French Golden Bouquet',
-      description: 'Regal Grasse grandiflorum jasmine, Damascus rose, and golden Comorian ylang-ylang. An architectural triumph of timeless French haute perfumerie.',
-      accords: 'Grasse Jasmine, Damascena Rose, Ylang',
-      bestFor: 'Formal Galas & Diplomatic Events',
-      longevity: '9–10 Hours (Opulent Floral)'
+      sku: 'ZR-W02',
+      name: 'Madurai Lune',
+      formula: 'Formula W-02',
+      archetype: 'Pre-Dawn Madurai Jasmine Sambac & Pink Pepper',
+      description: 'Intoxicating night-blooming Indian jasmine sambac buds blossoming into solar radiance with pink pepper and Haitian vetiver.',
+      accords: 'Madurai Jasmine Sambac, Mysore Tuberose, Pink Pepper, Haitian Vetiver',
+      bestFor: 'Sunlit Brunches, Chic Vacations & Tropical Evenings',
+      longevity: '16+ Hours (Hypnotic White-Floral Projection)',
+      climateFeature: 'Hydrophobic Solar White-Floral Complex'
     }
   ];
 
@@ -160,10 +139,10 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
         {/* Top Header Pill & SKU */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <span className="text-[11px] font-bold text-[oklch(0.683_0.102_82.6)] uppercase tracking-wider truncate">
-            {item.sku} • {item.inspiration}
+            {item.sku} • {item.formula}
           </span>
           <span className="text-[10px] font-semibold text-[oklch(0.442_0.015_286)] bg-[oklch(0.959_0.01_87.5)] px-2 py-0.5 rounded-full border border-[oklch(0.926_0.01_81.8)] shrink-0">
-            20ml • ₹999
+            30% Extrait • 50ml Flacon
           </span>
         </div>
 
@@ -180,16 +159,23 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
         {/* Unified Olfactory Architecture Spec Box */}
         <div className="text-[11px] text-[oklch(0.262_0.007_286)] space-y-2 mb-6 bg-[oklch(0.98_0.005_78.3)] p-3.5 rounded-xl border border-[oklch(0.926_0.01_81.8)]">
           <div className="flex items-start justify-between gap-2">
-            <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0">• Primary Accords:</span>
+            <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0">• Key Notes:</span>
             <span className="text-right font-medium text-[oklch(0.179_0.004_286)]">{item.accords}</span>
           </div>
           <div className="flex items-start justify-between gap-2">
-            <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0">• Best Worn:</span>
+            <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0">• Climate Role:</span>
             <span className="text-right font-medium text-[oklch(0.179_0.004_286)]">{item.bestFor}</span>
           </div>
           <div className="flex items-start justify-between gap-2">
             <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0">• Longevity:</span>
             <span className="text-right font-bold text-[oklch(0.683_0.102_82.6)]">{item.longevity}</span>
+          </div>
+          <div className="flex items-start justify-between gap-2 pt-1 border-t border-[oklch(0.926_0.01_81.8)]/60">
+            <span className="text-[oklch(0.552_0.014_286)] font-semibold shrink-0 flex items-center space-x-1">
+              <Thermometer className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
+              <span>Physics Shield:</span>
+            </span>
+            <span className="text-right text-[10px] text-[oklch(0.442_0.015_286)] italic">{item.climateFeature}</span>
           </div>
         </div>
       </div>
@@ -199,97 +185,97 @@ export const CannibalizationShowcase: React.FC<CannibalizationShowcaseProps> = (
         onClick={() => handleAdd(item.sku)}
         className="w-full py-2.5 rounded-xl bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-semibold text-xs uppercase tracking-wider cursor-pointer transition-all shadow-xs hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center space-x-1.5"
       >
-        <span>Add {item.sku} Flacon (₹999)</span>
+        <span>Acquire {item.sku} Master Flacon</span>
       </button>
     </div>
   );
 
   return (
-    <section id="cannibalization" className="py-16 sm:py-24 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="cannibalization" className="relative py-16 sm:py-24 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white border border-[oklch(0.926_0.01_81.8)] mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
             <span className="text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)]">
-              Connoisseur Olfactory Comparisons
+              The Master Formulation Architecture
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-[oklch(0.179_0.004_286)] mb-3">
-            Navigating Overlapping Masterpieces<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
+            Climate & Olfactory Architecture Matrix<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
           <p className="text-sm text-[oklch(0.442_0.015_286)] leading-relaxed">
-            Similar scent profiles serve completely different lifestyles. Here is how our perfumers recommend pairing and distinguishing between iconic fragrances.
+            Every formulation in the Master Compendium is engineered for a specific thermodynamic challenge and lifestyle domain. Compare accords and climate physics below.
           </p>
         </div>
 
         {/* Tab Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 max-w-4xl mx-auto px-2">
           <button
-            onClick={() => setActiveTab('blue')}
+            onClick={() => setActiveTab('climate')}
             className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
-              activeTab === 'blue'
+              activeTab === 'climate'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
-            The Blue Trinity (Apex vs Bleu vs Savage)
+            Extreme Climate Resistors (Heat & Monsoon)
           </button>
           <button
-            onClick={() => setActiveTab('swy')}
+            onClick={() => setActiveTab('aristocracy')}
             className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
-              activeTab === 'swy'
+              activeTab === 'aristocracy'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
-            Armani SWY Flankers (Intense vs Absolute)
+            Quiet Luxury & Formal Authority (Iris & Chypre)
           </button>
           <button
-            onClick={() => setActiveTab('sweet')}
+            onClick={() => setActiveTab('nocturnal')}
             className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
-              activeTab === 'sweet'
+              activeTab === 'nocturnal'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
-            Sweet Nightlife (Elixir vs Intense vs Wanted)
+            Nocturnal Seduction & Winter (Cognac & Cashmere)
           </button>
           <button
-            onClick={() => setActiveTab('floral')}
+            onClick={() => setActiveTab('lifestyle')}
             className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer text-center ${
-              activeTab === 'floral'
+              activeTab === 'lifestyle'
                 ? 'bg-[oklch(0.179_0.004_286)] text-white shadow-xs'
                 : 'bg-white text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] border border-[oklch(0.926_0.01_81.8)] shadow-2xs hover:border-[oklch(0.683_0.102_82.6)]/40'
             }`}
           >
-            Feminine Florals (Gardenia vs Voyage vs Adore)
+            Modern Chic & Daytime Signature (Fig & Citrus Tea)
           </button>
         </div>
 
         {/* Tab Content Display */}
-        {activeTab === 'blue' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blueItems.map(renderCard)}
-          </div>
-        )}
-
-        {activeTab === 'swy' && (
+        {activeTab === 'climate' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {swyItems.map(renderCard)}
+            {climateItems.map(renderCard)}
           </div>
         )}
 
-        {activeTab === 'sweet' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sweetItems.map(renderCard)}
+        {activeTab === 'aristocracy' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {aristocracyItems.map(renderCard)}
           </div>
         )}
 
-        {activeTab === 'floral' && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {floralItems.map(renderCard)}
+        {activeTab === 'nocturnal' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {nocturnalItems.map(renderCard)}
+          </div>
+        )}
+
+        {activeTab === 'lifestyle' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {lifestyleItems.map(renderCard)}
           </div>
         )}
 

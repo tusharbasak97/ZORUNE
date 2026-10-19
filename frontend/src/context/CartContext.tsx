@@ -4,10 +4,12 @@ import { Product, CartItem, OrderConfirmation } from '../types';
 interface PricingDetails {
   bottleCount: number;
   originalSubtotal: number;
+  originalSubtotalEur: number;
   bundleDiscount: number;
   bundleName: string;
   prepaidDiscount: number;
   finalTotal: number;
+  finalTotalEur: number;
   freeShipping: boolean;
   savingsMessage: string;
   nextTierPrompt: string | null;
@@ -156,48 +158,29 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  // Dynamic Pricing Calculation: Strictly 1 for 999, 2 for 1899, 3 for 2799
-  const originalSubtotal = cartCount * 999;
-  let bundleDiscount = 0;
-  let bundleName = 'Single Signature';
-  let nextTierPrompt: string | null = null;
-  let savingsMessage = 'Standard 20ml Extrait Pricing';
+  // Haute Niche Pricing Calculation: Pure product subtotal with zero promotional gimmicks
+  const originalSubtotal = cart.reduce((acc, item) => acc + (item.product.price || 0) * item.quantity, 0);
+  const originalSubtotalEur = cart.reduce((acc, item) => acc + (item.product.price_eur || Math.round((item.product.price || 0) / 90)) * item.quantity, 0);
+  const bundleDiscount = 0;
+  const bundleName = cartCount > 1 ? `Sovereign Collection (${cartCount} Editions)` : 'Haute Parfumerie Flacon';
+  const nextTierPrompt: string | null = null;
+  const savingsMessage = 'Complimentary White-Glove Insured Courier Included';
 
-  if (cartCount === 1) {
-    bundleDiscount = 0;
-    bundleName = 'Single Signature Flacon (₹999)';
-    nextTierPrompt = 'Add 1 more bottle for "The Duo" (2 for ₹1,899 — Save ₹99 + Free Delivery)!';
-  } else if (cartCount === 2) {
-    bundleDiscount = 99; // 2 x 999 = 1998 -> 1,899
-    bundleName = 'The Duo (2 for ₹1,899)';
-    savingsMessage = 'You saved ₹99 with The Duo (2 Flacons @ ₹1,899)!';
-    nextTierPrompt = 'Add 1 more bottle for "The Trio Wardrobe" (3 for ₹2,799 — Save ₹198)!';
-  } else if (cartCount === 3) {
-    bundleDiscount = 198; // 3 x 999 = 2997 -> 2,799
-    bundleName = 'The Trio Wardrobe (3 for ₹2,799)';
-    savingsMessage = 'You saved ₹198 with The Trio (3 Flacons @ ₹2,799)!';
-    nextTierPrompt = null;
-  } else if (cartCount >= 4) {
-    // 3 for 2,799 + each additional bottle at 899
-    const reserveTotal = 2799 + (cartCount - 3) * 899;
-    bundleDiscount = originalSubtotal - reserveTotal;
-    bundleName = `Connoisseur Reserve (${cartCount} Flacons)`;
-    savingsMessage = `You saved ₹${bundleDiscount} at Reserve Pricing!`;
-    nextTierPrompt = null;
-  }
-
-  // Zero UPI discount from merchant end - strictly handled by gateway
+  // Zero merchant promotional discounts
   const prepaidDiscount = 0;
-  const finalTotal = Math.max(0, originalSubtotal - bundleDiscount);
-  const freeShipping = cartCount >= 2 || finalTotal >= 999;
+  const finalTotal = originalSubtotal;
+  const finalTotalEur = originalSubtotalEur;
+  const freeShipping = true; // All sovereign caskets receive complimentary insured courier
 
   const pricing: PricingDetails = {
     bottleCount: cartCount,
     originalSubtotal,
+    originalSubtotalEur,
     bundleDiscount,
     bundleName,
     prepaidDiscount,
     finalTotal,
+    finalTotalEur,
     freeShipping,
     savingsMessage,
     nextTierPrompt

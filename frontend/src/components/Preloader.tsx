@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, Droplets } from 'lucide-react';
+import { FluidWaterCanvas } from './FluidWaterCanvas';
 
 interface PreloaderProps {
   onComplete: () => void;
@@ -41,12 +42,12 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
       setStage('formulating');
     }, stage1Delay);
 
-    // Concentration gauge progress (0% to 28% Extrait concentration)
+    // Concentration gauge progress (0% to 30% Extrait concentration)
     const interval = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 28) {
+        if (prev >= 30) {
           clearInterval(interval);
-          return 28;
+          return 30;
         }
         return prev + 1;
       });
@@ -85,6 +86,14 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
       {/* Subtle Warm Halo Background */}
       <div className="absolute w-[600px] h-[600px] rounded-full bg-[oklch(0.959_0.01_87.5)] blur-[120px] pointer-events-none opacity-80" />
 
+      {/* Interactive Extrait Fluid Waves Background */}
+      <FluidWaterCanvas 
+        className="absolute inset-0 z-0 opacity-40 pointer-events-none" 
+        variant="ambient" 
+        themeColor="champagne"
+        interactiveIntensity={0.8}
+      />
+
       {/* Skip Button */}
       <button
         onClick={onComplete}
@@ -113,10 +122,10 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
         </h1>
 
         <p className="text-[10px] tracking-[0.38em] uppercase font-bold text-[oklch(0.683_0.102_82.6)] mb-8">
-          HAUTE PARFUMERIE • 20ML FLACONS
+          SOVEREIGN HAUTE PARFUMERIE • 50ML MASTER FLACONS
         </p>
 
-        {/* 28% Extrait Concentration Formulating Gauge */}
+        {/* 30% Extrait Concentration Formulating Gauge */}
         <div className="w-64 bg-white border border-[oklch(0.926_0.01_81.8)] rounded-2xl p-4 shadow-sm mb-4">
           <div className="flex items-center justify-between text-xs mb-2">
             <span className="text-[11px] text-[oklch(0.552_0.014_286)] flex items-center space-x-1">
@@ -132,7 +141,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
           <div className="w-full h-1.5 bg-[oklch(0.98_0.005_78.3)] rounded-full overflow-hidden border border-[oklch(0.926_0.01_81.8)]/60">
             <div 
               className="h-full bg-gradient-to-r from-[oklch(0.683_0.102_82.6)] to-[oklch(0.179_0.004_286)] transition-all duration-75 rounded-full"
-              style={{ width: `${(progress / 28) * 100}%` }}
+              style={{ width: `${(progress / 30) * 100}%` }}
             />
           </div>
         </div>
@@ -140,7 +149,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
         {/* Dynamic Micro Status Copy */}
         <div className="h-6 flex items-center justify-center text-xs text-[oklch(0.442_0.015_286)]">
           {stage === 'drawing' && <span>Harmonizing Grasse Olfactive Extracts...</span>}
-          {stage === 'formulating' && <span>Calibrating 28% Extrait de Parfum Concentration...</span>}
+          {stage === 'formulating' && <span>Calibrating 30% Extrait Elixir Concentration...</span>}
           {(stage === 'complete' || stage === 'fading') && (
             <span className="text-emerald-700 font-semibold flex items-center space-x-1">
               <Sparkles className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
@@ -150,7 +159,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete, forceFirstVisi
         </div>
 
         <p className="text-[10px] text-[oklch(0.552_0.014_286)] tracking-wider uppercase mt-6">
-          Formulated in Grasse • Bottled in Mumbai • Flat ₹999
+          Compounded in Grasse • 50ml Super-Flint Crystal • Sovereign Extrait
         </p>
 
       </div>

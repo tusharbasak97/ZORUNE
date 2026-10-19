@@ -83,7 +83,7 @@ export const AccountModal: React.FC<AccountModalProps> = ({
       fullName: email.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
       email,
       phone: '+91 9820123456',
-      tier: '28% Extrait Patron',
+      tier: '30% Extrait Patron',
       memberSince: 'October 2026'
     };
     onLogin(loggedInUser);
@@ -174,7 +174,7 @@ export const AccountModal: React.FC<AccountModalProps> = ({
                   <div>
                     <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[oklch(0.179_0.004_286)] text-[oklch(0.683_0.102_82.6)] mb-2">
                       <Sparkles className="w-3 h-3" />
-                      <span>{user.tier || '28% Extrait Patron'}</span>
+                      <span>{user.tier || '30% Extrait Patron'}</span>
                     </span>
                     <h3 className="font-serif text-xl font-bold text-[oklch(0.179_0.004_286)]">
                       {user.fullName}
@@ -201,7 +201,7 @@ export const AccountModal: React.FC<AccountModalProps> = ({
                   <span>Patron Quality & Transit Guarantee</span>
                 </div>
                 <p className="text-[oklch(0.442_0.015_286)] leading-relaxed">
-                  Complimentary batch exchange within 7 days if maceration bouquet does not meet our rigorous 28% concentration standards.
+                  Complimentary batch exchange within 7 days if maceration bouquet does not meet our rigorous 30% Elixir concentration standards.
                 </p>
               </div>
 
@@ -221,8 +221,8 @@ export const AccountModal: React.FC<AccountModalProps> = ({
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-[11px] text-[oklch(0.552_0.014_286)] mt-1">
-                      <span>1 × Savage (20ml Extrait)</span>
-                      <span>₹999 (Prepaid UPI)</span>
+                      <span>1 × Yuzu Kōdō (50ml Refillable PCR Flacon)</span>
+                      <span>€205 / ₹18,500 (Prepaid Order)</span>
                     </div>
                     <p className="text-[10px] text-[oklch(0.442_0.015_286)] mt-2 pt-2 border-t border-[oklch(0.959_0.01_87.5)]">
                       Estimated Metro Air Arrival: <strong>Today by 9:00 PM</strong> (AWB: ZR-EXP-23342064)

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Search, Sparkles, Layers, ShoppingBag } from 'lucide-react';
+import { Home, Search, Sparkles, ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 interface MobileBottomNavProps {
@@ -8,7 +8,7 @@ interface MobileBottomNavProps {
 }
 
 export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, onNavigateSection }) => {
-  const { cartCount, setIsCartOpen, setIsQuizOpen, setIsWardrobeOpen } = useCart();
+  const { cartCount, setIsCartOpen, setIsQuizOpen } = useCart();
 
   return (
     <>
@@ -31,7 +31,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
           </span>
         </div>
 
-        {/* The 30 Catalog */}
+        {/* Our Collection */}
         <div className="relative group">
           <button
             onClick={() => onNavigateSection('catalog')}
@@ -41,7 +41,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
             <Search className="w-5 h-5" />
           </button>
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[oklch(0.179_0.004_286)] text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow-lg">
-            The 30 Icons
+            Our Collection
           </span>
         </div>
 
@@ -60,21 +60,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
             <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[oklch(0.683_0.102_82.6)]" />
           </button>
           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[oklch(0.179_0.004_286)] text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow-lg">
-            Olfactive Quiz
-          </span>
-        </div>
-
-        {/* Wardrobe Builder */}
-        <div className="relative group">
-          <button
-            onClick={() => setIsWardrobeOpen(true)}
-            className="w-11 h-11 rounded-full flex items-center justify-center text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.959_0.01_87.5)] transition-all cursor-pointer relative"
-            aria-label="Wardrobe Builder"
-          >
-            <Layers className="w-5 h-5 text-[oklch(0.683_0.102_82.6)]" />
-          </button>
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-[oklch(0.179_0.004_286)] text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow-lg">
-            3-Wardrobe (₹2,799)
+            Olfactive Matchmaker
           </span>
         </div>
 
@@ -120,7 +106,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
             className="flex flex-col items-center justify-center p-1.5 text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer"
           >
             <Search className="w-5 h-5 mb-0.5" />
-            <span className="text-[10px] font-medium tracking-wide">The 30</span>
+            <span className="text-[10px] font-medium tracking-wide">Collection</span>
           </button>
 
           {/* Quiz */}
@@ -129,31 +115,24 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenSearch, 
             className="flex flex-col items-center justify-center p-1.5 text-[oklch(0.683_0.102_82.6)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer"
           >
             <Sparkles className="w-5 h-5 mb-0.5" />
-            <span className="text-[10px] font-bold tracking-wide">Scent Quiz</span>
-          </button>
-
-          {/* Wardrobe */}
-          <button
-            onClick={() => setIsWardrobeOpen(true)}
-            className="flex flex-col items-center justify-center p-1.5 text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer relative"
-          >
-            <Layers className="w-5 h-5 mb-0.5 text-[oklch(0.683_0.102_82.6)]" />
-            <span className="text-[10px] font-medium tracking-wide">Wardrobe</span>
-            <span className="absolute top-1 right-2 w-2 h-2 rounded-full bg-[oklch(0.683_0.102_82.6)]" />
+            <span className="text-[10px] font-bold tracking-wide">Matchmaker</span>
           </button>
 
           {/* Cart */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className="flex flex-col items-center justify-center p-1.5 text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer relative"
+            aria-label={`Shopping Cart Bag with ${cartCount} items`}
+            className="flex flex-col items-center justify-center p-1.5 text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] active:scale-95 transition-all cursor-pointer relative touch-manipulation"
           >
-            <ShoppingBag className="w-5 h-5 mb-0.5" />
+            <div className="relative flex items-center justify-center">
+              <ShoppingBag className="w-5 h-5 mb-0.5" />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-2 flex items-center justify-center min-w-4 h-4 px-1 rounded-full bg-[oklch(0.179_0.004_286)] text-white text-[9px] font-bold shadow-xs">
+                  {cartCount}
+                </span>
+              )}
+            </div>
             <span className="text-[10px] font-medium tracking-wide">Bag</span>
-            {cartCount > 0 && (
-              <span className="absolute top-1 right-2 flex items-center justify-center w-4 h-4 rounded-full bg-[oklch(0.179_0.004_286)] text-white text-[9px] font-bold">
-                {cartCount}
-              </span>
-            )}
           </button>
 
         </div>

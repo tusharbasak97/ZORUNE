@@ -13,8 +13,8 @@ export const NewsletterClub: React.FC = () => {
   };
 
   return (
-    <section id="club" className="py-16 sm:py-20 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="club" className="relative py-16 sm:py-20 border-b border-[oklch(0.926_0.01_81.8)] bg-[oklch(0.98_0.005_78.3)] overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         {/* Subtle Eyebrow */}
         <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-[oklch(0.926_0.01_81.8)] text-[oklch(0.552_0.014_286)] text-[11px] font-bold uppercase tracking-[0.2em] mb-4 shadow-2xs">
@@ -29,7 +29,7 @@ export const NewsletterClub: React.FC = () => {
 
         {/* Philosophy Copy */}
         <p className="text-xs sm:text-sm text-[oklch(0.442_0.015_286)] max-w-xl mx-auto mb-8 leading-relaxed">
-          We handcraft our 28% Extraits in limited 50-liter artisanal runs to safeguard oil authenticity. 
+          We compound our 30% Elixirs in limited 50-liter artisanal runs to safeguard oil authenticity. 
           Enter your email or WhatsApp to receive private notices when reserved batches open for bottling.
         </p>
 
@@ -41,8 +41,15 @@ export const NewsletterClub: React.FC = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto gap-2.5">
+            <label htmlFor="newsletter-allocation-contact" className="sr-only">
+              Email address or WhatsApp number for small-batch allocation notices
+            </label>
             <input
               type="text"
+              id="newsletter-allocation-contact"
+              name="newsletter-contact"
+              autoComplete="email"
+              aria-label="Email address or WhatsApp number for small-batch allocation notices"
               required
               value={contact}
               onChange={(e) => setContact(e.target.value)}

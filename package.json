@@ -1,0 +1,19 @@
+{
+  "name": "zorune",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZORUNE — Sovereign Haute Parfumerie (Full Stack Monorepo)",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:all": "npm --prefix backend start & npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend start",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint",
+    "start": "npm --prefix backend start"
+  }
+}

@@ -36,16 +36,16 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
   if (!isOpen) return null;
 
   const quickTags = [
-    'Louis Vuitton',
-    'Sauvage',
-    'Baccarat Rouge',
-    'Le Male Elixir',
-    'Angels Share',
-    'Vanilla',
-    'Tobacco',
-    'Citrus',
-    'Oud',
-    'Date Night'
+    'Yuzu Céleste',
+    'Orris Soie',
+    'Kiso Silence',
+    'Oud Samarkhand',
+    'Mysore Santal',
+    'Saffron Nomade',
+    'Madurai Lune',
+    'Rose de Grasse',
+    'Cederberg Buchu',
+    'Immortelle'
   ];
 
   const filtered = query.trim()
@@ -55,8 +55,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
         return (
           p.name.toLowerCase().includes(q) ||
           p.sku.toLowerCase().includes(q) ||
-          p.inspired_by.brand.toLowerCase().includes(q) ||
-          p.inspired_by.original_name.toLowerCase().includes(q) ||
+          (p.inspired_by?.brand?.toLowerCase().includes(q) ?? false) ||
+          (p.inspired_by?.original_name?.toLowerCase().includes(q) ?? false) ||
           p.olfactive_family.toLowerCase().includes(q) ||
           p.main_accords.some(a => a.toLowerCase().includes(q)) ||
           allNotes.some(n => n.toLowerCase().includes(q)) ||
@@ -83,15 +83,19 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
         <div className="relative flex items-center border-b border-[oklch(0.926_0.01_81.8)] pb-4 mb-4">
           <Search className="w-5 h-5 text-[oklch(0.683_0.102_82.6)] mr-3" />
           <input
+            id="global-perfume-search"
+            name="global-perfume-search"
+            aria-label="Search by perfume name, notes, or climate role"
             autoFocus
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search by perfume, inspired brand (LV, Dior), notes (vanilla, oud)..."
+            placeholder="Search by perfume, notes (iris, cognac, vetiver), climate role..."
             className="w-full bg-transparent text-[oklch(0.179_0.004_286)] text-base sm:text-lg focus:outline-none placeholder:text-[oklch(0.552_0.014_286)]"
           />
           <button
             onClick={onClose}
+            aria-label="Close search modal"
             className="p-1.5 rounded-full bg-[oklch(0.98_0.005_78.3)] hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.552_0.014_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer border border-[oklch(0.926_0.01_81.8)]"
           >
             <X className="w-5 h-5" />
@@ -102,7 +106,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
         {!query.trim() && (
           <div className="py-4">
             <span className="text-xs font-bold uppercase tracking-wider text-[oklch(0.552_0.014_286)] block mb-3">
-              Popular Searches & Inspirations
+              Popular Formulations & Notes
             </span>
             <div className="flex flex-wrap gap-2">
               {quickTags.map((tag) => (
@@ -160,14 +164,21 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, produ
                       {p.name}
                     </h4>
 
-                    <p className="text-xs text-[oklch(0.442_0.015_286)] truncate">
-                      Inspired by {p.inspired_by.brand} {p.inspired_by.original_name}
+                    <p className="text-xs text-[oklch(0.683_0.102_82.6)] truncate font-medium">
+                      {p.inspired_by?.original_name || p.tagline}
                     </p>
                   </div>
 
                   <div className="text-right flex-shrink-0">
-                    <span className="text-sm font-extrabold text-[oklch(0.179_0.004_286)] block">₹999</span>
-                    <span className="text-[10px] text-[oklch(0.683_0.102_82.6)] font-semibold block">20ml Extrait</span>
+                    <span className="text-sm font-extrabold text-[oklch(0.179_0.004_286)] block">
+                      {p.price_eur ? `€${p.price_eur}` : `₹${p.price.toLocaleString('en-IN')}`}
+                    </span>
+                    <span className="text-[10px] text-[oklch(0.552_0.014_286)] block">
+                      {p.price_eur ? `₹${p.price.toLocaleString('en-IN')}` : ''}
+                    </span>
+                    <span className="text-[10px] text-[oklch(0.683_0.102_82.6)] font-semibold block">
+                      50ml Refillable Extrait
+                    </span>
                   </div>
                 </div>
               ))

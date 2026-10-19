@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({
   onReplayIntro,
   onOpenPolicy 
 }) => {
-  const { setIsQuizOpen, setIsWardrobeOpen } = useCart();
+  const { setIsQuizOpen } = useCart();
 
   const handlePolicyClick = (tab: PolicyTab) => {
     if (onOpenPolicy) {
@@ -48,9 +48,9 @@ export const Footer: React.FC<FooterProps> = ({
               <Droplets className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">28% Extrait de Parfum</h4>
+              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">30% Extrait Elixir</h4>
               <p className="text-xs text-[oklch(0.442_0.015_286)] leading-relaxed">
-                Maximum concentration standard. Engineered for 8–12 hours of rich, nuclear projection on skin.
+                Maximum concentration standard. Engineered for 12–16+ hours of rich, nuclear projection on skin with Quad Co-Solvents.
               </p>
             </div>
           </div>
@@ -60,9 +60,9 @@ export const Footer: React.FC<FooterProps> = ({
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">Flat ₹999 / 20ml</h4>
+              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">50ml Master Flacon</h4>
               <p className="text-xs text-[oklch(0.442_0.015_286)] leading-relaxed">
-                Uniform pocket flacons. ~300 precision sprays. Zero choice paralysis, zero blind-buy commitment.
+                Super-Flint crystal glass. 24mm punt, Zamac 3 die-cast magnetic closure, and private numbered certificate.
               </p>
             </div>
           </div>
@@ -72,9 +72,9 @@ export const Footer: React.FC<FooterProps> = ({
               <Truck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">Same-Day Metro Dispatch</h4>
+              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">White-Glove Insured Courier</h4>
               <p className="text-xs text-[oklch(0.442_0.015_286)] leading-relaxed">
-                Same-Day Delivery in Mumbai, Delhi-NCR & Bengaluru. Express Air to all tier-1/tier-2 Indian cities.
+                Complimentary insured delivery across India. Hand-packaged in rigid 1500 gsm velvet-lined presentation caskets.
               </p>
             </div>
           </div>
@@ -84,9 +84,9 @@ export const Footer: React.FC<FooterProps> = ({
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">Direct Atelier Pricing</h4>
+              <h4 className="text-xs font-bold text-[oklch(0.179_0.004_286)] uppercase tracking-wider mb-1">Haute Parfumerie Standard</h4>
               <p className="text-xs text-[oklch(0.442_0.015_286)] leading-relaxed">
-                1 for ₹999 • 2 for ₹1,899 • 3 for ₹2,799. Uncompromising 28% Extrait quality with zero promotional gimmicks.
+                Uncompromising 30% Extrait formulation with analytical 1,000 PPT accuracy and zero promotional gimmicks.
               </p>
             </div>
           </div>
@@ -106,8 +106,7 @@ export const Footer: React.FC<FooterProps> = ({
               </span>
             </div>
             <p className="text-xs text-[oklch(0.442_0.015_286)] max-w-sm leading-relaxed">
-              ZORUNE is an artisanal luxury perfumery collective democratizing the world’s 30 most iconic fragrance formulations. 
-              Formulated in Grasse and Paris, bottled in high-density 20ml pocket flacons for modern Indian connoisseurs.
+              ZORUNE is an independent haute parfumerie maison crafting rare master extractions in 50ml crystal presentation caskets.
             </p>
             <div className="pt-2 text-xs text-[oklch(0.552_0.014_286)] font-medium flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
@@ -140,22 +139,12 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2">
               <li>
                 <button onClick={() => onNavigateSection('catalog')} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left">
-                  All 30 Masterpiece Formulations
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onNavigateSection('tier1')} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left">
-                  Tier 1 Volume Heroes (Top 8)
+                  Our Collection
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection('cannibalization')} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left">
                   Scent Comparison Matrix
-                </button>
-              </li>
-              <li>
-                <button onClick={() => setIsWardrobeOpen(true)} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left">
-                  Wardrobe Builder (3 for ₹2,799)
                 </button>
               </li>
               <li>
@@ -244,7 +233,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button onClick={() => handlePolicyClick('authenticity')} className="text-[oklch(0.442_0.015_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer text-left flex items-center space-x-1.5">
                   <ShieldCheck className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
-                  <span>28% Extrait Authenticity</span>
+                  <span>30% Extrait Authenticity</span>
                 </button>
               </li>
               <li>

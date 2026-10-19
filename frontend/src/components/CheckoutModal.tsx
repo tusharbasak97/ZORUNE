@@ -50,7 +50,7 @@ export const CheckoutModal: React.FC = () => {
         phone,
         trackingAwb: 'ZR-EXP-' + Math.floor(10000000 + Math.random() * 90000000),
         estimatedDelivery: pincodeDeliveryText,
-        macerationInstructions: 'Artisanal Extrait de Parfum (28%) experiences kinetic agitation in transit. Spray 3 test pumps into the air, then let your bottle rest in a cool, dark drawer for 24–48 hours to allow the accords to settle.'
+        macerationInstructions: 'Single-Origin Artisanal Extrait de Parfum (20%–30%) experiences kinetic agitation in transit. Spray 3 test pumps into the air, then let your refillable flacon rest in a cool, dark drawer for 48 hours to allow the single-origin natural botanicals to settle.'
       };
 
       setOrderConfirmation(confirmation);
@@ -69,7 +69,7 @@ export const CheckoutModal: React.FC = () => {
       aria-modal="true"
     >
       <div 
-        className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-6 sm:p-8 overscroll-contain popup-scroll-pane"
+        className="relative w-full max-w-lg max-h-[92vh] overflow-y-auto bg-white border border-[oklch(0.926_0.01_81.8)] rounded-3xl shadow-2xl p-4 sm:p-7 overscroll-contain popup-scroll-pane"
         onClick={(e) => e.stopPropagation()}
         data-lenis-prevent
       >
@@ -77,39 +77,47 @@ export const CheckoutModal: React.FC = () => {
         {/* Close Button */}
         <button
           onClick={() => setIsCheckoutOpen(false)}
-          className="absolute top-5 right-5 p-2 rounded-full bg-[oklch(0.98_0.005_78.3)] hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.552_0.014_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer border border-[oklch(0.926_0.01_81.8)]"
+          aria-label="Close checkout"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-[oklch(0.98_0.005_78.3)] hover:bg-[oklch(0.959_0.01_87.5)] text-[oklch(0.552_0.014_286)] hover:text-[oklch(0.179_0.004_286)] transition-colors cursor-pointer border border-[oklch(0.926_0.01_81.8)] z-10"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Secure Checkout Header */}
-        <div className="flex items-center space-x-2.5 pb-4 border-b border-[oklch(0.926_0.01_81.8)] mb-6">
-          <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-extrabold text-sm">
+        <div className="flex items-start space-x-2.5 pb-4 border-b border-[oklch(0.926_0.01_81.8)] mb-5 pr-10 sm:pr-12">
+          <div className="w-8 h-8 rounded-lg bg-[oklch(0.179_0.004_286)] flex items-center justify-center text-white font-extrabold text-sm shrink-0 mt-0.5">
             <ShieldCheck className="w-5 h-5 text-[oklch(0.683_0.102_82.6)]" />
           </div>
-          <div>
-            <h3 className="font-serif text-lg font-bold text-[oklch(0.179_0.004_286)] flex items-center space-x-2">
-              <span>Instant 1-Click Secure Checkout<span className="text-[oklch(0.683_0.102_82.6)]">.</span></span>
-              <span className="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-sans font-bold border border-emerald-200">Encrypted</span>
-            </h3>
-            <p className="text-[11px] text-[oklch(0.552_0.014_286)]">Fast-track verified checkout for luxury fragrance</p>
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-1.5">
+              <h3 className="font-serif text-base sm:text-lg font-bold text-[oklch(0.179_0.004_286)]">
+                Instant 1-Click Secure Checkout<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
+              </h3>
+              <span className="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-sans font-bold border border-emerald-200">
+                Encrypted
+              </span>
+            </div>
+            <p className="text-[11px] text-[oklch(0.552_0.014_286)] mt-0.5">Fast-track verified checkout for luxury fragrance</p>
           </div>
         </div>
 
         {/* Order Summary Pill */}
         <div className="p-3.5 rounded-xl bg-[oklch(0.98_0.005_78.3)] border border-[oklch(0.926_0.01_81.8)] mb-6 flex items-center justify-between text-xs">
           <div>
-            <span className="text-[oklch(0.442_0.015_286)] block">{pricing.bottleCount} Flacons ({pricing.bundleName})</span>
+            <span className="text-[oklch(0.442_0.015_286)] block">{pricing.bottleCount} Presentation Editions ({pricing.bundleName})</span>
             <span className="font-bold text-[oklch(0.179_0.004_286)]">Estimated Delivery: {pincodeDeliveryText}</span>
           </div>
-          <span className="text-base font-extrabold text-[oklch(0.179_0.004_286)]">₹{pricing.finalTotal.toLocaleString('en-IN')}</span>
+          <div className="text-right">
+            <span className="text-base font-extrabold text-[oklch(0.179_0.004_286)] block">€{pricing.finalTotalEur}</span>
+            <span className="text-[11px] font-normal text-[oklch(0.442_0.015_286)] block">₹{pricing.finalTotal.toLocaleString('en-IN')}</span>
+          </div>
         </div>
 
         <form onSubmit={handleCompleteOrder} className="space-y-4">
           
           {/* Phone */}
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
+            <label htmlFor="checkout-phone" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
               Mobile Number (For Priority WhatsApp Updates)
             </label>
             <div className="flex rounded-xl overflow-hidden border border-[oklch(0.926_0.01_81.8)] focus-within:border-[oklch(0.683_0.102_82.6)]">
@@ -118,6 +126,9 @@ export const CheckoutModal: React.FC = () => {
               </span>
               <input
                 type="tel"
+                id="checkout-phone"
+                name="phone"
+                autoComplete="tel"
                 required
                 maxLength={10}
                 value={phone}
@@ -130,11 +141,14 @@ export const CheckoutModal: React.FC = () => {
           {/* Name & Pincode */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
+              <label htmlFor="checkout-name" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
                 Full Name
               </label>
               <input
                 type="text"
+                id="checkout-name"
+                name="name"
+                autoComplete="name"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -142,11 +156,14 @@ export const CheckoutModal: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
+              <label htmlFor="checkout-pincode" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
                 Pincode
               </label>
               <input
                 type="text"
+                id="checkout-pincode"
+                name="pincode"
+                autoComplete="postal-code"
                 required
                 maxLength={6}
                 value={pincode}
@@ -157,11 +174,14 @@ export const CheckoutModal: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
+            <label htmlFor="checkout-address" className="block text-[11px] font-bold uppercase tracking-wider text-[oklch(0.442_0.015_286)] mb-1">
               Delivery Address (Street, Building, Flat)
             </label>
             <input
               type="text"
+              id="checkout-address"
+              name="address"
+              autoComplete="street-address"
               required
               value={address}
               onChange={(e) => setAddress(e.target.value)}

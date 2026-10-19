@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Sparkles, Check, ArrowRight, RotateCcw } from 'lucide-react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
+import { FluidWaterCanvas } from './FluidWaterCanvas';
 
 interface OlfactiveMatchmakerModalProps {
   products: Product[];
@@ -117,7 +118,15 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
         onClick={(e) => e.stopPropagation()}
         data-lenis-prevent
       >
-        
+        {/* Interactive Fluid Extrait Dynamics Canvas */}
+        <FluidWaterCanvas
+          className="absolute inset-0 z-0 opacity-25 pointer-events-none"
+          variant="ambient"
+          themeColor="champagne"
+          interactiveIntensity={0.6}
+        />
+
+        <div className="relative z-10 flex-1 flex flex-col">
         {/* Close Button */}
         <button
           onClick={() => setIsQuizOpen(false)}
@@ -136,7 +145,7 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
             Find Your Signature Scent Profile<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
           </h2>
           <p className="text-xs text-[oklch(0.442_0.015_286)] mt-1">
-            Step {Math.min(step, 3)} of 3 • Algorithmic match across all 30 ZORUNE formulations
+            Step {Math.min(step, 3)} of 3 • Bespoke match across our 20 Terroir Formulations
           </p>
         </div>
 
@@ -317,17 +326,19 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
                       <span className="text-[11px] text-[oklch(0.683_0.102_82.6)] font-semibold">{product.sku}</span>
                     </div>
                     <h4 className="font-serif text-base font-bold text-[oklch(0.179_0.004_286)] truncate">{product.name}</h4>
-                    <p className="text-xs text-[oklch(0.442_0.015_286)] truncate">
-                      Inspired by {product.inspired_by.brand} {product.inspired_by.original_name}
+                    <p className="text-xs text-[oklch(0.683_0.102_82.6)] truncate font-medium">
+                      {product.tagline || product.concept}
                     </p>
-                    <p className="text-[11px] text-[oklch(0.179_0.004_286)] font-semibold mt-1">₹999 / 20ml Extrait</p>
+                    <p className="text-[11px] text-[oklch(0.179_0.004_286)] font-semibold mt-1">
+                      {product.price_eur ? `€${product.price_eur} (₹${product.price.toLocaleString('en-IN')})` : `₹${product.price.toLocaleString('en-IN')}`} / 50ml Refillable Extrait
+                    </p>
                   </div>
 
                   <button
                     onClick={() => { addToCart(product); setIsQuizOpen(false); }}
                     className="px-4 py-2 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-semibold text-xs uppercase tracking-wider flex-shrink-0 cursor-pointer shadow-xs"
                   >
-                    Add 20ml
+                    Acquire Flacon
                   </button>
                 </div>
               ))}
@@ -335,18 +346,19 @@ export const OlfactiveMatchmakerModal: React.FC<OlfactiveMatchmakerModalProps> =
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-[oklch(0.926_0.01_81.8)]">
               <span className="text-xs text-[oklch(0.442_0.015_286)]">
-                Get all 3 in a <strong className="text-[oklch(0.179_0.004_286)]">Wardrobe Trio for ₹2,499</strong> (Save ₹500 + Free Pouch)
+                Acquire all 3 matched masterpieces with complimentary insured courier
               </span>
               <button
                 onClick={handleAddAllMatches}
                 className="w-full sm:w-auto px-6 py-3 rounded-full bg-[oklch(0.179_0.004_286)] hover:bg-[oklch(0.262_0.007_286)] text-white font-bold text-xs uppercase tracking-wider cursor-pointer shadow-xs"
               >
-                Add All 3 to Cart (₹2,499)
+                Acquire All 3 Matches
               </button>
             </div>
           </div>
         )}
 
+        </div>
       </div>
     </div>
   );
