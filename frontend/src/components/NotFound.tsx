@@ -121,7 +121,7 @@ export const NotFound: React.FC<NotFoundProps> = ({
 
       {/* Footer Minimalist Signature */}
       <footer className="relative z-10 w-full py-4 border-t border-[oklch(0.926_0.01_81.8)] bg-white/70 backdrop-blur-md text-center text-xs text-[oklch(0.552_0.014_286)]">
-        <p>ZORUNE<span className="text-[oklch(0.683_0.102_82.6)]">.</span> Haute Parfumerie Collective • Formulated in Grasse & Bottled in Mumbai</p>
+        <p>ZORUNE<span className="text-[oklch(0.683_0.102_82.6)]">.</span> Haute Parfumerie Collective • Kanpur & Mumbai</p>
       </footer>
 
     </div>

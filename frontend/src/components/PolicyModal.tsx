@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Lenis from 'lenis';
 import { 
   X, 
   ShieldCheck, 
@@ -70,6 +71,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
   const [cooldownRemaining, setCooldownRemaining] = useState<number>(0);
   const formRenderTimeRef = useRef<number>(Date.now());
   const contentPaneRef = useRef<HTMLDivElement>(null);
+  const modalLenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     if (initialTab) {
@@ -90,8 +92,63 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
     }
   }, [activeTab]);
 
+  // Luxury Kinematic Lenis Smooth Scroll implementation on Editorial Policies & Customer Care Card
   useEffect(() => {
-    if (contentPaneRef.current) {
+    if (!isOpen) return;
+
+    let modalLenis: Lenis | null = null;
+    let rafId: number;
+
+    const timer = setTimeout(() => {
+      if (!contentPaneRef.current) return;
+      const wrapper = contentPaneRef.current;
+
+      modalLenis = new Lenis({
+        wrapper: wrapper,
+        content: wrapper,
+        eventsTarget: wrapper,
+        duration: 0.75,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1.25,
+        touchMultiplier: 1.5,
+        infinite: false,
+      });
+
+      modalLenisRef.current = modalLenis;
+      (window as any).policyModalLenis = modalLenis;
+
+      function raf(time: number) {
+        if (modalLenis) {
+          modalLenis.raf(time);
+          rafId = requestAnimationFrame(raf);
+        }
+      }
+      rafId = requestAnimationFrame(raf);
+    }, 40);
+
+    return () => {
+      clearTimeout(timer);
+      if (rafId) cancelAnimationFrame(rafId);
+      if (modalLenis) {
+        modalLenis.destroy();
+      }
+      modalLenisRef.current = null;
+      if ((window as any).policyModalLenis === modalLenis) {
+        delete (window as any).policyModalLenis;
+      }
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (modalLenisRef.current) {
+      modalLenisRef.current.scrollTo(0, { immediate: true });
+      setTimeout(() => {
+        modalLenisRef.current?.resize();
+      }, 50);
+    } else if (contentPaneRef.current) {
       contentPaneRef.current.scrollTo({ top: 0, behavior: 'instant' });
     }
   }, [activeTab]);
@@ -336,13 +393,11 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
             })}
           </div>
 
-          {/* Content Pane */}
+          {/* Content Pane with Lenis Kinematic Smooth Scroll */}
           <div 
             ref={contentPaneRef}
             className="flex-1 p-6 sm:p-8 overflow-y-auto min-h-0 overscroll-contain popup-scroll-pane space-y-6 text-sm leading-relaxed text-[oklch(0.442_0.015_286)] bg-[oklch(0.98_0.005_78.3)]"
-            data-lenis-prevent
             tabIndex={0}
-            onWheel={(e) => e.stopPropagation()}
           >
             
             {/* 1. PRIVACY POLICY */}
@@ -532,7 +587,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({
                     <span>30% Extrait Standard</span>
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-[oklch(0.179_0.004_286)]">Authenticity & Olfactive Purity</h3>
-                  <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Mastercrafted in Grasse, Bottled Fresh in India</p>
+                  <p className="text-xs text-[oklch(0.552_0.014_286)] mt-1">Mastercrafted & Bottled in Kanpur & Mumbai</p>
                 </div>
 
                 <div className="space-y-4">

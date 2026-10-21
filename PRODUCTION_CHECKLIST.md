@@ -37,9 +37,9 @@ This document details every prerequisite, architecture change, security hardenin
   - [ ] Verify creation of tables: `Product`, `Order`, `OrderItem`, `ContactTicket`, `CartSession`, `BlitznowPincode`.
 
 - [ ] **1.3 Database Seeding & Catalog Sync**
-  - [ ] Run [`database/seed.js`](database/seed.js) to ingest all 30 master formulation perfumes into the database.
-  - [ ] Verify SKU uniqueness (`ZR-01` to `ZR-30`) and uniform commercial pricing (₹999 @ 20ml Extrait de Parfum).
-  - [ ] Verify index health on `sku`, `gender`, `tier`, `olfactive_family`, and price columns.
+  - [ ] Run [`database/seed.js`](database/seed.js) to ingest all 20 sovereign terroir formulations into the database.
+  - [ ] Verify SKU uniqueness (`ZR-W01`–`ZR-W05`, `ZR-M01`–`ZR-M05`, `ZR-U01`–`ZR-U10`) and terroir pricing (₹14,800–₹27,000 @ 50ml Extrait de Parfum).
+  - [ ] Verify index health on `sku`, `gender`, `tier`, `olfactive_family`, `collection`, and price columns.
 
 - [ ] **1.4 Refactor Backend to Prisma Client**
   - [ ] Replace `ordersDb = new Map()` in [`backend/src/server.js`](backend/src/server.js) with `prisma.order.create` and `prisma.order.findUnique`.
@@ -157,7 +157,7 @@ This document details every prerequisite, architecture change, security hardenin
 - [ ] **5.1 Transactional Email Service**
   - [ ] Set up **Resend**, **Postmark**, or **Amazon SES** with dedicated custom domain records (`SPF`, `DKIM`, `DMARC`).
   - [ ] Create responsive HTML luxury email templates:
-    - Order Confirmation with itemized breakdown & ₹999 Extrait badges.
+    - Order Confirmation with itemized breakdown & sovereign terroir pricing (₹14,800–₹27,000 per 50ml Flacon).
     - Dispatch Notification with tracking link & courier partner.
     - Contact Inquiry Receipt with Reference Ticket (`ZR-CON-XXXXXX`).
     - 48-Hour Maceration & Application Guide tips sent 2 days post-delivery.
@@ -191,14 +191,14 @@ This document details every prerequisite, architecture change, security hardenin
     ```
 
 - [ ] **6.2 Image & Media Delivery Optimization**
-  - [ ] Ensure all 30 bottle images and editorial hero banners are compressed in `.webp` or `.avif` formats.
+  - [ ] Ensure all 20 flacon images and editorial hero banners are compressed in `.webp` or `.avif` formats.
   - [ ] Host product images on high-speed CDN (Cloudinary, Cloudflare R2, or Vercel Blob) with proper caching headers (`Cache-Control: public, max-age=31536000, immutable`).
   - [ ] Add `width` and `height` attributes to avoid Cumulative Layout Shift (CLS).
 
 - [ ] **6.3 Structured Data & E-Commerce SEO**
   - [ ] In [`frontend/index.html`](frontend/index.html), add JSON-LD structured data for:
-    - `Organization` (ZORUNE Haute Parfumerie, Atelier locations in Kanpur & Mumbai).
-    - `Product` schema for each perfume (price: ₹999, currency: INR, availability: InStock, Extrait de Parfum Elixir 30%).
+    - `Organization` (ZORUNE Sovereign Haute Parfumerie, global atelier network).
+    - `Product` schema for each of the 20 sovereign terroir formulations (price: ₹14,800–₹27,000, currency: INR/EUR/USD, availability: InStock, Extrait de Parfum 20%–30%).
     - `FAQPage` schema corresponding to the policy FAQ items.
   - [ ] Add Open Graph (`og:image`, `og:title`, `og:description`) and Twitter card tags.
   - [ ] Deploy dynamic or static `sitemap.xml` and `robots.txt` in `frontend/public/`.
@@ -316,9 +316,9 @@ VITE_SENTRY_FRONTEND_DSN="https://xxxx@o0.ingest.sentry.io/xxxx"
 
 Before driving public ad traffic or announcing the launch:
 
-- [ ] Place a real ₹999 live order using a real UPI ID / Credit Card.
+- [ ] Place a real live order at sovereign terroir pricing (e.g. ₹16,500 for Yuzu Céleste) using a real UPI ID / Credit Card.
 - [ ] Confirm funds arrive in Merchant Settlement Account.
-- [ ] Verify order record persists in the PostgreSQL database with correct items and pricing.
+- [ ] Verify order record persists in the PostgreSQL database with correct items, terroir pricing, and multi-currency amounts (INR/EUR/USD).
 - [ ] Confirm receipt of Order Confirmation Email and WhatsApp message within 60 seconds.
 - [ ] Trigger an inquiry submission on the unified **Contact Us** form & verify receipt of Reference Ticket email.
 - [ ] Run Google Lighthouse Audit on mobile: target scores &gt; 90 for Performance, Accessibility, and SEO.

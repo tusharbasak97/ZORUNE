@@ -65,24 +65,25 @@ enum PaymentStatus {
 
 model Product {
   id               String         @id @default(uuid())
-  sku              String         @unique // e.g. "ZR-03"
-  name             String         // e.g. "Imagination"
+  sku              String         @unique // e.g. "ZR-W01", "ZR-M03", "ZR-U07"
+  name             String         // e.g. "Orris Soie", "Oud Samarkhand", "Yuzu Céleste"
   brand            String         @default("ZORUNE")
-  concentration    String         @default("Extrait de Parfum (30%)")
-  sizeMl           Int            @default(50) // 50ml Master Crystal Presentation Flacon
-  price            Decimal        @default(19500.00) @db.Decimal(10, 2)
-  stock            Int            @default(100)
+  collection       String         @default("Unisex Terroir Collection") // Women's / Men's / Unisex Terroir
+  concentration    String         @default("Extrait de Parfum (25%)")
+  sizeMl           Int            @default(50) // 50ml Master Super-Flint Crystal Flacon (Refillable)
+  price            Decimal        @db.Decimal(10, 2) // INR terroir pricing (₹14,800–₹27,000)
+  priceEur         Decimal?       @db.Decimal(10, 2) // EUR pricing (€165–€300)
+  priceUsd         Decimal?       @db.Decimal(10, 2) // USD pricing ($180–$330)
+  stock            Int            @default(65)
   
   gender           Gender
   commercialScore  Int            // 1-100 score
-  commercialRank   Int            // 1-30 rank
-  tier             InventoryTier  // TIER_1_HERO (50%), TIER_2_REVENUE (35%), TIER_3_NICHE (15%)
+  commercialRank   Int            // 1-20 rank
+  tier             InventoryTier  // TIER_1_HERO, TIER_2_REVENUE
   
-  // Inspiration Details
-  inspiredBrand    String         // e.g. "Louis Vuitton"
-  originalName     String         // e.g. "Imagination"
-  originalPriceUsd Decimal?       @db.Decimal(10, 2)
-  arbitrageSavings Decimal?       @db.Decimal(5, 2) // e.g. 96.00%
+  // Terroir Origin & Cooperative
+  inspiredBrand    String         // e.g. "Umaji Village Cooperative Kōchi"
+  originalName     String         // e.g. "Cold-Pressed Wild Mountain Kōchi Yuzu"
   
   // Olfactive DNA
   olfactiveFamily  String         // e.g. "Citrus Aromatic"
@@ -144,7 +145,7 @@ model CartItem {
   productId String
   product   Product  @relation(fields: [productId], references: [id])
   quantity  Int      @default(1)
-  price     Decimal  @default(999.00) @db.Decimal(10, 2)
+  price     Decimal  @db.Decimal(10, 2) // Terroir pricing per flacon
   createdAt DateTime @default(now())
 
   @@unique([cartId, productId])
@@ -201,7 +202,7 @@ model OrderItem {
   productId String
   product   Product  @relation(fields: [productId], references: [id])
   quantity  Int      @default(1)
-  unitPrice Decimal  @default(999.00) @db.Decimal(10, 2)
+  unitPrice Decimal  @db.Decimal(10, 2) // Terroir unit price per flacon
   total     Decimal  @db.Decimal(10, 2)
 }
 

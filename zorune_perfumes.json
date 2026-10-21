@@ -26,7 +26,7 @@
       "formula_code": "Formula W-01",
       "brand": "ZORUNE",
       "collection": "Women's Haute Parfumerie",
-      "subtitle": "The Velvet Pallida • Florentine Orris Butter & Royal Suede",
+      "subtitle": "The Velvet Pallida \u2022 Florentine Orris Butter & Royal Suede",
       "concept": "Inspired by Renaissance Tuscan silk draperies and noble powder chambers. An aristocratic second-skin aura marrying 3-year cured Florentine Orris Butter (15% Irone) with Grasse Jasmine and warm New Caledonian Sandalwood.",
       "inspired_by": {
         "brand": "Tuscan Iris Guild",
@@ -71,9 +71,9 @@
       "terroir": {
         "origin": "Florence, Tuscany, Italy",
         "cooperative": "Tuscan Artisan Iris Guild (Organic certified, 3-yr rhizome cure)",
-        "coordinates": "43.7696° N, 11.2558° E",
+        "coordinates": "43.7696\u00b0 N, 11.2558\u00b0 E",
         "elevation": "320m",
-        "harvest_season": "July–August"
+        "harvest_season": "July\u2013August"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint (24mm punt, 240g tare)",
@@ -112,7 +112,7 @@
         "carrier": "96% Organic Bio-Ethanol (Zero Added Water)"
       },
       "description": "An aristocratic second-skin aura. Three-year cured Florentine Orris Butter containing 15% pure natural irones, enveloped in Grasse jasmine absolute and creamy New Caledonian sandalwood.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_champagne.webp",
       "commercial_score": 97,
       "commercial_rank": 1,
       "size_ml": 50,
@@ -125,7 +125,7 @@
       "is_rescue_sku": false,
       "tagline": "Aristocratic Florentine Iris Pallida (15% Irone)",
       "longevity_hours": 18,
-      "sillage_rating": "Intimate to Enveloping Suede Aura (16–18h)"
+      "sillage_rating": "Intimate to Enveloping Suede Aura (16\u201318h)"
     },
     {
       "id": 2,
@@ -134,7 +134,7 @@
       "formula_code": "Formula W-02",
       "brand": "ZORUNE",
       "collection": "Women's Haute Parfumerie",
-      "subtitle": "Midnight Sambac • Night-Blooming Jasmine & Pink Peppercorn",
+      "subtitle": "Midnight Sambac \u2022 Night-Blooming Jasmine & Pink Peppercorn",
       "concept": "Night-blooming temple gardens under a tropical monsoon sky. Intoxicating, humid, ethereal jasmine sambac harvested before sunrise, accented with pink peppercorn and lush Indian tuberose resting on clean vetiver.",
       "inspired_by": {
         "brand": "Tamil Nadu Growers Cooperative",
@@ -179,9 +179,9 @@
       "terroir": {
         "origin": "Madurai, Tamil Nadu, India",
         "cooperative": "Madurai Flower Growers Association / LMR Naturals Fair Trade",
-        "coordinates": "9.9252° N, 78.1198° E",
+        "coordinates": "9.9252\u00b0 N, 78.1198\u00b0 E",
         "elevation": "136m",
-        "harvest_season": "April–July (Pre-dawn pick)"
+        "harvest_season": "April\u2013July (Pre-dawn pick)"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -218,7 +218,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An intoxicating nocturnal white floral. Hand-plucked Indian jasmine sambac buds blossoming into narcotic solar radiance with pink pepper and Haitian vetiver.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 95,
       "commercial_rank": 2,
       "size_ml": 50,
@@ -231,16 +231,16 @@
       "is_rescue_sku": false,
       "tagline": "Pre-Dawn Madurai Jasmine Sambac",
       "longevity_hours": 16,
-      "sillage_rating": "Hypnotic White-Floral Projection (14–16h)"
+      "sillage_rating": "Hypnotic White-Floral Projection (14\u201316h)"
     },
     {
       "id": 3,
       "sku": "ZR-W03",
-      "name": "Rose de Grasse Éternelle",
+      "name": "Rose de Grasse \u00c9ternelle",
       "formula_code": "Formula W-03",
       "brand": "ZORUNE",
       "collection": "Women's Haute Parfumerie",
-      "subtitle": "May Petal & Green Dew • Pays de Grasse Centifolia Rose",
+      "subtitle": "May Petal & Green Dew \u2022 Pays de Grasse Centifolia Rose",
       "concept": "The crisp 6:00 AM dawn harvest in Grasse when mountain dew clings to thousands of Centifolia rose petals. Honeyed, green, luminous, kissed with cold-pressed Calabrian bergamot and Somalian frankincense tears.",
       "inspired_by": {
         "brand": "Pays de Grasse Bio-Holdings",
@@ -285,9 +285,9 @@
       "terroir": {
         "origin": "Grasse, Alpes-Maritimes, France",
         "cooperative": "Grasse Producers Cooperative (UNESCO Heritage Protected Cultivation)",
-        "coordinates": "43.6602° N, 6.9287° E",
+        "coordinates": "43.6602\u00b0 N, 6.9287\u00b0 E",
         "elevation": "350m",
-        "harvest_season": "Month of May (Daily 5 AM–9 AM)"
+        "harvest_season": "Month of May (Daily 5 AM\u20139 AM)"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -324,7 +324,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The golden standard of rose perfumery. Pure Grasse Centifolia rose absolute distilled within hours of picking, balanced with crisp dew and golden frankincense.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_rose.webp",
       "commercial_score": 96,
       "commercial_rank": 3,
       "size_ml": 50,
@@ -337,7 +337,7 @@
       "is_rescue_sku": false,
       "tagline": "UNESCO Heritage Grasse Centifolia Rose",
       "longevity_hours": 15,
-      "sillage_rating": "Radiant Luminous Floral Halo (14–15h)"
+      "sillage_rating": "Radiant Luminous Floral Halo (14\u201315h)"
     },
     {
       "id": 4,
@@ -346,7 +346,7 @@
       "formula_code": "Formula W-04",
       "brand": "ZORUNE",
       "collection": "Women's Haute Parfumerie",
-      "subtitle": "Cape Blossom & Wild Honey • Namaqualand Wildflora & Honeybush",
+      "subtitle": "Cape Blossom & Wild Honey \u2022 Namaqualand Wildflora & Honeybush",
       "concept": "The post-winter miracle across the Cape Floral Kingdom when arid fynbos hillsides burst into billions of honeyed blossoms. Featuring rare Cape Snowbush, honeyed Cederberg wild honeybush, and Bourbon vanilla.",
       "inspired_by": {
         "brand": "Heiveld Cooperative Nieuwoudtville",
@@ -377,7 +377,7 @@
         "occasions": [
           "Resort & Travel",
           "Artistic Events",
-          "Garden Soirées"
+          "Garden Soir\u00e9es"
         ]
       },
       "main_accords": [
@@ -391,9 +391,9 @@
       "terroir": {
         "origin": "Cederberg & Namaqualand, Western Cape, South Africa",
         "cooperative": "Heiveld Cooperative & Indigenous Agathosma Trust",
-        "coordinates": "31.3719° S, 19.1158° E",
+        "coordinates": "31.3719\u00b0 S, 19.1158\u00b0 E",
         "elevation": "780m",
-        "harvest_season": "September–November"
+        "harvest_season": "September\u2013November"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -430,7 +430,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A sun-drenched Cape floral nectar. Golden honeybush tea and wild chamomilic snowbush sweetened with raw vanilla pod and sparkling rose geranium.",
-      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 93,
       "commercial_rank": 4,
       "size_ml": 50,
@@ -452,7 +452,7 @@
       "formula_code": "Formula W-05",
       "brand": "ZORUNE",
       "collection": "Women's Haute Parfumerie",
-      "subtitle": "The Mediterranean Solstice • Tunisian Orange Blossom & Blood Orange",
+      "subtitle": "The Mediterranean Solstice \u2022 Tunisian Orange Blossom & Blood Orange",
       "concept": "Midday sunlight warming coastal citrus groves and stone terraces on the Mediterranean coast. Sparkling Sicilian blood orange, radiant Tunisian orange blossom absolute, and wild linden blossom resting on warm Atlas cedarwood.",
       "inspired_by": {
         "brand": "Nabeul Citrus Artisan Guild",
@@ -494,9 +494,9 @@
       "terroir": {
         "origin": "Cap Bon, Nabeul, Tunisia & Mount Etna, Sicily",
         "cooperative": "Nabeul Citrus Artisan Guild & Sicilian Organic Agro-Groves",
-        "coordinates": "36.4561° N, 10.7376° E",
+        "coordinates": "36.4561\u00b0 N, 10.7376\u00b0 E",
         "elevation": "45m",
-        "harvest_season": "March–April"
+        "harvest_season": "March\u2013April"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -533,7 +533,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An effervescent citrus-blossom elixir. Sun-soaked blood orange and opulent Tunisian orange blossom grounded in smooth Moroccan cedarwood.",
-      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_citrus.webp",
       "commercial_score": 91,
       "commercial_rank": 5,
       "size_ml": 50,
@@ -546,7 +546,7 @@
       "is_rescue_sku": false,
       "tagline": "Cap Bon Sun-Drenched Orange Blossom",
       "longevity_hours": 13,
-      "sillage_rating": "Luminous Citrus Radiance (12–13h)"
+      "sillage_rating": "Luminous Citrus Radiance (12\u201313h)"
     },
     {
       "id": 6,
@@ -555,7 +555,7 @@
       "formula_code": "Formula M-01",
       "brand": "ZORUNE",
       "collection": "Men's Haute Parfumerie",
-      "subtitle": "The Temple Cryptomeria • Kiso Valley Hinoki & Yakushima Sugi",
+      "subtitle": "The Temple Cryptomeria \u2022 Kiso Valley Hinoki & Yakushima Sugi",
       "concept": "Walking the ancient forested Nakasendo post-town trail in winter. Serene, dry, resinous cedarwood, therapeutic Japanese Hinoki heartwood, damp moss, and cold temple incense rising into misty alpine air.",
       "inspired_by": {
         "brand": "Kiso Forestry Union Nagano",
@@ -600,7 +600,7 @@
       "terroir": {
         "origin": "Kiso Valley, Nagano Prefecture, Japan",
         "cooperative": "Kiso Forestry Union (Sustainable Kanbatsu forest-thinning)",
-        "coordinates": "35.8456° N, 137.6942° E",
+        "coordinates": "35.8456\u00b0 N, 137.6942\u00b0 E",
         "elevation": "940m",
         "harvest_season": "Year-round sustainable forestry"
       },
@@ -641,7 +641,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An architectural wooden temple in winter. Sacred Japanese Hinoki heartwood and Yakushima cedarwood elevated by cold resins and crisp black pepper.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 98,
       "commercial_rank": 6,
       "size_ml": 50,
@@ -654,7 +654,7 @@
       "is_rescue_sku": false,
       "tagline": "Kiso Valley Ancient Hinoki Wood",
       "longevity_hours": 17,
-      "sillage_rating": "Sovereign Resinous Wood Sillage (16–17h)"
+      "sillage_rating": "Sovereign Resinous Wood Sillage (16\u201317h)"
     },
     {
       "id": 7,
@@ -663,7 +663,7 @@
       "formula_code": "Formula M-02",
       "brand": "ZORUNE",
       "collection": "Men's Haute Parfumerie",
-      "subtitle": "The Mountain Ridge • Wild Buchu, Labdanum & Chaco Guaiacwood",
+      "subtitle": "The Mountain Ridge \u2022 Wild Buchu, Labdanum & Chaco Guaiacwood",
       "concept": "Dawn scrambling across the iron-red sandstone ridges of the Western Cape mountains. Brushed by wild aromatic buchu leaves releasing dark cassis and camphor, supported by Spanish labdanum and smoky guaiacwood.",
       "inspired_by": {
         "brand": "Indigenous Agathosma Trust Cederberg",
@@ -708,9 +708,9 @@
       "terroir": {
         "origin": "Cederberg Wilderness, Western Cape, South Africa",
         "cooperative": "Cederberg Indigenous Agathosma Trust (FairWild & UEBT Certified)",
-        "coordinates": "32.1842° S, 19.1415° E",
+        "coordinates": "32.1842\u00b0 S, 19.1415\u00b0 E",
         "elevation": "1,050m",
-        "harvest_season": "January–March"
+        "harvest_season": "January\u2013March"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -747,7 +747,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A rugged mountain herbal leather. Wild Cederberg buchu leaf offering deep blackcurrant-herbal facets resting on amber resin and dark leathered guaiacwood.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 93,
       "commercial_rank": 7,
       "size_ml": 50,
@@ -760,7 +760,7 @@
       "is_rescue_sku": false,
       "tagline": "Wild Harvested Cederberg Mountain Buchu",
       "longevity_hours": 16,
-      "sillage_rating": "Assertive Herbal-Leather Trail (15–16h)"
+      "sillage_rating": "Assertive Herbal-Leather Trail (15\u201316h)"
     },
     {
       "id": 8,
@@ -769,7 +769,7 @@
       "formula_code": "Formula M-03",
       "brand": "ZORUNE",
       "collection": "Men's Haute Parfumerie",
-      "subtitle": "The Silk Road Caravan • Assam Wild Oud, Kashmiri Saffron & Green Hojari",
+      "subtitle": "The Silk Road Caravan \u2022 Assam Wild Oud, Kashmiri Saffron & Green Hojari",
       "concept": "The grand caravanserais of Samarkand. Cedar chests laden with wild Assam Aquilaria oud, bittersweet Kashmiri saffron stigmas, and smoldering Omani Royal Green Hojari frankincense tears.",
       "inspired_by": {
         "brand": "Assam Ethical Aquilaria Plantations",
@@ -812,7 +812,7 @@
       "terroir": {
         "origin": "Hojai, Assam, India & Dhofar Plateau, Oman",
         "cooperative": "Hojai Sustainable Agroforestry & Dhofar Frankincense Guild",
-        "coordinates": "26.0028° N, 92.8597° E",
+        "coordinates": "26.0028\u00b0 N, 92.8597\u00b0 E",
         "elevation": "110m",
         "harvest_season": "Winter mature extraction"
       },
@@ -852,7 +852,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The pinnacle of oriental resinous perfumery. Certified sustainable Assam wild oud infused with rare Kashmiri saffron and imperial Omani frankincense.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 99,
       "commercial_rank": 8,
       "size_ml": 50,
@@ -865,7 +865,7 @@
       "is_rescue_sku": false,
       "tagline": "Sustainable Assam Wild Aquilaria Oud (30% Extrait)",
       "longevity_hours": 20,
-      "sillage_rating": "Nuclear Opulent Sillage (18–20h+)"
+      "sillage_rating": "Nuclear Opulent Sillage (18\u201320h+)"
     },
     {
       "id": 9,
@@ -874,7 +874,7 @@
       "formula_code": "Formula M-04",
       "brand": "ZORUNE",
       "collection": "Men's Haute Parfumerie",
-      "subtitle": "The Kannauj Rainmaker • Traditional Copper-Deg Ruh Khus & Geosmin",
+      "subtitle": "The Kannauj Rainmaker \u2022 Traditional Copper-Deg Ruh Khus & Geosmin",
       "concept": "The transformative instant when the first drops of the summer monsoon break months of blistering heat, soaking sun-baked clay. Hydro-distilled Kannauj Ruh Khus in ancient copper vessels, paired with green mandarin and riverbed geosmin.",
       "inspired_by": {
         "brand": "Kannauj Traditional Distillers Guild",
@@ -890,7 +890,7 @@
         "Master Formulation Research Group",
         "Kannauj Heritage Guild"
       ],
-      "climate_role": "45°C Heat Resistor & Intense Humidity Neutralizer",
+      "climate_role": "45\u00b0C Heat Resistor & Intense Humidity Neutralizer",
       "when_to_apply": {
         "seasons": [
           "Summer",
@@ -919,9 +919,9 @@
       "terroir": {
         "origin": "Kannauj, Uttar Pradesh, India",
         "cooperative": "Kannauj Artisan Distillers Guild (400-year copper deg-bhapka heritage)",
-        "coordinates": "27.0543° N, 79.9134° E",
+        "coordinates": "27.0543\u00b0 N, 79.9134\u00b0 E",
         "elevation": "139m",
-        "harvest_season": "December–February (Wild roots)"
+        "harvest_season": "December\u2013February (Wild roots)"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -960,7 +960,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The authentic scent of rain on baked earth. Pure copper-distilled North Indian Ruh Khus vetiver infused with natural petrichor geosmin and zesty green mandarin.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 96,
       "commercial_rank": 9,
       "size_ml": 50,
@@ -973,7 +973,7 @@
       "is_rescue_sku": false,
       "tagline": "Copper-Distilled Kannauj Petrichor Ruh Khus",
       "longevity_hours": 16,
-      "sillage_rating": "Crisp Cooling Earth Sillage (15–16h)"
+      "sillage_rating": "Crisp Cooling Earth Sillage (15\u201316h)"
     },
     {
       "id": 10,
@@ -982,7 +982,7 @@
       "formula_code": "Formula M-05",
       "brand": "ZORUNE",
       "collection": "Men's Haute Parfumerie",
-      "subtitle": "The Cordoba Saddlery • Spanish Cade Wood, Birch Tar & Resins",
+      "subtitle": "The Cordoba Saddlery \u2022 Spanish Cade Wood, Birch Tar & Resins",
       "concept": "The historic leather-working ateliers of Moorish Cordoba. Bitter orange peels dried over smoldering cade embers, polished harness hides, and deep Somalian opoponax resin.",
       "inspired_by": {
         "brand": "Sierra de Grazalema Co-op Spain",
@@ -1025,7 +1025,7 @@
       "terroir": {
         "origin": "Sierra de Grazalema, Andalusia, Spain",
         "cooperative": "Sierra de Grazalema Wild Harvesters Guild",
-        "coordinates": "36.7592° N, 5.3683° W",
+        "coordinates": "36.7592\u00b0 N, 5.3683\u00b0 W",
         "elevation": "820m",
         "harvest_season": "Autumn"
       },
@@ -1064,7 +1064,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An uncompromising dry Spanish leather. Smoldering cade wood and purified birch tar softened with bitter orange and golden opoponax resin.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 94,
       "commercial_rank": 10,
       "size_ml": 50,
@@ -1077,20 +1077,20 @@
       "is_rescue_sku": false,
       "tagline": "Pyrogenic-Safe Spanish Cade Leather",
       "longevity_hours": 17,
-      "sillage_rating": "Dark Enveloping Leather Presence (16–17h)"
+      "sillage_rating": "Dark Enveloping Leather Presence (16\u201317h)"
     },
     {
       "id": 11,
       "sku": "ZR-U01",
-      "name": "Yuzu Céleste",
+      "name": "Yuzu C\u00e9leste",
       "formula_code": "Formula U-01",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Glacier Spring • Kōchi Yuzu, Hokkaido Mint & Mountain Juniper",
-      "concept": "Pristine mountain onsens in Shikoku surrounded by snow-covered yuzu branches. Sparkling, sharp, joyful Kōchi yuzu cold-pressed oil, Japanese white mint, and Himalayan juniper berry over crystalline biotech ambroxan.",
+      "subtitle": "The Glacier Spring \u2022 K\u014dchi Yuzu, Hokkaido Mint & Mountain Juniper",
+      "concept": "Pristine mountain onsens in Shikoku surrounded by snow-covered yuzu branches. Sparkling, sharp, joyful K\u014dchi yuzu cold-pressed oil, Japanese white mint, and Himalayan juniper berry over crystalline biotech ambroxan.",
       "inspired_by": {
-        "brand": "Umaji Village Cooperative Kōchi",
-        "original_name": "Cold-Pressed Wild Mountain Kōchi Yuzu"
+        "brand": "Umaji Village Cooperative K\u014dchi",
+        "original_name": "Cold-Pressed Wild Mountain K\u014dchi Yuzu"
       },
       "concentration": "Extrait de Parfum (24%)",
       "gender": "Unisex",
@@ -1128,11 +1128,11 @@
         "aquatic"
       ],
       "terroir": {
-        "origin": "Umaji Village, Kōchi Prefecture, Japan",
+        "origin": "Umaji Village, K\u014dchi Prefecture, Japan",
         "cooperative": "Umaji Village Cooperative (Circular zero-waste fruit peel harvest)",
-        "coordinates": "33.5647° N, 134.0042° E",
+        "coordinates": "33.5647\u00b0 N, 134.0042\u00b0 E",
         "elevation": "620m",
-        "harvest_season": "November–January"
+        "harvest_season": "November\u2013January"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -1142,7 +1142,7 @@
       },
       "notes": {
         "top": [
-          "Kōchi Yuzu Cold-Press",
+          "K\u014dchi Yuzu Cold-Press",
           "Hokkaido White Mint (Hakku)",
           "Japanese Lemon"
         ],
@@ -1168,8 +1168,8 @@
         "water_content": "0.00% w/w",
         "carrier": "96% Organic Bio-Ethanol"
       },
-      "description": "A glacier-cold mountain citrus. Pristine Kōchi yuzu fruit and crisp Japanese mint bursting over mineral spring water and clean ambergris.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "description": "A glacier-cold mountain citrus. Pristine K\u014dchi yuzu fruit and crisp Japanese mint bursting over mineral spring water and clean ambergris.",
+      "image_url": "/flacons/flacon_citrus.webp",
       "commercial_score": 98,
       "commercial_rank": 11,
       "size_ml": 50,
@@ -1180,9 +1180,9 @@
       "stock": 95,
       "tier": "TIER_1_HERO",
       "is_rescue_sku": false,
-      "tagline": "Single-Origin Mountain Kōchi Yuzu",
+      "tagline": "Single-Origin Mountain K\u014dchi Yuzu",
       "longevity_hours": 15,
-      "sillage_rating": "Crystalline Sparkling Halo (14–15h)"
+      "sillage_rating": "Crystalline Sparkling Halo (14\u201315h)"
     },
     {
       "id": 12,
@@ -1191,7 +1191,7 @@
       "formula_code": "Formula U-02",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Golden Stigma • Pampore Kashmiri Saffron & Somalian Myrrh",
+      "subtitle": "The Golden Stigma \u2022 Pampore Kashmiri Saffron & Somalian Myrrh",
       "concept": "High-altitude spice routes crossing the Pir Panjal mountains. Bittersweet golden Pampore saffron stigmas drying on woven blankets, enriched with Somalian myrrh, Guatemalan cardamom, and golden amber.",
       "inspired_by": {
         "brand": "Pampore Smallholders Saffron Co.",
@@ -1236,9 +1236,9 @@
       "terroir": {
         "origin": "Pampore, Kashmir Valley, India",
         "cooperative": "Pampore Smallholders Saffron Co. (100% Grade-1 Mongra Stigmas)",
-        "coordinates": "34.0182° N, 74.9315° E",
+        "coordinates": "34.0182\u00b0 N, 74.9315\u00b0 E",
         "elevation": "1,620m",
-        "harvest_season": "October–November (2-week dawn bloom)"
+        "harvest_season": "October\u2013November (2-week dawn bloom)"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -1276,7 +1276,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A luminous golden spice elixir. Genuine Kashmiri Mongra saffron stigmas imparting warm bittersweet leather nuances against Somalian myrrh and amber.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 97,
       "commercial_rank": 12,
       "size_ml": 50,
@@ -1289,7 +1289,7 @@
       "is_rescue_sku": false,
       "tagline": "High-Altitude Kashmiri Mongra Saffron",
       "longevity_hours": 18,
-      "sillage_rating": "Golden Velvet Projection (16–18h)"
+      "sillage_rating": "Golden Velvet Projection (16\u201318h)"
     },
     {
       "id": 13,
@@ -1298,7 +1298,7 @@
       "formula_code": "Formula U-03",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Temple of Dawn • Kiso Hinoki, Kyoto Kuromoji & Frankincense",
+      "subtitle": "The Temple of Dawn \u2022 Kiso Hinoki, Kyoto Kuromoji & Frankincense",
       "concept": "The morning prayer bell at Ryoan-ji, Kyoto. Cedar and Hinoki temple walkways washed with mountain spring water reflecting pale dawn light, infused with spicy-floral Kuromoji branches and sheer incense.",
       "inspired_by": {
         "brand": "Mount Hiei Forest Keepers Kyoto",
@@ -1343,7 +1343,7 @@
       "terroir": {
         "origin": "Kyoto & Nagano, Japan",
         "cooperative": "Mount Hiei Forest Keepers & Kiso Forestry Union",
-        "coordinates": "35.0705° N, 135.8402° E",
+        "coordinates": "35.0705\u00b0 N, 135.8402\u00b0 E",
         "elevation": "848m",
         "harvest_season": "Spring/Autumn sustainable pruning"
       },
@@ -1383,7 +1383,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A serene Japanese sanctuary in scent. Pristine Hinoki wood washed with cold morning water, spiced with wild Kuromoji twigs and clean temple incense.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 96,
       "commercial_rank": 13,
       "size_ml": 50,
@@ -1396,7 +1396,7 @@
       "is_rescue_sku": false,
       "tagline": "Kyoto Kuromoji & Kiso Hinoki Sanctuary",
       "longevity_hours": 16,
-      "sillage_rating": "Intimate Meditative Radiance (14–16h)"
+      "sillage_rating": "Intimate Meditative Radiance (14\u201316h)"
     },
     {
       "id": 14,
@@ -1405,7 +1405,7 @@
       "formula_code": "Formula U-04",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Cape Storm • Wild Cederberg Buchu & Atlantic Seaweed",
+      "subtitle": "The Cape Storm \u2022 Wild Cederberg Buchu & Atlantic Seaweed",
       "concept": "The dramatic convergence of the Atlantic and Indian Oceans at the Cape of Good Hope during a winter gale. Aromatic cassis-mint buchu leaves swept up in salty ocean spray, blue eucalyptus, and wild Pyrenean rosemary.",
       "inspired_by": {
         "brand": "Indigenous Agathosma Trust Cederberg",
@@ -1449,9 +1449,9 @@
       "terroir": {
         "origin": "Cederberg & Atlantic Coast, South Africa",
         "cooperative": "Cederberg Indigenous Agathosma Trust & Brittany Seaweed Harvesters",
-        "coordinates": "34.3568° S, 18.4725° E",
+        "coordinates": "34.3568\u00b0 S, 18.4725\u00b0 E",
         "elevation": "Sea level to 900m",
-        "harvest_season": "January–March"
+        "harvest_season": "January\u2013March"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -1488,7 +1488,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An electrifying aromatic oceanic creation. Dark blackcurrant-green buchu leaves whipping through cold salty Atlantic surf and sun-bleached driftwood.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 93,
       "commercial_rank": 14,
       "size_ml": 50,
@@ -1501,7 +1501,7 @@
       "is_rescue_sku": false,
       "tagline": "Atlantic Surf & Wild Cederberg Buchu",
       "longevity_hours": 15,
-      "sillage_rating": "Crisp Oceanic Sillage (14–15h)"
+      "sillage_rating": "Crisp Oceanic Sillage (14\u201315h)"
     },
     {
       "id": 15,
@@ -1510,7 +1510,7 @@
       "formula_code": "Formula U-05",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Sacred Carving • Karnataka Sandalwood & Siamese Benzoin",
+      "subtitle": "The Sacred Carving \u2022 Karnataka Sandalwood & Siamese Benzoin",
       "concept": "Ancient Chola temple sanctums with doors carved from single aged sandalwood timbers, polished by centuries of devotion. Pure plantation Santalum album, Australian sandalwood, ambrette seeds, and golden Siamese benzoin tears.",
       "inspired_by": {
         "brand": "Karnataka State Forest Plantations",
@@ -1555,7 +1555,7 @@
       "terroir": {
         "origin": "Karnataka, South India & Western Australia",
         "cooperative": "Karnataka Certified Sustainable Plantations & Dutjahn Indigenous Sandalwood Guild",
-        "coordinates": "12.2958° N, 76.6394° E",
+        "coordinates": "12.2958\u00b0 N, 76.6394\u00b0 E",
         "elevation": "763m",
         "harvest_season": "15-20 year sustainable rotation"
       },
@@ -1595,7 +1595,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The golden benchmark of authentic sandalwood. Certified sustainable Karnataka Santalum album delivering creamy, buttery balsamic wood warmth with immense skin longevity.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 99,
       "commercial_rank": 15,
       "size_ml": 50,
@@ -1608,7 +1608,7 @@
       "is_rescue_sku": false,
       "tagline": "Govt Certified Karnataka Santalum Album (30% Extrait)",
       "longevity_hours": 20,
-      "sillage_rating": "Sensual Enveloping Wood Radiance (18–20h)"
+      "sillage_rating": "Sensual Enveloping Wood Radiance (18\u201320h)"
     },
     {
       "id": 16,
@@ -1617,7 +1617,7 @@
       "formula_code": "Formula U-06",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Maquis Wildfire • Balagne Corsican Immortelle & Spanish Cistus",
+      "subtitle": "The Maquis Wildfire \u2022 Balagne Corsican Immortelle & Spanish Cistus",
       "concept": "Sun-baked granite hillsides of Corsica where the wind carries the dry, honey-spicy aroma of yellow everlasting flowers out to sea. Sun-drenched immortelle, golden honeybush, and aromatic Spanish cistus resins.",
       "inspired_by": {
         "brand": "Balagne Artisanal Distillers Corsica",
@@ -1661,9 +1661,9 @@
       "terroir": {
         "origin": "Balagne Plateau, Corsica, France",
         "cooperative": "Balagne Artisanal Distillers (Organic wild-crafted Helichrysum)",
-        "coordinates": "42.5683° N, 8.9419° E",
+        "coordinates": "42.5683\u00b0 N, 8.9419\u00b0 E",
         "elevation": "420m",
-        "harvest_season": "June–July"
+        "harvest_season": "June\u2013July"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -1700,7 +1700,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An evocative sun-baked amber. Rare Corsican immortelle flowers releasing maple-curry warmth, wild maquis herbs, and deep golden labdanum.",
-      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 93,
       "commercial_rank": 16,
       "size_ml": 50,
@@ -1713,16 +1713,16 @@
       "is_rescue_sku": false,
       "tagline": "Balagne Wild Corsican Immortelle",
       "longevity_hours": 17,
-      "sillage_rating": "Sun-Drenched Honeyed Resin Aura (16–17h)"
+      "sillage_rating": "Sun-Drenched Honeyed Resin Aura (16\u201317h)"
     },
     {
       "id": 17,
       "sku": "ZR-U07",
-      "name": "Kuromoji Glacé",
+      "name": "Kuromoji Glac\u00e9",
       "formula_code": "Formula U-07",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Alpine Forest • Kyoto Kuromoji Twigs & Sichuan Pepper",
+      "subtitle": "The Alpine Forest \u2022 Kyoto Kuromoji Twigs & Sichuan Pepper",
       "concept": "Ceremonial Japanese Kuromoji tea sticks whittled fresh in high alpine winter air. Delicate floral-linalool wood nuances, tingling Sichuan peppercorn, and Yakushima Sugi conifer needles.",
       "inspired_by": {
         "brand": "Kyoto Mountain Wood Artisans",
@@ -1766,7 +1766,7 @@
       "terroir": {
         "origin": "Kyoto Prefecture & Sichuan Highlands, East Asia",
         "cooperative": "Kyoto Mountain Wood Artisans & High-Altitude Foragers",
-        "coordinates": "35.0116° N, 135.7681° E",
+        "coordinates": "35.0116\u00b0 N, 135.7681\u00b0 E",
         "elevation": "750m",
         "harvest_season": "Early Spring"
       },
@@ -1805,7 +1805,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An ethereal floral-spice conifer creation. Hand-distilled Kyoto Kuromoji twigs sparkling with electric Sichuan pepper and crisp Japanese Sugi wood.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 94,
       "commercial_rank": 17,
       "size_ml": 50,
@@ -1818,7 +1818,7 @@
       "is_rescue_sku": false,
       "tagline": "Kyoto Ceremonial Kuromoji & Sugi Wood",
       "longevity_hours": 15,
-      "sillage_rating": "Cool Floral-Spice Projection (14–15h)"
+      "sillage_rating": "Cool Floral-Spice Projection (14\u201315h)"
     },
     {
       "id": 18,
@@ -1827,7 +1827,7 @@
       "formula_code": "Formula U-08",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Oceanic Drift • Ethical Beach-Combed Ambergris & Irish Moss",
+      "subtitle": "The Oceanic Drift \u2022 Ethical Beach-Combed Ambergris & Irish Moss",
       "concept": "The solitude of the Southern Ocean. Decades-aged fossilized ambergris washed ashore on remote windswept New Zealand coastlines, paired with cold ocean foam, Irish moss, and sun-bleached driftwood.",
       "inspired_by": {
         "brand": "Licensed New Zealand Foragers",
@@ -1872,7 +1872,7 @@
       "terroir": {
         "origin": "South Island, New Zealand & Kerry Coast, Ireland",
         "cooperative": "Licensed Coastal Beach-Combers Co-op (100% Cruelty-Free / CITES Compliant)",
-        "coordinates": "44.0407° S, 168.6182° E",
+        "coordinates": "44.0407\u00b0 S, 168.6182\u00b0 E",
         "elevation": "Sea Level",
         "harvest_season": "Natural tidal drifts"
       },
@@ -1911,7 +1911,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A transcendent oceanic amber. Certified ethical beach-combed ambergris tincture providing unparalleled mineral warmth, salt spray, and ancient driftwood.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_champagne.webp",
       "commercial_score": 97,
       "commercial_rank": 18,
       "size_ml": 50,
@@ -1924,7 +1924,7 @@
       "is_rescue_sku": false,
       "tagline": "Cruelty-Free Beach-Combed Natural Ambergris",
       "longevity_hours": 19,
-      "sillage_rating": "Hypnotic Saline-Skin Sillage (18–19h)"
+      "sillage_rating": "Hypnotic Saline-Skin Sillage (18\u201319h)"
     },
     {
       "id": 19,
@@ -1933,7 +1933,7 @@
       "formula_code": "Formula U-09",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Earth's Respiration • Wild Kannauj Khus & Himalayan Spikenard",
+      "subtitle": "The Earth's Respiration \u2022 Wild Kannauj Khus & Himalayan Spikenard",
       "concept": "The Ayurvedic science of thermodynamic equilibrium. Deep wild vetiver roots hydro-distilled in Kannauj copper vessels, Himalayan spikenard, crushed green cardamom pods, and organic virgin sesame extract.",
       "inspired_by": {
         "brand": "Kannauj Traditional Distillers Guild",
@@ -1949,7 +1949,7 @@
         "Master Formulation Research Group",
         "Kannauj Heritage Guild"
       ],
-      "climate_role": "45°C Extreme Heat Shield & Mental Calming",
+      "climate_role": "45\u00b0C Extreme Heat Shield & Mental Calming",
       "when_to_apply": {
         "seasons": [
           "Summer",
@@ -1978,7 +1978,7 @@
       "terroir": {
         "origin": "Kannauj, Uttar Pradesh & Uttarakhand Himalayas, India",
         "cooperative": "Kannauj Distillers Guild & Nepal Mountain Harvesters (CITES Certified)",
-        "coordinates": "27.0543° N, 79.9134° E",
+        "coordinates": "27.0543\u00b0 N, 79.9134\u00b0 E",
         "elevation": "139m to 2,200m",
         "harvest_season": "Winter root harvest"
       },
@@ -2017,7 +2017,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An ancient botanical cooling matrix. Wild North Indian Ruh Khus distilled in copper cauldrons with calming Himalayan spikenard and green cardamom.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 95,
       "commercial_rank": 19,
       "size_ml": 50,
@@ -2030,16 +2030,16 @@
       "is_rescue_sku": false,
       "tagline": "Copper-Distilled Wild North Indian Ruh Khus",
       "longevity_hours": 17,
-      "sillage_rating": "Deep Calming Earthy Sillage (16–17h)"
+      "sillage_rating": "Deep Calming Earthy Sillage (16\u201317h)"
     },
     {
       "id": 20,
       "sku": "ZR-U10",
-      "name": "Figuier Éthiopien",
+      "name": "Figuier \u00c9thiopien",
       "formula_code": "Formula U-10",
       "brand": "ZORUNE",
       "collection": "Unisex Terroir Collection",
-      "subtitle": "The Highland Oasis • Wild Fig Leaf, Yirgacheffe Green Coffee & Geranium",
+      "subtitle": "The Highland Oasis \u2022 Wild Fig Leaf, Yirgacheffe Green Coffee & Geranium",
       "concept": "Wild fig trees shading high-altitude coffee terraces in Oromia, Ethiopia. Lush green fig leaves dripping with milky sap, sun-warmed Yirgacheffe green coffee beans, and sweet Egyptian geranium over Moroccan cedar.",
       "inspired_by": {
         "brand": "Oromia Coffee Farmers Union Ethiopia",
@@ -2081,10 +2081,10 @@
       ],
       "terroir": {
         "origin": "Oromia Highlands, Ethiopia & Provence, France",
-        "cooperative": "Oromia Coffee Farmers Union & Provençal Botanical Extractors",
-        "coordinates": "6.1628° N, 38.2058° E",
+        "cooperative": "Oromia Coffee Farmers Union & Proven\u00e7al Botanical Extractors",
+        "coordinates": "6.1628\u00b0 N, 38.2058\u00b0 E",
         "elevation": "1,850m",
-        "harvest_season": "November–January"
+        "harvest_season": "November\u2013January"
       },
       "eco_packaging": {
         "glass": "40% PCR French Super-Flint",
@@ -2121,7 +2121,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A verdant highland oasis. Lush green wild fig leaves, fresh raw green coffee beans from Ethiopia, and warm Atlas cedarwood.",
-      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 92,
       "commercial_rank": 20,
       "size_ml": 50,
@@ -2134,7 +2134,7 @@
       "is_rescue_sku": false,
       "tagline": "Oromia Green Coffee & Wild Fig Leaf",
       "longevity_hours": 14,
-      "sillage_rating": "Crisp Green Leaf & Coffee Halo (13–14h)"
+      "sillage_rating": "Crisp Green Leaf & Coffee Halo (13\u201314h)"
     }
   ]
 }

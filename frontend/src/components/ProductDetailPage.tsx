@@ -13,6 +13,22 @@ interface ProductDetailPageProps {
   onNavigateHome: () => void;
   onSelectProduct: (p: Product) => void;
 }
+// Concise sillage formatter for clean card symmetry
+const formatSillage = (rating: string): string => {
+  if (!rating) return 'Enveloping';
+  const clean = rating.replace(/\s*\([^)]*\)/g, '').trim();
+  if (clean.length <= 12) return clean;
+  if (clean.toLowerCase().includes('nuclear')) return 'Nuclear';
+  if (clean.toLowerCase().includes('enveloping')) return 'Enveloping';
+  if (clean.toLowerCase().includes('intimate')) return 'Intimate';
+  if (clean.toLowerCase().includes('radiant') || clean.toLowerCase().includes('luminous')) return 'Luminous';
+  if (clean.toLowerCase().includes('crystalline') || clean.toLowerCase().includes('sparkling')) return 'Crystalline';
+  if (clean.toLowerCase().includes('resinous')) return 'Resinous';
+  if (clean.toLowerCase().includes('earth')) return 'Earth-Petrichor';
+  if (clean.toLowerCase().includes('leather')) return 'Leather';
+  if (clean.toLowerCase().includes('honey')) return 'Honeyed';
+  return clean.split(' ')[0] || 'Enveloping';
+};
 
 export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   product,
@@ -230,33 +246,36 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
               {/* Performance Metrics Trio */}
               <div className="grid grid-cols-3 gap-3 mt-4">
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
+                <div className="px-2.5 py-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs flex flex-col justify-center min-h-[76px]">
                   <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
                     Skin Longevity
                   </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Clock className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
+                  <div className="flex items-center justify-center space-x-1.5 font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm">
+                    <Clock className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
                     <span>{product.longevity_hours} Hours</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
+                <div 
+                  className="px-2.5 py-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs flex flex-col justify-center min-h-[76px] cursor-help"
+                  title={product.sillage_rating}
+                >
                   <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
                     Sillage Radius
                   </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Wind className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>{product.sillage_rating}</span>
+                  <div className="flex items-center justify-center space-x-1.5 font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm">
+                    <Wind className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
+                    <span>{formatSillage(product.sillage_rating)}</span>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs">
+                <div className="px-2.5 py-3.5 rounded-2xl bg-white border border-[oklch(0.926_0.01_81.8)] text-center shadow-2xs flex flex-col justify-center min-h-[76px]">
                   <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-bold tracking-wider block mb-1">
                     Authenticity
                   </span>
-                  <div className="flex items-center justify-center space-x-1 font-extrabold text-[oklch(0.179_0.004_286)] text-sm">
-                    <Award className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)]" />
-                    <span>Pure French Oils</span>
+                  <div className="flex items-center justify-center space-x-1.5 font-extrabold text-[oklch(0.179_0.004_286)] text-xs sm:text-sm">
+                    <Award className="w-3.5 h-3.5 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
+                    <span>Single-Origin</span>
                   </div>
                 </div>
               </div>

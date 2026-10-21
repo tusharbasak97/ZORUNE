@@ -13,26 +13,27 @@ CREATE TYPE order_status_type AS ENUM ('PENDING', 'CONFIRMED', 'PROCESSING', 'SH
 CREATE TYPE payment_method_type AS ENUM ('UPI_PREPAID', 'CARD_PREPAID', 'NET_BANKING', 'CASH_ON_DELIVERY');
 CREATE TYPE payment_status_type AS ENUM ('INITIATED', 'SUCCESS', 'FAILED', 'REFUNDED');
 
--- Products Table (The 7 Master Formulations: 20ml @ ₹999)
+-- Products Table (Sovereign Terroir Haute Niche Parfumerie: 20 Formulations @ 50ml Refillable Flacons)
 CREATE TABLE products (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     sku VARCHAR(20) UNIQUE NOT NULL,
     name VARCHAR(100) NOT NULL,
     brand VARCHAR(50) DEFAULT 'ZORUNE',
-    concentration VARCHAR(50) DEFAULT 'Extrait de Parfum (30%)',
+    collection VARCHAR(100) DEFAULT 'Unisex Terroir Collection',
+    concentration VARCHAR(50) DEFAULT 'Extrait de Parfum (25%)',
     size_ml INT DEFAULT 50,
-    price DECIMAL(10, 2) DEFAULT 19500.00,
-    stock INT DEFAULT 100,
+    price DECIMAL(10, 2) NOT NULL,
+    price_eur DECIMAL(10, 2),
+    price_usd DECIMAL(10, 2),
+    stock INT DEFAULT 65,
     gender gender_type NOT NULL,
     commercial_score INT NOT NULL,
     commercial_rank INT NOT NULL,
     tier inventory_tier_type NOT NULL,
     
-    -- Inspiration Details
+    -- Terroir Origin & Cooperative
     inspired_brand VARCHAR(100) NOT NULL,
     original_name VARCHAR(150) NOT NULL,
-    original_price_usd DECIMAL(10, 2),
-    arbitrage_savings DECIMAL(5, 2),
     
     -- Olfactive DNA
     olfactive_family VARCHAR(100) NOT NULL,
@@ -80,7 +81,7 @@ CREATE INDEX idx_products_accords ON products USING GIN(main_accords);
 CREATE INDEX idx_products_occasions ON products USING GIN(occasions);
 CREATE INDEX idx_products_seasons ON products USING GIN(seasons);
 
--- Full-Text Search Index over Name, Brand, Inspiration & Notes
+-- Full-Text Search Index over Name, Brand, Terroir & Notes
 CREATE INDEX idx_products_fts ON products USING GIN(
     to_tsvector('english', 
         name || ' ' || 
@@ -109,7 +110,7 @@ CREATE TABLE cart_items (
     cart_id UUID REFERENCES carts(id) ON DELETE CASCADE,
     product_id UUID REFERENCES products(id) ON DELETE CASCADE,
     quantity INT DEFAULT 1,
-    price DECIMAL(10, 2) DEFAULT 999.00,
+    price DECIMAL(10, 2) NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT uq_cart_product UNIQUE(cart_id, product_id)
 );
@@ -156,7 +157,7 @@ CREATE TABLE order_items (
     order_id UUID REFERENCES orders(id) ON DELETE CASCADE,
     product_id UUID REFERENCES products(id),
     quantity INT DEFAULT 1,
-    unit_price DECIMAL(10, 2) DEFAULT 999.00,
+    unit_price DECIMAL(10, 2) NOT NULL,
     total DECIMAL(10, 2) NOT NULL
 );
 

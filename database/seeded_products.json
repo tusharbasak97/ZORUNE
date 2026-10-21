@@ -19,8 +19,7 @@
     "flacon_format": "50mL Master Super-Flint Crystal Flacon (Refillable)",
     "tier_distribution": {
       "tier_1_heroes": 12,
-      "tier_2_revenue": 8,
-      "tier_3_niche_and_rescue": 0
+      "tier_2_revenue": 8
     }
   },
   "products": [
@@ -117,7 +116,7 @@
         "carrier": "96% Organic Bio-Ethanol (Zero Added Water)"
       },
       "description": "An aristocratic second-skin aura. Three-year cured Florentine Orris Butter containing 15% pure natural irones, enveloped in Grasse jasmine absolute and creamy New Caledonian sandalwood.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_champagne.webp",
       "commercial_score": 97,
       "commercial_rank": 1,
       "size_ml": 50,
@@ -131,9 +130,6 @@
       "tagline": "Aristocratic Florentine Iris Pallida (15% Irone)",
       "longevity_hours": 18,
       "sillage_rating": "Intimate to Enveloping Suede Aura (16–18h)",
-      "original_price_usd": 315,
-      "original_price_inr": 26500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Calabrian Bergamot FCF",
         "Ambrette Seed CO2",
@@ -238,7 +234,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An intoxicating nocturnal white floral. Hand-plucked Indian jasmine sambac buds blossoming into narcotic solar radiance with pink pepper and Haitian vetiver.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 95,
       "commercial_rank": 2,
       "size_ml": 50,
@@ -252,9 +248,6 @@
       "tagline": "Pre-Dawn Madurai Jasmine Sambac",
       "longevity_hours": 16,
       "sillage_rating": "Hypnotic White-Floral Projection (14–16h)",
-      "original_price_usd": 240,
-      "original_price_inr": 19800,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Madurai Green Leaves",
         "Pink Pepper CO2",
@@ -358,7 +351,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The golden standard of rose perfumery. Pure Grasse Centifolia rose absolute distilled within hours of picking, balanced with crisp dew and golden frankincense.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_rose.webp",
       "commercial_score": 96,
       "commercial_rank": 3,
       "size_ml": 50,
@@ -372,9 +365,6 @@
       "tagline": "UNESCO Heritage Grasse Centifolia Rose",
       "longevity_hours": 15,
       "sillage_rating": "Radiant Luminous Floral Halo (14–15h)",
-      "original_price_usd": 285,
-      "original_price_inr": 23500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Calabrian Bergamot FCF",
         "Morning Dew Accord",
@@ -478,7 +468,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A sun-drenched Cape floral nectar. Golden honeybush tea and wild chamomilic snowbush sweetened with raw vanilla pod and sparkling rose geranium.",
-      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 93,
       "commercial_rank": 4,
       "size_ml": 50,
@@ -492,9 +482,6 @@
       "tagline": "Endemic Cape Floral Kingdom Honeybush",
       "longevity_hours": 14,
       "sillage_rating": "Intimate Sun-Warmed Honey Trail (14h)",
-      "original_price_usd": 215,
-      "original_price_inr": 17500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Cape Snowbush (Eriocephalus)",
         "Wild Mandarin",
@@ -595,7 +582,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An effervescent citrus-blossom elixir. Sun-soaked blood orange and opulent Tunisian orange blossom grounded in smooth Moroccan cedarwood.",
-      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_citrus.webp",
       "commercial_score": 91,
       "commercial_rank": 5,
       "size_ml": 50,
@@ -609,9 +596,6 @@
       "tagline": "Cap Bon Sun-Drenched Orange Blossom",
       "longevity_hours": 13,
       "sillage_rating": "Luminous Citrus Radiance (12–13h)",
-      "original_price_usd": 190,
-      "original_price_inr": 15800,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Sicilian Blood Orange",
         "Green Mandarin",
@@ -717,7 +701,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An architectural wooden temple in winter. Sacred Japanese Hinoki heartwood and Yakushima cedarwood elevated by cold resins and crisp black pepper.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 98,
       "commercial_rank": 6,
       "size_ml": 50,
@@ -731,9 +715,6 @@
       "tagline": "Kiso Valley Ancient Hinoki Wood",
       "longevity_hours": 17,
       "sillage_rating": "Sovereign Resinous Wood Sillage (16–17h)",
-      "original_price_usd": 260,
-      "original_price_inr": 21500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Kiso Hinoki Leaf",
         "Japanese Black Pepper",
@@ -838,7 +819,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A rugged mountain herbal leather. Wild Cederberg buchu leaf offering deep blackcurrant-herbal facets resting on amber resin and dark leathered guaiacwood.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 93,
       "commercial_rank": 7,
       "size_ml": 50,
@@ -852,9 +833,6 @@
       "tagline": "Wild Harvested Cederberg Mountain Buchu",
       "longevity_hours": 16,
       "sillage_rating": "Assertive Herbal-Leather Trail (15–16h)",
-      "original_price_usd": 210,
-      "original_price_inr": 17000,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Cederberg Buchu Leaf",
         "Bitter Orange Pith",
@@ -957,7 +935,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The pinnacle of oriental resinous perfumery. Certified sustainable Assam wild oud infused with rare Kashmiri saffron and imperial Omani frankincense.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 99,
       "commercial_rank": 8,
       "size_ml": 50,
@@ -971,9 +949,6 @@
       "tagline": "Sustainable Assam Wild Aquilaria Oud (30% Extrait)",
       "longevity_hours": 20,
       "sillage_rating": "Nuclear Opulent Sillage (18–20h+)",
-      "original_price_usd": 330,
-      "original_price_inr": 27000,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Pampore Saffron Stigma CO2",
         "Dhofar Green Hojari Olibanum",
@@ -1079,7 +1054,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The authentic scent of rain on baked earth. Pure copper-distilled North Indian Ruh Khus vetiver infused with natural petrichor geosmin and zesty green mandarin.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 96,
       "commercial_rank": 9,
       "size_ml": 50,
@@ -1093,9 +1068,6 @@
       "tagline": "Copper-Distilled Kannauj Petrichor Ruh Khus",
       "longevity_hours": 16,
       "sillage_rating": "Crisp Cooling Earth Sillage (15–16h)",
-      "original_price_usd": 230,
-      "original_price_inr": 18900,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Italian Green Mandarin",
         "Calabrian Bergamot FCF",
@@ -1198,7 +1170,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An uncompromising dry Spanish leather. Smoldering cade wood and purified birch tar softened with bitter orange and golden opoponax resin.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 94,
       "commercial_rank": 10,
       "size_ml": 50,
@@ -1212,9 +1184,6 @@
       "tagline": "Pyrogenic-Safe Spanish Cade Leather",
       "longevity_hours": 17,
       "sillage_rating": "Dark Enveloping Leather Presence (16–17h)",
-      "original_price_usd": 275,
-      "original_price_inr": 22500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Seville Bitter Orange",
         "Spanish Thyme",
@@ -1317,7 +1286,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A glacier-cold mountain citrus. Pristine Kōchi yuzu fruit and crisp Japanese mint bursting over mineral spring water and clean ambergris.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_citrus.webp",
       "commercial_score": 98,
       "commercial_rank": 11,
       "size_ml": 50,
@@ -1331,9 +1300,6 @@
       "tagline": "Single-Origin Mountain Kōchi Yuzu",
       "longevity_hours": 15,
       "sillage_rating": "Crystalline Sparkling Halo (14–15h)",
-      "original_price_usd": 200,
-      "original_price_inr": 16500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Kōchi Yuzu Cold-Press",
         "Hokkaido White Mint (Hakku)",
@@ -1438,7 +1404,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A luminous golden spice elixir. Genuine Kashmiri Mongra saffron stigmas imparting warm bittersweet leather nuances against Somalian myrrh and amber.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 97,
       "commercial_rank": 12,
       "size_ml": 50,
@@ -1452,9 +1418,6 @@
       "tagline": "High-Altitude Kashmiri Mongra Saffron",
       "longevity_hours": 18,
       "sillage_rating": "Golden Velvet Projection (16–18h)",
-      "original_price_usd": 300,
-      "original_price_inr": 24800,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Guatemalan Cardamom CO2",
         "Calabrian Bergamot FCF",
@@ -1560,7 +1523,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A serene Japanese sanctuary in scent. Pristine Hinoki wood washed with cold morning water, spiced with wild Kuromoji twigs and clean temple incense.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 96,
       "commercial_rank": 13,
       "size_ml": 50,
@@ -1574,9 +1537,6 @@
       "tagline": "Kyoto Kuromoji & Kiso Hinoki Sanctuary",
       "longevity_hours": 16,
       "sillage_rating": "Intimate Meditative Radiance (14–16h)",
-      "original_price_usd": 250,
-      "original_price_inr": 20700,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Kyoto Kuromoji Branch",
         "Pink Pepper",
@@ -1679,7 +1639,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An electrifying aromatic oceanic creation. Dark blackcurrant-green buchu leaves whipping through cold salty Atlantic surf and sun-bleached driftwood.",
-      "image_url": "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_noir.webp",
       "commercial_score": 93,
       "commercial_rank": 14,
       "size_ml": 50,
@@ -1693,9 +1653,6 @@
       "tagline": "Atlantic Surf & Wild Cederberg Buchu",
       "longevity_hours": 15,
       "sillage_rating": "Crisp Oceanic Sillage (14–15h)",
-      "original_price_usd": 215,
-      "original_price_inr": 17500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Cederberg Buchu Leaf",
         "Atlantic Sea Spray Accord",
@@ -1800,7 +1757,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "The golden benchmark of authentic sandalwood. Certified sustainable Karnataka Santalum album delivering creamy, buttery balsamic wood warmth with immense skin longevity.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 99,
       "commercial_rank": 15,
       "size_ml": 50,
@@ -1814,9 +1771,6 @@
       "tagline": "Govt Certified Karnataka Santalum Album (30% Extrait)",
       "longevity_hours": 20,
       "sillage_rating": "Sensual Enveloping Wood Radiance (18–20h)",
-      "original_price_usd": 325,
-      "original_price_inr": 26800,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Cardamom Pod Green",
         "Ambrette Seed CO2",
@@ -1919,7 +1873,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An evocative sun-baked amber. Rare Corsican immortelle flowers releasing maple-curry warmth, wild maquis herbs, and deep golden labdanum.",
-      "image_url": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 93,
       "commercial_rank": 16,
       "size_ml": 50,
@@ -1933,9 +1887,6 @@
       "tagline": "Balagne Wild Corsican Immortelle",
       "longevity_hours": 17,
       "sillage_rating": "Sun-Drenched Honeyed Resin Aura (16–17h)",
-      "original_price_usd": 235,
-      "original_price_inr": 19500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Corsican Bitter Orange",
         "Wild Thyme",
@@ -2038,7 +1989,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An ethereal floral-spice conifer creation. Hand-distilled Kyoto Kuromoji twigs sparkling with electric Sichuan pepper and crisp Japanese Sugi wood.",
-      "image_url": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_crystal.webp",
       "commercial_score": 94,
       "commercial_rank": 17,
       "size_ml": 50,
@@ -2052,9 +2003,6 @@
       "tagline": "Kyoto Ceremonial Kuromoji & Sugi Wood",
       "longevity_hours": 15,
       "sillage_rating": "Cool Floral-Spice Projection (14–15h)",
-      "original_price_usd": 245,
-      "original_price_inr": 20200,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Sichuan Pepper CO2",
         "Yuzu Zest",
@@ -2158,7 +2106,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A transcendent oceanic amber. Certified ethical beach-combed ambergris tincture providing unparalleled mineral warmth, salt spray, and ancient driftwood.",
-      "image_url": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_champagne.webp",
       "commercial_score": 97,
       "commercial_rank": 18,
       "size_ml": 50,
@@ -2172,9 +2120,6 @@
       "tagline": "Cruelty-Free Beach-Combed Natural Ambergris",
       "longevity_hours": 19,
       "sillage_rating": "Hypnotic Saline-Skin Sillage (18–19h)",
-      "original_price_usd": 305,
-      "original_price_inr": 25200,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Oceanic Mist Accord",
         "Sea Salt",
@@ -2278,7 +2223,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "An ancient botanical cooling matrix. Wild North Indian Ruh Khus distilled in copper cauldrons with calming Himalayan spikenard and green cardamom.",
-      "image_url": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_amber.webp",
       "commercial_score": 95,
       "commercial_rank": 19,
       "size_ml": 50,
@@ -2292,9 +2237,6 @@
       "tagline": "Copper-Distilled Wild North Indian Ruh Khus",
       "longevity_hours": 17,
       "sillage_rating": "Deep Calming Earthy Sillage (16–17h)",
-      "original_price_usd": 225,
-      "original_price_inr": 18500,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Green Cardamom Absolute",
         "Bitter Grapefruit Pith",
@@ -2396,7 +2338,7 @@
         "carrier": "96% Organic Bio-Ethanol"
       },
       "description": "A verdant highland oasis. Lush green wild fig leaves, fresh raw green coffee beans from Ethiopia, and warm Atlas cedarwood.",
-      "image_url": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80",
+      "image_url": "/flacons/flacon_cognac.webp",
       "commercial_score": 92,
       "commercial_rank": 20,
       "size_ml": 50,
@@ -2410,9 +2352,6 @@
       "tagline": "Oromia Green Coffee & Wild Fig Leaf",
       "longevity_hours": 14,
       "sillage_rating": "Crisp Green Leaf & Coffee Halo (13–14h)",
-      "original_price_usd": 180,
-      "original_price_inr": 14800,
-      "arbitrage_savings_percent": 0,
       "all_notes": [
         "Wild Fig Leaf Accord (Stemone-Free)",
         "Green Mandarin",

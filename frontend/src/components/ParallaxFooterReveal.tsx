@@ -20,9 +20,9 @@ export const ParallaxFooterReveal: React.FC = () => {
           ZORUNE<span className="text-[oklch(0.683_0.102_82.6)]">.</span>
         </h2>
         
-        {/* Minimalist French Atelier Tagline */}
+        {/* Minimalist Atelier Tagline */}
         <p className="text-[9px] sm:text-[11px] lg:text-xs font-bold tracking-[0.45em] uppercase text-[oklch(0.552_0.014_286)] mt-2 sm:mt-4">
-          Haute Parfumerie Collective • Grasse & Mumbai
+          Haute Parfumerie Collective • Kanpur & Mumbai
         </p>
       </div>
     </div>

@@ -149,7 +149,7 @@ export const TestimonialsSection: React.FC = () => {
             </span>
           </div>
           <span className="text-[11px] text-[oklch(0.552_0.014_286)] tracking-wider uppercase font-semibold flex-shrink-0">
-            IFRA 51st Amendment Compliant • Pure Grasse & Global Single Origins
+            IFRA 51st Amendment Compliant • Global Single-Origin Terroir Extraits
           </span>
         </div>
 

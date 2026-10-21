@@ -32,23 +32,101 @@ const ordersDb = new Map();
 
 // Olfactory Architecture pairing mappings for the Sovereign Terroir Formulations
 const COMPARISON_MAP = {
-  'ZR-U01': {
-    conflictingSku: 'ZR-M04',
-    title: 'Japanese Mountain Yuzu vs Kannauj Ruh Khus Monsoon',
-    difference: 'ZR-U01 (Yuzu Céleste) is a crystalline glacial citrus shield with cold-pressed Kōchi yuzu and Hokkaido mint. ZR-M04 (Vetiver Monsoon) is an earthy, wet-soil fortress featuring Kannauj copper-deg distilled Ruh Khus and clay geosmin.',
-    pairingNotes: 'The Daytime Terroir Rotation: Yuzu Céleste for high-heat humidity and Vetiver Monsoon for deep grounding executive presence.'
-  },
   'ZR-W01': {
     conflictingSku: 'ZR-U05',
     title: 'Florentine Orris Butter vs Mysore Santalum Album',
     difference: 'ZR-W01 (Orris Soie) delivers aristocratic Tuscan iris butter (15% irone) and haute suede powder. ZR-U05 (Mysore Santal) centers on ancient Karnataka sandalwood heartwood and golden benzoin tears.',
     pairingNotes: 'The Haute Aristocracy Wardrobe: Orris Soie for formal galas and Mysore Santal for serene meditative authority.'
   },
+  'ZR-W02': {
+    conflictingSku: 'ZR-W03',
+    title: 'Madurai Jasmine Sambac vs Grasse Centifolia Rose',
+    difference: 'ZR-W02 (Madurai Lune) is a nocturnal indolic jasmine with tropical monsoon character. ZR-W03 (Rose de Grasse Éternelle) is a luminous, green-dew dawn rose with honeyed brightness.',
+    pairingNotes: 'The Floral Masterclass Duo: Madurai Lune for sultry evening romance and Rose de Grasse for radiant daytime elegance.'
+  },
+  'ZR-W03': {
+    conflictingSku: 'ZR-W04',
+    title: 'Grasse Centifolia Rose vs Cape Floral Honeybush',
+    difference: 'ZR-W03 (Rose de Grasse Éternelle) is a classical French rose with bergamot dew and frankincense. ZR-W04 (Fleur de Fynbos) is a sun-drenched South African nectar with honeybush and vanilla.',
+    pairingNotes: 'European Elegance meets African Warmth: Rose de Grasse for formal occasions and Fleur de Fynbos for golden-hour travel.'
+  },
+  'ZR-W04': {
+    conflictingSku: 'ZR-U06',
+    title: 'Cape Honeybush vs Corsican Immortelle',
+    difference: 'ZR-W04 (Fleur de Fynbos) features sweet Cape honeybush and vanilla in a gentle floral. ZR-U06 (Immortelle Corsique) delivers spicy-herbal immortelle and cistus labdanum in a sun-baked amber.',
+    pairingNotes: 'The Mediterranean & Cape Warmth Set: Fleur de Fynbos for intimate softness and Immortelle Corsique for bold herbal radiance.'
+  },
+  'ZR-W05': {
+    conflictingSku: 'ZR-U01',
+    title: 'Mediterranean Orange Blossom vs Japanese Mountain Yuzu',
+    difference: 'ZR-W05 (Nectar d\'Agrumes) is a rich Tunisian neroli and blood orange blossom. ZR-U01 (Yuzu Céleste) is a crystalline glacial Japanese yuzu with mint and juniper.',
+    pairingNotes: 'The Citrus Connoisseur Duo: Nectar d\'Agrumes for warm coastal evenings and Yuzu Céleste for high-heat morning freshness.'
+  },
+  'ZR-M01': {
+    conflictingSku: 'ZR-U03',
+    title: 'Kiso Hinoki Temple vs Kyoto Kuromoji Sanctuary',
+    difference: 'ZR-M01 (Kiso Silence) is a resinous smoky conifer with incense and black pepper. ZR-U03 (Hinoki Sanctuary) is a meditative transparent woody with clary sage and sheer frankincense.',
+    pairingNotes: 'The Japanese Wood Wardrobe: Kiso Silence for boardroom authority and Hinoki Sanctuary for mindful retreat.'
+  },
+  'ZR-M02': {
+    conflictingSku: 'ZR-U04',
+    title: 'Cederberg Mountain Buchu vs Atlantic Storm Buchu',
+    difference: 'ZR-M02 (Cederberg Fynbos) pairs wild buchu with dark leather and guaiacwood. ZR-U04 (Buchu Sauvage) sweeps buchu through salty ocean spray with seaweed and driftwood.',
+    pairingNotes: 'The Cape Duality: Cederberg Fynbos for rugged mountain expeditions and Buchu Sauvage for coastal maritime energy.'
+  },
   'ZR-M03': {
     conflictingSku: 'ZR-U02',
     title: 'Assam Wild Oud vs High-Altitude Kashmiri Saffron',
     difference: 'ZR-M03 (Oud Samarkhand) pairs sustainable Assam Aquilaria oud with royal green hojari frankincense. ZR-U02 (Saffron Nomade) illuminates Pampore saffron stigmas with golden amber and somalian myrrh.',
     pairingNotes: 'The Sovereign Nocturnal Duo: Oud Samarkhand for command presence and Saffron Nomade for magnetic evening warmth.'
+  },
+  'ZR-M04': {
+    conflictingSku: 'ZR-U09',
+    title: 'Kannauj Monsoon Vetiver vs Heritage Ruh Khus',
+    difference: 'ZR-M04 (Vetiver Monsoon) captures petrichor with geosmin and green mandarin. ZR-U09 (Ruh Khus Terroir) is a deep Ayurvedic botanical with Himalayan spikenard and sesame.',
+    pairingNotes: 'The Indian Earthy Heritage Set: Vetiver Monsoon for refreshing daywear and Ruh Khus Terroir for calming evening depth.'
+  },
+  'ZR-M05': {
+    conflictingSku: 'ZR-U06',
+    title: 'Spanish Cade Leather vs Corsican Maquis Amber',
+    difference: 'ZR-M05 (Cuir d\'Andalousie) is an uncompromising dry leather with birch tar and bitter orange. ZR-U06 (Immortelle Corsique) is a honeyed herbal amber with sun-drenched immortelle.',
+    pairingNotes: 'The Mediterranean Masculinity Duo: Cuir d\'Andalousie for private club evenings and Immortelle Corsique for sunset contemplation.'
+  },
+  'ZR-U01': {
+    conflictingSku: 'ZR-M04',
+    title: 'Japanese Mountain Yuzu vs Kannauj Ruh Khus Monsoon',
+    difference: 'ZR-U01 (Yuzu Céleste) is a crystalline glacial citrus shield with cold-pressed Kōchi yuzu and Hokkaido mint. ZR-M04 (Vetiver Monsoon) is an earthy, wet-soil fortress featuring Kannauj copper-deg distilled Ruh Khus and clay geosmin.',
+    pairingNotes: 'The Daytime Terroir Rotation: Yuzu Céleste for high-heat humidity and Vetiver Monsoon for deep grounding executive presence.'
+  },
+  'ZR-U02': {
+    conflictingSku: 'ZR-M03',
+    title: 'Kashmiri Saffron vs Assam Wild Oud',
+    difference: 'ZR-U02 (Saffron Nomade) radiates golden bittersweet saffron with myrrh and amber. ZR-M03 (Oud Samarkhand) commands with wild oud, green hojari frankincense, and smoked leather.',
+    pairingNotes: 'The Silk Road Collection: Saffron Nomade for art exhibitions and Oud Samarkhand for state banquets.'
+  },
+  'ZR-U05': {
+    conflictingSku: 'ZR-W01',
+    title: 'Sacred Karnataka Sandalwood vs Florentine Iris Butter',
+    difference: 'ZR-U05 (Mysore Santal) delivers creamy, milky sandalwood with benzoin warmth. ZR-W01 (Orris Soie) is a velvet powdery iris with white suede and ambrette.',
+    pairingNotes: 'The Sacred & Aristocratic Pairing: Mysore Santal for spiritual contemplation and Orris Soie for evening elegance.'
+  },
+  'ZR-U07': {
+    conflictingSku: 'ZR-M01',
+    title: 'Kyoto Kuromoji vs Kiso Valley Hinoki',
+    difference: 'ZR-U07 (Kuromoji Glacé) is a delicate floral-spice with electric Sichuan pepper and linalool-rich wood. ZR-M01 (Kiso Silence) is a dense, resinous temple cedarwood with smoked frankincense.',
+    pairingNotes: 'The Japanese Conifer Journey: Kuromoji Glacé for creative morning work and Kiso Silence for commanding evening authority.'
+  },
+  'ZR-U08': {
+    conflictingSku: 'ZR-U04',
+    title: 'Beach-Combed Ambergris vs Atlantic Buchu Storm',
+    difference: 'ZR-U08 (Ambergris Australe) is a contemplative saline-amber with ethical ambergris tincture and Irish moss. ZR-U04 (Buchu Sauvage) is an electrifying aromatic oceanic with Cape buchu and cold surf.',
+    pairingNotes: 'The Oceanic Collection: Ambergris Australe for quiet luxury and Buchu Sauvage for active coastal energy.'
+  },
+  'ZR-U10': {
+    conflictingSku: 'ZR-W05',
+    title: 'Ethiopian Fig & Coffee vs Mediterranean Citrus Blossom',
+    difference: 'ZR-U10 (Figuier Éthiopien) is a verdant highland fig with green coffee and geranium. ZR-W05 (Nectar d\'Agrumes) is a sun-soaked Mediterranean neroli and blood orange.',
+    pairingNotes: 'The Brunch Discovery Set: Figuier Éthiopien for creative garden mornings and Nectar d\'Agrumes for coastal afternoon radiance.'
   }
 };
 

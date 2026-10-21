@@ -34,11 +34,19 @@ export interface EcoPackaging {
   cap: string;
 }
 
+export interface ChemicalDossier {
+  key_molecules: string[];
+  co_solvent_matrix: string;
+  water_content: string;
+  carrier: string;
+}
+
 export interface Product {
   id: number;
   sku: string;
   name: string;
   brand: string;
+  collection: string;
   inspired_by: InspiredBy;
   formula_code?: string;
   subtitle?: string;
@@ -62,18 +70,18 @@ export interface Product {
   size_ml: number;
   price: number;
   price_eur?: number;
+  price_usd?: number;
   stock: number;
   tier: InventoryTier;
-  original_price_usd: number;
-  original_price_inr: number;
-  arbitrage_savings_percent: number;
   is_rescue_sku: boolean;
-  rescue_angle?: string | null;
+  rescue_angle?: string;
   tagline?: string;
   longevity_hours: number;
   sillage_rating: string;
+  flacon_spec?: string;
   terroir?: TerroirData;
   eco_packaging?: EcoPackaging;
+  chemical_dossier?: ChemicalDossier;
 }
 
 export interface CartItem {
@@ -85,7 +93,7 @@ export interface ComparisonInfo {
   conflictingSku: string;
   title: string;
   difference: string;
-  bundleSuggestion: string;
+  pairingNotes: string;
 }
 
 export interface OrderConfirmation {

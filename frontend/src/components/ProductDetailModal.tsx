@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import { X, Crown, Clock, MapPin, Plus, Zap } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+// Concise sillage formatter for clean card symmetry
+const formatSillage = (rating: string): string => {
+  if (!rating) return 'Enveloping';
+  const clean = rating.replace(/\s*\([^)]*\)/g, '').trim();
+  if (clean.length <= 18) return clean;
+  if (clean.toLowerCase().includes('nuclear')) return 'Nuclear Opulent';
+  if (clean.toLowerCase().includes('enveloping')) return 'Enveloping Aura';
+  if (clean.toLowerCase().includes('intimate')) return 'Intimate Sillage';
+  if (clean.toLowerCase().includes('radiant') || clean.toLowerCase().includes('luminous')) return 'Luminous Halo';
+  if (clean.toLowerCase().includes('crystalline') || clean.toLowerCase().includes('sparkling')) return 'Crystalline Halo';
+  if (clean.toLowerCase().includes('resinous')) return 'Resinous Sillage';
+  if (clean.toLowerCase().includes('earth')) return 'Earth Petrichor';
+  if (clean.toLowerCase().includes('leather')) return 'Leather Presence';
+  if (clean.toLowerCase().includes('honey')) return 'Honeyed Trail';
+  return clean.split(' ').slice(0, 2).join(' ');
+};
 
 export const ProductDetailModal: React.FC = () => {
   const { 
@@ -128,11 +144,11 @@ export const ProductDetailModal: React.FC = () => {
                   <span>{product.longevity_hours} Hours</span>
                 </span>
               </div>
-              <div className="border-x border-[oklch(0.926_0.01_81.8)]">
+              <div className="border-x border-[oklch(0.926_0.01_81.8)]" title={product.sillage_rating}>
                 <span className="text-[10px] text-[oklch(0.552_0.014_286)] uppercase font-semibold block mb-0.5">Sillage</span>
                 <span className="text-xs font-bold text-[oklch(0.179_0.004_286)] flex items-center justify-center space-x-1">
-                  <Zap className="w-3 h-3 text-[oklch(0.683_0.102_82.6)]" />
-                  <span>{product.sillage_rating}</span>
+                  <Zap className="w-3 h-3 text-[oklch(0.683_0.102_82.6)] flex-shrink-0" />
+                  <span className="truncate">{formatSillage(product.sillage_rating)}</span>
                 </span>
               </div>
               <div>
